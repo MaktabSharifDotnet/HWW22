@@ -1,7 +1,15 @@
+using App.Infra.Db.SqlServer.Ef.DbContextAgg;
+using Microsoft.EntityFrameworkCore;
+using System;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddDbContext<AppDbContext>(options =>
+              options.UseSqlServer("Server=DESKTOP-M2BLLND\\SQLEXPRESS;Database=HWW22;Integrated Security=True;Encrypt=True;TrustServerCertificate=True;"));
+
 
 var app = builder.Build();
 
