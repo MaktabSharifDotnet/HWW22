@@ -1,27 +1,33 @@
+using App.Domain.Core.Contract.CategoryAgg.AppService;
+using App.Domain.Core.Contract.ProductAgg.AppService;
+using App.Domain.Core.Dtos.CategoryAgg;
+using App.Domain.Core.Dtos.ProductAgg;
 using App.EndPoints.MVC.HWW22.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
 namespace App.EndPoints.MVC.HWW22.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController(IProductAppService productAppService
+        ,ICategoryAppService categoryAppService) : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+      
 
-        public HomeController(ILogger<HomeController> logger)
+        public IActionResult Index(int categoryId)
         {
-            _logger = logger;
+
+            List<ProductDto> productDtos= productAppService.GetAll(categoryId);
+            List<CategoryDto> categoryDtos= categoryAppService.GetAll();
+            HomeIndexViewModel homeIndexViewModel = new HomeIndexViewModel() 
+            {
+               CategoryDtos = categoryDtos , 
+               ProductDtos = productDtos
+            };
+
+            return View(homeIndexViewModel);
         }
 
-        public IActionResult Index()
-        {
-            return View();
-        }
-
-        public IActionResult Privacy()
-        {
-            return View();
-        }
+    
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

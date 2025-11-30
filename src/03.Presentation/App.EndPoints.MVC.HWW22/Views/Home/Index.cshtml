@@ -1,8 +1,124 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@using App.EndPoints.MVC.HWW22.Models
+@model HomeIndexViewModel
+
+@{
+    ViewData["Title"] = "خانه - فروشگاه اینترنتی";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<link href="~/css/home-style.css" rel="stylesheet" />
+
+<div class="container-fluid hero-section text-center mb-4">
+    <h1 class="display-5 fw-bold">مکتب شاپ</h1>
+    <p class="lead">جدیدترین محصولات  با بهترین قیمت</p>
+</div>
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-lg-3 col-md-4 mb-4">
+            <div class="card shadow-sm border-0">
+                <div class="card-header bg-danger text-white fw-bold">
+                    <i class="bi bi-list"></i> دسته‌بندی‌ها
+                </div>
+                <div class="list-group list-group-flush">
+                    <a asp-controller="Home" asp-action="Index" asp-route-categoryId=""
+                       class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                        همه محصولات
+                        <i class="bi bi-chevron-left small text-muted"></i>
+                    </a>
+
+                    @foreach (var category in Model.CategoryDtos)
+                    {
+                        <a asp-controller="Home" asp-action="Index" asp-route-categoryId="@category.Id"
+                           class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                            @category.Name
+                            <i class="bi bi-chevron-left small text-muted"></i>
+                        </a>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-9 col-md-8">
+
+            <div class="d-flex justify-content-between align-items-center mb-3 pb-2 border-bottom">
+                <h5 class="fw-bold m-0"><span style="color: #ef394e;">|</span> کالاها</h5>
+                <span class="text-muted small">(@Model.ProductDtos.Count() کالا )</span>
+            </div>
+
+            @if (!Model.ProductDtos.Any())
+            {
+                <div class="alert alert-warning text-center">
+                    هیچ محصولی در این دسته‌بندی یافت نشد.
+                </div>
+            }
+            else
+            {
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3">
+                    @foreach (var product in Model.ProductDtos)
+                    {
+                        <div class="col">
+                            <div class="product-card h-100">
+                                <div class="product-img-container">
+                                    <img src="~/images/ProductsAgg/@(string.IsNullOrEmpty(product.Image) ? "default.png" : product.Image)"
+                                         alt="@product.Title" />
+                                </div>
+
+                                <div class="card-body d-flex flex-column">
+                                    <span class="category-badge mb-1">@product.CategoryName</span>
+
+                                    <h6 class="product-title flex-grow-1">@product.Title</h6>
+
+                                    <div class="mt-3 price-section">
+                                        @if (product.Inventory > 0)
+                                        {
+                                            <div class="d-flex justify-content-between align-items-center">
+                                                <span class="inventory-status text-success">
+                                                    <i class="bi bi-check-circle-fill"></i> موجود
+                                                </span>
+                                                <div class="text-end">
+                                                    <span class="price-amount">@product.Price.ToString("N0")</span>
+                                                    <span class="currency">تومان</span>
+                                                </div>
+                                            </div>
+                                        }
+                                        else
+                                        {
+                                            <div class="text-center w-100 py-2 bg-light rounded">
+                                                <span class="text-muted small">ناموجود</span>
+                                            </div>
+                                        }
+                                    </div>
+
+                                    <div class="mt-3">
+                                        <div class="row g-2">
+                                            <div class="col-6">
+                                                <a asp-controller="Product"
+                                                   asp-action="Detail"
+                                                   asp-route-id="@product.Id"
+                                                   class="btn btn-dk-outline w-100 btn-sm"
+                                                   title="مشاهده جزئیات">
+                                                    جزئیات
+                                                </a>
+                                            </div>
+
+                                            <div class="col-6">
+                                                <a asp-controller="Cart"
+                                                   asp-action="AddToCart"
+                                                   asp-route-productId="@product.Id"
+                                                   class="btn btn-dk-primary w-100 btn-sm">
+                                                    <i class="bi bi-cart-plus"></i> خرید
+                                                </a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            }
+        </div>
+    </div>
 </div>

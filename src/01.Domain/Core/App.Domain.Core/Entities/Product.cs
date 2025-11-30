@@ -15,6 +15,7 @@ namespace App.Domain.Core.Entities
         public string Image { get; set; }
         public decimal Price { get; set; }
         public int Inventory { get; set; }
+        public DateTime CreatedAt { get; set; }
 
         public List<CartProduct> CartProducts { get; set; } = [];
         public int CategoryId { get; set; }

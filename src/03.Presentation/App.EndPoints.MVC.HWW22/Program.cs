@@ -1,3 +1,15 @@
+using App.Domain.AppServices.CategoryAgg;
+using App.Domain.AppServices.ProductAgg;
+using App.Domain.Core.Contract.CategoryAgg.AppService;
+using App.Domain.Core.Contract.CategoryAgg.Repository;
+using App.Domain.Core.Contract.CategoryAgg.Service;
+using App.Domain.Core.Contract.ProductAgg.AppService;
+using App.Domain.Core.Contract.ProductAgg.Repository;
+using App.Domain.Core.Contract.ProductAgg.Service;
+using App.Domain.Services.CategoryAgg;
+using App.Domain.Services.ProductAgg;
+using App.Infra.Data.Repos.Ef.CategoryAgg;
+using App.Infra.Data.Repos.Ef.ProductAgg;
 using App.Infra.Db.SqlServer.Ef.DbContextAgg;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -9,7 +21,14 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<AppDbContext>(options =>
               options.UseSqlServer("Server=DESKTOP-M2BLLND\\SQLEXPRESS;Database=HWW22;Integrated Security=True;Encrypt=True;TrustServerCertificate=True;"));
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<IProductAppService, ProductAppService>();
 
+
+builder.Services.AddScoped<ICategoryRepository , CategoryRepository>();
+builder.Services.AddScoped<ICategoryService , CategoryService>();
+builder.Services.AddScoped<ICategoryAppService , CategoryAppService>();
 
 var app = builder.Build();
 

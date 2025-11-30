@@ -14,6 +14,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\01.Domain\Services\App.Domain.AppServices\App.Domain.AppServices.csproj" />
+    <ProjectReference Include="..\..\01.Domain\Services\App.Domain.Services\App.Domain.Services.csproj" />
+    <ProjectReference Include="..\..\02.Infrastructure\DataAccess\App.Infra.Data.Repos.Ef\App.Infra.Data.Repos.Ef.csproj" />
     <ProjectReference Include="..\..\02.Infrastructure\Db\App.Infra.Db.SqlServer.Ef\App.Infra.Db.SqlServer.Ef.csproj" />
   </ItemGroup>
 

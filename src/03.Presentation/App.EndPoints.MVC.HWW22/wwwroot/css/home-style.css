@@ -1,0 +1,305 @@
+﻿/* =========================================
+   1. تنظیمات پایه و متغیرها (Modern Base)
+   ========================================= */
+:root {
+    --primary-color: #ef4056; /* قرمز دیجی‌کالایی */
+    --primary-hover: #d32f2f; /* قرمز تیره‌تر برای هاور */
+    --secondary-color: #2b2b2b; /* مشکی زغالی */
+    --text-main: #3f4064; /* رنگ متن اصلی */
+    --text-muted: #81858b; /* رنگ متن فرعی */
+    --bg-body: #f5f5f9; /* پس‌زمینه کلی صفحه */
+    --card-bg: #ffffff; /* پس‌زمینه کارت‌ها */
+    --border-color: #e0e0e2; /* رنگ خطوط مرزی */
+    --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+    --shadow-md: 0 8px 16px rgba(0,0,0,0.08);
+    --shadow-lg: 0 12px 24px rgba(0,0,0,0.12);
+    --radius-md: 12px; /* گردی گوشه‌ها */
+    --radius-lg: 16px;
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); /* انیمیشن نرم */
+}
+
+body {
+    background-color: var(--bg-body);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* =========================================
+   2. بنر و هیرو (Hero Section)
+   ========================================= */
+.hero-section {
+    background: rgb(239,64,86);
+    background: linear-gradient(135deg, rgba(239,64,86,1) 0%, rgba(43,43,43,1) 100%);
+    color: white;
+    padding: 60px 0;
+    margin-bottom: 40px;
+    border-radius: 0 0 24px 24px;
+    box-shadow: var(--shadow-md);
+    position: relative;
+    overflow: hidden;
+}
+
+    /* افکت نوری پس‌زمینه */
+    .hero-section::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 60%);
+        transform: rotate(30deg);
+    }
+
+    .hero-section h1 {
+        font-weight: 800;
+        text-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    }
+
+/* =========================================
+   3. سایدبار و دسته‌بندی‌ها (Sidebar)
+   ========================================= */
+.card {
+    border: none;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+    background-color: var(--card-bg);
+}
+
+.card-header {
+    background-color: white;
+    border-bottom: 1px solid var(--border-color);
+    padding: 15px 20px;
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+.list-group-item {
+    border: none;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 14px 20px;
+    font-size: 0.95rem;
+    color: var(--text-main);
+    transition: var(--transition);
+    position: relative;
+    z-index: 1;
+}
+
+    .list-group-item:last-child {
+        border-bottom: none;
+    }
+
+    /* افکت هاور مدرن برای لیست */
+    .list-group-item::before {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 0;
+        background-color: #fff0f1; /* قرمز خیلی روشن */
+        transition: width 0.3s ease;
+        z-index: -1;
+    }
+
+    .list-group-item:hover::before {
+        width: 100%;
+    }
+
+    .list-group-item:hover {
+        color: var(--primary-color);
+        padding-right: 25px; /* حرکت متن به چپ */
+        font-weight: 600;
+    }
+
+/* =========================================
+   4. کارت محصول (Product Card) - بخش اصلی
+   ========================================= */
+.product-card {
+    background: var(--card-bg);
+    border-radius: var(--radius-md);
+    border: 1px solid transparent; /* برای جلوگیری از پرش در هاور */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+    /* هاور روی کارت */
+    .product-card:hover {
+        box-shadow: var(--shadow-lg);
+        transform: translateY(-6px); /* بالا آمدن کارت */
+        border-color: rgba(239, 64, 86, 0.3);
+    }
+
+/* کانتینر عکس */
+.product-img-container {
+    height: 220px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    position: relative;
+}
+
+    .product-img-container img {
+        max-height: 100%;
+        max-width: 100%;
+        object-fit: contain;
+        transition: transform 0.4s ease;
+    }
+
+/* زوم شدن عکس هنگام هاور */
+.product-card:hover .product-img-container img {
+    transform: scale(1.08);
+}
+
+/* بدنه کارت */
+.card-body {
+    padding: 18px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* بج دسته‌بندی */
+.category-badge {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    background-color: #f0f0f1;
+    padding: 4px 8px;
+    border-radius: 6px;
+    align-self: flex-start;
+    margin-bottom: 10px;
+}
+
+/* عنوان محصول */
+.product-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin-bottom: 15px;
+    line-height: 1.5;
+    height: 44px; /* ارتفاع فیکس برای دو خط */
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+/* بخش قیمت */
+.price-section {
+    margin-top: auto; /* چسبیدن به پایین */
+    padding-top: 15px;
+    border-top: 1px dashed #eee;
+}
+
+.price-amount {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--secondary-color);
+    letter-spacing: -0.5px;
+}
+
+.currency {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-right: 4px;
+}
+
+/* وضعیت موجودی */
+.inventory-status {
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.text-success {
+    color: #00a651 !important;
+}
+
+.text-danger {
+    color: var(--primary-color) !important;
+}
+
+/* =========================================
+   5. دکمه‌ها (Buttons)
+   ========================================= */
+.btn-dk-outline {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    border: 1px solid var(--border-color);
+    background-color: transparent;
+    color: var(--text-main);
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: var(--transition);
+    text-align: center;
+}
+
+    .btn-dk-outline:hover {
+        background-color: var(--primary-color);
+        border-color: var(--primary-color);
+        color: white;
+        box-shadow: 0 4px 10px rgba(239, 64, 86, 0.3);
+    }
+
+/* تغییر رنگ آیکون‌ها در هدرها */
+.bi-list {
+    color: var(--primary-color);
+    margin-left: 8px;
+}
+
+/* ریسپانسیو */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 40px 0;
+        border-radius: 0 0 15px 15px;
+    }
+
+    .product-img-container {
+        height: 180px;
+    }
+}
+
+
+/* سشبببببببببببببببببببببببب */
+
+/* استایل دکمه خرید (قرمز) */
+.btn-dk-primary {
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+    /* رنگ قرمز اصلی */
+    background-color: #ef4056 !important;
+    border: 1px solid #ef4056 !important;
+    color: white !important;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+    /* استایل هاور (وقتی موس میره روش) */
+    .btn-dk-primary:hover {
+        /* رنگ قرمز تیره‌تر */
+        background-color: #d32f2f !important;
+        border-color: #d32f2f !important;
+        box-shadow: 0 4px 12px rgba(239, 64, 86, 0.4);
+        transform: translateY(-2px); /* کمی بالا رفتن دکمه */
+    }
