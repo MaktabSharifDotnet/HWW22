@@ -73,9 +73,18 @@
 
                         @if (Model.Inventory > 0)
                         {
-                            <div class="inventory-alert text-success">
-                                <i class="bi bi-check-circle-fill"></i> موجود در انبار
-                            </div>
+                            @if (Model.Inventory < 5)
+                            {
+                                <div class="inventory-alert text-danger fw-bold mb-2">
+                                    <i class="bi bi-exclamation-triangle-fill"></i> تنها @Model.Inventory عدد در انبار باقی مانده!
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="inventory-alert text-success fw-bold mb-2">
+                                    <i class="bi bi-check-circle-fill"></i> موجود در انبار (@Model.Inventory عدد)
+                                </div>
+                            }
 
                             <a asp-controller="Cart"
                                asp-action="AddToCart"
@@ -91,7 +100,9 @@
                         else
                         {
                             <div class="inventory-alert text-danger border-bottom pb-3 mb-3">
-                                <i class="bi bi-bell-slash-fill"></i> ناموجود
+                                <div class="text-danger fw-bold">
+                                    <i class="bi bi-x-circle-fill"></i> ناموجود
+                                </div>
                             </div>
                             <button class="btn-disabled" disabled>
                                 این کالا فعلا موجود نیست
