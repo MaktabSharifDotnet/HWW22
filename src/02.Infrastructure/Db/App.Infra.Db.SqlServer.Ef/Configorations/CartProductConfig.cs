@@ -33,8 +33,7 @@ namespace App.Infra.Db.SqlServer.Ef.Configorations
                 .HasDefaultValue(1); 
 
          
-            builder.Property(cp => cp.FinalPrice)
-                .HasColumnType("decimal(18,2)");
+        
 
             builder.HasQueryFilter(cp => !cp.IsDeleted);
 
