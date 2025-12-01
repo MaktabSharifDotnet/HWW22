@@ -11,14 +11,14 @@ namespace App.Domain.Services.ProductAgg
 {
     public class ProductService(IProductRepository productRepository) : IProductService
     {
-        public List<ProductDto> GetAll(int? categoryId = null)
+        public async Task<List<ProductDto>> GetAll(int? categoryId = null , CancellationToken cancellationToken = default)
         {
-           return  productRepository.GetAll(categoryId);
+           return await productRepository.GetAll(categoryId , cancellationToken);
         }
 
-        public ProductDto? GetById(int productId)
+        public async Task<ProductDto?> GetById(int productId , CancellationToken cancellationToken)
         {
-            ProductDto? productDto = productRepository.GetById(productId);
+            ProductDto? productDto =await productRepository.GetById(productId , cancellationToken);
             if (productDto==null)
             {
                 throw new Exception("همچین محصولی موجود نیست.");

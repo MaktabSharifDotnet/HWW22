@@ -10,6 +10,6 @@ namespace App.Domain.Core.Contract.CategoryAgg.Repository
 {
     public interface ICategoryRepository
     {
-         public List<CategoryDto> GetAll();
+         public Task<List<CategoryDto>> GetAll(CancellationToken cancellationToken);
     }
 }

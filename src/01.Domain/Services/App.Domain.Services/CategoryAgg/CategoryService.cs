@@ -11,9 +11,9 @@ namespace App.Domain.Services.CategoryAgg
 {
     public class CategoryService(ICategoryRepository categoryRepository) : ICategoryService
     {
-        public List<CategoryDto> GetAll()
+        public async Task<List<CategoryDto>> GetAll(CancellationToken cancellationToken)
         {
-          return categoryRepository.GetAll();
+          return await categoryRepository.GetAll(cancellationToken);
         }
     }
 }

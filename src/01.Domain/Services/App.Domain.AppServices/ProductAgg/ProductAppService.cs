@@ -11,14 +11,14 @@ namespace App.Domain.AppServices.ProductAgg
 {
     public class ProductAppService(IProductService productService) : IProductAppService
     {
-        public List<ProductDto> GetAll(int? categoryId = null)
+        public async Task<List<ProductDto>> GetAll(int? categoryId = null ,CancellationToken cancellationToken = default)
         {
-            return  productService.GetAll(categoryId);
+            return await productService.GetAll(categoryId , cancellationToken);
         }
 
-        public ProductDto? GetById(int productId)
+        public async Task<ProductDto?> GetById(int productId  , CancellationToken cancellationToken)
         {
-            return productService.GetById(productId);
+            return await productService.GetById(productId , cancellationToken);
         }
     }
 }

@@ -5,6 +5,7 @@ using App.Domain.Core.Dtos.ProductAgg;
 using App.EndPoints.MVC.HWW22.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using System.Threading.Tasks;
 
 namespace App.EndPoints.MVC.HWW22.Controllers
 {
@@ -13,11 +14,11 @@ namespace App.EndPoints.MVC.HWW22.Controllers
     {
       
 
-        public IActionResult Index(int categoryId)
+        public async Task<IActionResult> Index(int categoryId , CancellationToken cancellationToken)
         {
 
-            List<ProductDto> productDtos= productAppService.GetAll(categoryId);
-            List<CategoryDto> categoryDtos= categoryAppService.GetAll();
+            List<ProductDto> productDtos= await productAppService.GetAll(categoryId , cancellationToken);
+            List<CategoryDto> categoryDtos= await categoryAppService.GetAll(cancellationToken);
             HomeIndexViewModel homeIndexViewModel = new HomeIndexViewModel() 
             {
                CategoryDtos = categoryDtos , 

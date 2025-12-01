@@ -1,6 +1,7 @@
 ﻿using App.Domain.Core.Contract.CategoryAgg.Repository;
 using App.Domain.Core.Dtos.CategoryAgg;
 using App.Infra.Db.SqlServer.Ef.DbContextAgg;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,16 +12,16 @@ namespace App.Infra.Data.Repos.Ef.CategoryAgg
 {
     public class CategoryRepository(AppDbContext _context) : ICategoryRepository
     {
-        public List<CategoryDto> GetAll()
+        public async Task<List<CategoryDto>> GetAll(CancellationToken cancellationToken)
         {
-          return  _context.Categories
+          return await _context.Categories
                 .Select(c => new CategoryDto
                 {
                       Id = c.Id,
                       Name = c.Name,
 
                 })
-                .ToList();
+                .ToListAsync(cancellationToken);
         }
     }
 }

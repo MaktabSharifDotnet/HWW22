@@ -9,6 +9,6 @@ namespace App.Domain.Core.Contract.CategoryAgg.Service
 {
     public interface ICategoryService
     {
-        public List<CategoryDto> GetAll();
+        public Task<List<CategoryDto>> GetAll(CancellationToken cancellationToken);
     }
 }
