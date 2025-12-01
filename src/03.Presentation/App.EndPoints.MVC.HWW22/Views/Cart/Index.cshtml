@@ -1,0 +1,128 @@
+﻿@using App.Domain.Core.Dtos.CartAgg
+@model List<CartItemDto>
+
+@{
+    ViewData["Title"] = "سبد خرید";
+   
+    decimal CartTotal = Model.Sum(x => x.TotalPrice);
+}
+
+<link href="~/css/cart-style.css" rel="stylesheet" />
+@if (TempData["Warning"] != null)
+{
+    <div class="alert alert-warning alert-dismissible fade show m-3" role="alert">
+        @TempData["Warning"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger alert-dismissible fade show m-3" role="alert">
+        @TempData["Error"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade show m-3" role="alert">
+        <i class="bi bi-check-circle-fill me-2"></i> @TempData["Success"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+<div class="container cart-container">
+    <h4 class="fw-bold mb-4">سبد خرید شما</h4>
+
+    @if (Model != null && Model.Any())
+    {
+        <div class="row">
+            <div class="col-lg-8">
+                @foreach (var item in Model)
+                {
+                    <div class="cart-item">
+                        <div class="row align-items-center">
+                            <div class="col-3 col-sm-2 text-center">
+                                <img src="~/images/ProductsAgg/@(string.IsNullOrEmpty(item.Image) ? "default.png" : item.Image)"
+                                     class="cart-img" alt="@item.Title">
+                            </div>
+
+                            <div class="col-9 col-sm-5">
+                                <h6 class="item-title">@item.Title</h6>
+                                <div class="text-muted small mb-2">
+                                    <i class="bi bi-shield-check"></i> گارانتی اصالت کالا
+                                </div>
+                                <span class="item-price">@item.Price.ToString("N0") <span class="small">تومان</span></span>
+                            </div>
+
+                            <div class="col-12 col-sm-5 mt-3 mt-sm-0 d-flex justify-content-between align-items-center">
+                                <div class="quantity-control">
+                                    <a asp-action="Increase" asp-route-productId="@item.ProductId" class="btn-qty text-decoration-none">+</a>
+                                    <span class="qty-display">@item.Count</span>
+                                    @if (item.Count == 1)
+                                    {
+                                        <a asp-action="Decrease" asp-route-productId="@item.ProductId" class="btn-qty text-decoration-none">
+                                            <i class="bi bi-trash" style="font-size: 1rem;"></i>
+                                        </a>
+                                    }
+                                    else
+                                    {
+                                        <a asp-action="Decrease" asp-route-productId="@item.ProductId" class="btn-qty text-decoration-none">-</a>
+                                    }
+                                </div>
+
+                                <div class="d-none d-md-block fw-bold text-muted">
+                                    @item.TotalPrice.ToString("N0")
+                                </div>
+
+                                <a asp-action="Remove" asp-route-productId="@item.ProductId" class="btn-remove">
+                                    <i class="bi bi-x-lg"></i> حذف
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+
+            <div class="col-lg-4">
+                <div class="summary-card">
+                    <h5 class="fw-bold mb-4">خلاصه سبد</h5>
+
+                    <div class="summary-row">
+                       
+                        <span>@CartTotal.ToString("N0") تومان</span>
+                    </div>
+
+                    <div class="summary-row text-success">
+                        <span>هزینه ارسال</span>
+                        <span>رایگان</span>
+                    </div>
+
+                    <div class="total-row">
+                        <span>جمع سبد خرید</span>
+                        <span style="color: #ef4056;">@CartTotal.ToString("N0") تومان</span>
+                    </div>
+
+                    <div class="alert alert-light border mt-3 small text-muted">
+                        <i class="bi bi-info-circle"></i> کالاهای موجود در سبد خرید شما ثبت و رزرو نشده‌اند، برای نهایی کردن خرید مراحل بعدی را تکمیل کنید.
+                    </div>
+
+                    <a href="#" class="btn btn-checkout text-center d-block text-decoration-none">
+                        تایید و تکمیل سفارش
+                    </a>
+                </div>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="text-center py-5 bg-white rounded shadow-sm">
+            <div class="mb-3">
+                <i class="bi bi-basket3" style="font-size: 5rem; color: #e0e0e2;"></i>
+            </div>
+            <h5 class="fw-bold text-muted">سبد خرید شما خالی است!</h5>
+            <p class="text-muted mb-4">می‌توانید برای مشاهده محصولات بیشتر به صفحه اصلی بازگردید.</p>
+            <a asp-controller="Home" asp-action="Index" class="btn btn-outline-danger px-4 py-2">
+                بازگشت به فروشگاه
+            </a>
+        </div>
+    }
+</div>

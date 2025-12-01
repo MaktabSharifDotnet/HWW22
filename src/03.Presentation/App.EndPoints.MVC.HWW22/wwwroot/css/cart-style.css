@@ -1,0 +1,135 @@
+﻿/* wwwroot/css/cart-style.css */
+body {
+    background-color: #f5f5f9;
+}
+
+.cart-container {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+/* کارت هر محصول در سبد */
+.cart-item {
+    background: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+    .cart-item:hover {
+        border-color: #ef4056; /* قرمز در هاور */
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+.cart-img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.item-title {
+    font-weight: 700;
+    color: #3f4064;
+    margin-bottom: 5px;
+}
+
+.item-price {
+    font-weight: 700;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+/* دکمه‌های تغییر تعداد */
+.quantity-control {
+    display: flex;
+    align-items: center;
+    border: 1px solid #e0e0e2;
+    border-radius: 8px;
+    width: fit-content;
+    overflow: hidden;
+}
+
+.btn-qty {
+    background: #fff;
+    border: none;
+    padding: 5px 12px;
+    color: #ef4056;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+    .btn-qty:hover {
+        background: #f0f0f1;
+    }
+
+.qty-display {
+    padding: 0 10px;
+    font-weight: bold;
+    color: #333;
+    min-width: 30px;
+    text-align: center;
+}
+
+/* دکمه حذف */
+.btn-remove {
+    color: #ef4056;
+    background: none;
+    border: none;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+    .btn-remove:hover {
+        text-decoration: underline;
+        color: #d32f2f;
+    }
+
+/* باکس خلاصه سفارش (سمت چپ) */
+.summary-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 20px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px dashed #e0e0e2;
+    font-weight: 900;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.btn-checkout {
+    background-color: #ef4056;
+    color: white;
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    border: none;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+    .btn-checkout:hover {
+        background-color: #d32f2f;
+        box-shadow: 0 4px 10px rgba(239, 64, 86, 0.4);
+        color: white;
+    }
