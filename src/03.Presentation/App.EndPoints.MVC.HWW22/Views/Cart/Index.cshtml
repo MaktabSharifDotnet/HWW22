@@ -86,18 +86,34 @@
                 <div class="summary-card">
                     <h5 class="fw-bold mb-4">خلاصه سبد</h5>
 
-                    <div class="summary-row">
-                       
+                    <div class="cart-summary-items mb-3">
+                        @foreach (var item in Model)
+                        {
+                            <div class="d-flex justify-content-between align-items-center mb-2" style="font-size: 0.85rem; color: #666;">
+                                <div class="d-flex align-items-center" style="max-width: 65%;">
+                                    <span class="fw-bold text-dark mx-1">@item.Count</span>
+                                    <span class="small text-muted me-1">×</span>
+                                    <span class="text-truncate" title="@item.Title">@item.Title</span>
+                                </div>
+
+                                <span class="fw-bold">@item.TotalPrice.ToString("N0") <span class="small font-weight-normal">تومان</span></span>
+                            </div>
+                        }
+                    </div>
+                    <hr class="text-muted my-3" style="opacity: 0.1">
+
+                    <div class="summary-row text-muted small">
+                        <span>جمع سفارشات</span>
                         <span>@CartTotal.ToString("N0") تومان</span>
                     </div>
 
-                    <div class="summary-row text-success">
+                    <div class="summary-row text-success small">
                         <span>هزینه ارسال</span>
                         <span>رایگان</span>
                     </div>
 
-                    <div class="total-row">
-                        <span>جمع سبد خرید</span>
+                    <div class="total-row mt-2 pt-3 border-top">
+                        <span>مبلغ قابل پرداخت</span>
                         <span style="color: #ef4056;">@CartTotal.ToString("N0") تومان</span>
                     </div>
 
