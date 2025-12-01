@@ -10,5 +10,6 @@ namespace App.Domain.Core.Contract.ProductAgg.AppService
     public interface IProductAppService
     {
         public List<ProductDto> GetAll(int? categoryId = null);
+        public ProductDto? GetById(int productId);
     }
 }

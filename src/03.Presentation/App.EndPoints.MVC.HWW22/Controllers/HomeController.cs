@@ -27,6 +27,7 @@ namespace App.EndPoints.MVC.HWW22.Controllers
             return View(homeIndexViewModel);
         }
 
+       
     
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

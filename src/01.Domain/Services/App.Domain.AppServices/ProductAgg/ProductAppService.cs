@@ -15,5 +15,10 @@ namespace App.Domain.AppServices.ProductAgg
         {
             return  productService.GetAll(categoryId);
         }
+
+        public ProductDto? GetById(int productId)
+        {
+            return productService.GetById(productId);
+        }
     }
 }

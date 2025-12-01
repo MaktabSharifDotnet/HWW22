@@ -15,5 +15,15 @@ namespace App.Domain.Services.ProductAgg
         {
            return  productRepository.GetAll(categoryId);
         }
+
+        public ProductDto? GetById(int productId)
+        {
+            ProductDto? productDto = productRepository.GetById(productId);
+            if (productDto==null)
+            {
+                throw new Exception("همچین محصولی موجود نیست.");
+            }
+            return productDto;
+        }
     }
 }

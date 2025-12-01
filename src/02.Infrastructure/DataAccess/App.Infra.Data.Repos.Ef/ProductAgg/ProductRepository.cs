@@ -37,5 +37,25 @@ namespace App.Infra.Data.Repos.Ef.ProductAgg
 
                 }).ToList();
         }
+
+        public ProductDto? GetById(int productId)
+        {
+           return _context.Products
+                .Where(p=>p.Id== productId)
+                .Select(p=> new ProductDto() 
+                {
+                   Id = p.Id,
+                   Title = p.Title,
+                   CategoryName = p.Category.Name,
+                   Description = p.Description,
+                   Image = p.Image,
+                   Price = p.Price,
+                   CreatedAt= p.CreatedAt,
+                   Inventory = p.Inventory,
+                   
+                  
+                })
+                .FirstOrDefault();
+        }
     }
 }
