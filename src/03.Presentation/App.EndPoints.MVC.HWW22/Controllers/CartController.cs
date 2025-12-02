@@ -1,5 +1,8 @@
-﻿using App.Domain.Core.Contract.ProductAgg.AppService;
+﻿using App.Domain.AppServices.CartAgg;
+using App.Domain.Core.Contract.CartAgg.AddService;
+using App.Domain.Core.Contract.ProductAgg.AppService;
 using App.Domain.Core.Dtos.CartAgg;
+using App.Domain.Core.Entities;
 using App.EndPoints.MVC.HWW22.Extensions;
 
 using Microsoft.AspNetCore.Mvc;
@@ -7,71 +10,92 @@ using System.Threading.Tasks;
 
 namespace App.EndPoints.MVC.HWW22.Controllers
 {
-    public class CartController(IProductAppService productAppService) : Controller
+    public class CartController(IProductAppService productAppService , ICartAppService cartAppService) : Controller
     {
         private const string CartSessionKey = "UserCart";
 
-        public async Task<IActionResult> AddToCart(int productId ,CancellationToken cancellationToken)
+        
+        public async Task<IActionResult> AddToCart(int productId, CancellationToken cancellationToken)
         {
             try
             {
+
                 var product = await productAppService.GetById(productId, cancellationToken);
-                if (product.Inventory <= 0)
+                if (product!.Inventory <= 0)
                 {
                     TempData["Error"] = "این کالا ناموجود است.";
 
                     return RedirectToAction("Index", "Home");
 
                 }
-                List<CartItemDto> cart = HttpContext.Session.GetObject<List<CartItemDto>>(CartSessionKey)
-                                   ?? new List<CartItemDto>();
 
-                CartItemDto? existingItem = cart.FirstOrDefault(c => c.ProductId == productId);
-
-                if (existingItem != null)
+                if (LocalStorage.LoginUser!=null)
                 {
-                   
-                    if (existingItem.Count >= product.Inventory)
+                    int cartId=await cartAppService.Add(LocalStorage.LoginUser.Id, productId, cancellationToken);
+                    if (cartId<=0)
                     {
-                        TempData["Warning"] = "تعداد درخواستی بیشتر از موجودی انبار است.";
+                        TempData["Error"] = "خطایی رخ داد دوباره تلاش کنید";
                         return RedirectToAction("Index", "Home");
                     }
+                    TempData["Success"] = "کالا به سبد اضافه شد";
+                    return RedirectToAction("Index");
 
-                    existingItem.Count++;
+
                 }
-                else
+
+                else 
                 {
-                    cart.Add(new CartItemDto
+                    List<CartItemDto> cart = HttpContext.Session.GetObject<List<CartItemDto>>(CartSessionKey)
+                       ?? new List<CartItemDto>();
+
+                    CartItemDto? existingItem = cart.FirstOrDefault(c => c.ProductId == productId);
+
+                    if (existingItem != null)
                     {
-                        ProductId = product.Id,
-                        Title = product.Title,
-                        Image = product.Image,
-                        Price = product.Price,
-                        Count = 1
-                    });
+
+                        if (existingItem.Count >= product.Inventory)
+                        {
+                            TempData["Warning"] = "تعداد درخواستی بیشتر از موجودی انبار است.";
+                            return RedirectToAction("Index", "Home");
+                        }
+
+                        existingItem.Count++;
+                    }
+                    else
+                    {
+                        cart.Add(new CartItemDto
+                        {
+                            ProductId = product.Id,
+                            Title = product.Title,
+                            Image = product.Image,
+                            Price = product.Price,
+                            Count = 1
+                        });
+                    }
+
+                    HttpContext.Session.SetObject(CartSessionKey, cart);
+
+
+                    TempData["Success"] = "کالا به سبد اضافه شد";
+                    return RedirectToAction("Index");
+
                 }
-
-                HttpContext.Session.SetObject(CartSessionKey, cart);
-
-                
-                TempData["Success"] = "کالا به سبد اضافه شد";
-                return RedirectToAction("Index");
 
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
                 TempData["Warning"] = ex.Message;
-                return RedirectToAction("Index" , "Home");
+                return RedirectToAction("Index", "Home");
             }
-          
+
         }
 
-        public async Task<IActionResult> Increase(int productId , CancellationToken cancellationToken)
+        public async Task<IActionResult> Increase(int productId, CancellationToken cancellationToken)
         {
 
             try
             {
-                
+
                 var product = await productAppService.GetById(productId, cancellationToken);
 
 
@@ -95,13 +119,13 @@ namespace App.EndPoints.MVC.HWW22.Controllers
                 }
                 return RedirectToAction("Index");
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
-                TempData["Warning"] =ex.Message;
-                return RedirectToAction("Index" , "Home");
+                TempData["Warning"] = ex.Message;
+                return RedirectToAction("Index", "Home");
             }
 
-         
+
         }
 
         public IActionResult Decrease(int productId)
@@ -113,7 +137,7 @@ namespace App.EndPoints.MVC.HWW22.Controllers
                 if (item != null)
                 {
                     item.Count--;
-                    if (item.Count == 0) 
+                    if (item.Count == 0)
                     { cart.Remove(item); }
                     HttpContext.Session.SetObject(CartSessionKey, cart);
                 }
@@ -136,11 +160,25 @@ namespace App.EndPoints.MVC.HWW22.Controllers
             return RedirectToAction("Index");
         }
 
-        public IActionResult Index()
+
+        public async Task<IActionResult> Index(CancellationToken cancellationToken)
         {
-            var cart = HttpContext.Session.GetObject<List<CartItemDto>>(CartSessionKey)
-                       ?? new List<CartItemDto>();
-            return View(cart);
+            List<CartItemDto> cartItems = new();
+
+          
+            if (LocalStorage.LoginUser != null)
+            {
+                
+                cartItems = await cartAppService.GetUserCartItems(LocalStorage.LoginUser.Id, cancellationToken);
+            }
+            else
+            {
+                
+                cartItems = HttpContext.Session.GetObject<List<CartItemDto>>(CartSessionKey)
+                            ?? new List<CartItemDto>();
+            }
+
+            return View(cartItems);
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using App.Domain.Core.Contract.CartAgg.Repository;
+using App.Domain.Core.Dtos.CartAgg;
 using App.Domain.Core.Entities;
 using App.Infra.Db.SqlServer.Ef.DbContextAgg;
 using Microsoft.EntityFrameworkCore;
@@ -18,18 +19,22 @@ namespace App.Infra.Data.Repos.Ef.CartAgg
         {
            
             return await _context.Carts
-                         .Include(c => c.CartProducts)                   
+                         .Include(c => c.CartProducts)
+                         .ThenInclude(cp => cp.Product)
                          .FirstOrDefaultAsync(c => c.UserId == userId, cancellationToken);
         }
 
-        public async Task Add(Cart cart, CancellationToken cancellationToken)
+        public async Task<int> Add(Cart cart, CancellationToken cancellationToken)
         {
             await _context.Carts.AddAsync(cart, cancellationToken);
+            return cart.Id;
         }
 
         public async Task<int> Save(CancellationToken cancellationToken)
         {
           return  await _context.SaveChangesAsync(cancellationToken);
         }
+
+ 
     }
 }
