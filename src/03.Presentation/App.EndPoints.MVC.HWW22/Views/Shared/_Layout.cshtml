@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using App.Domain.Core.Entities
+
+<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
     <meta charset="utf-8" />
@@ -31,19 +33,32 @@
                         <li class="nav-item">
                             <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">خانه</a>
                         </li>
-                      
                     </ul>
 
-                    <div class="auth-buttons ms-auto mt-2 mt-sm-0">
+                    <div class="auth-buttons ms-auto mt-2 mt-sm-0 d-flex align-items-center">
 
                         <a href="#" class="btn-cart" title="سبد خرید">
                             <i class="bi bi-cart3"></i>
                             <span class="cart-badge">0</span>
                         </a>
 
-                        <a class="btn-login" asp-controller="Account" asp-action="Login">ورود</a>
+                        @if (LocalStorage.LoginUser != null)
+                        {
+                            <div class="text-white me-3 fw-bold">
+                                <i class="bi bi-person-circle h5 align-middle mb-0"></i>
+                                <span class="align-middle">@LocalStorage.LoginUser.Username</span>
+                            </div>
 
-                        <a class="btn-register" asp-controller="Account" asp-action="Register">ثبت نام</a>
+                            <a class="btn-login" asp-controller="Account" asp-action="Logout">
+                                <i class="bi bi-box-arrow-left"></i> خروج
+                            </a>
+                        }
+                        else
+                        {
+                            <a class="btn-login" asp-controller="Account" asp-action="Login">ورود</a>
+                            <a class="btn-register" asp-controller="Account" asp-action="Register">ثبت نام</a>
+                        }
+
                     </div>
                 </div>
             </div>
