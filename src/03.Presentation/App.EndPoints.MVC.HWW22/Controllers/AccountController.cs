@@ -1,6 +1,7 @@
 ﻿using App.Domain.Core.Contract.CartAgg.AddService;
 using App.Domain.Core.Contract.UserAgg.AppService;
 using App.Domain.Core.Dtos.CartAgg;
+using App.Domain.Core.Entities;
 using App.EndPoints.MVC.HWW22.Extensions;
 using App.EndPoints.MVC.HWW22.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -54,10 +55,13 @@ namespace App.EndPoints.MVC.HWW22.Controllers
                 TempData["Error"] = ex.Message;
                 return View(loginViewModel);
             }
-            
-           
 
+        }
 
+        public IActionResult LogOut() 
+        {
+            LocalStorage.LoginUser= null;
+            return RedirectToAction("Login");
         }
     }
 }

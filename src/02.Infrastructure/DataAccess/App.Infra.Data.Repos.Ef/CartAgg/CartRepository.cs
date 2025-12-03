@@ -23,10 +23,18 @@ namespace App.Infra.Data.Repos.Ef.CartAgg
                          .ThenInclude(cp => cp.Product)
                          .FirstOrDefaultAsync(c => c.UserId == userId, cancellationToken);
         }
+        public async Task<CartProduct?> GetCartProductIncludingDeleted(int cartId, int productId, CancellationToken cancellationToken)
+        {
+            
+            return await _context.CartProducts
+                .IgnoreQueryFilters()
+                .FirstOrDefaultAsync(cp => cp.CartId == cartId && cp.ProductId == productId, cancellationToken);
+        }
 
         public async Task<int> Add(Cart cart, CancellationToken cancellationToken)
         {
             await _context.Carts.AddAsync(cart, cancellationToken);
+          
             return cart.Id;
         }
 
@@ -35,6 +43,10 @@ namespace App.Infra.Data.Repos.Ef.CartAgg
           return  await _context.SaveChangesAsync(cancellationToken);
         }
 
- 
+     
+
+       
+
+
     }
 }
