@@ -38,15 +38,21 @@ namespace App.Infra.Data.Repos.Ef.CartAgg
             return cart.Id;
         }
 
+        public async Task Remove(int cartId, CancellationToken cancellationToken)
+        {
+            var cart=await _context.Carts.FirstOrDefaultAsync(c=>c.Id==cartId, cancellationToken);
+            if (cart==null)
+            {
+                throw new Exception("همچین سبد خریدی موجود نیست.");
+            }
+            cart.IsDeleted=true;
+        }
+
         public async Task<int> Save(CancellationToken cancellationToken)
         {
           return  await _context.SaveChangesAsync(cancellationToken);
         }
 
-     
-
-       
-
-
+      
     }
 }

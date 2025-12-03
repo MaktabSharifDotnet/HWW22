@@ -1,0 +1,150 @@
+﻿/* wwwroot/css/checkout-style.css */
+
+:root {
+    --primary-red: #ef4056;
+    --success-green: #00a651;
+    --bg-gray: #f5f5f9;
+    --text-dark: #232933;
+}
+
+body {
+    background-color: var(--bg-gray);
+    font-family: 'Vazir', Tahoma, sans-serif;
+}
+
+.checkout-result-container {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 15px;
+}
+
+.result-card {
+    background: #fff;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    text-align: center;
+    padding: 40px 30px;
+    border-top: 5px solid transparent;
+}
+
+/* حالت موفقیت */
+.card-success {
+    border-top-color: var(--success-green);
+}
+
+.icon-box-success {
+    width: 80px;
+    height: 80px;
+    background-color: rgba(0, 166, 81, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px auto;
+    color: var(--success-green);
+    font-size: 3rem;
+    animation: pulse-green 2s infinite;
+}
+
+/* حالت خطا */
+.card-error {
+    border-top-color: var(--primary-red);
+}
+
+.icon-box-error {
+    width: 80px;
+    height: 80px;
+    background-color: rgba(239, 64, 86, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px auto;
+    color: var(--primary-red);
+    font-size: 3rem;
+    animation: pulse-red 2s infinite;
+}
+
+/* متن‌ها */
+.result-title {
+    font-weight: 800;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+}
+
+.result-message {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    font-size: 0.95rem;
+}
+
+/* دکمه‌ها */
+.btn-checkout-home {
+    background-color: var(--primary-red);
+    color: white;
+    border-radius: 8px;
+    padding: 12px 30px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+    display: inline-block;
+    width: 100%;
+}
+
+    .btn-checkout-home:hover {
+        background-color: #d32f2f;
+        color: white;
+        box-shadow: 0 5px 15px rgba(239, 64, 86, 0.3);
+    }
+
+.btn-outline-back {
+    border: 1px solid #ddd;
+    color: #666;
+    border-radius: 8px;
+    padding: 12px 30px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+    display: inline-block;
+    width: 100%;
+    margin-top: 10px;
+}
+
+    .btn-outline-back:hover {
+        background-color: #f0f0f1;
+        color: #333;
+    }
+
+/* انیمیشن‌ها */
+@keyframes pulse-green {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 166, 81, 0.4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 15px rgba(0, 166, 81, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 166, 81, 0);
+    }
+}
+
+@keyframes pulse-red {
+    0% {
+        box-shadow: 0 0 0 0 rgba(239, 64, 86, 0.4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 15px rgba(239, 64, 86, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(239, 64, 86, 0);
+    }
+}

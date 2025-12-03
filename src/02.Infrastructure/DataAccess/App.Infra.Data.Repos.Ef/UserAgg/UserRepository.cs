@@ -12,9 +12,23 @@ namespace App.Infra.Data.Repos.Ef.UserAgg
 {
     public class UserRepository(AppDbContext _context) : IUserRepository
     {
+        public async Task<User?> GetById(int userId, CancellationToken cancellationToken)
+        {
+          return await _context.Users
+                .Include(u=>u.Carts)
+                .ThenInclude(c=>c.CartProducts)
+                .ThenInclude(cp=>cp.Product)
+                .FirstOrDefaultAsync(u=>u.Id==userId);
+        }
+
         public async Task<User?> GetByUsername(string username, CancellationToken cancellationToken)
         {
           return await _context.Users.FirstOrDefaultAsync(u => u.Username == username , cancellationToken);
+        }
+
+        public async Task<int> Save(CancellationToken cancellationToken)
+        {
+          return await _context.SaveChangesAsync(cancellationToken);
         }
     }
 }

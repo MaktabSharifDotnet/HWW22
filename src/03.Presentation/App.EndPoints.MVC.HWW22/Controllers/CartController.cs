@@ -212,12 +212,18 @@ namespace App.EndPoints.MVC.HWW22.Controllers
         public async Task<IActionResult> Index(CancellationToken cancellationToken)
         {
             List<CartItemDto> cartItems = new();
+            ViewBag.UserId = 0;
+            ViewBag.CartId = 0;
 
-          
             if (LocalStorage.LoginUser != null)
             {
-                
+                ViewBag.UserId = LocalStorage.LoginUser.Id;
                 cartItems = await cartAppService.GetUserCartItems(LocalStorage.LoginUser.Id, cancellationToken);
+                if (cartItems.Any()) 
+                {
+                    ViewBag.CartId = cartItems.First().CartId;
+
+                }
             }
             else
             {
@@ -225,7 +231,7 @@ namespace App.EndPoints.MVC.HWW22.Controllers
                 cartItems = HttpContext.Session.GetObject<List<CartItemDto>>(CartSessionKey)
                             ?? new List<CartItemDto>();
             }
-
+            
             return View(cartItems);
         }
     }

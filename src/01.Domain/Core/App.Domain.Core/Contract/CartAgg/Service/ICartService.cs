@@ -13,7 +13,9 @@ namespace App.Domain.Core.Contract.CartAgg.Service
         public  Task<int> MergeCart(int userId, List<CartItemDto> sessionItems, CancellationToken cancellationToken);
         public Task<List<CartItemDto>> GetUserCartItems(int userId, CancellationToken cancellationToken);
         public Task<int> Add(int userId,int productId, CancellationToken cancellationToken);
-        public Task<int> Remove(int userId,int productId, CancellationToken cancellationToken);
+        public Task<int> RemoveProduct(int userId,int productId, CancellationToken cancellationToken);
         public  Task<int> DecreaseItem(int userId, int productId, CancellationToken cancellationToken);
+
+        public Task RemoveCart(int cartId, CancellationToken cancellationToken);
     }
 }

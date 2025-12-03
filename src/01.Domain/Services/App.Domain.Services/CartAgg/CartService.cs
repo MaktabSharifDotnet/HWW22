@@ -93,6 +93,7 @@ namespace App.Domain.Services.CartAgg
             }
           return userCartDb!.CartProducts.Select(c=>new CartItemDto 
                   {
+                       CartId = c.CartId,
                        ProductId = c.ProductId,
                        Title = c.Product.Title,
                        Image = c.Product.Image,
@@ -166,7 +167,7 @@ namespace App.Domain.Services.CartAgg
             return await _cartRepository.Save(cancellationToken);
         }
 
-        public async Task<int> Remove(int userId, int productId, CancellationToken cancellationToken)
+        public async Task<int> RemoveProduct(int userId, int productId, CancellationToken cancellationToken)
         {
             var userCartDb=await _cartRepository.GetByUserId(userId, cancellationToken);
             if (userCartDb==null)
@@ -186,5 +187,12 @@ namespace App.Domain.Services.CartAgg
             return await _cartRepository.Save(cancellationToken);
 
         }
+
+        public async Task RemoveCart(int cartId , CancellationToken cancellationToken) 
+        {
+            await  _cartRepository.Remove(cartId, cancellationToken);
+        }
+
+      
     }
 }

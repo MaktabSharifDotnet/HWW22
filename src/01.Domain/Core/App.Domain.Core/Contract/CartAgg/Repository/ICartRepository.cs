@@ -19,6 +19,7 @@ namespace App.Domain.Core.Contract.CartAgg.Repository
 
         public  Task<int> Save(CancellationToken cancellationToken);
         public Task<CartProduct?> GetCartProductIncludingDeleted(int cartId, int productId, CancellationToken cancellationToken);
+        public Task Remove(int cartId, CancellationToken cancellationToken);
 
 
 

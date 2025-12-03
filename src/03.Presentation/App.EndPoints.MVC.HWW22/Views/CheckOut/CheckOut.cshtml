@@ -1,0 +1,71 @@
+﻿@{
+    ViewData["Title"] = "نتیجه پرداخت";
+  
+}
+
+<link href="~/css/checkout-style.css" rel="stylesheet" />
+
+<div class="checkout-result-container">
+
+    @if (TempData["Success"] != null)
+    {
+        <div class="result-card card-success">
+            <div class="icon-box-success">
+                <i class="bi bi-check-lg"></i>
+            </div>
+
+            <h2 class="result-title">سفارش با موفقیت ثبت شد!</h2>
+
+            <p class="result-message">
+                از خرید شما سپاسگزاریم. سفارش شما پردازش شده و به زودی ارسال خواهد شد.
+                <br>
+                @if (ViewBag.OrderId != null)
+                {
+                    <span class="badge bg-light text-dark border mt-2 p-2">
+                        کد پیگیری: @ViewBag.OrderId
+                    </span>
+                }
+            </p>
+
+            <div class="alert alert-success bg-opacity-10 border-0 small text-success">
+                @TempData["Success"]
+            </div>
+
+            <div class="row g-2 mt-4">
+                <div class="col-12">
+                    <a asp-controller="Home" asp-action="Index" class="btn-checkout-home">
+                        بازگشت به فروشگاه
+                    </a>
+                </div>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="result-card card-error">
+            <div class="icon-box-error">
+                <i class="bi bi-x-lg"></i>
+            </div>
+
+            <h2 class="result-title">خطا در ثبت سفارش</h2>
+
+            
+
+            <div asp-validation-summary="All" class="alert alert-danger text-start small"></div>
+
+            <div class="row g-2 mt-4">
+                <div class="col-12">
+                    <a asp-controller="Cart" asp-action="Index" class="btn-checkout-home">
+                        بازگشت به سبد خرید
+                    </a>
+                </div>
+                <div class="col-12">
+                    <a asp-controller="Home" asp-action="Index" class="btn-outline-back">
+                        انصراف
+                    </a>
+                </div>
+            </div>
+        </div>
+    }
+
+</div>

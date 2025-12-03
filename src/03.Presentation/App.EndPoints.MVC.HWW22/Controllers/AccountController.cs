@@ -60,7 +60,7 @@ namespace App.EndPoints.MVC.HWW22.Controllers
 
         public IActionResult LogOut() 
         {
-            LocalStorage.LoginUser= null;
+            userAppService.LogOut();
             return RedirectToAction("Login");
         }
     }

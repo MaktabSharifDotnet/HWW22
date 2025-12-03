@@ -66,7 +66,7 @@
                                     }
                                     else
                                     {
-                                        <a asp-action="Decrease" asp-route-productId="@item.ProductId" class="btn-qty text-decoration-none">-</a>
+                                        <a asp-action="Decrease" asp-route-productId="@item.ProductId" asp-route-cartId="" class="btn-qty text-decoration-none">-</a>
                                     }
                                 </div>
 
@@ -122,7 +122,7 @@
                         <i class="bi bi-info-circle"></i> کالاهای موجود در سبد خرید شما ثبت و رزرو نشده‌اند، برای نهایی کردن خرید مراحل بعدی را تکمیل کنید.
                     </div>
 
-                    <a href="#" class="btn btn-checkout text-center d-block text-decoration-none">
+                    <a asp-action="CheckOut" asp-controller="CheckOut" asp-route-userId="@ViewBag.UserId" asp-route-cartId="@ViewBag.CartId" class="btn btn-checkout text-center d-block text-decoration-none">
                         تایید و تکمیل سفارش
                     </a>
                 </div>

@@ -1,5 +1,7 @@
 ﻿using App.Domain.Core.Contract.CartAgg.AddService;
 using App.Domain.Core.Contract.CartAgg.Service;
+using App.Domain.Core.Contract.OrderAgg.AppService;
+using App.Domain.Core.Contract.UserAgg.Service;
 using App.Domain.Core.Dtos.CartAgg;
 using System;
 using System.Collections.Generic;
@@ -10,6 +12,7 @@ using System.Threading.Tasks;
 namespace App.Domain.AppServices.CartAgg
 {
     public class CartAppService(ICartService _cartService) : ICartAppService
+
     {
         public Task<int> Add(int userId, int productId, CancellationToken cancellationToken)
         {
@@ -33,9 +36,8 @@ namespace App.Domain.AppServices.CartAgg
 
         public Task<int> Remove(int userId, int productId, CancellationToken cancellationToken)
         {
-          return _cartService.Remove(userId, productId, cancellationToken);
+          return _cartService.RemoveProduct(userId, productId, cancellationToken);
         }
-
 
     }
 }

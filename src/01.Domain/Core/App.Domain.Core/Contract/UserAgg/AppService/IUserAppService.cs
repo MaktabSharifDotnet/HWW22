@@ -9,5 +9,7 @@ namespace App.Domain.Core.Contract.UserAgg.AppService
     public interface IUserAppService
     {
         public  Task<int> Login(string username, string password, CancellationToken cancellationToken);
+        public void LogOut();
+       
     }
 }
