@@ -19,7 +19,7 @@ namespace App.Domain.Services.CartAgg
             if (userCartDb==null)
             {
                 userCartDb  = new Cart() { UserId = userId  };
-                int cartId=await _cartRepository.Add(userCartDb , cancellationToken);
+               await _cartRepository.Add(userCartDb , cancellationToken);
               
             }
 
@@ -60,7 +60,7 @@ namespace App.Domain.Services.CartAgg
             if (userCartDb == null)
             {
                 userCartDb = new Cart() { UserId = userId };
-                int cartId = await _cartRepository.Add(userCartDb, cancellationToken);
+                 await _cartRepository.Add(userCartDb, cancellationToken);
 
             }
 
@@ -173,7 +173,7 @@ namespace App.Domain.Services.CartAgg
             if (userCartDb==null)
             {
                 userCartDb = new Cart() { UserId = userId };
-                int cartId = await _cartRepository.Add(userCartDb, cancellationToken);
+                await _cartRepository.Add(userCartDb, cancellationToken);
             }
 
             var cartProduct= userCartDb.CartProducts.FirstOrDefault(cp => cp.ProductId == productId);

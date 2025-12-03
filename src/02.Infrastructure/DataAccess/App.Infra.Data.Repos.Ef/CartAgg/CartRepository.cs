@@ -31,11 +31,11 @@ namespace App.Infra.Data.Repos.Ef.CartAgg
                 .FirstOrDefaultAsync(cp => cp.CartId == cartId && cp.ProductId == productId, cancellationToken);
         }
 
-        public async Task<int> Add(Cart cart, CancellationToken cancellationToken)
+        public async Task Add(Cart cart, CancellationToken cancellationToken)
         {
             await _context.Carts.AddAsync(cart, cancellationToken);
           
-            return cart.Id;
+            
         }
 
         public async Task Remove(int cartId, CancellationToken cancellationToken)

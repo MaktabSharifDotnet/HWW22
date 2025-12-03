@@ -14,7 +14,7 @@ namespace App.Domain.Core.Contract.CartAgg.Repository
         public  Task<Cart?> GetByUserId(int userId, CancellationToken cancellationToken);
 
 
-        public Task<int> Add(Cart cart, CancellationToken cancellationToken);
+        public Task Add(Cart cart, CancellationToken cancellationToken);
 
 
         public  Task<int> Save(CancellationToken cancellationToken);
