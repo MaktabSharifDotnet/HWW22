@@ -9,7 +9,7 @@ namespace App.Domain.Core.Contract.ProductAgg.Repository
 {
     public interface IProductRepository
     {
-        public Task<List<ProductDto>> GetAll(int? categoryId, CancellationToken cancellationToken = default);
+        public  Task<ProductListDto> GetAll(int pageNumber, int pageSize, int? categoryId = null, CancellationToken cancellationToken = default);
         Task<ProductDto?> GetById(int productId, CancellationToken cancellationToken );
     }
 }

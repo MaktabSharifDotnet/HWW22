@@ -1,5 +1,6 @@
 ﻿using App.Domain.Core.Contract.ProductAgg.Repository;
 using App.Domain.Core.Dtos.ProductAgg;
+using App.Domain.Core.Entities;
 using App.Infra.Db.SqlServer.Ef.DbContextAgg;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -14,7 +15,7 @@ namespace App.Infra.Data.Repos.Ef.ProductAgg
     public class ProductRepository(AppDbContext _context) : IProductRepository
     {
 
-        public async Task<List<ProductDto>> GetAll(int? categoryId = null, CancellationToken cancellationToken = default )
+        public async Task<ProductListDto> GetAll(int pageNumber,int pageSize  ,int? categoryId = null, CancellationToken cancellationToken = default )
         {
             var query = _context.Products.AsQueryable();
 
@@ -25,8 +26,10 @@ namespace App.Infra.Data.Repos.Ef.ProductAgg
 
             query = query.OrderByDescending(p => p.CreatedAt);
 
-          
-            return await query
+            var totalCount = await query.CountAsync(cancellationToken);
+            var products = await query
+                .Skip((pageNumber - 1) * pageSize) 
+                .Take(pageSize)
                 .Select(p => new ProductDto()
                 {
                     Id = p.Id,
@@ -38,7 +41,15 @@ namespace App.Infra.Data.Repos.Ef.ProductAgg
                     Price = p.Price,
                     Inventory = p.Inventory,
                 })
-                .ToListAsync(cancellationToken); 
+                .ToListAsync(cancellationToken);
+
+            return new ProductListDto
+            {
+                Products = products,
+                PageNumber = pageNumber,
+                PageSize = pageSize,
+                TotalCount = totalCount
+            };
         }
 
         public async Task<ProductDto?> GetById(int productId , CancellationToken cancellationToken)

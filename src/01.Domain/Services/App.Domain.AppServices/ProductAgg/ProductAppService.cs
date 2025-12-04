@@ -11,9 +11,9 @@ namespace App.Domain.AppServices.ProductAgg
 {
     public class ProductAppService(IProductService productService) : IProductAppService
     {
-        public async Task<List<ProductDto>> GetAll(int? categoryId = null ,CancellationToken cancellationToken = default)
+        public async Task<ProductListDto> GetAll(int pageNumber, int pageSize, int? categoryId = null, CancellationToken cancellationToken = default)
         {
-            return await productService.GetAll(categoryId , cancellationToken);
+            return await productService.GetAll(pageNumber, pageSize, categoryId, cancellationToken);
         }
 
         public async Task<ProductDto?> GetById(int productId  , CancellationToken cancellationToken)

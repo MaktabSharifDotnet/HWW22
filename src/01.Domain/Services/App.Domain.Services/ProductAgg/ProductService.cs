@@ -11,9 +11,11 @@ namespace App.Domain.Services.ProductAgg
 {
     public class ProductService(IProductRepository productRepository) : IProductService
     {
-        public async Task<List<ProductDto>> GetAll(int? categoryId = null , CancellationToken cancellationToken = default)
+        
+
+        public async Task<ProductListDto> GetAll(int pageNumber, int pageSize, int? categoryId = null, CancellationToken cancellationToken = default)
         {
-           return await productRepository.GetAll(categoryId , cancellationToken);
+            return await productRepository.GetAll(pageNumber, pageSize, categoryId, cancellationToken);
         }
 
         public async Task<ProductDto?> GetById(int productId , CancellationToken cancellationToken)
