@@ -25,7 +25,7 @@ namespace App.EndPoints.MVC.HWW22.Controllers
                 }
 
                 TempData["Success"] = "سفارش شما با موفقیت ثبت شد";
-                ViewBag.OrderId = result;
+               
                 return View();
             }
             catch (Exception ex) 
