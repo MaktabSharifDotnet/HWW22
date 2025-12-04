@@ -14,34 +14,52 @@ namespace App.Domain.Services.CartAgg
     {
         public async Task<int> Add(int userId, int productId, CancellationToken cancellationToken)
         {
-           Cart? userCartDb= await _cartRepository.GetByUserId(userId , cancellationToken);
+           
+            var userCartDb = await _cartRepository.GetByUserId(userId, cancellationToken);
 
-            if (userCartDb==null)
+         
+            if (userCartDb == null)
             {
-                userCartDb  = new Cart() { UserId = userId  };
-               await _cartRepository.Add(userCartDb , cancellationToken);
-              
+                userCartDb = new Cart
+                {
+                    UserId = userId,   
+                  
+                };
+
+                userCartDb.CartProducts.Add(new CartProduct
+                {
+                    ProductId = productId,
+                    Count = 1,
+                    IsDeleted = false
+                   
+                });
+
+                await _cartRepository.Add(userCartDb, cancellationToken);
+                return await _cartRepository.Save(cancellationToken);
             }
 
-            CartProduct? cartProduct= userCartDb.CartProducts.FirstOrDefault(c=>c.ProductId==productId);
-            if (cartProduct != null) 
+           
+            var cartProduct = userCartDb.CartProducts.FirstOrDefault(c => c.ProductId == productId);
+
+            if (cartProduct != null)
             {
+                
                 cartProduct.Count++;
             }
-            else 
+            else
             {
+              
                 var deletedItem = await _cartRepository.GetCartProductIncludingDeleted(userCartDb.Id, productId, cancellationToken);
 
                 if (deletedItem != null)
                 {
                     
-                    deletedItem.IsDeleted = false; 
-                    deletedItem.Count = 1;         
-
-              
+                    deletedItem.IsDeleted = false;
+                    deletedItem.Count = 1; 
                 }
                 else
                 {
+                    
                     userCartDb.CartProducts.Add(new CartProduct
                     {
                         ProductId = productId,
@@ -49,9 +67,9 @@ namespace App.Domain.Services.CartAgg
                         IsDeleted = false
                     });
                 }
-
             }
-          return  await _cartRepository.Save(cancellationToken);
+
+            return await _cartRepository.Save(cancellationToken);
         }
 
         public async Task<int> DecreaseItem(int userId, int productId, CancellationToken cancellationToken)
@@ -59,8 +77,7 @@ namespace App.Domain.Services.CartAgg
             var userCartDb= await _cartRepository.GetByUserId(userId , cancellationToken);
             if (userCartDb == null)
             {
-                userCartDb = new Cart() { UserId = userId };
-                 await _cartRepository.Add(userCartDb, cancellationToken);
+                throw new Exception("سبد خرید شما خالی است.");
 
             }
 
@@ -91,47 +108,58 @@ namespace App.Domain.Services.CartAgg
             {
                 return new List<CartItemDto>();
             }
-          return userCartDb!.CartProducts.Select(c=>new CartItemDto 
-                  {
-                       CartId = c.CartId,
-                       ProductId = c.ProductId,
-                       Title = c.Product.Title,
-                       Image = c.Product.Image,
-                       Price = c.Product.Price,
-                       Count = c.Count  
-                  
-                  }).ToList();
+           return userCartDb!.CartProducts.Select(c=>new CartItemDto 
+           {
+                CartId = c.CartId,
+                ProductId = c.ProductId,
+                Title = c.Product.Title,
+                Image = c.Product.Image,
+                Price = c.Product.Price,
+                Count = c.Count  
+           
+           }).ToList();
         }
 
         public async Task<int> MergeCart(int userId, List<CartItemDto> sessionItems, CancellationToken cancellationToken)
         {
-            
             var cartDb = await _cartRepository.GetByUserId(userId, cancellationToken);
 
-         
+          
             if (cartDb == null)
             {
+                
                 cartDb = new Cart
                 {
                     UserId = userId,
-                    
+                    CartProducts = new List<CartProduct>()
                 };
-                await _cartRepository.Add(cartDb, cancellationToken);
+
+              
+                foreach (var sessionItem in sessionItems)
+                {
+                    cartDb.CartProducts.Add(new CartProduct
+                    {
+                        ProductId = sessionItem.ProductId,
+                        Count = sessionItem.Count,
+                        IsDeleted = false
+                      
+                    });
+                }
 
              
-                await _cartRepository.Save(cancellationToken);
+                await _cartRepository.Add(cartDb, cancellationToken);
+                return await _cartRepository.Save(cancellationToken);
             }
 
-            
+     
             foreach (var sessionItem in sessionItems)
             {
-                
+             
                 var existingProduct = cartDb.CartProducts
                     .FirstOrDefault(cp => cp.ProductId == sessionItem.ProductId);
 
                 if (existingProduct != null)
                 {
-                   
                     existingProduct.Count += sessionItem.Count;
                 }
                 else
@@ -141,17 +169,13 @@ namespace App.Domain.Services.CartAgg
 
                     if (deletedProduct != null)
                     {
-                       
+                      
                         deletedProduct.IsDeleted = false;
-
-
-                        deletedProduct.Count = sessionItem.Count;
-
-
+                        deletedProduct.Count = sessionItem.Count; 
                     }
                     else
                     {
-                        
+                      
                         cartDb.CartProducts.Add(new CartProduct
                         {
                             ProductId = sessionItem.ProductId,
@@ -163,7 +187,6 @@ namespace App.Domain.Services.CartAgg
                 }
             }
 
-         
             return await _cartRepository.Save(cancellationToken);
         }
 
@@ -172,8 +195,7 @@ namespace App.Domain.Services.CartAgg
             var userCartDb=await _cartRepository.GetByUserId(userId, cancellationToken);
             if (userCartDb==null)
             {
-                userCartDb = new Cart() { UserId = userId };
-                await _cartRepository.Add(userCartDb, cancellationToken);
+                throw new Exception("سبد خرید شما خالی است.");
             }
 
             var cartProduct= userCartDb.CartProducts.FirstOrDefault(cp => cp.ProductId == productId);
