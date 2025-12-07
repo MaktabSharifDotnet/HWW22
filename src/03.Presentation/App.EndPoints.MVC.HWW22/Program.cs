@@ -32,6 +32,7 @@ using App.Infra.Db.SqlServer.Ef.DbContextAgg;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
 using System;
+using UI_MVC.Middlwares;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -92,6 +93,8 @@ app.UseHttpsRedirection();
 
 
 app.UseStaticFiles();
+
+app.UseMiddleware<RequestLoggingMiddleware>();
 
 app.UseRouting();
 
