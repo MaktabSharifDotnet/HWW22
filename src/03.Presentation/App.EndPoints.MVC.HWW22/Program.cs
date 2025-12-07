@@ -30,6 +30,7 @@ using App.Infra.Data.Repos.Ef.ProductAgg;
 using App.Infra.Data.Repos.Ef.UserAgg;
 using App.Infra.Db.SqlServer.Ef.DbContextAgg;
 using Microsoft.EntityFrameworkCore;
+using Serilog;
 using System;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -68,6 +69,15 @@ builder.Services.AddSession(options =>
     options.Cookie.HttpOnly = true;
     options.Cookie.IsEssential = true;
 });
+
+
+builder.Host.UseSerilog((context, configuration) =>
+{
+  
+    configuration.ReadFrom.Configuration(context.Configuration);
+});
+
+
 
 var app = builder.Build();
 
