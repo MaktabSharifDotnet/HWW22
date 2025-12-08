@@ -15,5 +15,8 @@ namespace App.Domain.Core.Contract.CategoryAgg.Repository
          public Task<bool> IsExistCategoryByName(string name, CancellationToken cancellationToken);
 
         public Task<int> Add(CategoryDto categoryDto, CancellationToken cancellationToken);
+
+        public Task<Result<CategoryDto>> GetById(int categryId , CancellationToken cancellationToken);
+        public Task<Result<int>> Edit(CategoryDto categoryDto , CancellationToken cancellationToken);
     }
 }

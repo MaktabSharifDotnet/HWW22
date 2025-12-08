@@ -17,9 +17,19 @@ namespace App.Domain.AppServices.CategoryAgg
             return  await _categoryService.Create(categoryDto, cancellationToken);
         }
 
+        public async Task<Result<int>> Edit(CategoryDto categoryDto, CancellationToken cancellationToken)
+        {
+            return await _categoryService.Edit(categoryDto, cancellationToken);
+        }
+
         public async Task<List<CategoryDto>> GetAll(CancellationToken cancellationToken)
         {
             return await _categoryService.GetAll(cancellationToken);
+        }
+
+        public Task<Result<CategoryDto>> GetById(int categryId, CancellationToken cancellationToken)
+        {
+           return _categoryService.GetById(categryId, cancellationToken);
         }
     }
 }

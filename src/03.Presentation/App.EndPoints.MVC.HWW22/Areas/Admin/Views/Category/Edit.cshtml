@@ -1,0 +1,49 @@
+﻿@using App.Domain.Core.Dtos.CategoryAgg
+@model CategoryDto
+
+@{
+    ViewData["Title"] = "ویرایش دسته‌بندی";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/category-edit.css" />
+}
+
+<div class="edit-category-card">
+    <div class="form-header">
+        <i class="bi bi-pencil-square fs-4 text-warning"></i>
+        <h4>ویرایش دسته‌بندی "@Model.Name"</h4>
+    </div>
+
+   
+    <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+    <form asp-action="Edit" method="post">
+
+        <input type="hidden" asp-for="Id" />
+
+        <div class="mb-3">
+            <label asp-for="Name" class="form-label">نام دسته‌بندی</label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Description" class="form-label">توضیحات</label>
+            <textarea asp-for="Description" class="form-control" rows="4"></textarea>
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+
+        <div class="d-flex gap-2 mt-4">
+            <button type="submit" class="btn btn-warning-custom">
+                <i class="bi bi-save"></i> ذخیره تغییرات
+            </button>
+            <a asp-action="Index" class="btn btn-outline-secondary">انصراف</a>
+        </div>
+
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -26,6 +26,22 @@ namespace App.Infra.Data.Repos.Ef.CategoryAgg
             return  category.Id;
         }
 
+        public async Task<Result<int>> Edit(CategoryDto categoryDto, CancellationToken cancellationToken)
+        {
+
+            Category? category=await _context.Categories.FirstOrDefaultAsync(c=>c.Id== categoryDto.Id , cancellationToken);
+
+            if (category==null)
+            {
+                return Result<int>.Failure("همچین کتگوری ای موجود نمیباشد.");
+            }
+           
+            category.Name = categoryDto.Name;
+            category.Description = categoryDto.Description;
+            await _context.SaveChangesAsync();
+            return Result<int>.Success(category.Id);
+        }
+
         public async Task<List<CategoryDto>> GetAll(CancellationToken cancellationToken)
         {
           return await _context.Categories
@@ -39,9 +55,27 @@ namespace App.Infra.Data.Repos.Ef.CategoryAgg
                 .ToListAsync(cancellationToken);
         }
 
+        public async Task<Result<CategoryDto>> GetById(int categryId, CancellationToken cancellationToken)
+        {
+            Category? category=  await  _context.Categories.FirstOrDefaultAsync(c=>c.Id== categryId , cancellationToken);
+            if (category==null)
+            {
+                return Result<CategoryDto>.Failure("همچین دسته بندی ای موجود نیست.");
+            }
+            CategoryDto categoryDto = new CategoryDto 
+            {
+                Id= category.Id,
+                Name = category.Name,
+                Description = category.Description           
+            };
+            return Result<CategoryDto>.Success(categoryDto);
+        }
+
         public async Task<bool> IsExistCategoryByName(string name, CancellationToken cancellationToken)
         {
           return await  _context.Categories.AnyAsync(c=>c.Name.ToLower()==name.ToLower());
         }
+
+
     }
 }

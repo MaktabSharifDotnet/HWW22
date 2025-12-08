@@ -13,15 +13,11 @@ namespace App.Domain.Services.CategoryAgg
 {
     public class CategoryService(ICategoryRepository _categoryRepository) : ICategoryService
     {
-       
-     
 
         public async Task<List<CategoryDto>> GetAll(CancellationToken cancellationToken)
         {
           return await _categoryRepository.GetAll(cancellationToken);
         }
-
-       
 
         public async Task<Result<int>> Create(CategoryDto categoryDto, CancellationToken cancellationToken)
         {
@@ -37,6 +33,18 @@ namespace App.Domain.Services.CategoryAgg
                 return Result<int>.Failure("خطایی رخ داده است دوباره تلاش کنید.");
             }
             return Result<int>.Success(categoryId);
+
+        }
+
+        public async Task<Result<CategoryDto>> GetById(int categryId, CancellationToken cancellationToken)
+        {
+          return await _categoryRepository.GetById(categryId, cancellationToken);
+        }
+
+        public async Task<Result<int>> Edit(CategoryDto categoryDto, CancellationToken cancellationToken)
+        {
+          
+          return await _categoryRepository.Edit(categoryDto, cancellationToken);
 
         }
     }

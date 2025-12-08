@@ -1,0 +1,28 @@
+﻿
+.edit-category-card {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: #fff;
+    border-top: 5px solid #ffc107; 
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.form-header {
+    margin-bottom: 20px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-warning-custom {
+    background-color: #ffc107;
+    border-color: #ffc107;
+    color: #000;
+}
+
+    .btn-warning-custom:hover {
+        background-color: #e0a800;
+    }
