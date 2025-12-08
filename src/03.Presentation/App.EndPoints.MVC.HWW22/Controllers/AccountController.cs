@@ -18,7 +18,7 @@ namespace App.EndPoints.MVC.HWW22.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Login(LoginViewModel loginViewModel , CancellationToken cancellationToken)
+        public async Task<IActionResult> Login(AdminLoginViewModel loginViewModel , CancellationToken cancellationToken)
         {
             if (!ModelState.IsValid)
             {

@@ -4,6 +4,7 @@ using App.Infra.Db.SqlServer.Ef.DbContextAgg;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace App.Infra.Db.SqlServer.Ef.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20251208050418_add role enum and edit seeddata category")]
+    partial class addroleenumandeditseeddatacategory
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -450,7 +453,7 @@ namespace App.Infra.Db.SqlServer.Ef.Migrations
                             Balance = 10000000m,
                             IsDeleted = false,
                             Password = "123",
-                            RoleEnum = 2,
+                            RoleEnum = 0,
                             Username = "ali"
                         },
                         new
@@ -459,7 +462,7 @@ namespace App.Infra.Db.SqlServer.Ef.Migrations
                             Balance = 500000m,
                             IsDeleted = false,
                             Password = "123",
-                            RoleEnum = 2,
+                            RoleEnum = 0,
                             Username = "ali_rezaei"
                         },
                         new
@@ -468,7 +471,7 @@ namespace App.Infra.Db.SqlServer.Ef.Migrations
                             Balance = 0m,
                             IsDeleted = false,
                             Password = "123",
-                            RoleEnum = 2,
+                            RoleEnum = 0,
                             Username = "sara_kamali"
                         },
                         new
@@ -477,17 +480,8 @@ namespace App.Infra.Db.SqlServer.Ef.Migrations
                             Balance = 2500000m,
                             IsDeleted = false,
                             Password = "123",
-                            RoleEnum = 2,
+                            RoleEnum = 0,
                             Username = "test_user"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            Balance = 2500000m,
-                            IsDeleted = false,
-                            Password = "123",
-                            RoleEnum = 1,
-                            Username = "admin"
                         });
                 });
 

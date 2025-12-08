@@ -1,4 +1,5 @@
 ﻿using App.Domain.Core.Entities;
+using App.Domain.Core.Enums.UserAgg;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
@@ -20,6 +21,7 @@ namespace App.Infra.Db.SqlServer.Ef.Configorations
                       Username = "ali",
                       Password = "123",
                       Balance = 10000000M,
+                      RoleEnum=RoleEnum.Customer,
                       IsDeleted = false
                   },
                   new User
@@ -28,6 +30,7 @@ namespace App.Infra.Db.SqlServer.Ef.Configorations
                       Username = "ali_rezaei",
                       Password = "123",
                       Balance = 500000M,
+                      RoleEnum = RoleEnum.Customer,
                       IsDeleted = false
                   },
                   new User
@@ -36,6 +39,7 @@ namespace App.Infra.Db.SqlServer.Ef.Configorations
                       Username = "sara_kamali",
                       Password = "123",
                       Balance = 0,
+                      RoleEnum = RoleEnum.Customer,
                       IsDeleted = false
                   },
                   new User
@@ -44,6 +48,17 @@ namespace App.Infra.Db.SqlServer.Ef.Configorations
                       Username = "test_user",
                       Password = "123",
                       Balance = 2500000M,
+                      RoleEnum = RoleEnum.Customer,
+                      IsDeleted = false
+                  }
+                  ,
+                  new User
+                  {
+                      Id = 6,
+                      Username = "admin",
+                      Password = "123",
+                      Balance = 2500000M,
+                      RoleEnum = RoleEnum.Admin,
                       IsDeleted = false
                   }
               );

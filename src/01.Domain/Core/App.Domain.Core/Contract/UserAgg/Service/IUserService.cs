@@ -13,7 +13,6 @@ namespace App.Domain.Core.Contract.UserAgg.Service
         public Task<int> Login(string username, string password , CancellationToken cancellationToken);
         public Task<User?> GetById(int userId, CancellationToken cancellationToken);
         public void LogOut();
-
         public Cart? GetCart(User user, int cartId);
         public void CaheckInventory(List<CartProduct> cartProducts);
         public decimal CalculateTotalPrice(List<CartProduct> cartProducts);

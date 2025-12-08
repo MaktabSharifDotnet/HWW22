@@ -29,7 +29,6 @@ namespace App.Domain.Services.UserAgg
             LocalStorage.LoginUser=user;
             return  user.Id;
 
-
         }
 
         public void LogOut()

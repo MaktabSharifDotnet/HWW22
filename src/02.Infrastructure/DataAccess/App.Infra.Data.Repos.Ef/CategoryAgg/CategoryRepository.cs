@@ -19,6 +19,7 @@ namespace App.Infra.Data.Repos.Ef.CategoryAgg
                 {
                       Id = c.Id,
                       Name = c.Name,
+                      Description = c.Description
 
                 })
                 .ToListAsync(cancellationToken);

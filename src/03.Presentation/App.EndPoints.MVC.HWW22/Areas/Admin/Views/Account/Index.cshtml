@@ -1,0 +1,56 @@
+﻿@using App.EndPoints.MVC.HWW22.Models
+@model AdminLoginViewModel
+
+@{
+    ViewData["Title"] = "ورود مدیر";
+    Layout = "_Layout"; // اطمینان از اینکه لی‌اوت ادمین لود شود
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/admin-login.css" />
+}
+
+<div class="login-container">
+    <h4 class="login-header">ورود به پنل مدیریت</h4>
+
+    @* نمایش خطای کلی (مثلاً نام کاربری یا رمز عبور اشتباه است) *@
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger">
+            @TempData["Error"]
+        </div>
+    }
+
+    @* نمایش خلاصه خطاهای مدل (مثلاً فیلدهای خالی) *@
+    <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+    <form asp-action="Login" method="post">
+
+        <div class="mb-3">
+            @* لیبل خودکار از [Display(Name="نام کاربری")] خوانده می‌شود *@
+            <label asp-for="Username" class="form-label"></label>
+
+            @* اینپوت به پراپرتی Username وصل می‌شود *@
+            <input asp-for="Username" class="form-control" placeholder="admin" />
+
+            @* نمایش پیام خطا مخصوص این فیلد *@
+            <span asp-validation-for="Username" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Password" class="form-label"></label>
+
+            @* تایپ پسورد به صورت خودکار تشخیص داده می‌شود اما نوشتن آن برای اطمینان خوب است *@
+            <input asp-for="Password" type="password" class="form-control" />
+
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn btn-dark w-100 py-2">ورود</button>
+    </form>
+</div>
+
+@section Scripts {
+    @* اضافه کردن اسکریپت‌های اعتبارسنجی سمت کلاینت (JQuery Validate) *@
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -1,0 +1,45 @@
+﻿@using App.Domain.Core.Dtos.CategoryAgg
+@model CategoryDto
+
+@{
+    ViewData["Title"] = "ایجاد دسته‌بندی جدید";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/category-create.css" />
+}
+
+<div class="create-category-card">
+    <h4 class="mb-4 border-bottom pb-2">افزودن دسته‌بندی جدید</h4>
+
+   
+    <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+    <form asp-action="Create" method="post">
+
+        <div class="mb-3">
+            <label asp-for="Name" class="form-label">نام دسته‌بندی</label>
+            <input asp-for="Name" class="form-control" placeholder="مثلاً: کالای دیجیتال" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Description" class="form-label">توضیحات</label>
+            <textarea asp-for="Description" class="form-control" rows="4" placeholder="توضیحات مختصری درباره این دسته‌بندی بنویسید..."></textarea>
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+
+        <div class="form-actions">
+            <button type="submit" class="btn btn-success">
+                <i class="bi bi-check-lg"></i> ثبت دسته‌بندی
+            </button>
+            <a asp-action="Index" class="btn btn-secondary">بازگشت به لیست</a>
+        </div>
+
+    </form>
+</div>
+
+@section Scripts {
+    
+    <partial name="_ValidationScriptsPartial" />
+}
