@@ -98,5 +98,27 @@ namespace App.EndPoints.MVC.HWW22.Areas.Admin.Controllers
             return RedirectToAction("Index");
         }
 
+
+        [HttpPost]
+        public async Task<IActionResult> Delete(int categoryId, CancellationToken cancellationToken) 
+        {
+
+            Result<int> result=await _categoryAppService.Delete(categoryId, cancellationToken);
+            if (!result.IsSuccess)
+            {
+                _logger.LogWarning("Failed to delete Category with ID: {CategoryId}. Reason: {Message}",
+                            categoryId,
+                            result.Message);
+                TempData["Error"] = result.Message;
+                return RedirectToAction("Index");
+            }
+            _logger.LogInformation("Category with ID: {CategoryId} was soft-deleted successfully.", categoryId);
+            TempData["Success"] = "دسته‌بندی با موفقیت حذف شد.";
+            return RedirectToAction("Index");
+          
+        }
+
+
+
     }
 }

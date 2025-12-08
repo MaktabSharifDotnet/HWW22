@@ -1476,3 +1476,176 @@ System.Exception: تست میدلور
 2025-12-08 18:24:04.528 +03:30 [INF] Response b106bddc-1784-413c-ae39-d6ae2dd4c4eb: 200 in 2ms
 2025-12-08 18:24:04.560 +03:30 [INF] Request fc28fdd6-b098-45b0-8c09-a9642a093c6b: GET /Vazir.woff2  from ::1
 2025-12-08 18:24:04.564 +03:30 [INF] Response fc28fdd6-b098-45b0-8c09-a9642a093c6b: 404 in 0ms
+2025-12-08 18:30:52.134 +03:30 [INF] Request ce987303-fae1-4a0a-8a80-b19276f83202: GET /  from ::1
+2025-12-08 18:30:52.829 +03:30 [WRN] Entity 'User' has a global query filter defined and is the required end of a relationship with the entity 'Order'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-08 18:30:52.904 +03:30 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-08 18:30:52.907 +03:30 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-08 18:30:52.908 +03:30 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'User'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-08 18:30:53.735 +03:30 [INF] Response ce987303-fae1-4a0a-8a80-b19276f83202: 200 in 1557ms
+2025-12-08 18:30:53.783 +03:30 [INF] Request 089e00e4-999e-4da9-b818-cd9cc0d98320: GET /WebApplication1.styles.css  from ::1
+2025-12-08 18:30:53.824 +03:30 [INF] Response 089e00e4-999e-4da9-b818-cd9cc0d98320: 404 in 2ms
+2025-12-08 18:30:55.407 +03:30 [INF] Request 95007ff6-9bd3-48e4-b4d4-ea83e0a6dd34: GET /Admin/Account  from ::1
+2025-12-08 18:30:55.466 +03:30 [INF] Response 95007ff6-9bd3-48e4-b4d4-ea83e0a6dd34: 200 in 56ms
+2025-12-08 18:30:55.519 +03:30 [INF] Request bfcb9982-cfb9-4c4c-bea5-05b554ef7df5: GET /Vazir.woff2  from ::1
+2025-12-08 18:30:55.524 +03:30 [INF] Response bfcb9982-cfb9-4c4c-bea5-05b554ef7df5: 404 in 0ms
+2025-12-08 18:30:58.300 +03:30 [INF] Request eda1758c-7d40-4a55-a8bf-49b68157d661: POST /Admin/Account/Login  from ::1
+2025-12-08 18:30:58.406 +03:30 [INF] Admin user admin logged in successfully with UserID: 6
+2025-12-08 18:30:58.410 +03:30 [INF] Response eda1758c-7d40-4a55-a8bf-49b68157d661: 302 in 107ms
+2025-12-08 18:30:58.419 +03:30 [INF] Request ea86efba-4b16-4556-bdf6-db6eb5371ea9: GET /Admin/Category  from ::1
+2025-12-08 18:30:58.500 +03:30 [INF] Response ea86efba-4b16-4556-bdf6-db6eb5371ea9: 200 in 78ms
+2025-12-08 18:30:58.541 +03:30 [INF] Request 64093519-4364-4cf9-b57b-00adc431f509: GET /Vazir.woff2  from ::1
+2025-12-08 18:30:58.545 +03:30 [INF] Response 64093519-4364-4cf9-b57b-00adc431f509: 404 in 0ms
+2025-12-08 18:31:00.998 +03:30 [INF] Request 58e93228-93e2-4ba5-8e5d-49119ea01bbf: GET /Admin/Category/Edit ?categoryId=6 from ::1
+2025-12-08 18:31:01.067 +03:30 [INF] Response 58e93228-93e2-4ba5-8e5d-49119ea01bbf: 200 in 65ms
+2025-12-08 18:31:01.111 +03:30 [INF] Request e5bc643d-6424-4478-88ad-5f22ba58ee9b: GET /Vazir.woff2  from ::1
+2025-12-08 18:31:01.115 +03:30 [INF] Response e5bc643d-6424-4478-88ad-5f22ba58ee9b: 404 in 0ms
+2025-12-08 18:31:06.838 +03:30 [INF] Request 5ff50bcb-1c53-4248-987a-133448dd6605: POST /Admin/Category/Edit  from ::1
+2025-12-08 18:31:06.947 +03:30 [INF] Category تست تست jsj updated successfully with ID: 6
+2025-12-08 18:31:06.949 +03:30 [INF] Response 5ff50bcb-1c53-4248-987a-133448dd6605: 302 in 109ms
+2025-12-08 18:31:06.956 +03:30 [INF] Request a7f6fd67-c663-4014-8146-211ec61fc304: GET /Admin/Category  from ::1
+2025-12-08 18:31:06.962 +03:30 [INF] Response a7f6fd67-c663-4014-8146-211ec61fc304: 200 in 4ms
+2025-12-08 18:31:06.996 +03:30 [INF] Request d98fc168-bf7b-4fe6-bb6f-9e8d02ec0e0d: GET /Vazir.woff2  from ::1
+2025-12-08 18:31:07.001 +03:30 [INF] Response d98fc168-bf7b-4fe6-bb6f-9e8d02ec0e0d: 404 in 0ms
+2025-12-08 18:34:56.060 +03:30 [INF] Request cdd0025d-149a-4494-8f1a-e8e9d8e9a3f7: GET /  from ::1
+2025-12-08 18:34:56.745 +03:30 [WRN] Entity 'User' has a global query filter defined and is the required end of a relationship with the entity 'Order'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-08 18:34:56.815 +03:30 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-08 18:34:56.817 +03:30 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-08 18:34:56.819 +03:30 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'User'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-08 18:34:57.639 +03:30 [INF] Response cdd0025d-149a-4494-8f1a-e8e9d8e9a3f7: 200 in 1537ms
+2025-12-08 18:34:57.679 +03:30 [INF] Request d0082a4a-1b42-45dd-8610-e2698adce1b5: GET /WebApplication1.styles.css  from ::1
+2025-12-08 18:34:57.719 +03:30 [INF] Response d0082a4a-1b42-45dd-8610-e2698adce1b5: 404 in 36ms
+2025-12-08 18:34:59.760 +03:30 [INF] Request 8bba2221-4618-4f70-8305-ca4ae51650c7: GET /Admin/Account  from ::1
+2025-12-08 18:34:59.820 +03:30 [INF] Response 8bba2221-4618-4f70-8305-ca4ae51650c7: 200 in 55ms
+2025-12-08 18:34:59.869 +03:30 [INF] Request 6b333dca-aba0-4767-8b65-956eb12b69ef: GET /Vazir.woff2  from ::1
+2025-12-08 18:34:59.873 +03:30 [INF] Response 6b333dca-aba0-4767-8b65-956eb12b69ef: 404 in 0ms
+2025-12-08 18:35:03.331 +03:30 [INF] Request 55affbfc-b05e-4409-a2a3-edb7c4bac338: POST /Admin/Account/Login  from ::1
+2025-12-08 18:35:03.436 +03:30 [INF] Admin user admin logged in successfully with UserID: 6
+2025-12-08 18:35:03.439 +03:30 [INF] Response 55affbfc-b05e-4409-a2a3-edb7c4bac338: 302 in 105ms
+2025-12-08 18:35:03.449 +03:30 [INF] Request 4555e13e-3df0-4379-acf6-6c95207d198e: GET /Admin/Category  from ::1
+2025-12-08 18:35:03.513 +03:30 [INF] Response 4555e13e-3df0-4379-acf6-6c95207d198e: 200 in 62ms
+2025-12-08 18:35:03.550 +03:30 [INF] Request d5a6766d-ea86-4d0e-b9b6-d7b1d432bec1: GET /Vazir.woff2  from ::1
+2025-12-08 18:35:03.574 +03:30 [INF] Response d5a6766d-ea86-4d0e-b9b6-d7b1d432bec1: 404 in 0ms
+2025-12-08 18:35:06.968 +03:30 [INF] Request 47b170da-a421-4b41-920e-d0cbcf1797a7: GET /Admin/Category/Delete ?categoryId=6 from ::1
+2025-12-08 18:35:06.973 +03:30 [INF] Response 47b170da-a421-4b41-920e-d0cbcf1797a7: 405 in 0ms
+2025-12-08 18:40:00.288 +03:30 [INF] Request 0f215dfc-14cb-4941-812d-4ca2b27c783d: GET /  from ::1
+2025-12-08 18:40:01.023 +03:30 [WRN] Entity 'User' has a global query filter defined and is the required end of a relationship with the entity 'Order'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-08 18:40:01.095 +03:30 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-08 18:40:01.097 +03:30 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-08 18:40:01.098 +03:30 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'User'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-08 18:40:01.966 +03:30 [INF] Response 0f215dfc-14cb-4941-812d-4ca2b27c783d: 200 in 1633ms
+2025-12-08 18:40:02.011 +03:30 [INF] Request 0fe7adae-38ba-4fe6-8bc2-111c856853c4: GET /WebApplication1.styles.css  from ::1
+2025-12-08 18:40:02.025 +03:30 [INF] Response 0fe7adae-38ba-4fe6-8bc2-111c856853c4: 404 in 2ms
+2025-12-08 18:40:03.123 +03:30 [INF] Request 0a9fe36c-cbb5-4887-967e-d4152871e485: GET /Admin/Account  from ::1
+2025-12-08 18:40:03.191 +03:30 [INF] Response 0a9fe36c-cbb5-4887-967e-d4152871e485: 200 in 65ms
+2025-12-08 18:40:03.240 +03:30 [INF] Request 684d0087-cfcc-4c2a-87a6-e772ef300179: GET /Vazir.woff2  from ::1
+2025-12-08 18:40:03.244 +03:30 [INF] Response 684d0087-cfcc-4c2a-87a6-e772ef300179: 404 in 0ms
+2025-12-08 18:40:08.325 +03:30 [INF] Request 1fbcf1a5-d954-4d1f-9845-2eda4293389e: POST /Admin/Account/Login  from ::1
+2025-12-08 18:40:08.429 +03:30 [INF] Admin user admin logged in successfully with UserID: 6
+2025-12-08 18:40:08.432 +03:30 [INF] Response 1fbcf1a5-d954-4d1f-9845-2eda4293389e: 302 in 102ms
+2025-12-08 18:40:08.441 +03:30 [INF] Request 3bf8b1d9-956c-44ec-83af-d2916808f139: GET /Admin/Category  from ::1
+2025-12-08 18:40:08.525 +03:30 [INF] Response 3bf8b1d9-956c-44ec-83af-d2916808f139: 200 in 65ms
+2025-12-08 18:40:08.564 +03:30 [INF] Request 018a2760-e089-4448-9c39-57a8eda2bd3d: GET /Vazir.woff2  from ::1
+2025-12-08 18:40:08.566 +03:30 [INF] Response 018a2760-e089-4448-9c39-57a8eda2bd3d: 404 in 0ms
+2025-12-08 18:40:12.935 +03:30 [INF] Request 3fd73698-3728-4e84-8634-542926100358: POST /Admin/Category/Delete ?categoryId=6 from ::1
+2025-12-08 19:01:47.054 +03:30 [INF] Request 7cc0666e-b19b-48bd-ab89-3c2cb52b5cad: GET /  from ::1
+2025-12-08 19:01:47.817 +03:30 [WRN] Entity 'User' has a global query filter defined and is the required end of a relationship with the entity 'Order'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-08 19:01:47.911 +03:30 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-08 19:01:47.914 +03:30 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-08 19:01:47.915 +03:30 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'User'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-08 19:01:48.902 +03:30 [INF] Response 7cc0666e-b19b-48bd-ab89-3c2cb52b5cad: 200 in 1793ms
+2025-12-08 19:01:48.948 +03:30 [INF] Request 9dac6da4-bbc6-4bf2-8712-8516b847f905: GET /WebApplication1.styles.css  from ::1
+2025-12-08 19:01:48.992 +03:30 [INF] Response 9dac6da4-bbc6-4bf2-8712-8516b847f905: 404 in 40ms
+2025-12-08 19:01:50.173 +03:30 [INF] Request ca7a7539-5f33-4290-8f4a-9c794ad9ab45: GET /Admin/Account  from ::1
+2025-12-08 19:01:50.241 +03:30 [INF] Response ca7a7539-5f33-4290-8f4a-9c794ad9ab45: 200 in 64ms
+2025-12-08 19:01:50.313 +03:30 [INF] Request 848944e0-0675-4ea3-961c-4a95c60387da: GET /Vazir.woff2  from ::1
+2025-12-08 19:01:50.316 +03:30 [INF] Response 848944e0-0675-4ea3-961c-4a95c60387da: 404 in 0ms
+2025-12-08 19:01:53.114 +03:30 [INF] Request 67ae6c23-8f58-440f-a8b8-d5eacaa1ad41: POST /Admin/Account/Login  from ::1
+2025-12-08 19:01:53.226 +03:30 [INF] Admin user admin logged in successfully with UserID: 6
+2025-12-08 19:01:53.229 +03:30 [INF] Response 67ae6c23-8f58-440f-a8b8-d5eacaa1ad41: 302 in 103ms
+2025-12-08 19:01:53.237 +03:30 [INF] Request dec31c64-759b-4b74-88f5-3c1c2e4a3ab4: GET /Admin/Category  from ::1
+2025-12-08 19:01:53.322 +03:30 [INF] Response dec31c64-759b-4b74-88f5-3c1c2e4a3ab4: 200 in 81ms
+2025-12-08 19:01:53.363 +03:30 [INF] Request 54f5b14c-1507-4112-8d1d-640b923fd920: GET /Vazir.woff2  from ::1
+2025-12-08 19:01:53.367 +03:30 [INF] Response 54f5b14c-1507-4112-8d1d-640b923fd920: 404 in 0ms
+2025-12-08 19:01:56.187 +03:30 [INF] Request fcbc697f-a4b2-4290-bf85-59ed3869a34e: POST /Admin/Category/Delete ?categoryId=7 from ::1
+2025-12-08 19:01:56.300 +03:30 [INF] Category with ID: 7 was soft-deleted successfully.
+2025-12-08 19:01:56.305 +03:30 [INF] Response fcbc697f-a4b2-4290-bf85-59ed3869a34e: 302 in 114ms
+2025-12-08 19:01:56.312 +03:30 [INF] Request 14de7a3c-ca22-46c2-a6e0-eea4db7e802a: GET /Admin/Category  from ::1
+2025-12-08 19:01:56.318 +03:30 [INF] Response 14de7a3c-ca22-46c2-a6e0-eea4db7e802a: 200 in 3ms
+2025-12-08 19:01:56.350 +03:30 [INF] Request d0b52f11-346b-4cca-ac85-13f6f30b885d: GET /Vazir.woff2  from ::1
+2025-12-08 19:01:56.355 +03:30 [INF] Response d0b52f11-346b-4cca-ac85-13f6f30b885d: 404 in 0ms
+2025-12-08 19:01:59.858 +03:30 [INF] Request 73aad326-c16d-4ec6-b0f4-b0f3f434d2a0: GET /.well-known/appspecific/com.chrome.devtools.json  from ::1
+2025-12-08 19:01:59.861 +03:30 [INF] Response 73aad326-c16d-4ec6-b0f4-b0f3f434d2a0: 404 in 0ms
+2025-12-08 19:02:14.350 +03:30 [INF] Request 9d913b30-10a3-4ff2-85ef-5fede58d15a9: POST /Admin/Category/Delete ?categoryId=55 from ::1
+2025-12-08 19:02:14.374 +03:30 [WRN] Failed to delete Category with ID: 55. Reason: همچین کتگوری ای موجود نیست.
+2025-12-08 19:02:14.376 +03:30 [INF] Response 9d913b30-10a3-4ff2-85ef-5fede58d15a9: 302 in 5ms
+2025-12-08 19:02:14.385 +03:30 [INF] Request 13f332ec-dc23-4e48-bcbf-5d8de2cce3a7: GET /Admin/Category  from ::1
+2025-12-08 19:02:14.390 +03:30 [INF] Response 13f332ec-dc23-4e48-bcbf-5d8de2cce3a7: 200 in 2ms
+2025-12-08 19:02:14.419 +03:30 [INF] Request 114fc0cb-ee17-4970-8e18-6f8851c19127: GET /.well-known/appspecific/com.chrome.devtools.json  from ::1
+2025-12-08 19:02:14.426 +03:30 [INF] Response 114fc0cb-ee17-4970-8e18-6f8851c19127: 404 in 0ms
+2025-12-08 19:02:14.466 +03:30 [INF] Request 0eda3d3d-4948-4b94-9659-c1894003d086: GET /Vazir.woff2  from ::1
+2025-12-08 19:02:14.475 +03:30 [INF] Response 0eda3d3d-4948-4b94-9659-c1894003d086: 404 in 0ms
+2025-12-08 19:02:28.286 +03:30 [INF] Request 34f0b672-892e-4e00-b038-26304f15e031: POST /Admin/Category/Delete ?categoryId=66 from ::1
+2025-12-08 19:02:28.291 +03:30 [WRN] Failed to delete Category with ID: 66. Reason: همچین کتگوری ای موجود نیست.
+2025-12-08 19:02:28.293 +03:30 [INF] Response 34f0b672-892e-4e00-b038-26304f15e031: 302 in 4ms
+2025-12-08 19:02:28.303 +03:30 [INF] Request be269bd8-0b48-4deb-878b-45fdbe369325: GET /Admin/Category  from ::1
+2025-12-08 19:02:28.308 +03:30 [INF] Response be269bd8-0b48-4deb-878b-45fdbe369325: 200 in 2ms
+2025-12-08 19:02:28.339 +03:30 [INF] Request 7508b5bd-1ac8-4403-9012-ccf665e99cb8: GET /.well-known/appspecific/com.chrome.devtools.json  from ::1
+2025-12-08 19:02:28.342 +03:30 [INF] Response 7508b5bd-1ac8-4403-9012-ccf665e99cb8: 404 in 0ms
+2025-12-08 19:02:28.377 +03:30 [INF] Request 5d73f176-c60f-46e7-9a7b-ea7b528109a3: GET /Vazir.woff2  from ::1
+2025-12-08 19:02:28.383 +03:30 [INF] Response 5d73f176-c60f-46e7-9a7b-ea7b528109a3: 404 in 0ms
+2025-12-08 19:02:38.822 +03:30 [INF] Request 58289b8c-b63e-4b8e-a9c0-b0da44d4b7d5: GET /.well-known/appspecific/com.chrome.devtools.json  from ::1
+2025-12-08 19:02:38.824 +03:30 [INF] Response 58289b8c-b63e-4b8e-a9c0-b0da44d4b7d5: 404 in 0ms
+2025-12-08 19:02:41.271 +03:30 [INF] Request 4c7d2e6d-20e8-486f-8e80-c3b1cd09d452: GET /Admin/Category/Edit ?categoryId=6 from ::1
+2025-12-08 19:02:41.305 +03:30 [INF] Response 4c7d2e6d-20e8-486f-8e80-c3b1cd09d452: 200 in 30ms
+2025-12-08 19:02:41.365 +03:30 [INF] Request bc6c03ce-1f01-4714-84db-10d9953f5ba6: GET /Vazir.woff2  from ::1
+2025-12-08 19:02:41.368 +03:30 [INF] Response bc6c03ce-1f01-4714-84db-10d9953f5ba6: 404 in 0ms
+2025-12-08 19:02:45.050 +03:30 [INF] Request 53182ede-9627-4c1c-aa8c-65ba0cd09998: GET /Admin/Category/Edit ?categoryId=6 from ::1
+2025-12-08 19:02:45.056 +03:30 [INF] Response 53182ede-9627-4c1c-aa8c-65ba0cd09998: 200 in 3ms
+2025-12-08 19:02:45.121 +03:30 [INF] Request f1932583-7140-45f5-9747-2cb82fbd0afa: GET /Vazir.woff2  from ::1
+2025-12-08 19:02:45.125 +03:30 [INF] Response f1932583-7140-45f5-9747-2cb82fbd0afa: 404 in 0ms
+2025-12-08 19:02:49.102 +03:30 [INF] Request 19086b7a-36b5-4994-9611-90da8e74b1f9: GET /Admin/Category/Edit ?categoryId=6 from ::1
+2025-12-08 19:02:49.111 +03:30 [INF] Response 19086b7a-36b5-4994-9611-90da8e74b1f9: 200 in 4ms
+2025-12-08 19:02:49.179 +03:30 [INF] Request adad8444-523c-43e7-91f8-42511c59075d: GET /Vazir.woff2  from ::1
+2025-12-08 19:02:49.182 +03:30 [INF] Response adad8444-523c-43e7-91f8-42511c59075d: 404 in 0ms
+2025-12-08 19:02:55.265 +03:30 [INF] Request 8cc0e934-e093-482a-9329-0defb53ec732: GET /Admin/Category/Edit ?categoryId=6 from ::1
+2025-12-08 19:02:55.278 +03:30 [INF] Response 8cc0e934-e093-482a-9329-0defb53ec732: 200 in 10ms
+2025-12-08 19:02:55.353 +03:30 [INF] Request 60550ab4-d922-4fd6-9472-ea202dc635af: GET /Vazir.woff2  from ::1
+2025-12-08 19:02:55.355 +03:30 [INF] Response 60550ab4-d922-4fd6-9472-ea202dc635af: 404 in 0ms
+2025-12-08 19:03:05.861 +03:30 [INF] Request 80474bc5-e43a-4613-adf9-a649e0394e75: GET /Admin/Category/Edit ?categoryId=6 from ::1
+2025-12-08 19:03:05.867 +03:30 [INF] Response 80474bc5-e43a-4613-adf9-a649e0394e75: 200 in 2ms
+2025-12-08 19:03:05.898 +03:30 [INF] Request edeb931c-3af7-4e8b-9124-4ca7d2c9949b: GET /.well-known/appspecific/com.chrome.devtools.json  from ::1
+2025-12-08 19:03:05.902 +03:30 [INF] Response edeb931c-3af7-4e8b-9124-4ca7d2c9949b: 404 in 0ms
+2025-12-08 19:03:05.960 +03:30 [INF] Request 655a644e-5f86-4788-a443-a47bee7b7f8b: GET /Vazir.woff2  from ::1
+2025-12-08 19:03:05.963 +03:30 [INF] Response 655a644e-5f86-4788-a443-a47bee7b7f8b: 404 in 0ms
+2025-12-08 19:03:12.607 +03:30 [INF] Request 03fe30ad-8e12-4950-bc35-bda0a7d8e143: POST /Admin/Category/Edit  from ::1
+2025-12-08 19:03:12.628 +03:30 [INF] Category تست تست jsj updated successfully with ID: 6
+2025-12-08 19:03:12.630 +03:30 [INF] Response 03fe30ad-8e12-4950-bc35-bda0a7d8e143: 302 in 19ms
+2025-12-08 19:03:12.636 +03:30 [INF] Request 61d6af1b-a19c-43a1-98d1-719e4372ed6d: GET /Admin/Category  from ::1
+2025-12-08 19:03:12.644 +03:30 [INF] Response 61d6af1b-a19c-43a1-98d1-719e4372ed6d: 200 in 3ms
+2025-12-08 19:03:12.677 +03:30 [INF] Request 915b7767-cb39-40d4-bbae-48edcd824bec: GET /.well-known/appspecific/com.chrome.devtools.json  from ::1
+2025-12-08 19:03:12.683 +03:30 [INF] Response 915b7767-cb39-40d4-bbae-48edcd824bec: 404 in 0ms
+2025-12-08 19:03:12.723 +03:30 [INF] Request e5ca3d60-1f48-4806-86bd-04dbf2be9f71: GET /Vazir.woff2  from ::1
+2025-12-08 19:03:12.727 +03:30 [INF] Response e5ca3d60-1f48-4806-86bd-04dbf2be9f71: 404 in 0ms
+2025-12-08 19:03:24.750 +03:30 [INF] Request 28b2c6da-29cf-4b9d-8651-28ce4fa99f73: GET /Admin/Category/Edit ?categoryId=5 from ::1
+2025-12-08 19:03:24.757 +03:30 [INF] Response 28b2c6da-29cf-4b9d-8651-28ce4fa99f73: 200 in 3ms
+2025-12-08 19:03:24.795 +03:30 [INF] Request e0f6b682-e621-4291-a4ad-2e610d433170: GET /.well-known/appspecific/com.chrome.devtools.json  from ::1
+2025-12-08 19:03:24.798 +03:30 [INF] Response e0f6b682-e621-4291-a4ad-2e610d433170: 404 in 0ms
+2025-12-08 19:03:24.848 +03:30 [INF] Request 18a0d4b4-9580-42d3-9b13-def7165ddcb2: GET /Vazir.woff2  from ::1
+2025-12-08 19:03:24.851 +03:30 [INF] Response 18a0d4b4-9580-42d3-9b13-def7165ddcb2: 404 in 0ms
+2025-12-08 19:03:26.525 +03:30 [INF] Request 013d61c7-fbbb-4612-8153-9c16b8e13553: GET /Admin/Category  from ::1
+2025-12-08 19:03:26.530 +03:30 [INF] Response 013d61c7-fbbb-4612-8153-9c16b8e13553: 200 in 2ms
+2025-12-08 19:03:26.567 +03:30 [INF] Request 44929e89-a14d-476b-babe-90024a2583ec: GET /.well-known/appspecific/com.chrome.devtools.json  from ::1
+2025-12-08 19:03:26.571 +03:30 [INF] Response 44929e89-a14d-476b-babe-90024a2583ec: 404 in 0ms
+2025-12-08 19:03:27.875 +03:30 [INF] Request ae9767c0-8897-4c31-a5a5-e9574a797873: GET /Admin/Category/Edit ?categoryId=6 from ::1
+2025-12-08 19:03:27.881 +03:30 [INF] Response ae9767c0-8897-4c31-a5a5-e9574a797873: 200 in 2ms
+2025-12-08 19:03:27.918 +03:30 [INF] Request 7dad3b1e-2a2b-48a3-8c00-7d89d44a0798: GET /.well-known/appspecific/com.chrome.devtools.json  from ::1
+2025-12-08 19:03:27.922 +03:30 [INF] Response 7dad3b1e-2a2b-48a3-8c00-7d89d44a0798: 404 in 0ms
+2025-12-08 19:03:27.974 +03:30 [INF] Request 1eea8c25-e8ae-4c84-a103-cce0d8230cdf: GET /Vazir.woff2  from ::1
+2025-12-08 19:03:27.978 +03:30 [INF] Response 1eea8c25-e8ae-4c84-a103-cce0d8230cdf: 404 in 0ms
+2025-12-08 19:03:58.418 +03:30 [INF] Request 6fd87019-b944-4c42-a258-09af949964dd: POST /Admin/Category/Edit  from ::1
+2025-12-08 19:03:58.431 +03:30 [WRN] Failed Edit attempt for Category: تست تست jsj. Reason: همچین کتگوری ای موجود نمیباشد.
+2025-12-08 19:03:58.437 +03:30 [INF] Response 6fd87019-b944-4c42-a258-09af949964dd: 200 in 15ms
+2025-12-08 19:03:58.481 +03:30 [INF] Request b97ca5b2-42fd-4537-9d22-c43b440f302f: GET /.well-known/appspecific/com.chrome.devtools.json  from ::1
+2025-12-08 19:03:58.485 +03:30 [INF] Response b97ca5b2-42fd-4537-9d22-c43b440f302f: 404 in 0ms
+2025-12-08 19:03:58.534 +03:30 [INF] Request d25a7044-654e-49d8-9dfa-0bd36dc00b1e: GET /Vazir.woff2  from ::1
+2025-12-08 19:03:58.537 +03:30 [INF] Response d25a7044-654e-49d8-9dfa-0bd36dc00b1e: 404 in 0ms

@@ -17,6 +17,11 @@ namespace App.Domain.AppServices.CategoryAgg
             return  await _categoryService.Create(categoryDto, cancellationToken);
         }
 
+        public async Task<Result<int>> Delete(int categryId, CancellationToken cancellationToken)
+        {
+           return await  _categoryService.Delete(categryId, cancellationToken);
+        }
+
         public async Task<Result<int>> Edit(CategoryDto categoryDto, CancellationToken cancellationToken)
         {
             return await _categoryService.Edit(categoryDto, cancellationToken);

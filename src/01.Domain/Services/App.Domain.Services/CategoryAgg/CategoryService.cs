@@ -47,5 +47,10 @@ namespace App.Domain.Services.CategoryAgg
           return await _categoryRepository.Edit(categoryDto, cancellationToken);
 
         }
+
+        public async Task<Result<int>> Delete(int categryId, CancellationToken cancellationToken)
+        {
+           return await _categoryRepository.Delete(categryId, cancellationToken);
+        }
     }
 }

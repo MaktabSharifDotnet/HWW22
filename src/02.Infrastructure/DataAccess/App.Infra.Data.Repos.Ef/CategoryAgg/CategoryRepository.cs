@@ -26,6 +26,22 @@ namespace App.Infra.Data.Repos.Ef.CategoryAgg
             return  category.Id;
         }
 
+        public async Task<Result<int>> Delete(int categryId, CancellationToken cancellationToken)
+        {
+            Category? category= await _context.Categories.FirstOrDefaultAsync(c => c.Id == categryId, cancellationToken);
+            if (category ==null)
+            {
+                return Result<int>.Failure("همچین کتگوری ای موجود نیست.");
+            }
+            category.IsDeleted = true;
+            int result= await _context.SaveChangesAsync();
+            if (result<=0)
+            {
+                return Result<int>.Failure("تغییری رخ نداد.");
+            }
+            return Result<int>.Success(result);
+        }
+
         public async Task<Result<int>> Edit(CategoryDto categoryDto, CancellationToken cancellationToken)
         {
 
