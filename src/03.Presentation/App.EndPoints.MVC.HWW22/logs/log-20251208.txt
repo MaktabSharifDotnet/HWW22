@@ -554,3 +554,284 @@ System.InvalidOperationException: The view 'Login' was not found. The following 
 2025-12-08 11:20:59.428 +03:30 [INF] Response da0b42f0-9ed5-4f82-88e5-4fd0ef69f54e: 200 in 18ms
 2025-12-08 11:20:59.461 +03:30 [INF] Request 84b3b645-4da2-42c7-8b61-18d9fb5f689b: GET /Vazir.woff2 from ::1
 2025-12-08 11:20:59.465 +03:30 [INF] Response 84b3b645-4da2-42c7-8b61-18d9fb5f689b: 404 in 0ms
+2025-12-08 11:33:52.534 +03:30 [INF] Request 26249142-234f-473c-833b-597d2e5f64bd: GET / from ::1
+2025-12-08 11:33:52.868 +03:30 [INF] Response 26249142-234f-473c-833b-597d2e5f64bd: 200 in 292ms
+2025-12-08 11:33:53.018 +03:30 [INF] Request b023a31d-9ccc-4613-9770-81f4f40695c7: GET /Vazir.woff2 from ::1
+2025-12-08 11:33:53.022 +03:30 [INF] Response b023a31d-9ccc-4613-9770-81f4f40695c7: 404 in 1ms
+2025-12-08 11:36:23.684 +03:30 [INF] Request 0648c0d3-1541-49eb-8486-f8ca84085340: GET / from ::1
+2025-12-08 11:36:23.973 +03:30 [INF] Response 0648c0d3-1541-49eb-8486-f8ca84085340: 200 in 248ms
+2025-12-08 11:36:24.053 +03:30 [INF] Request fc7d41a0-71ad-4c0c-8681-4478743cb552: GET /Vazir.woff2 from ::1
+2025-12-08 11:36:24.057 +03:30 [INF] Response fc7d41a0-71ad-4c0c-8681-4478743cb552: 404 in 1ms
+2025-12-08 11:36:44.872 +03:30 [INF] Request 15413b6b-0fd3-4d3f-95e2-f7c34f1ad834: GET / from ::1
+2025-12-08 11:36:45.169 +03:30 [INF] Response 15413b6b-0fd3-4d3f-95e2-f7c34f1ad834: 200 in 255ms
+2025-12-08 11:36:45.254 +03:30 [INF] Request e6326522-4c78-4cb1-9b3d-8e61966e367a: GET /Vazir.woff2 from ::1
+2025-12-08 11:36:45.257 +03:30 [INF] Response e6326522-4c78-4cb1-9b3d-8e61966e367a: 404 in 1ms
+2025-12-08 11:36:49.194 +03:30 [INF] Request e70d86e2-1172-4d0f-9765-75c06677c119: POST /Admin/Account/Login from ::1
+2025-12-08 11:37:35.023 +03:30 [WRN] Entity 'User' has a global query filter defined and is the required end of a relationship with the entity 'Order'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-08 11:37:35.094 +03:30 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-08 11:37:35.097 +03:30 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-08 11:37:35.098 +03:30 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'User'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-08 11:37:55.500 +03:30 [ERR] Request e70d86e2-1172-4d0f-9765-75c06677c119 failed after 66301ms
+System.Exception: نام کاربری یا رمز عبور اشتباه است.
+   at App.Domain.Services.UserAgg.UserService.Login(String username, String password, CancellationToken cancellationToken) in D:\maktabsharifc#part2\recordcalses\week23\HWW23\src\01.Domain\Services\App.Domain.Services\UserAgg\UserService.cs:line 26
+   at App.Domain.AppServices.UserAgg.UserAppService.Login(String username, String password, CancellationToken cancellationToken) in D:\maktabsharifc#part2\recordcalses\week23\HWW23\src\01.Domain\Services\App.Domain.AppServices\UserAgg\UserAppService.cs:line 18
+   at App.EndPoints.MVC.HWW22.Areas.Admin.Controllers.AccountController.Login(AdminLoginViewModel adminLoginViewModel, CancellationToken cancellationToken) in D:\maktabsharifc#part2\recordcalses\week23\HWW23\src\03.Presentation\App.EndPoints.MVC.HWW22\Areas\Admin\Controllers\AccountController.cs:line 28
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at UI_MVC.Middlwares.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in D:\maktabsharifc#part2\recordcalses\week23\HWW23\src\03.Presentation\App.EndPoints.MVC.HWW22\Middlwares\RequestLoggingMiddleware.cs:line 32
+2025-12-08 11:37:57.132 +03:30 [ERR] An unhandled exception has occurred while executing the request.
+System.Exception: نام کاربری یا رمز عبور اشتباه است.
+   at App.Domain.Services.UserAgg.UserService.Login(String username, String password, CancellationToken cancellationToken) in D:\maktabsharifc#part2\recordcalses\week23\HWW23\src\01.Domain\Services\App.Domain.Services\UserAgg\UserService.cs:line 26
+   at App.Domain.AppServices.UserAgg.UserAppService.Login(String username, String password, CancellationToken cancellationToken) in D:\maktabsharifc#part2\recordcalses\week23\HWW23\src\01.Domain\Services\App.Domain.AppServices\UserAgg\UserAppService.cs:line 18
+   at App.EndPoints.MVC.HWW22.Areas.Admin.Controllers.AccountController.Login(AdminLoginViewModel adminLoginViewModel, CancellationToken cancellationToken) in D:\maktabsharifc#part2\recordcalses\week23\HWW23\src\03.Presentation\App.EndPoints.MVC.HWW22\Areas\Admin\Controllers\AccountController.cs:line 28
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at UI_MVC.Middlwares.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in D:\maktabsharifc#part2\recordcalses\week23\HWW23\src\03.Presentation\App.EndPoints.MVC.HWW22\Middlwares\RequestLoggingMiddleware.cs:line 32
+   at UI_MVC.Middlwares.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in D:\maktabsharifc#part2\recordcalses\week23\HWW23\src\03.Presentation\App.EndPoints.MVC.HWW22\Middlwares\RequestLoggingMiddleware.cs:line 54
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-12-08 11:37:57.176 +03:30 [ERR] An exception was thrown attempting to display the error page.
+System.ObjectDisposedException: Cannot access a closed Stream.
+Object name: 'MemoryStream'.
+   at System.IO.Stream.ValidateCopyToArguments(Stream destination, Int32 bufferSize)
+   at System.IO.MemoryStream.CopyToAsync(Stream destination, Int32 bufferSize, CancellationToken cancellationToken)
+   at System.IO.Stream.CopyToAsync(Stream destination)
+   at Microsoft.Extensions.RazorViews.BaseView.ExecuteAsync(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-12-08 11:37:57.181 +03:30 [ERR] Connection id "0HNHM62T2JK9V", Request id "0HNHM62T2JK9V:0000000B": An unhandled exception was thrown by the application.
+System.Exception: نام کاربری یا رمز عبور اشتباه است.
+   at App.Domain.Services.UserAgg.UserService.Login(String username, String password, CancellationToken cancellationToken) in D:\maktabsharifc#part2\recordcalses\week23\HWW23\src\01.Domain\Services\App.Domain.Services\UserAgg\UserService.cs:line 26
+   at App.Domain.AppServices.UserAgg.UserAppService.Login(String username, String password, CancellationToken cancellationToken) in D:\maktabsharifc#part2\recordcalses\week23\HWW23\src\01.Domain\Services\App.Domain.AppServices\UserAgg\UserAppService.cs:line 18
+   at App.EndPoints.MVC.HWW22.Areas.Admin.Controllers.AccountController.Login(AdminLoginViewModel adminLoginViewModel, CancellationToken cancellationToken) in D:\maktabsharifc#part2\recordcalses\week23\HWW23\src\03.Presentation\App.EndPoints.MVC.HWW22\Areas\Admin\Controllers\AccountController.cs:line 28
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at UI_MVC.Middlwares.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in D:\maktabsharifc#part2\recordcalses\week23\HWW23\src\03.Presentation\App.EndPoints.MVC.HWW22\Middlwares\RequestLoggingMiddleware.cs:line 32
+   at UI_MVC.Middlwares.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in D:\maktabsharifc#part2\recordcalses\week23\HWW23\src\03.Presentation\App.EndPoints.MVC.HWW22\Middlwares\RequestLoggingMiddleware.cs:line 54
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2025-12-08 11:43:26.691 +03:30 [INF] Request b0288ea4-4a3c-495c-ab08-79bf10ebac9c: GET /  from ::1
+2025-12-08 11:43:27.049 +03:30 [INF] Response b0288ea4-4a3c-495c-ab08-79bf10ebac9c: 200 in 318ms
+2025-12-08 11:43:27.144 +03:30 [INF] Request 38cc0227-27e8-4517-86ca-36aa94419bc8: GET /Vazir.woff2  from ::1
+2025-12-08 11:43:27.149 +03:30 [INF] Response 38cc0227-27e8-4517-86ca-36aa94419bc8: 404 in 1ms
+2025-12-08 11:43:35.702 +03:30 [INF] Request 692e9317-0dd6-44c3-a7b2-430c2e362103: POST /Admin/Account/Login  from ::1
+2025-12-08 11:43:38.200 +03:30 [WRN] Entity 'User' has a global query filter defined and is the required end of a relationship with the entity 'Order'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-08 11:43:38.274 +03:30 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-08 11:43:38.278 +03:30 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-08 11:43:38.279 +03:30 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'User'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-08 11:43:44.479 +03:30 [ERR] Request 692e9317-0dd6-44c3-a7b2-430c2e362103 failed after 8772ms
+System.Exception: نام کاربری یا رمز عبور اشتباه است.
+   at App.Domain.Services.UserAgg.UserService.Login(String username, String password, CancellationToken cancellationToken) in D:\maktabsharifc#part2\recordcalses\week23\HWW23\src\01.Domain\Services\App.Domain.Services\UserAgg\UserService.cs:line 26
+   at App.Domain.AppServices.UserAgg.UserAppService.Login(String username, String password, CancellationToken cancellationToken) in D:\maktabsharifc#part2\recordcalses\week23\HWW23\src\01.Domain\Services\App.Domain.AppServices\UserAgg\UserAppService.cs:line 18
+   at App.EndPoints.MVC.HWW22.Areas.Admin.Controllers.AccountController.Login(AdminLoginViewModel adminLoginViewModel, CancellationToken cancellationToken) in D:\maktabsharifc#part2\recordcalses\week23\HWW23\src\03.Presentation\App.EndPoints.MVC.HWW22\Areas\Admin\Controllers\AccountController.cs:line 28
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at UI_MVC.Middlwares.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in D:\maktabsharifc#part2\recordcalses\week23\HWW23\src\03.Presentation\App.EndPoints.MVC.HWW22\Middlwares\RequestLoggingMiddleware.cs:line 32
+2025-12-08 11:43:46.298 +03:30 [ERR] An unhandled exception has occurred while executing the request.
+System.Exception: نام کاربری یا رمز عبور اشتباه است.
+   at App.Domain.Services.UserAgg.UserService.Login(String username, String password, CancellationToken cancellationToken) in D:\maktabsharifc#part2\recordcalses\week23\HWW23\src\01.Domain\Services\App.Domain.Services\UserAgg\UserService.cs:line 26
+   at App.Domain.AppServices.UserAgg.UserAppService.Login(String username, String password, CancellationToken cancellationToken) in D:\maktabsharifc#part2\recordcalses\week23\HWW23\src\01.Domain\Services\App.Domain.AppServices\UserAgg\UserAppService.cs:line 18
+   at App.EndPoints.MVC.HWW22.Areas.Admin.Controllers.AccountController.Login(AdminLoginViewModel adminLoginViewModel, CancellationToken cancellationToken) in D:\maktabsharifc#part2\recordcalses\week23\HWW23\src\03.Presentation\App.EndPoints.MVC.HWW22\Areas\Admin\Controllers\AccountController.cs:line 28
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at UI_MVC.Middlwares.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in D:\maktabsharifc#part2\recordcalses\week23\HWW23\src\03.Presentation\App.EndPoints.MVC.HWW22\Middlwares\RequestLoggingMiddleware.cs:line 32
+   at UI_MVC.Middlwares.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in D:\maktabsharifc#part2\recordcalses\week23\HWW23\src\03.Presentation\App.EndPoints.MVC.HWW22\Middlwares\RequestLoggingMiddleware.cs:line 54
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-12-08 11:43:46.335 +03:30 [ERR] An exception was thrown attempting to display the error page.
+System.ObjectDisposedException: Cannot access a closed Stream.
+Object name: 'MemoryStream'.
+   at System.IO.Stream.ValidateCopyToArguments(Stream destination, Int32 bufferSize)
+   at System.IO.MemoryStream.CopyToAsync(Stream destination, Int32 bufferSize, CancellationToken cancellationToken)
+   at System.IO.Stream.CopyToAsync(Stream destination)
+   at Microsoft.Extensions.RazorViews.BaseView.ExecuteAsync(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2025-12-08 11:43:46.343 +03:30 [ERR] Connection id "0HNHM66KS9ILA", Request id "0HNHM66KS9ILA:0000000D": An unhandled exception was thrown by the application.
+System.Exception: نام کاربری یا رمز عبور اشتباه است.
+   at App.Domain.Services.UserAgg.UserService.Login(String username, String password, CancellationToken cancellationToken) in D:\maktabsharifc#part2\recordcalses\week23\HWW23\src\01.Domain\Services\App.Domain.Services\UserAgg\UserService.cs:line 26
+   at App.Domain.AppServices.UserAgg.UserAppService.Login(String username, String password, CancellationToken cancellationToken) in D:\maktabsharifc#part2\recordcalses\week23\HWW23\src\01.Domain\Services\App.Domain.AppServices\UserAgg\UserAppService.cs:line 18
+   at App.EndPoints.MVC.HWW22.Areas.Admin.Controllers.AccountController.Login(AdminLoginViewModel adminLoginViewModel, CancellationToken cancellationToken) in D:\maktabsharifc#part2\recordcalses\week23\HWW23\src\03.Presentation\App.EndPoints.MVC.HWW22\Areas\Admin\Controllers\AccountController.cs:line 28
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at UI_MVC.Middlwares.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in D:\maktabsharifc#part2\recordcalses\week23\HWW23\src\03.Presentation\App.EndPoints.MVC.HWW22\Middlwares\RequestLoggingMiddleware.cs:line 32
+   at UI_MVC.Middlwares.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in D:\maktabsharifc#part2\recordcalses\week23\HWW23\src\03.Presentation\App.EndPoints.MVC.HWW22\Middlwares\RequestLoggingMiddleware.cs:line 54
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+   at Microsoft.WebTools.BrowserLink.Net.BrowserLinkMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Watch.BrowserRefresh.BrowserRefreshMiddleware.InvokeAsync(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2025-12-08 11:50:26.866 +03:30 [INF] Request 10dd8259-4eb2-42f4-af8b-e2ef1c9b705c: GET /  from ::1
+2025-12-08 11:50:27.221 +03:30 [INF] Response 10dd8259-4eb2-42f4-af8b-e2ef1c9b705c: 200 in 303ms
+2025-12-08 11:50:27.309 +03:30 [INF] Request 3ce5170b-5e1f-420f-bf41-a29088da6385: GET /Vazir.woff2  from ::1
+2025-12-08 11:50:27.314 +03:30 [INF] Response 3ce5170b-5e1f-420f-bf41-a29088da6385: 404 in 0ms
+2025-12-08 11:50:31.288 +03:30 [INF] Request cc75bddd-f511-4b00-a711-41cef4e1c9dc: POST /Admin/Account/Login  from ::1
+2025-12-08 11:50:33.802 +03:30 [WRN] Entity 'User' has a global query filter defined and is the required end of a relationship with the entity 'Order'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-08 11:50:33.874 +03:30 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-08 11:50:33.877 +03:30 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-08 11:50:33.879 +03:30 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'User'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-08 11:50:38.407 +03:30 [ERR] Request cc75bddd-f511-4b00-a711-41cef4e1c9dc failed after 7115ms
+System.Exception: نام کاربری یا رمز عبور اشتباه است.
+   at App.Domain.Services.UserAgg.UserService.Login(String username, String password, CancellationToken cancellationToken) in D:\maktabsharifc#part2\recordcalses\week23\HWW23\src\01.Domain\Services\App.Domain.Services\UserAgg\UserService.cs:line 26
+   at App.Domain.AppServices.UserAgg.UserAppService.Login(String username, String password, CancellationToken cancellationToken) in D:\maktabsharifc#part2\recordcalses\week23\HWW23\src\01.Domain\Services\App.Domain.AppServices\UserAgg\UserAppService.cs:line 18
+   at App.EndPoints.MVC.HWW22.Areas.Admin.Controllers.AccountController.Login(AdminLoginViewModel adminLoginViewModel, CancellationToken cancellationToken) in D:\maktabsharifc#part2\recordcalses\week23\HWW23\src\03.Presentation\App.EndPoints.MVC.HWW22\Areas\Admin\Controllers\AccountController.cs:line 28
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at UI_MVC.Middlwares.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in D:\maktabsharifc#part2\recordcalses\week23\HWW23\src\03.Presentation\App.EndPoints.MVC.HWW22\Middlwares\RequestLoggingMiddleware.cs:line 35
+2025-12-08 11:50:38.439 +03:30 [INF] Request 31301bd0-759c-4b21-890c-a119d83b25bb: GET /Home/Error  from ::1
+2025-12-08 11:50:38.441 +03:30 [INF] Response 31301bd0-759c-4b21-890c-a119d83b25bb: 404 in 0ms
+2025-12-08 11:53:12.134 +03:30 [INF] Request ce966d08-17b6-4847-9550-12ff0b6d62ac: GET /  from ::1
+2025-12-08 11:53:12.472 +03:30 [INF] Response ce966d08-17b6-4847-9550-12ff0b6d62ac: 200 in 296ms
+2025-12-08 11:53:12.546 +03:30 [INF] Request 813fbffb-0f62-4042-b042-c13fa4fe59d1: GET /Vazir.woff2  from ::1
+2025-12-08 11:53:12.552 +03:30 [INF] Response 813fbffb-0f62-4042-b042-c13fa4fe59d1: 404 in 0ms
+2025-12-08 11:53:17.431 +03:30 [INF] Request 4d734f38-2ede-42f9-9b12-d50bc8a15e31: POST /Admin/Account/Login  from ::1
+2025-12-08 11:53:21.417 +03:30 [WRN] Entity 'User' has a global query filter defined and is the required end of a relationship with the entity 'Order'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-08 11:53:21.490 +03:30 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-08 11:53:21.493 +03:30 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-08 11:53:21.495 +03:30 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'User'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-08 11:53:28.092 +03:30 [ERR] Request 4d734f38-2ede-42f9-9b12-d50bc8a15e31 failed after 10651ms
+System.Exception: نام کاربری یا رمز عبور اشتباه است.
+   at App.Domain.Services.UserAgg.UserService.Login(String username, String password, CancellationToken cancellationToken) in D:\maktabsharifc#part2\recordcalses\week23\HWW23\src\01.Domain\Services\App.Domain.Services\UserAgg\UserService.cs:line 26
+   at App.Domain.AppServices.UserAgg.UserAppService.Login(String username, String password, CancellationToken cancellationToken) in D:\maktabsharifc#part2\recordcalses\week23\HWW23\src\01.Domain\Services\App.Domain.AppServices\UserAgg\UserAppService.cs:line 18
+   at App.EndPoints.MVC.HWW22.Areas.Admin.Controllers.AccountController.Login(AdminLoginViewModel adminLoginViewModel, CancellationToken cancellationToken) in D:\maktabsharifc#part2\recordcalses\week23\HWW23\src\03.Presentation\App.EndPoints.MVC.HWW22\Areas\Admin\Controllers\AccountController.cs:line 28
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at UI_MVC.Middlwares.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in D:\maktabsharifc#part2\recordcalses\week23\HWW23\src\03.Presentation\App.EndPoints.MVC.HWW22\Middlwares\RequestLoggingMiddleware.cs:line 35
+2025-12-08 11:53:28.118 +03:30 [INF] Request 9fb7a5eb-0722-408e-ba55-3cf83bbfb26c: GET /Home/Error  from ::1
+2025-12-08 11:53:28.121 +03:30 [INF] Response 9fb7a5eb-0722-408e-ba55-3cf83bbfb26c: 404 in 0ms
+2025-12-08 11:54:31.511 +03:30 [INF] Request 851697f5-cab2-4880-b2c3-444c3be9b69c: GET /  from ::1
+2025-12-08 11:54:31.896 +03:30 [INF] Response 851697f5-cab2-4880-b2c3-444c3be9b69c: 200 in 286ms
+2025-12-08 11:54:32.041 +03:30 [INF] Request d3f5edfc-e9c0-4db1-b626-da515a41ef87: GET /Vazir.woff2  from ::1
+2025-12-08 11:54:32.047 +03:30 [INF] Response d3f5edfc-e9c0-4db1-b626-da515a41ef87: 404 in 1ms
+2025-12-08 11:54:34.936 +03:30 [INF] Request 6a709397-c3b4-4a02-9429-b51b00a0d1e2: POST /Admin/Account/Login  from ::1
+2025-12-08 11:54:35.410 +03:30 [WRN] Entity 'User' has a global query filter defined and is the required end of a relationship with the entity 'Order'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-08 11:54:35.487 +03:30 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-08 11:54:35.491 +03:30 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-08 11:54:35.492 +03:30 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'User'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-08 11:59:53.755 +03:30 [INF] Request e1a5c609-66ec-4c56-add5-5659cb9e9013: GET /  from ::1
+2025-12-08 11:59:54.140 +03:30 [INF] Response e1a5c609-66ec-4c56-add5-5659cb9e9013: 200 in 330ms
+2025-12-08 11:59:54.229 +03:30 [INF] Request 6c7f3fb9-cee4-44af-ad2e-da5a8de48205: GET /Vazir.woff2  from ::1
+2025-12-08 11:59:54.232 +03:30 [INF] Response 6c7f3fb9-cee4-44af-ad2e-da5a8de48205: 404 in 0ms
+2025-12-08 11:59:59.080 +03:30 [INF] Request 029e8f7d-303e-42af-8885-7444d7d76ff0: POST /Admin/Account/Login  from ::1
+2025-12-08 11:59:59.604 +03:30 [WRN] Entity 'User' has a global query filter defined and is the required end of a relationship with the entity 'Order'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-08 11:59:59.684 +03:30 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-08 11:59:59.687 +03:30 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-08 11:59:59.688 +03:30 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'User'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-08 12:00:00.358 +03:30 [WRN] Failed login attempt for username: admin
+2025-12-08 12:00:00.367 +03:30 [INF] Response 029e8f7d-303e-42af-8885-7444d7d76ff0: 200 in 1284ms
+2025-12-08 12:00:00.415 +03:30 [INF] Request 7c509534-9b83-4cf9-8fcb-f958e1f2c7dd: GET /Vazir.woff2  from ::1
+2025-12-08 12:00:00.421 +03:30 [INF] Response 7c509534-9b83-4cf9-8fcb-f958e1f2c7dd: 404 in 0ms
+2025-12-08 12:00:33.568 +03:30 [INF] Request 1262e4bd-d9e7-4b17-92b6-35f819110c91: POST /Admin/Account/Login  from ::1
+2025-12-08 12:00:33.693 +03:30 [INF] Admin user admin logged in successfully with UserID: 6
+2025-12-08 12:00:33.697 +03:30 [INF] Response 1262e4bd-d9e7-4b17-92b6-35f819110c91: 302 in 125ms
+2025-12-08 12:00:33.705 +03:30 [INF] Request 3544c3da-2c33-4923-8305-6438ba0e6400: GET /Admin/Category  from ::1
+2025-12-08 12:00:33.788 +03:30 [INF] Response 3544c3da-2c33-4923-8305-6438ba0e6400: 200 in 80ms
+2025-12-08 12:00:33.831 +03:30 [INF] Request 5328fcc2-ece1-4808-9bbe-e17bb9acba09: GET /Vazir.woff2  from ::1
+2025-12-08 12:00:33.835 +03:30 [INF] Response 5328fcc2-ece1-4808-9bbe-e17bb9acba09: 404 in 0ms

@@ -10,5 +10,8 @@ namespace App.Domain.Core.Contract.CategoryAgg.Service
     public interface ICategoryService
     {
         public Task<List<CategoryDto>> GetAll(CancellationToken cancellationToken);
+        public Task<int> Create(CategoryDto categoryDto,CancellationToken cancellationToken);
+
+
     }
 }

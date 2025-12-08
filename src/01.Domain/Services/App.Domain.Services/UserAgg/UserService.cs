@@ -23,7 +23,7 @@ namespace App.Domain.Services.UserAgg
             User? user=await _userRepository.GetByUsername(username, cancellationToken);
             if (user==null || user.Password!=password)
             {
-                throw new Exception("نام کاربری یا رمز عبور اشتباه است.");
+                return 0;
             }
 
             LocalStorage.LoginUser=user;

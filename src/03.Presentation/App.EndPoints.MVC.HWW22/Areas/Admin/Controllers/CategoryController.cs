@@ -30,6 +30,14 @@ namespace App.EndPoints.MVC.HWW22.Areas.Admin.Controllers
             return View();
         }
 
+        [HttpPost]
+        public IActionResult Create(CategoryDto categoryDto,CancellationToken cancellationToken)
+        {
+
+            
+
+            return RedirectToAction("Index");
+        }
 
 
 

@@ -1,27 +1,30 @@
-﻿namespace UI_MVC.Middlwares
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Logging;
+using System;
+using System.IO;
+using System.Threading.Tasks;
+
+namespace UI_MVC.Middlwares
 {
     public class RequestLoggingMiddleware
     {
         private readonly RequestDelegate _next;
         private readonly ILogger<RequestLoggingMiddleware> _logger;
 
-
-        public RequestLoggingMiddleware(
-            RequestDelegate next,
-            ILogger<RequestLoggingMiddleware> logger)
+        public RequestLoggingMiddleware(RequestDelegate next, ILogger<RequestLoggingMiddleware> logger)
         {
             _next = next;
             _logger = logger;
         }
 
-
         public async Task InvokeAsync(HttpContext context)
         {
             var requestId = Guid.NewGuid().ToString();
             context.Items["RequestId"] = requestId;
-            await LogRequest(context, requestId);
-            var originalBodyStream = context.Response.Body;
 
+            await LogRequest(context, requestId);
+
+            var originalBodyStream = context.Response.Body;
             using var responseBody = new MemoryStream();
             context.Response.Body = responseBody;
 
@@ -32,72 +35,73 @@
                 await _next(context);
                 stopwatch.Stop();
 
-                // Log response
+               
                 await LogResponse(context, requestId, stopwatch.ElapsedMilliseconds);
             }
             catch (Exception ex)
             {
                 stopwatch.Stop();
+
+                
                 _logger.LogError(
                     ex,
                     "Request {RequestId} failed after {ElapsedMs}ms",
                     requestId,
                     stopwatch.ElapsedMilliseconds
                 );
-                throw;
+
+            
+                if (!context.Response.HasStarted)
+                {
+                    context.Response.StatusCode = 500; 
+                   
+                    context.Response.Redirect("/Home/Error");
+                }
+
+               
             }
             finally
             {
-                // Copy response body back to original stream
+            
                 responseBody.Seek(0, SeekOrigin.Begin);
                 await responseBody.CopyToAsync(originalBodyStream);
             }
         }
 
-
         private async Task LogRequest(HttpContext context, string requestId)
         {
             var request = context.Request;
 
-            // 1. جلوگیری از لاگ کردن پسوردها و اطلاعات حساس
-            var sensitivePaths = new[] { "/Account/Login", "/Account/Register", "/Admin/User/Create" };
-            bool isSensitive = sensitivePaths.Any(p => request.Path.Value?.Contains(p, StringComparison.OrdinalIgnoreCase) == true);
+         
+            bool isMultipart = request.ContentType != null && request.ContentType.Contains("multipart/form-data");
 
-            // 2. جلوگیری از لاگ کردن فایل‌های آپلودی
-            bool isFile = request.ContentType != null && request.ContentType.Contains("multipart/form-data");
+            string bodyText = "(Not Logged)";
 
-            string bodyText = "(Not Logged - Sensitive or File)";
-
-            if (!isSensitive && !isFile)
+            if (!isMultipart)
             {
                 request.EnableBuffering();
-                // خواندن بادی فقط اگر حساس یا فایل نباشد
                 bodyText = await ReadStreamAsync(request.Body);
                 request.Body.Position = 0;
             }
 
             _logger.LogInformation(
-                "Request {RequestId}: {Method} {Path} from {RemoteIp}",
+                "Request {RequestId}: {Method} {Path} {QueryString} from {RemoteIp}",
                 requestId,
                 request.Method,
                 request.Path,
+                request.QueryString,
                 context.Connection.RemoteIpAddress
             );
 
-            // فقط اگر بادی داشتیم لاگ کن
-            if (!string.IsNullOrEmpty(bodyText) && !bodyText.Equals("(Not Logged - Sensitive or File)"))
+            if (!string.IsNullOrEmpty(bodyText) && !bodyText.Equals("(Not Logged)"))
             {
                 _logger.LogDebug("Request {RequestId} Body: {Body}", requestId, bodyText);
             }
         }
 
-        private async Task LogResponse(
-            HttpContext context,
-            string requestId,
-            long elapsedMs)
+        private async Task LogResponse(HttpContext context, string requestId, long elapsedMs)
         {
             var response = context.Response;
-
             response.Body.Seek(0, SeekOrigin.Begin);
             var body = await ReadStreamAsync(response.Body);
             response.Body.Seek(0, SeekOrigin.Begin);
@@ -111,11 +115,7 @@
 
             if (!string.IsNullOrEmpty(body) && response.StatusCode >= 400)
             {
-                _logger.LogWarning(
-                    "Response {RequestId} Error Body: {Body}",
-                    requestId,
-                    body
-                );
+                _logger.LogWarning("Response {RequestId} Error Body: {Body}", requestId, body);
             }
         }
 
@@ -127,6 +127,5 @@
             stream.Seek(0, SeekOrigin.Begin);
             return content;
         }
-
     }
 }

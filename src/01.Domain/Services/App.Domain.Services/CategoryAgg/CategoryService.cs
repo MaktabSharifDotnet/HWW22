@@ -11,6 +11,11 @@ namespace App.Domain.Services.CategoryAgg
 {
     public class CategoryService(ICategoryRepository categoryRepository) : ICategoryService
     {
+        public Task<int> Create(CategoryDto categoryDto, CancellationToken cancellationToken)
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<List<CategoryDto>> GetAll(CancellationToken cancellationToken)
         {
           return await categoryRepository.GetAll(cancellationToken);

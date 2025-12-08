@@ -24,25 +24,24 @@ namespace App.EndPoints.MVC.HWW22.Areas.Admin.Controllers
                 return View("Index", adminLoginViewModel);
             }
 
-            try
+            
+            int userId = await _userAppService.Login(adminLoginViewModel.Username, adminLoginViewModel.Password, cancellationToken);
+            if (userId==0)
             {
-                
-                int userId = await _userAppService.Login(adminLoginViewModel.Username, adminLoginViewModel.Password, cancellationToken);
 
-                _logger.LogInformation("Admin user {Username} logged in successfully with UserID: {UserId}",
+                _logger.LogWarning("Failed login attempt for username: {Username}", adminLoginViewModel.Username);
+                TempData["Error"] ="نام کاربری یا رمز عبور اشتباه است.";
+                return View("Index", adminLoginViewModel);
+                
+            }
+            _logger.LogInformation("Admin user {Username} logged in successfully with UserID: {UserId}",
                                        adminLoginViewModel.Username,
                                        userId);
 
                 return RedirectToAction("Index", "Category");
-            }
-            catch (Exception ex)
-            {
-                TempData["Error"] = ex.Message;
+        
 
-                _logger.LogWarning("Failed login attempt for username: {Username}", adminLoginViewModel.Username);
-
-                return View("Index", adminLoginViewModel);
-            }
+            
         }
 
 
