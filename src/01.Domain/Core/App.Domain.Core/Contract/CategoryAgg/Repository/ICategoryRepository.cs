@@ -1,4 +1,5 @@
-﻿using App.Domain.Core.Dtos.CategoryAgg;
+﻿using App.Domain.Core._common;
+using App.Domain.Core.Dtos.CategoryAgg;
 using App.Domain.Core.Entities;
 using System;
 using System.Collections.Generic;
@@ -11,5 +12,8 @@ namespace App.Domain.Core.Contract.CategoryAgg.Repository
     public interface ICategoryRepository
     {
          public Task<List<CategoryDto>> GetAll(CancellationToken cancellationToken);
+         public Task<bool> IsExistCategoryByName(string name, CancellationToken cancellationToken);
+
+        public Task<int> Add(CategoryDto categoryDto, CancellationToken cancellationToken);
     }
 }

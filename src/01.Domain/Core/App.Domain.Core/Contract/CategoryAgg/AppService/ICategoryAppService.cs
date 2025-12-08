@@ -1,4 +1,5 @@
-﻿using App.Domain.Core.Dtos.CategoryAgg;
+﻿using App.Domain.Core._common;
+using App.Domain.Core.Dtos.CategoryAgg;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,5 +11,6 @@ namespace App.Domain.Core.Contract.CategoryAgg.AppService
     public interface ICategoryAppService
     {
         public Task<List<CategoryDto>> GetAll(CancellationToken cancellationToken);
+        public Task<Result<int>> Create(CategoryDto categoryDto, CancellationToken cancellationToken);
     }
 }

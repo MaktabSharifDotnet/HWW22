@@ -1,8 +1,10 @@
-﻿using App.Domain.Core.Contract.CategoryAgg.AppService;
+﻿using App.Domain.Core._common;
+using App.Domain.Core.Contract.CategoryAgg.AppService;
 using App.Domain.Core.Dtos.CategoryAgg;
 using App.Domain.Core.Entities;
 using App.Domain.Core.Enums.UserAgg;
 using App.EndPoints.MVC.HWW22.Constants;
+using App.EndPoints.MVC.HWW22.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
@@ -30,10 +32,25 @@ namespace App.EndPoints.MVC.HWW22.Areas.Admin.Controllers
             
             return View();
         }
+
         [HttpPost]
-        public IActionResult Create(CategoryDto categoryDto,CancellationToken cancellationToken)
+        public async Task<IActionResult> Create(CategoryDto categoryDto,CancellationToken cancellationToken)
         {
 
+            if (!ModelState.IsValid)
+            {
+                return View("Create", categoryDto);
+            }
+
+            Result<int> result = await _categoryAppService.Create(categoryDto, cancellationToken);
+            if (!result.IsSuccess)
+            {
+                _logger.LogWarning("Failed Create attempt for Category: {Name}. Reason: {Message}",
+                           categoryDto.Name,
+                           result.Message);
+                ModelState.AddModelError(string.Empty, result.Message);
+                return View(categoryDto);
+            }
 
             return RedirectToAction("Index");
         }
