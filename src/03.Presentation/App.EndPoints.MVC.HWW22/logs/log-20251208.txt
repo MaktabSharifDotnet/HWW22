@@ -835,3 +835,373 @@ System.Exception: نام کاربری یا رمز عبور اشتباه است.
 2025-12-08 12:00:33.788 +03:30 [INF] Response 3544c3da-2c33-4923-8305-6438ba0e6400: 200 in 80ms
 2025-12-08 12:00:33.831 +03:30 [INF] Request 5328fcc2-ece1-4808-9bbe-e17bb9acba09: GET /Vazir.woff2  from ::1
 2025-12-08 12:00:33.835 +03:30 [INF] Response 5328fcc2-ece1-4808-9bbe-e17bb9acba09: 404 in 0ms
+2025-12-08 12:01:55.064 +03:30 [INF] Request 563f15eb-7140-47c3-8579-e3ff18a072ae: GET /  from ::1
+2025-12-08 12:01:55.400 +03:30 [INF] Response 563f15eb-7140-47c3-8579-e3ff18a072ae: 200 in 292ms
+2025-12-08 12:01:55.475 +03:30 [INF] Request c2f8d18e-19d1-44f6-9974-3f05424a24d2: GET /Vazir.woff2  from ::1
+2025-12-08 12:01:55.479 +03:30 [INF] Response c2f8d18e-19d1-44f6-9974-3f05424a24d2: 404 in 1ms
+2025-12-08 12:02:03.387 +03:30 [INF] Request 7c86191f-d54d-4f66-949e-474cc34b7cc8: POST /Admin/Account/Login  from ::1
+2025-12-08 12:02:03.860 +03:30 [WRN] Entity 'User' has a global query filter defined and is the required end of a relationship with the entity 'Order'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-08 12:02:03.934 +03:30 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-08 12:02:03.938 +03:30 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-08 12:02:03.940 +03:30 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'User'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-08 12:02:04.625 +03:30 [INF] Admin user admin logged in successfully with UserID: 6
+2025-12-08 12:02:04.632 +03:30 [INF] Response 7c86191f-d54d-4f66-949e-474cc34b7cc8: 302 in 1242ms
+2025-12-08 12:02:04.643 +03:30 [INF] Request 020d200d-ce16-44a8-bd8c-384d18116ef3: GET /Admin/Category  from ::1
+2025-12-08 12:02:04.685 +03:30 [INF] Response 020d200d-ce16-44a8-bd8c-384d18116ef3: 200 in 40ms
+2025-12-08 12:02:04.727 +03:30 [INF] Request ffb7258d-1b18-4d8e-bab8-7b55593916e2: GET /Vazir.woff2  from ::1
+2025-12-08 12:02:04.730 +03:30 [INF] Response ffb7258d-1b18-4d8e-bab8-7b55593916e2: 404 in 0ms
+2025-12-08 12:02:06.656 +03:30 [INF] Request 5e19a058-83e4-4bc1-bf7f-d67ac5fad84c: GET /Admin/Category/Create  from ::1
+2025-12-08 12:03:37.660 +03:30 [ERR] Request 5e19a058-83e4-4bc1-bf7f-d67ac5fad84c failed after 90996ms
+System.Exception: تست میدلور 
+   at App.EndPoints.MVC.HWW22.Areas.Admin.Controllers.CategoryController.Create(CancellationToken cancellationToken) in D:\maktabsharifc#part2\recordcalses\week23\HWW23\src\03.Presentation\App.EndPoints.MVC.HWW22\Areas\Admin\Controllers\CategoryController.cs:line 30
+   at lambda_method151(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at UI_MVC.Middlwares.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in D:\maktabsharifc#part2\recordcalses\week23\HWW23\src\03.Presentation\App.EndPoints.MVC.HWW22\Middlwares\RequestLoggingMiddleware.cs:line 35
+2025-12-08 12:03:37.692 +03:30 [INF] Request b32cc967-ea1c-47f4-ba96-dac123776d0d: GET /Home/Error  from ::1
+2025-12-08 12:03:37.694 +03:30 [INF] Response b32cc967-ea1c-47f4-ba96-dac123776d0d: 404 in 0ms
+2025-12-08 12:10:01.387 +03:30 [INF] Request 85d45edc-c021-4a1f-b071-4414751755df: GET /  from ::1
+2025-12-08 12:10:02.037 +03:30 [WRN] Entity 'User' has a global query filter defined and is the required end of a relationship with the entity 'Order'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-08 12:10:02.114 +03:30 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-08 12:10:02.117 +03:30 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-08 12:10:02.118 +03:30 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'User'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-08 12:10:02.970 +03:30 [INF] Response 85d45edc-c021-4a1f-b071-4414751755df: 200 in 1542ms
+2025-12-08 12:10:03.092 +03:30 [INF] Request a76e435f-e7c4-4bca-8c0f-9aec3d16ac9b: GET /WebApplication1.styles.css  from ::1
+2025-12-08 12:10:03.123 +03:30 [INF] Response a76e435f-e7c4-4bca-8c0f-9aec3d16ac9b: 404 in 3ms
+2025-12-08 12:10:16.525 +03:30 [INF] Request 2a50d3e4-f1b7-4221-a617-a35b8612e9fa: GET /  from ::1
+2025-12-08 12:10:17.237 +03:30 [WRN] Entity 'User' has a global query filter defined and is the required end of a relationship with the entity 'Order'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-08 12:10:17.311 +03:30 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-08 12:10:17.314 +03:30 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-08 12:10:17.315 +03:30 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'User'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-08 12:10:18.123 +03:30 [INF] Response 2a50d3e4-f1b7-4221-a617-a35b8612e9fa: 200 in 1550ms
+2025-12-08 12:10:18.165 +03:30 [INF] Request 89b72949-9115-4fd9-8299-1028255eb44d: GET /WebApplication1.styles.css  from ::1
+2025-12-08 12:10:18.208 +03:30 [INF] Response 89b72949-9115-4fd9-8299-1028255eb44d: 404 in 39ms
+2025-12-08 12:12:28.363 +03:30 [INF] Request 64282ae4-7724-4e82-a2b0-328a20839fa4: GET /  from ::1
+2025-12-08 12:12:28.691 +03:30 [INF] Response 64282ae4-7724-4e82-a2b0-328a20839fa4: 200 in 289ms
+2025-12-08 12:12:28.774 +03:30 [INF] Request 2110464c-47d3-4881-a980-2fc19ea65e76: GET /Vazir.woff2  from ::1
+2025-12-08 12:12:28.780 +03:30 [INF] Response 2110464c-47d3-4881-a980-2fc19ea65e76: 404 in 2ms
+2025-12-08 12:12:32.231 +03:30 [INF] Request b2fad71c-197a-4769-ac21-789ad992e052: POST /Admin/Account/Login  from ::1
+2025-12-08 12:12:32.744 +03:30 [WRN] Entity 'User' has a global query filter defined and is the required end of a relationship with the entity 'Order'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-08 12:12:32.840 +03:30 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-08 12:12:32.844 +03:30 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-08 12:12:32.846 +03:30 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'User'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-08 12:12:33.704 +03:30 [INF] Admin user admin logged in successfully with UserID: 6
+2025-12-08 12:12:33.712 +03:30 [INF] Response b2fad71c-197a-4769-ac21-789ad992e052: 302 in 1478ms
+2025-12-08 12:12:33.724 +03:30 [INF] Request 929825f3-e006-480f-83dd-ec264677040a: GET /Admin/Category  from ::1
+2025-12-08 12:12:33.772 +03:30 [INF] Response 929825f3-e006-480f-83dd-ec264677040a: 200 in 44ms
+2025-12-08 12:12:33.820 +03:30 [INF] Request 8a8e5f5d-0492-4eaf-a710-c5f7b4904503: GET /Vazir.woff2  from ::1
+2025-12-08 12:12:33.823 +03:30 [INF] Response 8a8e5f5d-0492-4eaf-a710-c5f7b4904503: 404 in 0ms
+2025-12-08 12:12:35.316 +03:30 [INF] Request ba251a32-9f2b-4f88-83e2-1bb6654187f8: GET /Admin/Category/Create  from ::1
+2025-12-08 12:12:38.610 +03:30 [ERR] Request ba251a32-9f2b-4f88-83e2-1bb6654187f8 failed after 3289ms
+System.Exception: تست میدلور 
+   at App.EndPoints.MVC.HWW22.Areas.Admin.Controllers.CategoryController.Create(CancellationToken cancellationToken) in D:\maktabsharifc#part2\recordcalses\week23\HWW23\src\03.Presentation\App.EndPoints.MVC.HWW22\Areas\Admin\Controllers\CategoryController.cs:line 30
+   at lambda_method151(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at UI_MVC.Middlwares.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in D:\maktabsharifc#part2\recordcalses\week23\HWW23\src\03.Presentation\App.EndPoints.MVC.HWW22\Middlwares\RequestLoggingMiddleware.cs:line 35
+2025-12-08 12:12:38.634 +03:30 [INF] Request a2758510-102b-44ec-9338-ac58d78ef4e5: GET /Home/Error  from ::1
+2025-12-08 12:12:38.660 +03:30 [INF] Response a2758510-102b-44ec-9338-ac58d78ef4e5: 200 in 9ms
+2025-12-08 12:12:48.927 +03:30 [INF] Request 2a3c4355-588b-4cab-8271-f97b4c536eaa: GET /  from ::1
+2025-12-08 12:12:48.939 +03:30 [INF] Response 2a3c4355-588b-4cab-8271-f97b4c536eaa: 200 in 7ms
+2025-12-08 12:12:48.975 +03:30 [INF] Request d1e61616-938b-4dc9-82e1-f19b0fd040f2: GET /Vazir.woff2  from ::1
+2025-12-08 12:12:48.979 +03:30 [INF] Response d1e61616-938b-4dc9-82e1-f19b0fd040f2: 404 in 0ms
+2025-12-08 12:12:51.241 +03:30 [INF] Request efba0663-eea2-4822-86bc-762e4768fff5: GET /Admin/Account/Login  from ::1
+2025-12-08 12:12:51.245 +03:30 [INF] Response efba0663-eea2-4822-86bc-762e4768fff5: 405 in 0ms
+2025-12-08 12:12:54.816 +03:30 [INF] Request 60cc7de5-ff25-4075-a073-de2780c13aac: GET /  from ::1
+2025-12-08 12:12:54.822 +03:30 [INF] Response 60cc7de5-ff25-4075-a073-de2780c13aac: 200 in 2ms
+2025-12-08 12:12:54.876 +03:30 [INF] Request 1dc6de8c-b3b4-4447-9008-6941a7accf18: GET /Vazir.woff2  from ::1
+2025-12-08 12:12:54.881 +03:30 [INF] Response 1dc6de8c-b3b4-4447-9008-6941a7accf18: 404 in 0ms
+2025-12-08 12:13:03.340 +03:30 [INF] Request 23939678-6a49-43ff-b2b4-01221b45e82b: GET /  from ::1
+2025-12-08 12:13:03.345 +03:30 [INF] Response 23939678-6a49-43ff-b2b4-01221b45e82b: 200 in 1ms
+2025-12-08 12:13:03.379 +03:30 [INF] Request 0ef67c9d-9f1d-491d-bac5-b7276befe30a: GET /Vazir.woff2  from ::1
+2025-12-08 12:13:03.382 +03:30 [INF] Response 0ef67c9d-9f1d-491d-bac5-b7276befe30a: 404 in 0ms
+2025-12-08 12:13:05.668 +03:30 [INF] Request 33fd69d8-7eff-4b3f-9580-6107ca936dd3: GET /Admin/Account/Login  from ::1
+2025-12-08 12:13:05.671 +03:30 [INF] Response 33fd69d8-7eff-4b3f-9580-6107ca936dd3: 405 in 0ms
+2025-12-08 12:14:47.884 +03:30 [INF] Request bc86667b-a180-4f58-a7b2-135584754d41: GET /  from ::1
+2025-12-08 12:14:48.215 +03:30 [INF] Response bc86667b-a180-4f58-a7b2-135584754d41: 200 in 290ms
+2025-12-08 12:14:48.291 +03:30 [INF] Request dc2b4bff-715e-4eaa-8503-f646c7d9f202: GET /Vazir.woff2  from ::1
+2025-12-08 12:14:48.297 +03:30 [INF] Response dc2b4bff-715e-4eaa-8503-f646c7d9f202: 404 in 1ms
+2025-12-08 12:14:53.326 +03:30 [INF] Request 130dc2d2-e4e6-4593-a77b-6cfe7ece8986: POST /Admin/Account/Login  from ::1
+2025-12-08 12:14:53.881 +03:30 [WRN] Entity 'User' has a global query filter defined and is the required end of a relationship with the entity 'Order'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-08 12:14:53.972 +03:30 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-08 12:14:53.975 +03:30 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-08 12:14:53.976 +03:30 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'User'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-08 12:14:54.656 +03:30 [INF] Admin user admin logged in successfully with UserID: 6
+2025-12-08 12:14:54.663 +03:30 [INF] Response 130dc2d2-e4e6-4593-a77b-6cfe7ece8986: 302 in 1327ms
+2025-12-08 12:14:54.674 +03:30 [INF] Request 02fda825-98b8-4001-a74c-a714fb7994ca: GET /Admin/Category  from ::1
+2025-12-08 12:14:54.719 +03:30 [INF] Response 02fda825-98b8-4001-a74c-a714fb7994ca: 200 in 42ms
+2025-12-08 12:14:54.772 +03:30 [INF] Request 1e198541-bbb2-47c7-a980-708e0e51ad8e: GET /Vazir.woff2  from ::1
+2025-12-08 12:14:54.777 +03:30 [INF] Response 1e198541-bbb2-47c7-a980-708e0e51ad8e: 404 in 0ms
+2025-12-08 12:14:55.872 +03:30 [INF] Request 2cc98c88-6c08-4bef-bd20-90d442856717: GET /Admin/Category/Create  from ::1
+2025-12-08 12:14:58.038 +03:30 [ERR] Request 2cc98c88-6c08-4bef-bd20-90d442856717 failed after 2161ms
+System.Exception: تست میدلور 
+   at App.EndPoints.MVC.HWW22.Areas.Admin.Controllers.CategoryController.Create(CancellationToken cancellationToken) in D:\maktabsharifc#part2\recordcalses\week23\HWW23\src\03.Presentation\App.EndPoints.MVC.HWW22\Areas\Admin\Controllers\CategoryController.cs:line 30
+   at lambda_method151(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at UI_MVC.Middlwares.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in D:\maktabsharifc#part2\recordcalses\week23\HWW23\src\03.Presentation\App.EndPoints.MVC.HWW22\Middlwares\RequestLoggingMiddleware.cs:line 35
+2025-12-08 12:14:58.062 +03:30 [INF] Request a31f9b2d-6437-4fd9-b077-a92fdc4f9092: GET /Home/Error  from ::1
+2025-12-08 12:14:58.076 +03:30 [INF] Response a31f9b2d-6437-4fd9-b077-a92fdc4f9092: 200 in 12ms
+2025-12-08 12:16:02.343 +03:30 [INF] Request 650c411e-2797-42e9-b58d-188fc673be41: GET /index/Home  from ::1
+2025-12-08 12:16:02.345 +03:30 [INF] Response 650c411e-2797-42e9-b58d-188fc673be41: 404 in 0ms
+2025-12-08 12:16:46.687 +03:30 [INF] Request 72abc2d1-c0cc-4afb-91de-428a546d1dcd: GET /  from ::1
+2025-12-08 12:16:47.128 +03:30 [INF] Response 72abc2d1-c0cc-4afb-91de-428a546d1dcd: 200 in 392ms
+2025-12-08 12:16:47.207 +03:30 [INF] Request 456b23d6-ed27-4c94-96be-5f5b55f979c0: GET /Vazir.woff2  from ::1
+2025-12-08 12:16:47.214 +03:30 [INF] Response 456b23d6-ed27-4c94-96be-5f5b55f979c0: 404 in 1ms
+2025-12-08 12:16:49.957 +03:30 [INF] Request 4b5818cd-3c17-4db8-8190-be49a3c746e0: POST /Admin/Account/Login  from ::1
+2025-12-08 12:16:50.001 +03:30 [INF] Response 4b5818cd-3c17-4db8-8190-be49a3c746e0: 200 in 38ms
+2025-12-08 12:16:50.036 +03:30 [INF] Request d5729a11-0378-4ecd-a314-4885521fc915: GET /Vazir.woff2  from ::1
+2025-12-08 12:16:50.041 +03:30 [INF] Response d5729a11-0378-4ecd-a314-4885521fc915: 404 in 0ms
+2025-12-08 12:16:53.783 +03:30 [INF] Request d4d1d4f6-25a6-4e46-986e-395b57ae6043: POST /Admin/Account/Login  from ::1
+2025-12-08 12:16:54.274 +03:30 [WRN] Entity 'User' has a global query filter defined and is the required end of a relationship with the entity 'Order'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-08 12:16:54.349 +03:30 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-08 12:16:54.352 +03:30 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-08 12:16:54.353 +03:30 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'User'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-08 12:16:55.068 +03:30 [INF] Admin user admin logged in successfully with UserID: 6
+2025-12-08 12:16:55.075 +03:30 [INF] Response d4d1d4f6-25a6-4e46-986e-395b57ae6043: 302 in 1288ms
+2025-12-08 12:16:55.083 +03:30 [INF] Request c35324d1-e366-4d05-a889-57e140557cd5: GET /Admin/Category  from ::1
+2025-12-08 12:16:55.120 +03:30 [INF] Response c35324d1-e366-4d05-a889-57e140557cd5: 200 in 34ms
+2025-12-08 12:16:55.167 +03:30 [INF] Request 98920a4a-bc74-40de-9a19-edea0a4b0ddb: GET /Vazir.woff2  from ::1
+2025-12-08 12:16:55.171 +03:30 [INF] Response 98920a4a-bc74-40de-9a19-edea0a4b0ddb: 404 in 0ms
+2025-12-08 12:16:56.339 +03:30 [INF] Request 54494319-3a19-47bd-920e-bc2979727004: GET /Admin/Category/Create  from ::1
+2025-12-08 12:16:58.057 +03:30 [ERR] Request 54494319-3a19-47bd-920e-bc2979727004 failed after 1716ms
+System.Exception: تست میدلور 
+   at App.EndPoints.MVC.HWW22.Areas.Admin.Controllers.CategoryController.Create(CancellationToken cancellationToken) in D:\maktabsharifc#part2\recordcalses\week23\HWW23\src\03.Presentation\App.EndPoints.MVC.HWW22\Areas\Admin\Controllers\CategoryController.cs:line 30
+   at lambda_method151(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at UI_MVC.Middlwares.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in D:\maktabsharifc#part2\recordcalses\week23\HWW23\src\03.Presentation\App.EndPoints.MVC.HWW22\Middlwares\RequestLoggingMiddleware.cs:line 35
+2025-12-08 12:16:58.084 +03:30 [INF] Request 4eea0a4d-2a30-418b-a812-eb5e37bf55b8: GET /Home/Error  from ::1
+2025-12-08 12:16:58.112 +03:30 [INF] Response 4eea0a4d-2a30-418b-a812-eb5e37bf55b8: 200 in 25ms
+2025-12-08 12:17:00.193 +03:30 [INF] Request c7486ce3-9b9b-466c-a0ac-287936252eb2: GET /Index/Home  from ::1
+2025-12-08 12:17:00.196 +03:30 [INF] Response c7486ce3-9b9b-466c-a0ac-287936252eb2: 404 in 0ms
+2025-12-08 12:18:29.924 +03:30 [INF] Request d8cd8955-bc33-44c3-98bf-81673eb46faa: GET /  from ::1
+2025-12-08 12:18:30.265 +03:30 [INF] Response d8cd8955-bc33-44c3-98bf-81673eb46faa: 200 in 300ms
+2025-12-08 12:18:30.346 +03:30 [INF] Request 0f2c6bda-af92-4b9b-b80a-e432853bc1b2: GET /Vazir.woff2  from ::1
+2025-12-08 12:18:30.352 +03:30 [INF] Response 0f2c6bda-af92-4b9b-b80a-e432853bc1b2: 404 in 1ms
+2025-12-08 12:18:33.848 +03:30 [INF] Request bda7e210-634b-4256-944b-199d874b585f: POST /Admin/Account/Login  from ::1
+2025-12-08 12:18:34.383 +03:30 [WRN] Entity 'User' has a global query filter defined and is the required end of a relationship with the entity 'Order'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-08 12:18:34.475 +03:30 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-08 12:18:34.478 +03:30 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-08 12:18:34.479 +03:30 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'User'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-08 12:18:35.188 +03:30 [INF] Admin user admin logged in successfully with UserID: 6
+2025-12-08 12:18:35.195 +03:30 [INF] Response bda7e210-634b-4256-944b-199d874b585f: 302 in 1344ms
+2025-12-08 12:18:35.206 +03:30 [INF] Request 658d7ea0-2693-40f9-8fce-aa2b618063fb: GET /Admin/Category  from ::1
+2025-12-08 12:18:35.254 +03:30 [INF] Response 658d7ea0-2693-40f9-8fce-aa2b618063fb: 200 in 45ms
+2025-12-08 12:18:35.302 +03:30 [INF] Request 6ff8c1ff-4e9b-4bcb-92a5-744ae07a8c42: GET /Vazir.woff2  from ::1
+2025-12-08 12:18:35.305 +03:30 [INF] Response 6ff8c1ff-4e9b-4bcb-92a5-744ae07a8c42: 404 in 0ms
+2025-12-08 12:18:36.589 +03:30 [INF] Request f42d6ba1-36b5-4ea1-98f1-83d8d93e15fd: GET /Admin/Category/Create  from ::1
+2025-12-08 12:18:38.034 +03:30 [ERR] Request f42d6ba1-36b5-4ea1-98f1-83d8d93e15fd failed after 1440ms
+System.Exception: تست میدلور 
+   at App.EndPoints.MVC.HWW22.Areas.Admin.Controllers.CategoryController.Create(CancellationToken cancellationToken) in D:\maktabsharifc#part2\recordcalses\week23\HWW23\src\03.Presentation\App.EndPoints.MVC.HWW22\Areas\Admin\Controllers\CategoryController.cs:line 30
+   at lambda_method151(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at UI_MVC.Middlwares.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in D:\maktabsharifc#part2\recordcalses\week23\HWW23\src\03.Presentation\App.EndPoints.MVC.HWW22\Middlwares\RequestLoggingMiddleware.cs:line 35
+2025-12-08 12:18:38.060 +03:30 [INF] Request 1304011f-9fbf-413d-add9-2c0767d2ccae: GET /Home/Error  from ::1
+2025-12-08 12:18:38.075 +03:30 [INF] Response 1304011f-9fbf-413d-add9-2c0767d2ccae: 200 in 13ms
+2025-12-08 12:18:40.334 +03:30 [INF] Request aab75000-daa4-4f2b-857b-5db1cbd1b91f: GET /  from ::1
+2025-12-08 12:18:40.342 +03:30 [INF] Response aab75000-daa4-4f2b-857b-5db1cbd1b91f: 200 in 4ms
+2025-12-08 12:18:40.371 +03:30 [INF] Request 1360ee2b-97f7-48f2-99f0-1c7d65fef4d3: GET /Vazir.woff2  from ::1
+2025-12-08 12:18:40.375 +03:30 [INF] Response 1360ee2b-97f7-48f2-99f0-1c7d65fef4d3: 404 in 0ms
+2025-12-08 12:21:26.680 +03:30 [INF] Request 8c7a5e56-b682-401d-8f05-0433836ea4f7: GET /  from ::1
+2025-12-08 12:21:26.684 +03:30 [INF] Response 8c7a5e56-b682-401d-8f05-0433836ea4f7: 200 in 2ms
+2025-12-08 12:21:26.718 +03:30 [INF] Request 95e934eb-2c7a-40c0-8caf-a438e075eee3: GET /Vazir.woff2  from ::1
+2025-12-08 12:21:26.729 +03:30 [INF] Response 95e934eb-2c7a-40c0-8caf-a438e075eee3: 404 in 0ms
+2025-12-08 12:23:34.411 +03:30 [INF] Request 6980d7ad-fcdb-4b08-838a-7fb214095a8d: GET /  from ::1
+2025-12-08 12:23:35.102 +03:30 [WRN] Entity 'User' has a global query filter defined and is the required end of a relationship with the entity 'Order'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-08 12:23:35.182 +03:30 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-08 12:23:35.185 +03:30 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-08 12:23:35.186 +03:30 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'User'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-08 12:23:36.081 +03:30 [INF] Response 6980d7ad-fcdb-4b08-838a-7fb214095a8d: 200 in 1626ms
+2025-12-08 12:23:36.125 +03:30 [INF] Request 558225dc-7291-472c-ba7a-296266e67779: GET /WebApplication1.styles.css  from ::1
+2025-12-08 12:23:36.174 +03:30 [INF] Response 558225dc-7291-472c-ba7a-296266e67779: 404 in 43ms
+2025-12-08 12:23:45.723 +03:30 [INF] Request 926c1ed7-0a0c-4fea-955e-9df5c65ccece: GET /Admin/Account  from ::1
+2025-12-08 12:23:45.786 +03:30 [INF] Response 926c1ed7-0a0c-4fea-955e-9df5c65ccece: 200 in 59ms
+2025-12-08 12:23:45.844 +03:30 [INF] Request 989fa3bc-134a-46b3-98ae-4bc334201968: GET /Vazir.woff2  from ::1
+2025-12-08 12:23:45.848 +03:30 [INF] Response 989fa3bc-134a-46b3-98ae-4bc334201968: 404 in 0ms
+2025-12-08 12:23:50.815 +03:30 [INF] Request 63a2f1b0-746f-43ff-ac81-0fe09d34c23e: POST /Admin/Account/Login  from ::1
+2025-12-08 12:23:50.916 +03:30 [INF] Admin user admin logged in successfully with UserID: 6
+2025-12-08 12:23:50.919 +03:30 [INF] Response 63a2f1b0-746f-43ff-ac81-0fe09d34c23e: 302 in 101ms
+2025-12-08 12:23:50.926 +03:30 [INF] Request 48a290ba-1c7c-47d8-8e6c-1628ef8a54bc: GET /Admin/Category  from ::1
+2025-12-08 12:23:51.008 +03:30 [INF] Response 48a290ba-1c7c-47d8-8e6c-1628ef8a54bc: 200 in 79ms
+2025-12-08 12:23:51.050 +03:30 [INF] Request d2335b15-8c51-447d-954f-b162ee25c577: GET /Vazir.woff2  from ::1
+2025-12-08 12:23:51.053 +03:30 [INF] Response d2335b15-8c51-447d-954f-b162ee25c577: 404 in 0ms
+2025-12-08 12:23:52.464 +03:30 [INF] Request df22a503-0b8e-4fff-8a1b-72f1378f0ea6: GET /Admin/Category/Create  from ::1
+2025-12-08 12:23:54.162 +03:30 [ERR] Request df22a503-0b8e-4fff-8a1b-72f1378f0ea6 failed after 1692ms
+System.Exception: تست میدلور 
+   at App.EndPoints.MVC.HWW22.Areas.Admin.Controllers.CategoryController.Create(CancellationToken cancellationToken) in D:\maktabsharifc#part2\recordcalses\week23\HWW23\src\03.Presentation\App.EndPoints.MVC.HWW22\Areas\Admin\Controllers\CategoryController.cs:line 30
+   at lambda_method176(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at UI_MVC.Middlwares.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in D:\maktabsharifc#part2\recordcalses\week23\HWW23\src\03.Presentation\App.EndPoints.MVC.HWW22\Middlwares\RequestLoggingMiddleware.cs:line 35
+2025-12-08 12:23:54.189 +03:30 [INF] Request be208df8-847f-49d3-a538-77da8382c422: GET /Home/Error  from ::1
+2025-12-08 12:23:54.198 +03:30 [INF] Response be208df8-847f-49d3-a538-77da8382c422: 200 in 6ms
+2025-12-08 12:23:57.336 +03:30 [INF] Request 3d5dc7c8-ae38-412b-a971-4503389aaa5e: GET /  from ::1
+2025-12-08 12:23:57.349 +03:30 [INF] Response 3d5dc7c8-ae38-412b-a971-4503389aaa5e: 200 in 10ms
+2025-12-08 12:23:57.376 +03:30 [INF] Request f69599eb-49eb-4b33-a286-7ce6cc5f6101: GET /WebApplication1.styles.css  from ::1
+2025-12-08 12:23:57.382 +03:30 [INF] Response f69599eb-49eb-4b33-a286-7ce6cc5f6101: 404 in 0ms
+2025-12-08 12:39:33.917 +03:30 [INF] Request 6d3d5a4b-86ba-4093-95c5-a59b105976f4: GET /  from ::1
+2025-12-08 12:39:34.646 +03:30 [WRN] Entity 'User' has a global query filter defined and is the required end of a relationship with the entity 'Order'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-08 12:39:34.720 +03:30 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-08 12:39:34.724 +03:30 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-08 12:39:34.725 +03:30 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'User'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-08 12:39:35.542 +03:30 [INF] Response 6d3d5a4b-86ba-4093-95c5-a59b105976f4: 200 in 1573ms
+2025-12-08 12:39:35.585 +03:30 [INF] Request 9588c8a8-b4a8-4682-b782-fa0c393abdbb: GET /WebApplication1.styles.css  from ::1
+2025-12-08 12:39:35.628 +03:30 [INF] Response 9588c8a8-b4a8-4682-b782-fa0c393abdbb: 404 in 3ms
+2025-12-08 12:39:37.274 +03:30 [INF] Request 69b834b6-6351-46af-b314-23f4d3012094: GET /Admin/Account  from ::1
+2025-12-08 12:39:37.333 +03:30 [INF] Response 69b834b6-6351-46af-b314-23f4d3012094: 200 in 56ms
+2025-12-08 12:39:37.391 +03:30 [INF] Request 10702cb2-a452-4e9c-ba52-125e0c685599: GET /Vazir.woff2  from ::1
+2025-12-08 12:39:37.394 +03:30 [INF] Response 10702cb2-a452-4e9c-ba52-125e0c685599: 404 in 0ms
+2025-12-08 12:39:39.654 +03:30 [INF] Request 21b8b783-93f7-42a5-b7e6-7744cf26dda9: GET /  from ::1
+2025-12-08 12:39:39.672 +03:30 [INF] Response 21b8b783-93f7-42a5-b7e6-7744cf26dda9: 200 in 15ms
+2025-12-08 12:39:39.704 +03:30 [INF] Request 33a83ac3-3275-44dc-add4-2b80a523dfb5: GET /WebApplication1.styles.css  from ::1
+2025-12-08 12:39:39.708 +03:30 [INF] Response 33a83ac3-3275-44dc-add4-2b80a523dfb5: 404 in 0ms
+2025-12-08 12:39:40.737 +03:30 [INF] Request cb567ec6-a7d0-4642-877c-f9dc83db1951: GET /Admin/Account  from ::1
+2025-12-08 12:39:40.743 +03:30 [INF] Response cb567ec6-a7d0-4642-877c-f9dc83db1951: 200 in 3ms
+2025-12-08 12:39:40.769 +03:30 [INF] Request 48a61e0f-28fd-4cfb-91e7-7b613a18daad: GET /Vazir.woff2  from ::1
+2025-12-08 12:39:40.777 +03:30 [INF] Response 48a61e0f-28fd-4cfb-91e7-7b613a18daad: 404 in 0ms
+2025-12-08 12:39:41.653 +03:30 [INF] Request 0f78cadc-761c-4ad2-86ef-947d66ec3809: GET /  from ::1
+2025-12-08 12:39:41.718 +03:30 [INF] Response 0f78cadc-761c-4ad2-86ef-947d66ec3809: 200 in 62ms
+2025-12-08 12:39:41.744 +03:30 [INF] Request 5a677f9b-250c-43e0-864e-96df82ef2118: GET /WebApplication1.styles.css  from ::1
+2025-12-08 12:39:41.746 +03:30 [INF] Response 5a677f9b-250c-43e0-864e-96df82ef2118: 404 in 0ms
+2025-12-08 12:39:45.493 +03:30 [INF] Request 92ec9b3c-b0e5-4507-bd82-cecc7adfea09: GET /Admin/Account  from ::1
+2025-12-08 12:39:45.499 +03:30 [INF] Response 92ec9b3c-b0e5-4507-bd82-cecc7adfea09: 200 in 3ms
+2025-12-08 12:39:45.536 +03:30 [INF] Request 274f4150-772f-4e60-a01a-67bdf3f995a0: GET /Vazir.woff2  from ::1
+2025-12-08 12:39:45.541 +03:30 [INF] Response 274f4150-772f-4e60-a01a-67bdf3f995a0: 404 in 0ms
+2025-12-08 12:42:02.549 +03:30 [INF] Request 503a78c0-bb7e-4ea3-aea1-b769598091c2: GET /  from ::1
+2025-12-08 12:42:03.514 +03:30 [WRN] Entity 'User' has a global query filter defined and is the required end of a relationship with the entity 'Order'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-08 12:42:03.605 +03:30 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-08 12:42:03.609 +03:30 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-08 12:42:03.611 +03:30 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'User'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-08 12:42:04.697 +03:30 [INF] Response 503a78c0-bb7e-4ea3-aea1-b769598091c2: 200 in 2104ms
+2025-12-08 12:42:04.747 +03:30 [INF] Request 5ef7d07b-3f09-44ca-82e6-8ba522ebffcd: GET /WebApplication1.styles.css  from ::1
+2025-12-08 12:42:04.764 +03:30 [INF] Response 5ef7d07b-3f09-44ca-82e6-8ba522ebffcd: 404 in 10ms
+2025-12-08 12:42:06.055 +03:30 [INF] Request 57ab7cb2-af1f-4f11-8aec-0bee9b995762: GET /Admin/Account  from ::1
+2025-12-08 12:42:06.133 +03:30 [INF] Response 57ab7cb2-af1f-4f11-8aec-0bee9b995762: 200 in 73ms
+2025-12-08 12:42:06.212 +03:30 [INF] Request dd62fb35-ae4c-4c7c-9a61-16036ddb8871: GET /Vazir.woff2  from ::1
+2025-12-08 12:42:06.216 +03:30 [INF] Response dd62fb35-ae4c-4c7c-9a61-16036ddb8871: 404 in 0ms
+2025-12-08 12:42:09.905 +03:30 [INF] Request 069ee55f-aa93-4230-ab48-31062fd4e037: POST /Admin/Account/Login  from ::1
+2025-12-08 12:42:10.082 +03:30 [INF] Admin user admin logged in successfully with UserID: 6
+2025-12-08 12:42:10.086 +03:30 [INF] Response 069ee55f-aa93-4230-ab48-31062fd4e037: 302 in 176ms
+2025-12-08 12:42:10.098 +03:30 [INF] Request 96fa1127-eff2-4c42-833e-a77e0b0ec9d4: GET /Admin/Category  from ::1
+2025-12-08 12:42:10.220 +03:30 [INF] Response 96fa1127-eff2-4c42-833e-a77e0b0ec9d4: 200 in 118ms
+2025-12-08 12:42:10.277 +03:30 [INF] Request e044f872-3b5b-43aa-b0ab-54113b39ec0d: GET /Vazir.woff2  from ::1
+2025-12-08 12:42:10.281 +03:30 [INF] Response e044f872-3b5b-43aa-b0ab-54113b39ec0d: 404 in 0ms
+2025-12-08 12:42:12.311 +03:30 [INF] Request 186a9cbe-3b52-4540-8ef8-2da48f50c7ae: GET /Admin/Category/Create  from ::1
+2025-12-08 12:42:23.482 +03:30 [ERR] Request 186a9cbe-3b52-4540-8ef8-2da48f50c7ae failed after 11167ms
+System.Exception: تست میدلور 
+   at App.EndPoints.MVC.HWW22.Areas.Admin.Controllers.CategoryController.Create(CancellationToken cancellationToken) in D:\maktabsharifc#part2\recordcalses\week23\HWW23\src\03.Presentation\App.EndPoints.MVC.HWW22\Areas\Admin\Controllers\CategoryController.cs:line 30
+   at lambda_method176(Closure, Object, Object[])
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at UI_MVC.Middlwares.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in D:\maktabsharifc#part2\recordcalses\week23\HWW23\src\03.Presentation\App.EndPoints.MVC.HWW22\Middlwares\RequestLoggingMiddleware.cs:line 35
+2025-12-08 12:42:23.525 +03:30 [INF] Request 942bac29-2f8d-495e-9ed2-2758850e884a: GET /Home/Error  from ::1
+2025-12-08 12:42:23.538 +03:30 [INF] Response 942bac29-2f8d-495e-9ed2-2758850e884a: 200 in 10ms
