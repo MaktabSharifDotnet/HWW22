@@ -1541,3 +1541,104 @@ System.InvalidOperationException: The view 'Detail' was not found. The following
 2025-12-09 17:15:09.969 +03:30 [INF] Response 082386bf-718c-4782-9a03-c2d1d709a652: 200 in 6ms
 2025-12-09 17:15:10.002 +03:30 [INF] Request 9c476a29-09c5-4777-b8cb-fdafc3296ab7: GET /Vazir.woff2  from ::1
 2025-12-09 17:15:10.009 +03:30 [INF] Response 9c476a29-09c5-4777-b8cb-fdafc3296ab7: 404 in 0ms
+2025-12-09 17:15:33.388 +03:30 [INF] Request aaae92b4-73c7-443b-ae8a-e47585dcbbed: GET /  from ::1
+2025-12-09 17:15:34.087 +03:30 [WRN] Entity 'User' has a global query filter defined and is the required end of a relationship with the entity 'Order'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-09 17:15:34.158 +03:30 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 17:15:34.161 +03:30 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 17:15:34.162 +03:30 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'User'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 17:15:34.996 +03:30 [INF] Response aaae92b4-73c7-443b-ae8a-e47585dcbbed: 200 in 1567ms
+2025-12-09 17:15:35.047 +03:30 [INF] Request c079d11e-5424-4d27-a219-8251e6d18cfd: GET /WebApplication1.styles.css  from ::1
+2025-12-09 17:15:35.058 +03:30 [INF] Response c079d11e-5424-4d27-a219-8251e6d18cfd: 404 in 7ms
+2025-12-09 17:15:36.075 +03:30 [INF] Request ca8481a2-e806-4669-92ab-3495c0a2cab7: GET /Admin/Account  from ::1
+2025-12-09 17:15:36.143 +03:30 [INF] Response ca8481a2-e806-4669-92ab-3495c0a2cab7: 200 in 63ms
+2025-12-09 17:15:36.195 +03:30 [INF] Request 7831820d-1c7f-415e-ae1e-116da43202a2: GET /Vazir.woff2  from ::1
+2025-12-09 17:15:36.201 +03:30 [INF] Response 7831820d-1c7f-415e-ae1e-116da43202a2: 404 in 0ms
+2025-12-09 17:15:38.902 +03:30 [INF] Request 4197c4c1-8f0b-44d6-a4af-ee43634b8c19: POST /Admin/Account/Login  from ::1
+2025-12-09 17:15:39.018 +03:30 [INF] Admin user admin logged in successfully with UserID: 6
+2025-12-09 17:15:39.021 +03:30 [INF] Response 4197c4c1-8f0b-44d6-a4af-ee43634b8c19: 302 in 115ms
+2025-12-09 17:15:39.028 +03:30 [INF] Request 698a5fec-6dd0-4f76-836d-1d3e3fa80cd3: GET /Admin/Category  from ::1
+2025-12-09 17:15:39.092 +03:30 [INF] Response 698a5fec-6dd0-4f76-836d-1d3e3fa80cd3: 200 in 61ms
+2025-12-09 17:15:39.134 +03:30 [INF] Request f1d2c847-e23f-40b5-acb9-f3e1f622e121: GET /Vazir.woff2  from ::1
+2025-12-09 17:15:39.137 +03:30 [INF] Response f1d2c847-e23f-40b5-acb9-f3e1f622e121: 404 in 0ms
+2025-12-09 17:15:40.821 +03:30 [INF] Request 9daa45b0-060d-47e8-ac74-3af626d18692: GET /Admin/Customer  from ::1
+2025-12-09 17:15:40.851 +03:30 [INF] Accessed Customer Index page successfully.
+2025-12-09 17:15:40.859 +03:30 [INF] Response 9daa45b0-060d-47e8-ac74-3af626d18692: 200 in 34ms
+2025-12-09 17:15:40.894 +03:30 [INF] Request 72b757b8-fa29-4aea-a013-443926d95f17: GET /Vazir.woff2  from ::1
+2025-12-09 17:15:40.899 +03:30 [INF] Response 72b757b8-fa29-4aea-a013-443926d95f17: 404 in 0ms
+2025-12-09 17:15:54.397 +03:30 [INF] Request 850f89df-b41a-4bb3-afef-9f97c6a28f1d: GET /Admin/Customer/Detail ?userId=6 from ::1
+2025-12-09 17:15:54.420 +03:30 [WRN] Failed to access Customer Detail page: همیچن کابری موجود نیست.
+2025-12-09 17:15:54.423 +03:30 [INF] Response 850f89df-b41a-4bb3-afef-9f97c6a28f1d: 302 in 23ms
+2025-12-09 17:15:54.431 +03:30 [INF] Request 9a077407-cc4c-49f5-9e1c-731b86b9133c: GET /Admin/Customer  from ::1
+2025-12-09 17:15:54.436 +03:30 [INF] Accessed Customer Index page successfully.
+2025-12-09 17:15:54.439 +03:30 [INF] Response 9a077407-cc4c-49f5-9e1c-731b86b9133c: 200 in 5ms
+2025-12-09 17:15:54.477 +03:30 [INF] Request bb5aeedc-f3c9-4679-ace3-b80138bef23a: GET /Vazir.woff2  from ::1
+2025-12-09 17:15:54.487 +03:30 [INF] Response bb5aeedc-f3c9-4679-ace3-b80138bef23a: 404 in 0ms
+2025-12-09 17:15:57.237 +03:30 [INF] Request 77aa67a8-05a1-40f1-807b-0b33072f133f: GET /Admin/Customer/Detail ?userId=5 from ::1
+2025-12-09 17:15:57.245 +03:30 [INF] Accessed Customer Detail page successfully for UserId: 5
+2025-12-09 17:15:57.251 +03:30 [INF] Response 77aa67a8-05a1-40f1-807b-0b33072f133f: 200 in 10ms
+2025-12-09 17:15:57.283 +03:30 [INF] Request 498778db-6686-4a3b-bf3d-9be0a512637c: GET /Vazir.woff2  from ::1
+2025-12-09 17:15:57.288 +03:30 [INF] Response 498778db-6686-4a3b-bf3d-9be0a512637c: 404 in 0ms
+2025-12-09 17:17:04.547 +03:30 [INF] Request 67177c02-3ecd-41d5-9989-3267db14e3f7: GET /  from ::1
+2025-12-09 17:17:05.228 +03:30 [WRN] Entity 'User' has a global query filter defined and is the required end of a relationship with the entity 'Order'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-09 17:17:05.310 +03:30 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 17:17:05.315 +03:30 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 17:17:05.317 +03:30 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'User'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 17:17:06.150 +03:30 [INF] Response 67177c02-3ecd-41d5-9989-3267db14e3f7: 200 in 1560ms
+2025-12-09 17:17:06.209 +03:30 [INF] Request c2404586-067c-4995-8a9f-7034652be4c4: GET /WebApplication1.styles.css  from ::1
+2025-12-09 17:17:06.248 +03:30 [INF] Response c2404586-067c-4995-8a9f-7034652be4c4: 404 in 27ms
+2025-12-09 17:17:07.616 +03:30 [INF] Request ce5838a2-34a9-40c1-b1dd-86086549a3d1: GET /Admin/Account  from ::1
+2025-12-09 17:17:07.708 +03:30 [INF] Response ce5838a2-34a9-40c1-b1dd-86086549a3d1: 200 in 89ms
+2025-12-09 17:17:07.773 +03:30 [INF] Request e2c211d1-84ba-4f20-886c-caacc6ffabc6: GET /Vazir.woff2  from ::1
+2025-12-09 17:17:07.776 +03:30 [INF] Response e2c211d1-84ba-4f20-886c-caacc6ffabc6: 404 in 0ms
+2025-12-09 17:17:10.307 +03:30 [INF] Request 497c3164-cdc4-45fc-9a3e-00598b3fa90e: POST /Admin/Account/Login  from ::1
+2025-12-09 17:17:10.420 +03:30 [INF] Admin user admin logged in successfully with UserID: 6
+2025-12-09 17:17:10.422 +03:30 [INF] Response 497c3164-cdc4-45fc-9a3e-00598b3fa90e: 302 in 105ms
+2025-12-09 17:17:10.430 +03:30 [INF] Request a276cfd2-5b60-4001-b470-31c00b5c7344: GET /Admin/Category  from ::1
+2025-12-09 17:17:10.495 +03:30 [INF] Response a276cfd2-5b60-4001-b470-31c00b5c7344: 200 in 62ms
+2025-12-09 17:17:10.534 +03:30 [INF] Request 68a0e59c-151d-4740-a3ef-ba732b9a6f6e: GET /Vazir.woff2  from ::1
+2025-12-09 17:17:10.538 +03:30 [INF] Response 68a0e59c-151d-4740-a3ef-ba732b9a6f6e: 404 in 0ms
+2025-12-09 17:17:11.996 +03:30 [INF] Request 4650e2e1-0c43-424b-969a-2bfb4acd84b0: GET /Admin/Customer  from ::1
+2025-12-09 17:17:12.017 +03:30 [INF] Accessed Customer Index page successfully.
+2025-12-09 17:17:12.024 +03:30 [INF] Response 4650e2e1-0c43-424b-969a-2bfb4acd84b0: 200 in 25ms
+2025-12-09 17:17:12.060 +03:30 [INF] Request be266abe-299c-47ef-b48a-534a45da92c2: GET /Vazir.woff2  from ::1
+2025-12-09 17:17:12.065 +03:30 [INF] Response be266abe-299c-47ef-b48a-534a45da92c2: 404 in 0ms
+2025-12-09 17:17:14.431 +03:30 [INF] Request 2b338759-0800-4b49-a58b-337aaca3b63a: GET /Admin/Customer/Detail ?userId=5 from ::1
+2025-12-09 17:17:14.452 +03:30 [INF] Accessed Customer Detail page successfully for UserId: 5
+2025-12-09 17:17:14.459 +03:30 [INF] Response 2b338759-0800-4b49-a58b-337aaca3b63a: 200 in 24ms
+2025-12-09 17:17:14.489 +03:30 [INF] Request 8979680d-245a-43c9-86ae-b1909ca1a0e8: GET /Vazir.woff2  from ::1
+2025-12-09 17:17:14.493 +03:30 [INF] Response 8979680d-245a-43c9-86ae-b1909ca1a0e8: 404 in 0ms
+2025-12-09 17:17:16.286 +03:30 [INF] Request 8d4b3bb6-ed38-40b9-b25c-664e094f4156: GET /Admin/Customer  from ::1
+2025-12-09 17:17:16.295 +03:30 [INF] Accessed Customer Index page successfully.
+2025-12-09 17:17:16.297 +03:30 [INF] Response 8d4b3bb6-ed38-40b9-b25c-664e094f4156: 200 in 4ms
+2025-12-09 17:17:16.328 +03:30 [INF] Request 47c96883-fd4b-4e95-be73-fdfff3166882: GET /Vazir.woff2  from ::1
+2025-12-09 17:17:16.331 +03:30 [INF] Response 47c96883-fd4b-4e95-be73-fdfff3166882: 404 in 0ms
+2025-12-09 17:17:19.354 +03:30 [INF] Request c770659e-e8df-4e2a-b67f-4c4f1f43c8f0: GET /Admin/Customer/Detail ?userId=4 from ::1
+2025-12-09 17:17:19.360 +03:30 [INF] Accessed Customer Detail page successfully for UserId: 4
+2025-12-09 17:17:19.362 +03:30 [INF] Response c770659e-e8df-4e2a-b67f-4c4f1f43c8f0: 200 in 4ms
+2025-12-09 17:17:19.391 +03:30 [INF] Request fbb1f7f9-f471-4866-a923-6aa4a252b8ea: GET /Vazir.woff2  from ::1
+2025-12-09 17:17:19.400 +03:30 [INF] Response fbb1f7f9-f471-4866-a923-6aa4a252b8ea: 404 in 0ms
+2025-12-09 17:17:20.617 +03:30 [INF] Request 4b20931a-2e29-4ff2-88e7-4e6a648b5422: GET /Admin/Customer  from ::1
+2025-12-09 17:17:20.623 +03:30 [INF] Accessed Customer Index page successfully.
+2025-12-09 17:17:20.627 +03:30 [INF] Response 4b20931a-2e29-4ff2-88e7-4e6a648b5422: 200 in 5ms
+2025-12-09 17:17:20.657 +03:30 [INF] Request c0fca566-6901-402c-b71a-c5a98954e111: GET /Vazir.woff2  from ::1
+2025-12-09 17:17:20.663 +03:30 [INF] Response c0fca566-6901-402c-b71a-c5a98954e111: 404 in 0ms
+2025-12-09 17:17:21.508 +03:30 [INF] Request 86e0b99f-b157-40e3-b9a9-5b6a1ef1076d: GET /Admin/Customer/Detail ?userId=3 from ::1
+2025-12-09 17:17:21.514 +03:30 [INF] Accessed Customer Detail page successfully for UserId: 3
+2025-12-09 17:17:21.516 +03:30 [INF] Response 86e0b99f-b157-40e3-b9a9-5b6a1ef1076d: 200 in 4ms
+2025-12-09 17:17:21.549 +03:30 [INF] Request abe50c31-1dcf-4ae9-9016-78c264643771: GET /Vazir.woff2  from ::1
+2025-12-09 17:17:21.552 +03:30 [INF] Response abe50c31-1dcf-4ae9-9016-78c264643771: 404 in 0ms
+2025-12-09 17:17:33.377 +03:30 [INF] Request 27f8c6e1-7b86-4204-a979-6ade4f1d67e9: GET /Admin/Customer  from ::1
+2025-12-09 17:17:33.385 +03:30 [INF] Accessed Customer Index page successfully.
+2025-12-09 17:17:33.387 +03:30 [INF] Response 27f8c6e1-7b86-4204-a979-6ade4f1d67e9: 200 in 6ms
+2025-12-09 17:17:33.426 +03:30 [INF] Request 8e931c5f-f39e-4dbc-9462-9dee6b943b7b: GET /Vazir.woff2  from ::1
+2025-12-09 17:17:33.431 +03:30 [INF] Response 8e931c5f-f39e-4dbc-9462-9dee6b943b7b: 404 in 0ms
+2025-12-09 17:17:36.105 +03:30 [INF] Request e6e5397d-3e4b-404a-90a3-37514d6f1ce9: GET /Admin/Customer/Detail ?userId=1 from ::1
+2025-12-09 17:17:36.112 +03:30 [INF] Accessed Customer Detail page successfully for UserId: 1
+2025-12-09 17:17:36.113 +03:30 [INF] Response e6e5397d-3e4b-404a-90a3-37514d6f1ce9: 200 in 4ms
+2025-12-09 17:17:36.143 +03:30 [INF] Request 45af8c34-c041-428c-a95a-849f0d016a66: GET /Vazir.woff2  from ::1
+2025-12-09 17:17:36.147 +03:30 [INF] Response 45af8c34-c041-428c-a95a-849f0d016a66: 404 in 0ms
+2025-12-09 17:17:37.089 +03:30 [INF] Request 25983ae1-f524-40da-b863-f99224dbdc63: GET /Admin/Customer  from ::1
+2025-12-09 17:17:37.096 +03:30 [INF] Accessed Customer Index page successfully.
+2025-12-09 17:17:37.098 +03:30 [INF] Response 25983ae1-f524-40da-b863-f99224dbdc63: 200 in 4ms
+2025-12-09 17:17:37.131 +03:30 [INF] Request 97b0284b-8b9c-48fa-abd4-3dad02071861: GET /Vazir.woff2  from ::1
+2025-12-09 17:17:37.137 +03:30 [INF] Response 97b0284b-8b9c-48fa-abd4-3dad02071861: 404 in 0ms

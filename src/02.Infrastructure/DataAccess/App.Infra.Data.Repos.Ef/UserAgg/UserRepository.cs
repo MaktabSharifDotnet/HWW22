@@ -16,7 +16,7 @@ namespace App.Infra.Data.Repos.Ef.UserAgg
     {
         public async Task<List<UserDto>> GetAll(CancellationToken cancellationToken)
         {
-            return await _context.Users.Select(u => new UserDto
+            return await _context.Users.Where(u=>u.RoleEnum==RoleEnum.Customer).Select(u => new UserDto
             {
                 Id = u.Id,
                 Username = u.Username
