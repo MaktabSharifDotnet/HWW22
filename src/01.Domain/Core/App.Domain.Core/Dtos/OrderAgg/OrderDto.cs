@@ -14,6 +14,8 @@ namespace App.Domain.Core.Dtos.OrderAgg
 
         public decimal TotalAmount { get; set; }
 
-       
+        public DateTime CreatedAt { get; set; }
+        public bool IsPaid { get; set; }
+
     }
 }

@@ -1,0 +1,308 @@
+2025-12-09 10:50:44.500 +03:30 [INF] Request dd54ab6d-6bfa-4169-818c-966421e8fe7e: GET /  from ::1
+2025-12-09 10:50:45.576 +03:30 [WRN] Entity 'User' has a global query filter defined and is the required end of a relationship with the entity 'Order'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-09 10:50:45.706 +03:30 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 10:50:45.709 +03:30 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 10:50:45.710 +03:30 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'User'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 10:50:47.040 +03:30 [INF] Response dd54ab6d-6bfa-4169-818c-966421e8fe7e: 200 in 2490ms
+2025-12-09 10:50:47.094 +03:30 [INF] Request c9e7d1b8-8346-474e-8400-bd42abf26a3f: GET /WebApplication1.styles.css  from ::1
+2025-12-09 10:50:47.135 +03:30 [INF] Response c9e7d1b8-8346-474e-8400-bd42abf26a3f: 404 in 2ms
+2025-12-09 10:50:48.211 +03:30 [INF] Request 43cd97ad-4054-4e80-8549-3af08547343e: GET /Admin/Account  from ::1
+2025-12-09 10:50:48.282 +03:30 [INF] Response 43cd97ad-4054-4e80-8549-3af08547343e: 200 in 67ms
+2025-12-09 10:50:48.362 +03:30 [INF] Request 23975ff0-85af-4418-abcd-8cc452af8c07: GET /Vazir.woff2  from ::1
+2025-12-09 10:50:48.366 +03:30 [INF] Response 23975ff0-85af-4418-abcd-8cc452af8c07: 404 in 0ms
+2025-12-09 10:50:59.911 +03:30 [INF] Request 7c906d83-8a91-40e0-8e51-c08ac3ebb027: POST /Admin/Account/Login  from ::1
+2025-12-09 10:51:00.061 +03:30 [INF] Admin user admin logged in successfully with UserID: 6
+2025-12-09 10:51:00.064 +03:30 [INF] Response 7c906d83-8a91-40e0-8e51-c08ac3ebb027: 302 in 149ms
+2025-12-09 10:51:00.074 +03:30 [INF] Request e49631da-15cb-499f-8705-0c9eacea25d0: GET /Admin/Category  from ::1
+2025-12-09 10:51:00.146 +03:30 [INF] Response e49631da-15cb-499f-8705-0c9eacea25d0: 200 in 69ms
+2025-12-09 10:51:00.206 +03:30 [INF] Request 5c91edff-6842-4be5-a8a0-6232bc0acc66: GET /Vazir.woff2  from ::1
+2025-12-09 10:51:00.213 +03:30 [INF] Response 5c91edff-6842-4be5-a8a0-6232bc0acc66: 404 in 0ms
+2025-12-09 10:53:10.586 +03:30 [INF] Request 2168e163-aeb1-4ec8-8bbd-b0e596e681ab: GET /  from ::1
+2025-12-09 10:53:11.368 +03:30 [WRN] Entity 'User' has a global query filter defined and is the required end of a relationship with the entity 'Order'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-09 10:53:11.444 +03:30 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 10:53:11.447 +03:30 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 10:53:11.448 +03:30 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'User'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 10:53:12.324 +03:30 [INF] Response 2168e163-aeb1-4ec8-8bbd-b0e596e681ab: 200 in 1694ms
+2025-12-09 10:53:12.365 +03:30 [INF] Request bf2a1e87-c042-423f-a306-7d94c9a33916: GET /WebApplication1.styles.css  from ::1
+2025-12-09 10:53:12.376 +03:30 [INF] Response bf2a1e87-c042-423f-a306-7d94c9a33916: 404 in 7ms
+2025-12-09 10:53:15.235 +03:30 [INF] Request 7a6181c7-3b9a-4777-88fc-2d5e9045f661: GET /Admin/Account  from ::1
+2025-12-09 10:53:15.296 +03:30 [INF] Response 7a6181c7-3b9a-4777-88fc-2d5e9045f661: 200 in 57ms
+2025-12-09 10:53:15.357 +03:30 [INF] Request 0f1a9228-61be-4e3f-b06e-83fab2eea246: GET /Vazir.woff2  from ::1
+2025-12-09 10:53:15.361 +03:30 [INF] Response 0f1a9228-61be-4e3f-b06e-83fab2eea246: 404 in 0ms
+2025-12-09 10:53:22.293 +03:30 [INF] Request 61044be0-da18-4274-bb41-3c22092f4d60: POST /Admin/Account/Login  from ::1
+2025-12-09 10:53:22.394 +03:30 [INF] Admin user admin logged in successfully with UserID: 6
+2025-12-09 10:53:22.400 +03:30 [INF] Response 61044be0-da18-4274-bb41-3c22092f4d60: 302 in 103ms
+2025-12-09 10:53:22.408 +03:30 [INF] Request adb43256-6e8c-4db2-8d70-4eb078c64408: GET /Admin/Category  from ::1
+2025-12-09 10:53:22.492 +03:30 [INF] Response adb43256-6e8c-4db2-8d70-4eb078c64408: 200 in 83ms
+2025-12-09 10:53:22.534 +03:30 [INF] Request 16ad4c7c-f3ff-4204-ad17-538b849ebb54: GET /Vazir.woff2  from ::1
+2025-12-09 10:53:22.538 +03:30 [INF] Response 16ad4c7c-f3ff-4204-ad17-538b849ebb54: 404 in 0ms
+2025-12-09 10:53:24.412 +03:30 [INF] Request b57d2d35-e1c7-4ea3-8a6d-7c6253c0d170: GET /  from ::1
+2025-12-09 10:53:24.429 +03:30 [INF] Response b57d2d35-e1c7-4ea3-8a6d-7c6253c0d170: 200 in 13ms
+2025-12-09 10:53:24.456 +03:30 [INF] Request 9888038a-0023-4029-a908-8f9a6ea0b2e8: GET /WebApplication1.styles.css  from ::1
+2025-12-09 10:53:24.458 +03:30 [INF] Response 9888038a-0023-4029-a908-8f9a6ea0b2e8: 404 in 0ms
+2025-12-09 11:08:16.385 +03:30 [INF] Request 45606901-47ca-4395-910b-f4d99f88c80e: GET /  from ::1
+2025-12-09 11:08:17.182 +03:30 [WRN] Entity 'User' has a global query filter defined and is the required end of a relationship with the entity 'Order'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-09 11:08:17.257 +03:30 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 11:08:17.260 +03:30 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 11:08:17.262 +03:30 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'User'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 11:08:18.297 +03:30 [INF] Response 45606901-47ca-4395-910b-f4d99f88c80e: 200 in 1866ms
+2025-12-09 11:08:18.333 +03:30 [INF] Request 7dbb98da-235e-41ef-934d-88b5c89ae221: GET /WebApplication1.styles.css  from ::1
+2025-12-09 11:08:18.401 +03:30 [INF] Response 7dbb98da-235e-41ef-934d-88b5c89ae221: 404 in 64ms
+2025-12-09 11:08:19.596 +03:30 [INF] Request 846745b9-e2d3-4fa9-ad52-1efd65061593: GET /Admin/Account  from ::1
+2025-12-09 11:08:19.662 +03:30 [INF] Response 846745b9-e2d3-4fa9-ad52-1efd65061593: 200 in 62ms
+2025-12-09 11:08:19.727 +03:30 [INF] Request 6c889e88-9c3c-487b-bb8e-466b8fbba0f0: GET /Vazir.woff2  from ::1
+2025-12-09 11:08:19.730 +03:30 [INF] Response 6c889e88-9c3c-487b-bb8e-466b8fbba0f0: 404 in 0ms
+2025-12-09 11:08:26.521 +03:30 [INF] Request 4313a7d4-ebd1-44e1-b35a-7baf0c41531c: GET /Admin/Category  from ::1
+2025-12-09 11:08:26.532 +03:30 [INF] Response 4313a7d4-ebd1-44e1-b35a-7baf0c41531c: 302 in 8ms
+2025-12-09 11:08:26.542 +03:30 [INF] Request e49d0ddc-b84b-4d56-a8ed-1963b3d219c3: GET /Admin/Account  from ::1
+2025-12-09 11:08:26.552 +03:30 [INF] Response e49d0ddc-b84b-4d56-a8ed-1963b3d219c3: 200 in 7ms
+2025-12-09 11:08:26.583 +03:30 [INF] Request ce6d250e-cf05-4be4-a529-17ff24aa90fe: GET /Vazir.woff2  from ::1
+2025-12-09 11:08:26.587 +03:30 [INF] Response ce6d250e-cf05-4be4-a529-17ff24aa90fe: 404 in 0ms
+2025-12-09 11:08:31.116 +03:30 [INF] Request 84ac20fb-1494-42f8-90b7-dfadafd6814c: POST /Admin/Account/Login  from ::1
+2025-12-09 11:08:31.234 +03:30 [INF] Admin user admin logged in successfully with UserID: 6
+2025-12-09 11:08:31.238 +03:30 [INF] Response 84ac20fb-1494-42f8-90b7-dfadafd6814c: 302 in 116ms
+2025-12-09 11:08:31.244 +03:30 [INF] Request 893bfce2-e67b-4c84-985a-d2cbab965be5: GET /Admin/Category  from ::1
+2025-12-09 11:08:31.309 +03:30 [INF] Response 893bfce2-e67b-4c84-985a-d2cbab965be5: 200 in 63ms
+2025-12-09 11:08:31.350 +03:30 [INF] Request d0971c38-4c0b-48fa-90fd-d52944fa7602: GET /Vazir.woff2  from ::1
+2025-12-09 11:08:31.353 +03:30 [INF] Response d0971c38-4c0b-48fa-90fd-d52944fa7602: 404 in 0ms
+2025-12-09 11:08:33.297 +03:30 [INF] Request e9bf9b96-6294-40c4-a252-f4991d188e00: GET /  from ::1
+2025-12-09 11:08:33.308 +03:30 [INF] Response e9bf9b96-6294-40c4-a252-f4991d188e00: 200 in 7ms
+2025-12-09 11:08:33.332 +03:30 [INF] Request 286b4223-61c7-4037-8427-bc54a1383b1e: GET /WebApplication1.styles.css  from ::1
+2025-12-09 11:08:33.336 +03:30 [INF] Response 286b4223-61c7-4037-8427-bc54a1383b1e: 404 in 0ms
+2025-12-09 11:08:38.644 +03:30 [INF] Request 5110b2b7-708d-4966-a5b3-efcc06acf477: GET /Admin/Category  from ::1
+2025-12-09 11:08:38.650 +03:30 [INF] Response 5110b2b7-708d-4966-a5b3-efcc06acf477: 200 in 3ms
+2025-12-09 11:08:41.229 +03:30 [INF] Request 02c7c6af-8bea-4a11-bcb4-3760eb3b0396: GET /Admin/Category  from ::1
+2025-12-09 11:08:41.235 +03:30 [INF] Response 02c7c6af-8bea-4a11-bcb4-3760eb3b0396: 200 in 3ms
+2025-12-09 11:08:41.268 +03:30 [INF] Request b0e2a1cd-6e70-4c08-85b4-2d3cb3f00f1f: GET /Vazir.woff2  from ::1
+2025-12-09 11:08:41.272 +03:30 [INF] Response b0e2a1cd-6e70-4c08-85b4-2d3cb3f00f1f: 404 in 0ms
+2025-12-09 11:08:41.881 +03:30 [INF] Request 01cb9295-27c6-42d8-95df-741df8dc293f: GET /Admin/Category  from ::1
+2025-12-09 11:08:41.886 +03:30 [INF] Response 01cb9295-27c6-42d8-95df-741df8dc293f: 200 in 2ms
+2025-12-09 11:08:41.913 +03:30 [INF] Request a6a77cb3-979f-44c6-9712-350f8a29b04a: GET /Vazir.woff2  from ::1
+2025-12-09 11:08:41.917 +03:30 [INF] Response a6a77cb3-979f-44c6-9712-350f8a29b04a: 404 in 0ms
+2025-12-09 11:08:42.881 +03:30 [INF] Request 276b17a7-b26a-4865-b502-ba2e28ba2664: GET /Admin/Customer  from ::1
+2025-12-09 11:08:42.886 +03:30 [INF] Response 276b17a7-b26a-4865-b502-ba2e28ba2664: 404 in 0ms
+2025-12-09 11:08:43.821 +03:30 [INF] Request ee8ad74f-96bf-4b87-9f51-62618ad796b3: GET /Admin/Category  from ::1
+2025-12-09 11:08:43.827 +03:30 [INF] Response ee8ad74f-96bf-4b87-9f51-62618ad796b3: 200 in 2ms
+2025-12-09 11:08:44.633 +03:30 [INF] Request a3163a97-e7dc-4111-ad13-0cdd82ac9588: GET /Admin/Category  from ::1
+2025-12-09 11:08:44.640 +03:30 [INF] Response a3163a97-e7dc-4111-ad13-0cdd82ac9588: 200 in 3ms
+2025-12-09 11:08:44.675 +03:30 [INF] Request 8e57e087-9a45-4538-a708-7cce865de367: GET /Vazir.woff2  from ::1
+2025-12-09 11:08:44.680 +03:30 [INF] Response 8e57e087-9a45-4538-a708-7cce865de367: 404 in 0ms
+2025-12-09 11:09:14.451 +03:30 [INF] Request 5fa7ef71-4941-4bff-b937-869f21b23f77: GET /  from ::1
+2025-12-09 11:09:15.130 +03:30 [WRN] Entity 'User' has a global query filter defined and is the required end of a relationship with the entity 'Order'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-09 11:09:15.206 +03:30 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 11:09:15.209 +03:30 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 11:09:15.210 +03:30 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'User'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 11:09:16.063 +03:30 [INF] Response 5fa7ef71-4941-4bff-b937-869f21b23f77: 200 in 1575ms
+2025-12-09 11:09:16.107 +03:30 [INF] Request d8a5f2ee-bf19-4da2-b444-379aa65f090b: GET /WebApplication1.styles.css  from ::1
+2025-12-09 11:09:16.118 +03:30 [INF] Response d8a5f2ee-bf19-4da2-b444-379aa65f090b: 404 in 2ms
+2025-12-09 11:09:17.521 +03:30 [INF] Request d41e75f7-e712-443e-988b-46c84d950051: GET /Admin/Account  from ::1
+2025-12-09 11:09:17.594 +03:30 [INF] Response d41e75f7-e712-443e-988b-46c84d950051: 200 in 70ms
+2025-12-09 11:09:17.662 +03:30 [INF] Request 8a182087-6518-4cb1-a759-a00745ac3806: GET /Vazir.woff2  from ::1
+2025-12-09 11:09:17.666 +03:30 [INF] Response 8a182087-6518-4cb1-a759-a00745ac3806: 404 in 0ms
+2025-12-09 11:09:21.800 +03:30 [INF] Request f74ff589-5d56-49d4-a43d-23b7d9c02102: POST /Admin/Account/Login  from ::1
+2025-12-09 11:09:21.898 +03:30 [INF] Admin user admin logged in successfully with UserID: 6
+2025-12-09 11:09:21.916 +03:30 [INF] Response f74ff589-5d56-49d4-a43d-23b7d9c02102: 302 in 113ms
+2025-12-09 11:09:21.925 +03:30 [INF] Request d26cf431-5b0c-4578-bd5e-e3a90e38e40b: GET /Admin/Category  from ::1
+2025-12-09 11:09:21.989 +03:30 [INF] Response d26cf431-5b0c-4578-bd5e-e3a90e38e40b: 200 in 61ms
+2025-12-09 11:09:22.031 +03:30 [INF] Request 7931b4e4-3b98-4912-a9a6-d2e8b0476667: GET /Vazir.woff2  from ::1
+2025-12-09 11:09:22.035 +03:30 [INF] Response 7931b4e4-3b98-4912-a9a6-d2e8b0476667: 404 in 0ms
+2025-12-09 11:09:25.107 +03:30 [INF] Request 9bc3bd78-7e83-4586-a1e9-2dcd19d74cbb: GET /Admin/Category  from ::1
+2025-12-09 11:09:25.116 +03:30 [INF] Response 9bc3bd78-7e83-4586-a1e9-2dcd19d74cbb: 200 in 5ms
+2025-12-09 11:09:25.148 +03:30 [INF] Request 7350f41c-4b97-4612-a7e6-97786a2eb870: GET /Vazir.woff2  from ::1
+2025-12-09 11:09:25.152 +03:30 [INF] Response 7350f41c-4b97-4612-a7e6-97786a2eb870: 404 in 0ms
+2025-12-09 11:34:27.122 +03:30 [INF] Request 76ed56a7-a9c0-493b-a241-c2b39305a26f: GET /  from ::1
+2025-12-09 11:34:27.792 +03:30 [WRN] Entity 'User' has a global query filter defined and is the required end of a relationship with the entity 'Order'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-09 11:34:27.869 +03:30 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 11:34:27.872 +03:30 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 11:34:27.873 +03:30 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'User'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 11:34:28.722 +03:30 [INF] Response 76ed56a7-a9c0-493b-a241-c2b39305a26f: 200 in 1563ms
+2025-12-09 11:34:28.768 +03:30 [INF] Request 5049a188-5e80-4077-97be-1fd9144bb930: GET /WebApplication1.styles.css  from ::1
+2025-12-09 11:34:28.801 +03:30 [INF] Response 5049a188-5e80-4077-97be-1fd9144bb930: 404 in 1ms
+2025-12-09 11:34:33.535 +03:30 [INF] Request 740d065b-bce3-4acd-a6df-3c36dc0f14d0: GET /Account/Login  from ::1
+2025-12-09 11:34:33.618 +03:30 [INF] Response 740d065b-bce3-4acd-a6df-3c36dc0f14d0: 200 in 80ms
+2025-12-09 11:34:37.390 +03:30 [INF] Request 65490c08-a1ad-4038-b7f5-85ce21b6038c: POST /Account/Login  from ::1
+2025-12-09 11:34:37.565 +03:30 [INF] Response 65490c08-a1ad-4038-b7f5-85ce21b6038c: 200 in 171ms
+2025-12-09 11:34:44.070 +03:30 [INF] Request d1866961-a505-4161-9035-6e77bb489bab: POST /Account/Login  from ::1
+2025-12-09 11:34:44.162 +03:30 [INF] Response d1866961-a505-4161-9035-6e77bb489bab: 200 in 89ms
+2025-12-09 11:34:58.683 +03:30 [INF] Request 831edbfb-2537-48d5-bade-7287f6ec478a: POST /Account/Login  from ::1
+2025-12-09 11:34:58.725 +03:30 [INF] Response 831edbfb-2537-48d5-bade-7287f6ec478a: 200 in 37ms
+2025-12-09 11:35:08.393 +03:30 [INF] Request 5d0c2342-4b43-4757-83c2-3d672b7c0f56: GET /Account/Login  from ::1
+2025-12-09 11:35:08.399 +03:30 [INF] Response 5d0c2342-4b43-4757-83c2-3d672b7c0f56: 200 in 2ms
+2025-12-09 11:35:12.088 +03:30 [INF] Request 1e963ccb-7778-47c5-a70e-ea95a7508602: GET /Cart  from ::1
+2025-12-09 11:35:12.209 +03:30 [INF] Response 1e963ccb-7778-47c5-a70e-ea95a7508602: 200 in 116ms
+2025-12-09 11:35:12.233 +03:30 [INF] Request 07292b13-0aaa-4f28-a1cd-de04de789470: GET /WebApplication1.styles.css  from ::1
+2025-12-09 11:35:12.240 +03:30 [INF] Response 07292b13-0aaa-4f28-a1cd-de04de789470: 404 in 0ms
+2025-12-09 11:36:00.286 +03:30 [INF] Request db679b8a-0c98-4091-b92d-cad022a40255: GET /  from ::1
+2025-12-09 11:36:00.973 +03:30 [WRN] Entity 'User' has a global query filter defined and is the required end of a relationship with the entity 'Order'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-09 11:36:01.045 +03:30 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 11:36:01.048 +03:30 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 11:36:01.049 +03:30 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'User'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 11:36:01.883 +03:30 [INF] Response db679b8a-0c98-4091-b92d-cad022a40255: 200 in 1555ms
+2025-12-09 11:36:01.928 +03:30 [INF] Request 731d461f-93a3-4176-ac8b-9da1d2342a34: GET /WebApplication1.styles.css  from ::1
+2025-12-09 11:36:01.940 +03:30 [INF] Response 731d461f-93a3-4176-ac8b-9da1d2342a34: 404 in 8ms
+2025-12-09 11:36:02.867 +03:30 [INF] Request fe07a075-cf70-4576-b21d-a00a030d5928: GET /Account/Login  from ::1
+2025-12-09 11:36:02.912 +03:30 [INF] Response fe07a075-cf70-4576-b21d-a00a030d5928: 200 in 42ms
+2025-12-09 11:36:06.221 +03:30 [INF] Request cdbd7ca8-c75f-4619-a539-88726dcd0f93: POST /Account/Login  from ::1
+2025-12-09 11:36:06.380 +03:30 [INF] Response cdbd7ca8-c75f-4619-a539-88726dcd0f93: 200 in 155ms
+2025-12-09 11:36:26.408 +03:30 [INF] Request 0597b574-956f-4722-98d0-5a8e07a00cd6: GET /  from ::1
+2025-12-09 11:36:27.095 +03:30 [WRN] Entity 'User' has a global query filter defined and is the required end of a relationship with the entity 'Order'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-09 11:36:27.166 +03:30 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 11:36:27.168 +03:30 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 11:36:27.169 +03:30 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'User'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 11:36:28.012 +03:30 [INF] Response 0597b574-956f-4722-98d0-5a8e07a00cd6: 200 in 1563ms
+2025-12-09 11:36:28.058 +03:30 [INF] Request 9d14258e-7772-4672-a552-0401e03218aa: GET /WebApplication1.styles.css  from ::1
+2025-12-09 11:36:28.112 +03:30 [INF] Response 9d14258e-7772-4672-a552-0401e03218aa: 404 in 5ms
+2025-12-09 11:36:30.514 +03:30 [INF] Request 35ea8c37-f9e2-4f3e-8a6d-85963da17337: GET /Account/Login  from ::1
+2025-12-09 11:36:30.566 +03:30 [INF] Response 35ea8c37-f9e2-4f3e-8a6d-85963da17337: 200 in 47ms
+2025-12-09 11:36:36.385 +03:30 [INF] Request 35def806-db7d-4f72-8f21-ff7b3de4e9fa: POST /Account/Login  from ::1
+2025-12-09 11:36:36.550 +03:30 [INF] Response 35def806-db7d-4f72-8f21-ff7b3de4e9fa: 200 in 160ms
+2025-12-09 11:36:56.639 +03:30 [INF] Request 794c7c32-0523-4485-9c40-84e54d73d5ed: GET /  from ::1
+2025-12-09 11:36:57.312 +03:30 [WRN] Entity 'User' has a global query filter defined and is the required end of a relationship with the entity 'Order'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-09 11:36:57.379 +03:30 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 11:36:57.383 +03:30 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 11:36:57.384 +03:30 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'User'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 11:36:58.185 +03:30 [INF] Response 794c7c32-0523-4485-9c40-84e54d73d5ed: 200 in 1505ms
+2025-12-09 11:36:58.229 +03:30 [INF] Request 343f8065-54cd-4d30-9238-7e41669ca5b3: GET /WebApplication1.styles.css  from ::1
+2025-12-09 11:36:58.268 +03:30 [INF] Response 343f8065-54cd-4d30-9238-7e41669ca5b3: 404 in 2ms
+2025-12-09 11:36:59.586 +03:30 [INF] Request 286e2101-dce7-49fb-a0ee-1db3345052c0: GET /Account/Login  from ::1
+2025-12-09 11:36:59.634 +03:30 [INF] Response 286e2101-dce7-49fb-a0ee-1db3345052c0: 200 in 44ms
+2025-12-09 11:37:03.576 +03:30 [INF] Request 8879abf4-93c8-4075-a07a-e245ded09ffa: POST /Account/Login  from ::1
+2025-12-09 11:38:26.384 +03:30 [INF] Response 8879abf4-93c8-4075-a07a-e245ded09ffa: 200 in 82803ms
+2025-12-09 11:38:38.603 +03:30 [INF] Request 0793ee0d-e83f-4107-a992-4ee835e361f9: GET /  from ::1
+2025-12-09 11:38:39.307 +03:30 [WRN] Entity 'User' has a global query filter defined and is the required end of a relationship with the entity 'Order'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-09 11:38:39.378 +03:30 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 11:38:39.382 +03:30 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 11:38:39.384 +03:30 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'User'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 11:38:40.179 +03:30 [INF] Response 0793ee0d-e83f-4107-a992-4ee835e361f9: 200 in 1535ms
+2025-12-09 11:38:40.224 +03:30 [INF] Request adce701f-bc09-4b08-a66f-7a15cd47a62c: GET /WebApplication1.styles.css  from ::1
+2025-12-09 11:38:40.235 +03:30 [INF] Response adce701f-bc09-4b08-a66f-7a15cd47a62c: 404 in 9ms
+2025-12-09 11:38:41.456 +03:30 [INF] Request fb04d9db-1b49-4496-857f-1f0385d8ca14: GET /Admin/Account  from ::1
+2025-12-09 11:38:41.516 +03:30 [INF] Response fb04d9db-1b49-4496-857f-1f0385d8ca14: 200 in 57ms
+2025-12-09 11:38:41.571 +03:30 [INF] Request fd88df39-d30e-4a51-9996-f28bc6a52255: GET /Vazir.woff2  from ::1
+2025-12-09 11:38:41.574 +03:30 [INF] Response fd88df39-d30e-4a51-9996-f28bc6a52255: 404 in 0ms
+2025-12-09 11:38:43.373 +03:30 [INF] Request a9832cad-2580-4bc6-afe1-d887cb446dc9: GET /Account/Login  from ::1
+2025-12-09 11:38:43.392 +03:30 [INF] Response a9832cad-2580-4bc6-afe1-d887cb446dc9: 200 in 16ms
+2025-12-09 11:38:46.554 +03:30 [INF] Request 9a4704b3-9285-4ef5-975e-2f6b02c0a851: POST /Account/Login  from ::1
+2025-12-09 11:38:49.935 +03:30 [INF] Response 9a4704b3-9285-4ef5-975e-2f6b02c0a851: 200 in 3379ms
+2025-12-09 11:39:08.701 +03:30 [INF] Request 47583af8-b5f3-4198-a7fa-5bfe0bd5ea58: GET /  from ::1
+2025-12-09 11:39:09.364 +03:30 [WRN] Entity 'User' has a global query filter defined and is the required end of a relationship with the entity 'Order'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-09 11:39:09.439 +03:30 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 11:39:09.442 +03:30 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 11:39:09.443 +03:30 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'User'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 11:39:10.242 +03:30 [INF] Response 47583af8-b5f3-4198-a7fa-5bfe0bd5ea58: 200 in 1499ms
+2025-12-09 11:39:10.288 +03:30 [INF] Request bd41ad72-dfdf-440d-8045-22d2055728b9: GET /WebApplication1.styles.css  from ::1
+2025-12-09 11:39:10.300 +03:30 [INF] Response bd41ad72-dfdf-440d-8045-22d2055728b9: 404 in 7ms
+2025-12-09 11:39:11.489 +03:30 [INF] Request 0867c83f-f420-4243-8ef9-46ee5f18996e: GET /Account/Login  from ::1
+2025-12-09 11:39:11.534 +03:30 [INF] Response 0867c83f-f420-4243-8ef9-46ee5f18996e: 200 in 41ms
+2025-12-09 11:39:14.230 +03:30 [INF] Request c79b27de-55f7-4314-9882-b8f5495fb8ac: POST /Account/Login  from ::1
+2025-12-09 11:40:03.109 +03:30 [INF] Response c79b27de-55f7-4314-9882-b8f5495fb8ac: 200 in 48875ms
+2025-12-09 11:41:42.756 +03:30 [INF] Request 79ffc735-65cb-4830-bd38-26b73ee5b510: GET /  from ::1
+2025-12-09 11:41:43.432 +03:30 [WRN] Entity 'User' has a global query filter defined and is the required end of a relationship with the entity 'Order'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-09 11:41:43.522 +03:30 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 11:41:43.528 +03:30 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 11:41:43.530 +03:30 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'User'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 11:41:44.360 +03:30 [INF] Response 79ffc735-65cb-4830-bd38-26b73ee5b510: 200 in 1565ms
+2025-12-09 11:41:44.401 +03:30 [INF] Request fc961d52-106c-4ba5-90b1-c13fd76c286a: GET /WebApplication1.styles.css  from ::1
+2025-12-09 11:41:44.445 +03:30 [INF] Response fc961d52-106c-4ba5-90b1-c13fd76c286a: 404 in 40ms
+2025-12-09 11:41:45.291 +03:30 [INF] Request b93d7fa0-4922-4cda-bfea-93f185856174: GET /Account/Login  from ::1
+2025-12-09 11:41:45.337 +03:30 [INF] Response b93d7fa0-4922-4cda-bfea-93f185856174: 200 in 41ms
+2025-12-09 11:41:48.635 +03:30 [INF] Request e3c4bf88-6776-499d-bc78-030eaac8608a: POST /Account/Login  from ::1
+2025-12-09 11:41:48.747 +03:30 [INF] Response e3c4bf88-6776-499d-bc78-030eaac8608a: 302 in 100ms
+2025-12-09 11:41:48.761 +03:30 [INF] Request 8585fc8f-a2f0-4669-80b7-45770f844acc: GET /  from ::1
+2025-12-09 11:41:48.819 +03:30 [INF] Response 8585fc8f-a2f0-4669-80b7-45770f844acc: 200 in 55ms
+2025-12-09 11:41:48.843 +03:30 [INF] Request 8da7bd59-fc43-412b-bf19-541d94cea42b: GET /WebApplication1.styles.css  from ::1
+2025-12-09 11:41:48.847 +03:30 [INF] Response 8da7bd59-fc43-412b-bf19-541d94cea42b: 404 in 0ms
+2025-12-09 11:42:04.580 +03:30 [INF] Request 1eb9a4e3-deaa-484b-97d2-552c4c1117d0: GET /Admin/Category  from ::1
+2025-12-09 11:42:04.592 +03:30 [WRN] Unauthorized access attempt to Category Index page.
+2025-12-09 11:42:04.595 +03:30 [INF] Response 1eb9a4e3-deaa-484b-97d2-552c4c1117d0: 302 in 12ms
+2025-12-09 11:42:04.601 +03:30 [INF] Request 33293581-74ac-471f-8452-f8cfc7b07454: GET /Admin/Account  from ::1
+2025-12-09 11:42:04.635 +03:30 [INF] Response 33293581-74ac-471f-8452-f8cfc7b07454: 200 in 32ms
+2025-12-09 11:42:04.693 +03:30 [INF] Request 6664eab2-6a00-4045-85e8-a5f90709c3a4: GET /Vazir.woff2  from ::1
+2025-12-09 11:42:04.698 +03:30 [INF] Response 6664eab2-6a00-4045-85e8-a5f90709c3a4: 404 in 0ms
+2025-12-09 11:42:53.149 +03:30 [INF] Request d225bde5-cf53-4088-ad0e-5cedfd4abbb0: GET /  from ::1
+2025-12-09 11:42:53.176 +03:30 [INF] Response d225bde5-cf53-4088-ad0e-5cedfd4abbb0: 200 in 22ms
+2025-12-09 11:42:53.239 +03:30 [INF] Request 0fc9c83a-57a9-4e99-b9f1-1dde75db5c7c: GET /WebApplication1.styles.css  from ::1
+2025-12-09 11:42:53.242 +03:30 [INF] Response 0fc9c83a-57a9-4e99-b9f1-1dde75db5c7c: 404 in 0ms
+2025-12-09 11:42:58.279 +03:30 [INF] Request 6c396c32-e6fa-44b4-9e21-9c69a68e148b: GET /Admin/Category  from ::1
+2025-12-09 11:42:58.284 +03:30 [WRN] Unauthorized access attempt to Category Index page.
+2025-12-09 11:42:58.286 +03:30 [INF] Response 6c396c32-e6fa-44b4-9e21-9c69a68e148b: 302 in 2ms
+2025-12-09 11:42:58.294 +03:30 [INF] Request 7eaab32b-1b23-4cc6-b3f3-c2d062a5354f: GET /Admin/Account  from ::1
+2025-12-09 11:42:58.300 +03:30 [INF] Response 7eaab32b-1b23-4cc6-b3f3-c2d062a5354f: 200 in 2ms
+2025-12-09 11:42:58.333 +03:30 [INF] Request 6128850a-a902-4352-a5f0-ccc264946412: GET /Vazir.woff2  from ::1
+2025-12-09 11:42:58.346 +03:30 [INF] Response 6128850a-a902-4352-a5f0-ccc264946412: 404 in 0ms
+2025-12-09 11:58:34.151 +03:30 [INF] Request e11729fa-e333-4e5b-bdc0-157add9890ad: GET /  from ::1
+2025-12-09 11:58:34.815 +03:30 [WRN] Entity 'User' has a global query filter defined and is the required end of a relationship with the entity 'Order'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-09 11:58:34.886 +03:30 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 11:58:34.891 +03:30 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 11:58:34.893 +03:30 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'User'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 11:58:35.715 +03:30 [INF] Response e11729fa-e333-4e5b-bdc0-157add9890ad: 200 in 1523ms
+2025-12-09 11:58:35.754 +03:30 [INF] Request df629277-f19c-4d29-8432-b7242277805a: GET /WebApplication1.styles.css  from ::1
+2025-12-09 11:58:35.761 +03:30 [INF] Response df629277-f19c-4d29-8432-b7242277805a: 404 in 3ms
+2025-12-09 11:58:37.098 +03:30 [INF] Request 8930e603-f8a6-4187-8e80-521cd7014f6e: GET /Admin/Account  from ::1
+2025-12-09 11:58:37.156 +03:30 [INF] Response 8930e603-f8a6-4187-8e80-521cd7014f6e: 200 in 55ms
+2025-12-09 11:58:37.212 +03:30 [INF] Request c47389c7-1dec-4fe7-8768-30c1940773d4: GET /Vazir.woff2  from ::1
+2025-12-09 11:58:37.217 +03:30 [INF] Response c47389c7-1dec-4fe7-8768-30c1940773d4: 404 in 0ms
+2025-12-09 11:58:40.553 +03:30 [INF] Request 231de271-df9a-47a0-aa98-c1847a245533: POST /Admin/Account/Login  from ::1
+2025-12-09 11:58:40.678 +03:30 [INF] Admin user admin logged in successfully with UserID: 6
+2025-12-09 11:58:40.681 +03:30 [INF] Response 231de271-df9a-47a0-aa98-c1847a245533: 302 in 124ms
+2025-12-09 11:58:40.690 +03:30 [INF] Request 7f791bd0-92a0-4607-b926-adc8af258840: GET /Admin/Category  from ::1
+2025-12-09 11:58:40.808 +03:30 [INF] Response 7f791bd0-92a0-4607-b926-adc8af258840: 200 in 115ms
+2025-12-09 11:58:40.846 +03:30 [INF] Request 67b09b35-7cea-40ad-b658-14c466f4f466: GET /Vazir.woff2  from ::1
+2025-12-09 11:58:40.849 +03:30 [INF] Response 67b09b35-7cea-40ad-b658-14c466f4f466: 404 in 0ms
+2025-12-09 11:58:42.019 +03:30 [INF] Request 9ac09c35-7ae2-4c9d-baf3-1031df2cd13d: GET /Admin/Category  from ::1
+2025-12-09 11:58:42.028 +03:30 [INF] Response 9ac09c35-7ae2-4c9d-baf3-1031df2cd13d: 200 in 5ms
+2025-12-09 11:58:42.064 +03:30 [INF] Request 37f4402e-40b9-4a32-bf00-504f13e86532: GET /Vazir.woff2  from ::1
+2025-12-09 11:58:42.069 +03:30 [INF] Response 37f4402e-40b9-4a32-bf00-504f13e86532: 404 in 0ms
+2025-12-09 11:58:43.951 +03:30 [INF] Request 7d9b7e49-5b95-4eb4-848f-5ccaf10336a2: GET /Admin/Order  from ::1
+2025-12-09 11:58:43.975 +03:30 [INF] Retrieved 10 orders for display in Order Index page.
+2025-12-09 11:58:43.989 +03:30 [INF] Response 7d9b7e49-5b95-4eb4-848f-5ccaf10336a2: 200 in 30ms
+2025-12-09 11:58:44.055 +03:30 [INF] Request de585d28-8316-4357-9464-f49657795178: GET /Vazir.woff2  from ::1
+2025-12-09 11:58:44.059 +03:30 [INF] Response de585d28-8316-4357-9464-f49657795178: 404 in 0ms
+2025-12-09 12:01:06.632 +03:30 [INF] Request bd7a9da4-fe17-4da6-8609-6aa82644ee64: GET /  from ::1
+2025-12-09 12:01:07.359 +03:30 [WRN] Entity 'User' has a global query filter defined and is the required end of a relationship with the entity 'Order'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-09 12:01:07.436 +03:30 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 12:01:07.439 +03:30 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 12:01:07.440 +03:30 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'User'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 12:01:08.295 +03:30 [INF] Response bd7a9da4-fe17-4da6-8609-6aa82644ee64: 200 in 1613ms
+2025-12-09 12:01:08.336 +03:30 [INF] Request 34340332-a497-41e3-b0e2-354182e6dac6: GET /WebApplication1.styles.css  from ::1
+2025-12-09 12:01:08.353 +03:30 [INF] Response 34340332-a497-41e3-b0e2-354182e6dac6: 404 in 7ms
+2025-12-09 12:01:09.210 +03:30 [INF] Request 35a4df5b-a9b8-468c-a2ca-3c6998806ba8: GET /Admin/Account  from ::1
+2025-12-09 12:01:09.267 +03:30 [INF] Response 35a4df5b-a9b8-468c-a2ca-3c6998806ba8: 200 in 53ms
+2025-12-09 12:01:09.336 +03:30 [INF] Request c1918689-1330-4593-9f0f-7ab13076ad92: GET /Vazir.woff2  from ::1
+2025-12-09 12:01:09.340 +03:30 [INF] Response c1918689-1330-4593-9f0f-7ab13076ad92: 404 in 0ms
+2025-12-09 12:01:12.037 +03:30 [INF] Request aed13dae-fa32-46bc-a70f-0b96f3582c71: POST /Admin/Account/Login  from ::1
+2025-12-09 12:01:12.161 +03:30 [INF] Admin user admin logged in successfully with UserID: 6
+2025-12-09 12:01:12.164 +03:30 [INF] Response aed13dae-fa32-46bc-a70f-0b96f3582c71: 302 in 119ms
+2025-12-09 12:01:12.170 +03:30 [INF] Request bc8d2c84-98dc-4dcf-9cbf-6ff115904cab: GET /Admin/Category  from ::1
+2025-12-09 12:01:12.236 +03:30 [INF] Response bc8d2c84-98dc-4dcf-9cbf-6ff115904cab: 200 in 63ms
+2025-12-09 12:01:12.288 +03:30 [INF] Request e1add4cf-35b1-41f3-b2ef-101f108036d1: GET /Vazir.woff2  from ::1
+2025-12-09 12:01:12.294 +03:30 [INF] Response e1add4cf-35b1-41f3-b2ef-101f108036d1: 404 in 0ms
+2025-12-09 12:01:14.807 +03:30 [INF] Request c2fe996a-6f84-46a1-82fe-23781d810964: GET /Admin/Order  from ::1
+2025-12-09 12:01:14.829 +03:30 [INF] Retrieved 10 orders for display in Order Index page.
+2025-12-09 12:01:14.843 +03:30 [INF] Response c2fe996a-6f84-46a1-82fe-23781d810964: 200 in 30ms
+2025-12-09 12:01:14.879 +03:30 [INF] Request 7213b1cc-fa70-4eb6-bef5-82372c899677: GET /Vazir.woff2  from ::1
+2025-12-09 12:01:14.883 +03:30 [INF] Response 7213b1cc-fa70-4eb6-bef5-82372c899677: 404 in 0ms
+2025-12-09 12:01:27.879 +03:30 [INF] Request 2a2da95f-eb7d-48b3-94c4-f38aff150232: GET /  from ::1
+2025-12-09 12:01:28.568 +03:30 [WRN] Entity 'User' has a global query filter defined and is the required end of a relationship with the entity 'Order'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-09 12:01:28.642 +03:30 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 12:01:28.644 +03:30 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 12:01:28.645 +03:30 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'User'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 12:01:29.428 +03:30 [INF] Response 2a2da95f-eb7d-48b3-94c4-f38aff150232: 200 in 1510ms
+2025-12-09 12:01:29.471 +03:30 [INF] Request f0ec521d-e389-4c1f-83f7-77da365d89f0: GET /WebApplication1.styles.css  from ::1
+2025-12-09 12:01:29.512 +03:30 [INF] Response f0ec521d-e389-4c1f-83f7-77da365d89f0: 404 in 3ms
+2025-12-09 12:01:30.747 +03:30 [INF] Request c29dcd11-07de-4344-a162-02242300f16b: GET /Admin/Account  from ::1
+2025-12-09 12:01:30.814 +03:30 [INF] Response c29dcd11-07de-4344-a162-02242300f16b: 200 in 63ms
+2025-12-09 12:01:30.870 +03:30 [INF] Request 00b575ae-ebfd-4f10-b6d2-0ba4cb7b4e5c: GET /Vazir.woff2  from ::1
+2025-12-09 12:01:30.874 +03:30 [INF] Response 00b575ae-ebfd-4f10-b6d2-0ba4cb7b4e5c: 404 in 0ms
+2025-12-09 12:01:33.505 +03:30 [INF] Request 0826be57-df4a-4f4c-97cf-fe7f6e215036: POST /Admin/Account/Login  from ::1
+2025-12-09 12:01:33.608 +03:30 [INF] Admin user admin logged in successfully with UserID: 6
+2025-12-09 12:01:33.611 +03:30 [INF] Response 0826be57-df4a-4f4c-97cf-fe7f6e215036: 302 in 103ms
+2025-12-09 12:01:33.632 +03:30 [INF] Request a165a04d-d8e3-4b09-ab16-804dc88b1eb8: GET /Admin/Category  from ::1
+2025-12-09 12:01:33.697 +03:30 [INF] Response a165a04d-d8e3-4b09-ab16-804dc88b1eb8: 200 in 62ms
+2025-12-09 12:01:33.736 +03:30 [INF] Request a8f244fa-5d15-44f2-b834-82a91c2710ba: GET /Vazir.woff2  from ::1
+2025-12-09 12:01:33.739 +03:30 [INF] Response a8f244fa-5d15-44f2-b834-82a91c2710ba: 404 in 0ms
+2025-12-09 12:01:36.239 +03:30 [INF] Request 62d9a809-89d0-4f9c-beb9-f6776f453ba6: GET /Admin/Order  from ::1
+2025-12-09 12:01:36.255 +03:30 [INF] Retrieved 10 orders for display in Order Index page.
+2025-12-09 12:01:36.267 +03:30 [INF] Response 62d9a809-89d0-4f9c-beb9-f6776f453ba6: 200 in 24ms
+2025-12-09 12:01:36.303 +03:30 [INF] Request 35436d21-154a-478b-be5b-a5e898f18d2c: GET /Vazir.woff2  from ::1
+2025-12-09 12:01:36.307 +03:30 [INF] Response 35436d21-154a-478b-be5b-a5e898f18d2c: 404 in 0ms

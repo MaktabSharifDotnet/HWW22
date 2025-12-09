@@ -17,5 +17,7 @@ namespace App.Domain.Core.Contract.OrderAgg.Service
         public  Task AddAsync(Order order, CancellationToken cancellationToken);
 
         public  Task<int> SaveAsync(CancellationToken cancellationToken);
+
+        public Task<List<OrderDto>> GetOrderDtos(CancellationToken cancellationToken);
     }
 }

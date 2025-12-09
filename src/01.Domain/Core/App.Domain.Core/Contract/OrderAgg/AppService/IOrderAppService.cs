@@ -1,4 +1,5 @@
-﻿using App.Domain.Core.Entities;
+﻿using App.Domain.Core.Dtos.OrderAgg;
+using App.Domain.Core.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,5 +12,7 @@ namespace App.Domain.Core.Contract.OrderAgg.AppService
     {
         public  Task Create(int userId, int cartId, CancellationToken cancellationToken);
         public Task<int> CheckOut(int userId, int cartId, CancellationToken cancellationToken);
+
+        public Task<List<OrderDto>> GetOrderDtos(CancellationToken cancellationToken);
     }
 }

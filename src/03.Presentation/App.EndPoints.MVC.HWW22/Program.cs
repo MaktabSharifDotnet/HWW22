@@ -99,6 +99,7 @@ app.UseMiddleware<RequestLoggingMiddleware>();
 app.UseRouting();
 
 app.UseAuthorization();
+app.UseSession();
 
 app.MapControllerRoute(
     name: "areas",

@@ -80,5 +80,10 @@ namespace App.Domain.AppServices.OrderAgg
              return  await _orderService.SaveAsync(cancellationToken);
            
         }
+
+        public async Task<List<OrderDto>> GetOrderDtos(CancellationToken cancellationToken)
+        {
+           return await _orderService.GetOrderDtos(cancellationToken);
+        }
     }
 }

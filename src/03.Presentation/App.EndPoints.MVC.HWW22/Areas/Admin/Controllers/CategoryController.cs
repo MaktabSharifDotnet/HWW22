@@ -19,6 +19,7 @@ namespace App.EndPoints.MVC.HWW22.Areas.Admin.Controllers
             if (LocalStorage.LoginUser==null || LocalStorage.LoginUser.RoleEnum!=RoleEnum.Admin)
             {
                 TempData["Error"]= "فقط کاربر ادمین به این صفحه  امکان دسترسی دارد.";
+                _logger.LogWarning("Unauthorized access attempt to Category Index page.");
                 return RedirectToAction("Index", "Account");
             }
             List<CategoryDto> categoryDtos= await _categoryAppService.GetAll(cancellationToken);

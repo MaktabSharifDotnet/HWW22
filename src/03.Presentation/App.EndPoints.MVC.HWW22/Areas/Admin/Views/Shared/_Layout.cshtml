@@ -14,9 +14,45 @@
 <body>
 
     <nav class="navbar navbar-dark bg-dark mb-4">
-        <div class="container-fluid">
+        <div class="container-fluid d-flex justify-content-between">
+
             <span class="navbar-brand mb-0 h1">پنل مدیریت فروشگاه</span>
-            <a href="/" class="btn btn-outline-light btn-sm">مشاهده سایت</a>
+
+            <div class="d-flex gap-2">
+
+               
+                <a asp-area="Admin"
+                   asp-controller="Category"
+                   asp-action="Index"
+                   class="btn btn-outline-light btn-sm">
+                     مدیریت دسته بندی ها
+                </a>
+
+               
+                <a asp-area="Admin"
+                   asp-controller="Customer"
+                   asp-action="Index"
+                   class="btn btn-outline-light btn-sm">
+                    مدیریت مشتری ها
+                </a>
+
+               
+                <a asp-area="Admin"
+                   asp-controller="Order"
+                   asp-action="Index"
+                   class="btn btn-outline-light btn-sm">
+                    مدیریت سفارشات
+                </a>
+
+                
+                <a asp-area=""
+                   asp-controller="Home"
+                   asp-action="Index"
+                   class="btn btn-light btn-sm">
+                    مشاهده سایت
+                </a>
+
+            </div>
         </div>
     </nav>
 
