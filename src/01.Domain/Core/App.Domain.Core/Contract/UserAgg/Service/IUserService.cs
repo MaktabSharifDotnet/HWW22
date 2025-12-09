@@ -1,4 +1,5 @@
 ﻿using App.Domain.Core.Dtos.OrderAgg;
+using App.Domain.Core.Dtos.UserAgg;
 using App.Domain.Core.Entities;
 using System;
 using System.Collections.Generic;
@@ -19,6 +20,8 @@ namespace App.Domain.Core.Contract.UserAgg.Service
         public void Withdraw(User user, decimal totalPrice, List<CartProduct> cartProducts);
         public void DecreaseInventory(int cartId, List<CartProduct> cartProducts);
 
-        
+        public Task<List<UserDto>> GetAllById(CancellationToken cancellationToken);
+
+
     }
 }

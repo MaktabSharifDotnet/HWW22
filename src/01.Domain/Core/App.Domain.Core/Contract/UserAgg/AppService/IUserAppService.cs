@@ -1,4 +1,5 @@
-﻿using System;
+﻿using App.Domain.Core.Dtos.UserAgg;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,8 @@ namespace App.Domain.Core.Contract.UserAgg.AppService
     {
         public  Task<int> Login(string username, string password, CancellationToken cancellationToken);
         public void LogOut();
-       
+
+        public Task<List<UserDto>> GetAllById(CancellationToken cancellationToken);
+
     }
 }

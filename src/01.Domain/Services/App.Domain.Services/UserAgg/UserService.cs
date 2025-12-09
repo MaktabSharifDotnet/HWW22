@@ -1,6 +1,7 @@
 ﻿using App.Domain.Core.Contract.UserAgg.Repository;
 using App.Domain.Core.Contract.UserAgg.Service;
 using App.Domain.Core.Dtos.OrderAgg;
+using App.Domain.Core.Dtos.UserAgg;
 using App.Domain.Core.Entities;
 using System;
 using System.Collections.Generic;
@@ -86,6 +87,9 @@ namespace App.Domain.Services.UserAgg
             cartItem!.Product.Inventory = cartItem!.Product.Inventory - cartItem.Count;
         }
 
-       
+        public async Task<List<UserDto>> GetAllById(CancellationToken cancellationToken)
+        {
+           return await _userRepository.GetAllById(cancellationToken);
+        }
     }
 }

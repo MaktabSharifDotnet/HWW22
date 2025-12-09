@@ -2,6 +2,7 @@
 using App.Domain.Core.Contract.CategoryAgg.Service;
 using App.Domain.Core.Contract.UserAgg.AppService;
 using App.Domain.Core.Contract.UserAgg.Service;
+using App.Domain.Core.Dtos.UserAgg;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,10 @@ namespace App.Domain.AppServices.UserAgg
 {
     public class UserAppService(IUserService _userService ) : IUserAppService
     {
+        public async Task<List<UserDto>> GetAllById(CancellationToken cancellationToken)
+        {
+            return await _userService.GetAllById(cancellationToken);
+        }
 
         public async Task<int> Login(string username, string password, CancellationToken cancellationToken)
         {
