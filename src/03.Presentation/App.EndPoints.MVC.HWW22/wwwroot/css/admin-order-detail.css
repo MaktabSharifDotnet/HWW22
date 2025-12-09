@@ -1,0 +1,26 @@
+﻿.container {
+    direction: rtl;
+    text-align: center;
+}
+
+.card {
+    border-radius: 12px;
+}
+
+.card-header {
+    font-weight: 600;
+}
+
+.table th {
+    width: 30%;
+    background-color: #f8f9fa;
+    font-weight: 600;
+}
+
+.table td {
+    font-size: 1rem;
+}
+
+.btn {
+    border-radius: 8px;
+}

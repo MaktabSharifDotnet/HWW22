@@ -306,3 +306,526 @@
 2025-12-09 12:01:36.267 +03:30 [INF] Response 62d9a809-89d0-4f9c-beb9-f6776f453ba6: 200 in 24ms
 2025-12-09 12:01:36.303 +03:30 [INF] Request 35436d21-154a-478b-be5b-a5e898f18d2c: GET /Vazir.woff2  from ::1
 2025-12-09 12:01:36.307 +03:30 [INF] Response 35436d21-154a-478b-be5b-a5e898f18d2c: 404 in 0ms
+2025-12-09 12:20:18.886 +03:30 [INF] Request 0b7105c1-4e10-4778-ac63-c601feffebda: GET /  from ::1
+2025-12-09 12:20:19.607 +03:30 [WRN] Entity 'User' has a global query filter defined and is the required end of a relationship with the entity 'Order'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-09 12:20:19.683 +03:30 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 12:20:19.685 +03:30 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 12:20:19.687 +03:30 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'User'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 12:20:20.536 +03:30 [INF] Response 0b7105c1-4e10-4778-ac63-c601feffebda: 200 in 1608ms
+2025-12-09 12:20:20.590 +03:30 [INF] Request b487148f-07b3-4f84-bf43-a7896b673b5e: GET /WebApplication1.styles.css  from ::1
+2025-12-09 12:20:20.660 +03:30 [INF] Response b487148f-07b3-4f84-bf43-a7896b673b5e: 404 in 67ms
+2025-12-09 12:20:22.045 +03:30 [INF] Request af577513-be33-4dee-876a-9ce8c36f3244: GET /Admin/Account  from ::1
+2025-12-09 12:20:22.118 +03:30 [INF] Response af577513-be33-4dee-876a-9ce8c36f3244: 200 in 68ms
+2025-12-09 12:20:22.195 +03:30 [INF] Request 1b6d6a77-192d-4d0e-a22c-a5184d6d079f: GET /Vazir.woff2  from ::1
+2025-12-09 12:20:22.199 +03:30 [INF] Response 1b6d6a77-192d-4d0e-a22c-a5184d6d079f: 404 in 0ms
+2025-12-09 12:20:24.952 +03:30 [INF] Request 786aba2b-6ae3-4108-a718-45c304008ad5: POST /Admin/Account/Login  from ::1
+2025-12-09 12:20:25.071 +03:30 [INF] Admin user admin logged in successfully with UserID: 6
+2025-12-09 12:20:25.073 +03:30 [INF] Response 786aba2b-6ae3-4108-a718-45c304008ad5: 302 in 119ms
+2025-12-09 12:20:25.081 +03:30 [INF] Request 79c41967-19d4-4cbc-aa28-94fd49df3653: GET /Admin/Category  from ::1
+2025-12-09 12:20:25.151 +03:30 [INF] Response 79c41967-19d4-4cbc-aa28-94fd49df3653: 200 in 68ms
+2025-12-09 12:20:25.191 +03:30 [INF] Request 69357926-bb04-45ab-b6d2-a48a017437cf: GET /Vazir.woff2  from ::1
+2025-12-09 12:20:25.197 +03:30 [INF] Response 69357926-bb04-45ab-b6d2-a48a017437cf: 404 in 1ms
+2025-12-09 12:20:27.002 +03:30 [INF] Request 2a6b0ef4-f2c4-4b26-9549-557e8f8a41e6: GET /Admin/Category/Edit ?categoryId=1 from ::1
+2025-12-09 12:20:27.056 +03:30 [INF] Response 2a6b0ef4-f2c4-4b26-9549-557e8f8a41e6: 200 in 50ms
+2025-12-09 12:20:27.115 +03:30 [INF] Request b60375d4-d8b7-4719-99ad-18ebbebd3cb6: GET /Vazir.woff2  from ::1
+2025-12-09 12:20:27.117 +03:30 [INF] Response b60375d4-d8b7-4719-99ad-18ebbebd3cb6: 404 in 0ms
+2025-12-09 12:20:28.374 +03:30 [INF] Request ba01ca69-ef85-4df9-9b60-ebe71ae38fe2: GET /Admin/Category  from ::1
+2025-12-09 12:20:28.385 +03:30 [INF] Response ba01ca69-ef85-4df9-9b60-ebe71ae38fe2: 200 in 6ms
+2025-12-09 12:20:32.547 +03:30 [INF] Request d51ae560-b9eb-447b-a835-6d4c27aea19b: POST /Admin/Category/Delete ?categoryId=6 from ::1
+2025-12-09 12:20:32.649 +03:30 [INF] Category with ID: 6 was soft-deleted successfully.
+2025-12-09 12:20:32.652 +03:30 [INF] Response d51ae560-b9eb-447b-a835-6d4c27aea19b: 302 in 101ms
+2025-12-09 12:20:32.658 +03:30 [INF] Request bfc915b0-0102-495a-b0c6-77b82026554b: GET /Admin/Category  from ::1
+2025-12-09 12:20:32.665 +03:30 [INF] Response bfc915b0-0102-495a-b0c6-77b82026554b: 200 in 4ms
+2025-12-09 12:20:32.701 +03:30 [INF] Request 5d300176-474c-4555-b020-d2d4340d6a59: GET /Vazir.woff2  from ::1
+2025-12-09 12:20:32.705 +03:30 [INF] Response 5d300176-474c-4555-b020-d2d4340d6a59: 404 in 0ms
+2025-12-09 12:20:36.303 +03:30 [INF] Request 39f98db2-3a78-4982-88d4-d06d86c39254: GET /Admin/Category/Create  from ::1
+2025-12-09 12:20:36.323 +03:30 [INF] Response 39f98db2-3a78-4982-88d4-d06d86c39254: 200 in 14ms
+2025-12-09 12:20:36.355 +03:30 [INF] Request c6069743-6428-4d13-be86-854c8f5e3710: GET /Vazir.woff2  from ::1
+2025-12-09 12:20:36.361 +03:30 [INF] Response c6069743-6428-4d13-be86-854c8f5e3710: 404 in 0ms
+2025-12-09 12:20:43.112 +03:30 [INF] Request 09631097-2d93-479c-a297-5fe1f731fbef: POST /Admin/Category/Create  from ::1
+2025-12-09 12:20:43.199 +03:30 [INF] Category تست created successfully with New ID: 8
+2025-12-09 12:20:43.201 +03:30 [INF] Response 09631097-2d93-479c-a297-5fe1f731fbef: 302 in 85ms
+2025-12-09 12:20:43.207 +03:30 [INF] Request 86e19b15-cc5c-4877-ad78-8543aecf6d29: GET /Admin/Category  from ::1
+2025-12-09 12:20:43.214 +03:30 [INF] Response 86e19b15-cc5c-4877-ad78-8543aecf6d29: 200 in 2ms
+2025-12-09 12:20:43.248 +03:30 [INF] Request 56c2084f-d9b6-4014-bf6e-dece13a41e17: GET /Vazir.woff2  from ::1
+2025-12-09 12:20:43.252 +03:30 [INF] Response 56c2084f-d9b6-4014-bf6e-dece13a41e17: 404 in 0ms
+2025-12-09 12:20:45.537 +03:30 [INF] Request fd7fff53-4c21-4502-8002-eb7304a71663: GET /Admin/Category  from ::1
+2025-12-09 12:20:45.544 +03:30 [INF] Response fd7fff53-4c21-4502-8002-eb7304a71663: 200 in 2ms
+2025-12-09 12:20:45.574 +03:30 [INF] Request c651c10c-5511-450c-9433-bfa5782ea36a: GET /Vazir.woff2  from ::1
+2025-12-09 12:20:45.579 +03:30 [INF] Response c651c10c-5511-450c-9433-bfa5782ea36a: 404 in 0ms
+2025-12-09 12:20:47.245 +03:30 [INF] Request 82dc769e-3a83-48a6-b2d5-b2979b7c0b2e: GET /Admin/Category  from ::1
+2025-12-09 12:20:47.251 +03:30 [INF] Response 82dc769e-3a83-48a6-b2d5-b2979b7c0b2e: 200 in 2ms
+2025-12-09 12:20:47.277 +03:30 [INF] Request ce2de95e-56cc-44c4-a969-10d4d9266f9b: GET /Vazir.woff2  from ::1
+2025-12-09 12:20:47.282 +03:30 [INF] Response ce2de95e-56cc-44c4-a969-10d4d9266f9b: 404 in 0ms
+2025-12-09 12:20:48.803 +03:30 [INF] Request cdd47645-5ee3-4506-8a50-c421a280f7f6: GET /Admin/Order  from ::1
+2025-12-09 12:20:48.819 +03:30 [INF] Retrieved 10 orders for display in Order Index page.
+2025-12-09 12:20:48.832 +03:30 [INF] Response cdd47645-5ee3-4506-8a50-c421a280f7f6: 200 in 25ms
+2025-12-09 12:20:48.859 +03:30 [INF] Request 186e8e46-4c11-49da-83c7-ec775e23d09e: GET /Vazir.woff2  from ::1
+2025-12-09 12:20:48.862 +03:30 [INF] Response 186e8e46-4c11-49da-83c7-ec775e23d09e: 404 in 0ms
+2025-12-09 12:20:56.677 +03:30 [INF] Request 6823987a-ccbf-42b3-8e07-e7c9c6d8a040: GET /  from ::1
+2025-12-09 12:20:56.688 +03:30 [INF] Response 6823987a-ccbf-42b3-8e07-e7c9c6d8a040: 200 in 7ms
+2025-12-09 12:20:56.714 +03:30 [INF] Request 6c35d702-928c-4bbf-ae0f-37de492923ca: GET /WebApplication1.styles.css  from ::1
+2025-12-09 12:20:56.717 +03:30 [INF] Response 6c35d702-928c-4bbf-ae0f-37de492923ca: 404 in 0ms
+2025-12-09 12:20:57.338 +03:30 [INF] Request 590180c0-0f80-4f9a-912a-4a05607d835e: GET /Account/Logout  from ::1
+2025-12-09 12:20:57.345 +03:30 [INF] Response 590180c0-0f80-4f9a-912a-4a05607d835e: 302 in 2ms
+2025-12-09 12:20:57.353 +03:30 [INF] Request afa50d09-a909-41ea-8514-fa64c38da107: GET /Account/Login  from ::1
+2025-12-09 12:20:57.367 +03:30 [INF] Response afa50d09-a909-41ea-8514-fa64c38da107: 200 in 11ms
+2025-12-09 12:21:01.511 +03:30 [INF] Request d652ae96-626d-4db5-89a7-99647f7bd247: GET /  from ::1
+2025-12-09 12:21:01.527 +03:30 [INF] Response d652ae96-626d-4db5-89a7-99647f7bd247: 200 in 12ms
+2025-12-09 12:21:01.552 +03:30 [INF] Request 6fe359fa-5a50-4921-b118-b79f76751d3c: GET /WebApplication1.styles.css  from ::1
+2025-12-09 12:21:01.554 +03:30 [INF] Response 6fe359fa-5a50-4921-b118-b79f76751d3c: 404 in 0ms
+2025-12-09 12:21:07.443 +03:30 [INF] Request 78c2a1be-3a94-49d2-b843-344e5db8613b: GET /Admin/Account  from ::1
+2025-12-09 12:21:07.450 +03:30 [INF] Response 78c2a1be-3a94-49d2-b843-344e5db8613b: 200 in 4ms
+2025-12-09 12:21:07.518 +03:30 [INF] Request 8cbe97bf-d504-4355-856d-db141fa119f9: GET /Vazir.woff2  from ::1
+2025-12-09 12:21:07.521 +03:30 [INF] Response 8cbe97bf-d504-4355-856d-db141fa119f9: 404 in 0ms
+2025-12-09 12:21:11.308 +03:30 [INF] Request 51312bf0-8933-4810-8c6a-700a7bbdecb5: GET /Admin/Order  from ::1
+2025-12-09 12:21:11.311 +03:30 [WRN] Unauthorized access attempt to Order Index page.
+2025-12-09 12:21:11.313 +03:30 [INF] Response 51312bf0-8933-4810-8c6a-700a7bbdecb5: 302 in 2ms
+2025-12-09 12:21:11.320 +03:30 [INF] Request 11c6f976-972d-44cb-adf7-125c78a3f103: GET /Admin/Account  from ::1
+2025-12-09 12:21:11.325 +03:30 [INF] Response 11c6f976-972d-44cb-adf7-125c78a3f103: 200 in 1ms
+2025-12-09 12:21:11.362 +03:30 [INF] Request a90ca051-3b1b-4db5-9057-5495bcdfe5ee: GET /Vazir.woff2  from ::1
+2025-12-09 12:21:11.366 +03:30 [INF] Response a90ca051-3b1b-4db5-9057-5495bcdfe5ee: 404 in 0ms
+2025-12-09 15:40:24.450 +03:30 [INF] Request 6fa83137-4fab-4213-bdec-c8f3625ca9fb: GET /  from ::1
+2025-12-09 15:40:25.318 +03:30 [WRN] Entity 'User' has a global query filter defined and is the required end of a relationship with the entity 'Order'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-09 15:40:25.400 +03:30 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 15:40:25.402 +03:30 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 15:40:25.403 +03:30 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'User'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 15:40:26.468 +03:30 [INF] Response 6fa83137-4fab-4213-bdec-c8f3625ca9fb: 200 in 1969ms
+2025-12-09 15:40:26.516 +03:30 [INF] Request 23cb6a27-e9dd-41ef-b7b0-b5efb5b67ef4: GET /WebApplication1.styles.css  from ::1
+2025-12-09 15:40:26.562 +03:30 [INF] Response 23cb6a27-e9dd-41ef-b7b0-b5efb5b67ef4: 404 in 40ms
+2025-12-09 15:40:27.938 +03:30 [INF] Request b5b36410-03d4-44b8-a416-8751ad1251b1: GET /Admin/Account  from ::1
+2025-12-09 15:40:28.002 +03:30 [INF] Response b5b36410-03d4-44b8-a416-8751ad1251b1: 200 in 60ms
+2025-12-09 15:40:28.064 +03:30 [INF] Request 92e5aa37-3a01-4028-ae90-698c22c08a1a: GET /Vazir.woff2  from ::1
+2025-12-09 15:40:28.068 +03:30 [INF] Response 92e5aa37-3a01-4028-ae90-698c22c08a1a: 404 in 0ms
+2025-12-09 15:40:31.033 +03:30 [INF] Request f4b667b9-f77b-48d3-ac3a-9c6579214032: POST /Admin/Account/Login  from ::1
+2025-12-09 15:40:31.164 +03:30 [INF] Admin user admin logged in successfully with UserID: 6
+2025-12-09 15:40:31.167 +03:30 [INF] Response f4b667b9-f77b-48d3-ac3a-9c6579214032: 302 in 128ms
+2025-12-09 15:40:31.174 +03:30 [INF] Request 7bc58fd0-e7e2-41d4-86ae-271ed25d9d6d: GET /Admin/Category  from ::1
+2025-12-09 15:40:31.239 +03:30 [INF] Response 7bc58fd0-e7e2-41d4-86ae-271ed25d9d6d: 200 in 63ms
+2025-12-09 15:40:31.289 +03:30 [INF] Request 9d1e3565-870a-4664-b1d7-5e7ce368ccf2: GET /Vazir.woff2  from ::1
+2025-12-09 15:40:31.293 +03:30 [INF] Response 9d1e3565-870a-4664-b1d7-5e7ce368ccf2: 404 in 0ms
+2025-12-09 15:40:34.603 +03:30 [INF] Request 33971093-b73e-441b-8d4e-d76ddf08a77d: GET /Admin/Order  from ::1
+2025-12-09 15:40:34.619 +03:30 [INF] Retrieved 10 orders for display in Order Index page.
+2025-12-09 15:40:34.633 +03:30 [INF] Response 33971093-b73e-441b-8d4e-d76ddf08a77d: 200 in 26ms
+2025-12-09 15:40:34.666 +03:30 [INF] Request ee26551e-7b6a-4d95-ac28-1a0de186d661: GET /Vazir.woff2  from ::1
+2025-12-09 15:40:34.670 +03:30 [INF] Response ee26551e-7b6a-4d95-ac28-1a0de186d661: 404 in 0ms
+2025-12-09 15:40:37.726 +03:30 [INF] Request a3362a0d-6121-4df4-8f8d-6ad583a27f8f: GET /Admin/Order/Details ?userId=5 from ::1
+2025-12-09 15:40:37.729 +03:30 [INF] Response a3362a0d-6121-4df4-8f8d-6ad583a27f8f: 404 in 0ms
+2025-12-09 15:40:41.226 +03:30 [INF] Request 762cf3a7-2f8b-40d7-918b-fde1166e36e5: GET /Admin/Customer  from ::1
+2025-12-09 15:40:41.234 +03:30 [ERR] The view 'Index' was not found. Searched locations: ["/Areas/Admin/Views/Customer/Index.cshtml","/Areas/Admin/Views/Shared/Index.cshtml","/Views/Shared/Index.cshtml"]
+2025-12-09 15:40:41.305 +03:30 [ERR] Request 762cf3a7-2f8b-40d7-918b-fde1166e36e5 failed after 74ms
+System.InvalidOperationException: The view 'Index' was not found. The following locations were searched:
+/Areas/Admin/Views/Customer/Index.cshtml
+/Areas/Admin/Views/Shared/Index.cshtml
+/Views/Shared/Index.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at UI_MVC.Middlwares.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in D:\maktabsharifc#part2\recordcalses\week23\HWW23\src\03.Presentation\App.EndPoints.MVC.HWW22\Middlwares\RequestLoggingMiddleware.cs:line 35
+2025-12-09 15:40:41.335 +03:30 [INF] Request 6e3117ee-5d18-47dc-b391-931120f15db1: GET /Home/Error  from ::1
+2025-12-09 15:40:41.345 +03:30 [INF] Response 6e3117ee-5d18-47dc-b391-931120f15db1: 200 in 7ms
+2025-12-09 15:40:44.067 +03:30 [INF] Request a5cda619-260f-457b-b5ab-901084522e48: GET /Admin/Category  from ::1
+2025-12-09 15:40:44.074 +03:30 [INF] Response a5cda619-260f-457b-b5ab-901084522e48: 200 in 4ms
+2025-12-09 15:40:44.120 +03:30 [INF] Request 27ac56fa-6dbe-40c5-a17f-7d3a3dfef281: GET /Vazir.woff2  from ::1
+2025-12-09 15:40:44.123 +03:30 [INF] Response 27ac56fa-6dbe-40c5-a17f-7d3a3dfef281: 404 in 0ms
+2025-12-09 15:40:46.305 +03:30 [INF] Request 29ccd23c-afc2-4246-a32f-c5f008b5d968: GET /Admin/Order  from ::1
+2025-12-09 15:40:46.309 +03:30 [INF] Retrieved 10 orders for display in Order Index page.
+2025-12-09 15:40:46.312 +03:30 [INF] Response 29ccd23c-afc2-4246-a32f-c5f008b5d968: 200 in 4ms
+2025-12-09 15:40:46.343 +03:30 [INF] Request c15eb8ab-2f7b-40a0-a126-3187b9d7bd19: GET /Vazir.woff2  from ::1
+2025-12-09 15:40:46.347 +03:30 [INF] Response c15eb8ab-2f7b-40a0-a126-3187b9d7bd19: 404 in 0ms
+2025-12-09 15:40:49.910 +03:30 [INF] Request 36ed75f7-5cd4-40c3-823e-1fc438b37251: GET /Admin/Order/Details ?userId=5 from ::1
+2025-12-09 15:40:49.914 +03:30 [INF] Response 36ed75f7-5cd4-40c3-823e-1fc438b37251: 404 in 0ms
+2025-12-09 15:41:37.233 +03:30 [INF] Request 44fca0c8-9cb6-44d4-83b5-6afd9b5f7738: GET /  from ::1
+2025-12-09 15:41:37.961 +03:30 [WRN] Entity 'User' has a global query filter defined and is the required end of a relationship with the entity 'Order'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-09 15:41:38.049 +03:30 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 15:41:38.052 +03:30 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 15:41:38.053 +03:30 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'User'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 15:41:38.884 +03:30 [INF] Response 44fca0c8-9cb6-44d4-83b5-6afd9b5f7738: 200 in 1609ms
+2025-12-09 15:41:38.941 +03:30 [INF] Request 0f6c779c-5834-4f3c-b0e6-f95eb33a5dd9: GET /WebApplication1.styles.css  from ::1
+2025-12-09 15:41:38.957 +03:30 [INF] Response 0f6c779c-5834-4f3c-b0e6-f95eb33a5dd9: 404 in 8ms
+2025-12-09 15:41:40.402 +03:30 [INF] Request 8e31ebb8-090f-4bfa-8ee5-27d60e7c041a: GET /Admin/Account  from ::1
+2025-12-09 15:41:40.469 +03:30 [INF] Response 8e31ebb8-090f-4bfa-8ee5-27d60e7c041a: 200 in 64ms
+2025-12-09 15:41:40.522 +03:30 [INF] Request b3d8f9a5-6529-466e-b488-ee215ddef654: GET /Vazir.woff2  from ::1
+2025-12-09 15:41:40.525 +03:30 [INF] Response b3d8f9a5-6529-466e-b488-ee215ddef654: 404 in 0ms
+2025-12-09 15:41:43.417 +03:30 [INF] Request aafa1623-16f9-4fc8-9dc9-7989bc99d91e: POST /Admin/Account/Login  from ::1
+2025-12-09 15:41:43.536 +03:30 [INF] Admin user admin logged in successfully with UserID: 6
+2025-12-09 15:41:43.539 +03:30 [INF] Response aafa1623-16f9-4fc8-9dc9-7989bc99d91e: 302 in 119ms
+2025-12-09 15:41:43.546 +03:30 [INF] Request 80fb7191-8189-4029-b4ab-430bd0a077df: GET /Admin/Category  from ::1
+2025-12-09 15:41:43.613 +03:30 [INF] Response 80fb7191-8189-4029-b4ab-430bd0a077df: 200 in 64ms
+2025-12-09 15:41:43.653 +03:30 [INF] Request 022639d7-a92c-4ea9-bc34-bcf9d3d9ccc3: GET /Vazir.woff2  from ::1
+2025-12-09 15:41:43.658 +03:30 [INF] Response 022639d7-a92c-4ea9-bc34-bcf9d3d9ccc3: 404 in 0ms
+2025-12-09 15:41:46.043 +03:30 [INF] Request f40a00c9-21f9-4e08-b339-88fbb533694c: GET /Admin/Order  from ::1
+2025-12-09 15:41:46.059 +03:30 [INF] Retrieved 10 orders for display in Order Index page.
+2025-12-09 15:41:46.073 +03:30 [INF] Response f40a00c9-21f9-4e08-b339-88fbb533694c: 200 in 26ms
+2025-12-09 15:41:46.111 +03:30 [INF] Request 45707023-b843-4734-94c0-00eb2642db7a: GET /Vazir.woff2  from ::1
+2025-12-09 15:41:46.115 +03:30 [INF] Response 45707023-b843-4734-94c0-00eb2642db7a: 404 in 0ms
+2025-12-09 15:41:46.987 +03:30 [INF] Request 95a29394-913f-48f7-8ce0-2a66be70cc95: GET /Admin/Order/Detail ?userId=1 from ::1
+2025-12-09 15:41:47.009 +03:30 [INF] Retrieved 14 order items for display in OrderItem Detail page.
+2025-12-09 15:41:47.015 +03:30 [ERR] The view 'Detail' was not found. Searched locations: ["/Areas/Admin/Views/Order/Detail.cshtml","/Areas/Admin/Views/Shared/Detail.cshtml","/Views/Shared/Detail.cshtml"]
+2025-12-09 15:41:47.156 +03:30 [ERR] Request 95a29394-913f-48f7-8ce0-2a66be70cc95 failed after 166ms
+System.InvalidOperationException: The view 'Detail' was not found. The following locations were searched:
+/Areas/Admin/Views/Order/Detail.cshtml
+/Areas/Admin/Views/Shared/Detail.cshtml
+/Views/Shared/Detail.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at UI_MVC.Middlwares.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in D:\maktabsharifc#part2\recordcalses\week23\HWW23\src\03.Presentation\App.EndPoints.MVC.HWW22\Middlwares\RequestLoggingMiddleware.cs:line 35
+2025-12-09 15:41:47.182 +03:30 [INF] Request 9f4de7a2-1bd1-428c-8781-78eaab2389c9: GET /Home/Error  from ::1
+2025-12-09 15:41:47.192 +03:30 [INF] Response 9f4de7a2-1bd1-428c-8781-78eaab2389c9: 200 in 7ms
+2025-12-09 15:41:48.756 +03:30 [INF] Request 8c43f074-b724-4ea6-a2b7-8d8d3a7d2a3a: GET /  from ::1
+2025-12-09 15:41:48.768 +03:30 [INF] Response 8c43f074-b724-4ea6-a2b7-8d8d3a7d2a3a: 200 in 8ms
+2025-12-09 15:41:48.799 +03:30 [INF] Request 6cdcff6c-84d8-4a52-96fe-fb438af47050: GET /WebApplication1.styles.css  from ::1
+2025-12-09 15:41:48.802 +03:30 [INF] Response 6cdcff6c-84d8-4a52-96fe-fb438af47050: 404 in 0ms
+2025-12-09 15:47:45.942 +03:30 [INF] Request 24fe468c-bff9-4ded-9071-7b2904a8f21a: GET /  from ::1
+2025-12-09 15:47:46.631 +03:30 [WRN] Entity 'User' has a global query filter defined and is the required end of a relationship with the entity 'Order'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-09 15:47:46.699 +03:30 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 15:47:46.702 +03:30 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 15:47:46.703 +03:30 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'User'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 15:47:47.503 +03:30 [INF] Response 24fe468c-bff9-4ded-9071-7b2904a8f21a: 200 in 1503ms
+2025-12-09 15:47:47.544 +03:30 [INF] Request 8036c921-7fbf-4967-9943-1478534ab184: GET /WebApplication1.styles.css  from ::1
+2025-12-09 15:47:47.623 +03:30 [INF] Response 8036c921-7fbf-4967-9943-1478534ab184: 404 in 9ms
+2025-12-09 15:47:49.478 +03:30 [INF] Request 384114ce-260d-4c40-a212-89d9cac98be1: GET /Admin/Account  from ::1
+2025-12-09 15:47:49.536 +03:30 [INF] Response 384114ce-260d-4c40-a212-89d9cac98be1: 200 in 55ms
+2025-12-09 15:47:49.598 +03:30 [INF] Request 25356198-869b-4227-a13c-36186f95f296: GET /Vazir.woff2  from ::1
+2025-12-09 15:47:49.604 +03:30 [INF] Response 25356198-869b-4227-a13c-36186f95f296: 404 in 0ms
+2025-12-09 15:47:52.657 +03:30 [INF] Request 66ff259f-e788-430e-b04d-55f9bffed80c: POST /Admin/Account/Login  from ::1
+2025-12-09 15:47:52.779 +03:30 [INF] Admin user admin logged in successfully with UserID: 6
+2025-12-09 15:47:52.782 +03:30 [INF] Response 66ff259f-e788-430e-b04d-55f9bffed80c: 302 in 121ms
+2025-12-09 15:47:52.790 +03:30 [INF] Request 0d5dd673-da53-49cb-ae6f-acdb8cc63474: GET /Admin/Category  from ::1
+2025-12-09 15:47:52.860 +03:30 [INF] Response 0d5dd673-da53-49cb-ae6f-acdb8cc63474: 200 in 68ms
+2025-12-09 15:47:52.901 +03:30 [INF] Request 74b5dc17-5c6f-4e0b-9119-f096b8c21c87: GET /Vazir.woff2  from ::1
+2025-12-09 15:47:52.905 +03:30 [INF] Response 74b5dc17-5c6f-4e0b-9119-f096b8c21c87: 404 in 0ms
+2025-12-09 15:47:54.421 +03:30 [INF] Request 229457d7-5df4-4cdf-9569-bde6facaff57: GET /Admin/Customer  from ::1
+2025-12-09 15:47:54.428 +03:30 [ERR] The view 'Index' was not found. Searched locations: ["/Areas/Admin/Views/Customer/Index.cshtml","/Areas/Admin/Views/Shared/Index.cshtml","/Views/Shared/Index.cshtml"]
+2025-12-09 15:47:54.493 +03:30 [ERR] Request 229457d7-5df4-4cdf-9569-bde6facaff57 failed after 68ms
+System.InvalidOperationException: The view 'Index' was not found. The following locations were searched:
+/Areas/Admin/Views/Customer/Index.cshtml
+/Areas/Admin/Views/Shared/Index.cshtml
+/Views/Shared/Index.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at UI_MVC.Middlwares.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in D:\maktabsharifc#part2\recordcalses\week23\HWW23\src\03.Presentation\App.EndPoints.MVC.HWW22\Middlwares\RequestLoggingMiddleware.cs:line 35
+2025-12-09 15:47:54.519 +03:30 [INF] Request 8e60594f-f473-4425-8646-8ec9974d47cf: GET /Home/Error  from ::1
+2025-12-09 15:47:54.529 +03:30 [INF] Response 8e60594f-f473-4425-8646-8ec9974d47cf: 200 in 8ms
+2025-12-09 15:47:55.421 +03:30 [INF] Request 367c2c55-2ce6-4953-9782-f5be9e577d22: GET /Admin/Category  from ::1
+2025-12-09 15:47:55.433 +03:30 [INF] Response 367c2c55-2ce6-4953-9782-f5be9e577d22: 200 in 7ms
+2025-12-09 15:47:55.948 +03:30 [INF] Request 0e3bf7b3-bc73-425c-a79d-9c3a99490cff: GET /Admin/Order  from ::1
+2025-12-09 15:47:55.965 +03:30 [INF] Retrieved 10 orders for display in Order Index page.
+2025-12-09 15:47:55.982 +03:30 [INF] Response 0e3bf7b3-bc73-425c-a79d-9c3a99490cff: 200 in 31ms
+2025-12-09 15:47:56.018 +03:30 [INF] Request 94aed2b7-099c-40cc-aaeb-686de18deeb4: GET /Vazir.woff2  from ::1
+2025-12-09 15:47:56.023 +03:30 [INF] Response 94aed2b7-099c-40cc-aaeb-686de18deeb4: 404 in 0ms
+2025-12-09 15:47:57.354 +03:30 [INF] Request 042a76e3-ff5b-45c1-aa57-4c0485415d5d: GET /Admin/Order/Detail ?orderId=5 from ::1
+2025-12-09 16:00:53.771 +03:30 [INF] Request 50c5bed4-c9f5-408c-a9ea-202dfa57d672: GET /  from ::1
+2025-12-09 16:00:54.463 +03:30 [WRN] Entity 'User' has a global query filter defined and is the required end of a relationship with the entity 'Order'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-09 16:00:54.532 +03:30 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 16:00:54.537 +03:30 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 16:00:54.538 +03:30 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'User'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 16:00:55.361 +03:30 [INF] Response 50c5bed4-c9f5-408c-a9ea-202dfa57d672: 200 in 1549ms
+2025-12-09 16:00:55.456 +03:30 [INF] Request e1fc60b0-b27c-4934-83e0-24c18d868ed5: GET /WebApplication1.styles.css  from ::1
+2025-12-09 16:00:55.492 +03:30 [INF] Response e1fc60b0-b27c-4934-83e0-24c18d868ed5: 404 in 4ms
+2025-12-09 16:00:56.772 +03:30 [INF] Request b52ab6ef-0a8d-4caf-ab17-19c175dbff7e: GET /Admin/Account  from ::1
+2025-12-09 16:00:56.840 +03:30 [INF] Response b52ab6ef-0a8d-4caf-ab17-19c175dbff7e: 200 in 64ms
+2025-12-09 16:00:56.894 +03:30 [INF] Request d7d4152d-91f2-41f6-b1b1-dfb8be106807: GET /Vazir.woff2  from ::1
+2025-12-09 16:00:56.899 +03:30 [INF] Response d7d4152d-91f2-41f6-b1b1-dfb8be106807: 404 in 0ms
+2025-12-09 16:01:00.162 +03:30 [INF] Request 6ff937d0-48d2-4231-8b7c-5a0024a7526b: POST /Admin/Account/Login  from ::1
+2025-12-09 16:01:00.284 +03:30 [INF] Admin user admin logged in successfully with UserID: 6
+2025-12-09 16:01:00.287 +03:30 [INF] Response 6ff937d0-48d2-4231-8b7c-5a0024a7526b: 302 in 117ms
+2025-12-09 16:01:00.294 +03:30 [INF] Request 3fefc253-02fd-470d-b09b-f6dc0a724208: GET /Admin/Category  from ::1
+2025-12-09 16:01:00.358 +03:30 [INF] Response 3fefc253-02fd-470d-b09b-f6dc0a724208: 200 in 62ms
+2025-12-09 16:01:00.401 +03:30 [INF] Request 1700b843-22d8-4925-a545-d4e5f6332b8a: GET /Vazir.woff2  from ::1
+2025-12-09 16:01:00.405 +03:30 [INF] Response 1700b843-22d8-4925-a545-d4e5f6332b8a: 404 in 0ms
+2025-12-09 16:01:02.123 +03:30 [INF] Request 58e68ac9-e0e6-4a35-a109-0ff6ca0c4c0c: GET /Admin/Order  from ::1
+2025-12-09 16:01:02.143 +03:30 [INF] Retrieved 10 orders for display in Order Index page.
+2025-12-09 16:01:02.156 +03:30 [INF] Response 58e68ac9-e0e6-4a35-a109-0ff6ca0c4c0c: 200 in 29ms
+2025-12-09 16:01:02.189 +03:30 [INF] Request 9fac291c-b018-403c-9d05-ac3a9bb28a73: GET /Vazir.woff2  from ::1
+2025-12-09 16:01:02.194 +03:30 [INF] Response 9fac291c-b018-403c-9d05-ac3a9bb28a73: 404 in 0ms
+2025-12-09 16:01:03.148 +03:30 [INF] Request 957cb8d3-96da-4e67-ba51-69d5b8778f98: GET /Admin/Order/Detail ?orderId=1 from ::1
+2025-12-09 16:01:03.173 +03:30 [INF] Retrieved order items for OrderId 1 successfully.
+2025-12-09 16:01:03.177 +03:30 [ERR] The view 'Detail' was not found. Searched locations: ["/Areas/Admin/Views/Order/Detail.cshtml","/Areas/Admin/Views/Shared/Detail.cshtml","/Views/Shared/Detail.cshtml"]
+2025-12-09 16:01:03.301 +03:30 [ERR] Request 957cb8d3-96da-4e67-ba51-69d5b8778f98 failed after 149ms
+System.InvalidOperationException: The view 'Detail' was not found. The following locations were searched:
+/Areas/Admin/Views/Order/Detail.cshtml
+/Areas/Admin/Views/Shared/Detail.cshtml
+/Views/Shared/Detail.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at UI_MVC.Middlwares.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in D:\maktabsharifc#part2\recordcalses\week23\HWW23\src\03.Presentation\App.EndPoints.MVC.HWW22\Middlwares\RequestLoggingMiddleware.cs:line 35
+2025-12-09 16:01:03.324 +03:30 [INF] Request e0a0e83a-2083-4952-9668-5b94458006c3: GET /Home/Error  from ::1
+2025-12-09 16:01:03.334 +03:30 [INF] Response e0a0e83a-2083-4952-9668-5b94458006c3: 200 in 8ms
+2025-12-09 16:01:05.073 +03:30 [INF] Request 07d7b3d9-5d37-4a7b-9bf2-63e4020b617c: GET /  from ::1
+2025-12-09 16:01:05.087 +03:30 [INF] Response 07d7b3d9-5d37-4a7b-9bf2-63e4020b617c: 200 in 9ms
+2025-12-09 16:01:05.119 +03:30 [INF] Request 5f863d4b-2811-4e77-ab75-1797bd2e3ef5: GET /WebApplication1.styles.css  from ::1
+2025-12-09 16:01:05.125 +03:30 [INF] Response 5f863d4b-2811-4e77-ab75-1797bd2e3ef5: 404 in 0ms
+2025-12-09 16:01:25.831 +03:30 [INF] Request e761ae45-c341-4aab-bcbd-5e529267c0f2: GET /Account/Logout  from ::1
+2025-12-09 16:01:25.839 +03:30 [INF] Response e761ae45-c341-4aab-bcbd-5e529267c0f2: 302 in 4ms
+2025-12-09 16:01:25.848 +03:30 [INF] Request 9cc633e3-1201-4688-b730-aa796feed9fd: GET /Account/Login  from ::1
+2025-12-09 16:01:25.865 +03:30 [INF] Response 9cc633e3-1201-4688-b730-aa796feed9fd: 200 in 12ms
+2025-12-09 16:01:39.788 +03:30 [INF] Request 31e572fb-1093-4292-a76d-212e30635859: GET /  from ::1
+2025-12-09 16:01:40.495 +03:30 [WRN] Entity 'User' has a global query filter defined and is the required end of a relationship with the entity 'Order'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-09 16:01:40.565 +03:30 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 16:01:40.568 +03:30 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 16:01:40.571 +03:30 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'User'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 16:01:41.359 +03:30 [INF] Response 31e572fb-1093-4292-a76d-212e30635859: 200 in 1510ms
+2025-12-09 16:01:41.401 +03:30 [INF] Request b8a2c2d4-914f-4581-86b4-65aa6f29b8b8: GET /WebApplication1.styles.css  from ::1
+2025-12-09 16:01:41.473 +03:30 [INF] Response b8a2c2d4-914f-4581-86b4-65aa6f29b8b8: 404 in 68ms
+2025-12-09 16:01:49.528 +03:30 [INF] Request fbb5659b-24f1-46bb-96a5-25ee5948dfba: GET /  from ::1
+2025-12-09 16:01:50.320 +03:30 [WRN] Entity 'User' has a global query filter defined and is the required end of a relationship with the entity 'Order'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-09 16:01:50.394 +03:30 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 16:01:50.397 +03:30 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 16:01:50.398 +03:30 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'User'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 16:01:51.235 +03:30 [INF] Response fbb5659b-24f1-46bb-96a5-25ee5948dfba: 200 in 1651ms
+2025-12-09 16:01:51.274 +03:30 [INF] Request 3cc5aeb8-dcec-4e6e-8956-7067734faefe: GET /WebApplication1.styles.css  from ::1
+2025-12-09 16:01:51.338 +03:30 [INF] Response 3cc5aeb8-dcec-4e6e-8956-7067734faefe: 404 in 59ms
+2025-12-09 16:01:51.829 +03:30 [INF] Request 1bd00192-dd4f-4064-88a7-312dfcac165e: GET /Account/Login  from ::1
+2025-12-09 16:01:51.873 +03:30 [INF] Response 1bd00192-dd4f-4064-88a7-312dfcac165e: 200 in 41ms
+2025-12-09 16:01:53.248 +03:30 [INF] Request dcbd4f98-7767-407e-b8bf-cc216de8b17f: GET /Admin/Account  from ::1
+2025-12-09 16:01:53.287 +03:30 [INF] Response dcbd4f98-7767-407e-b8bf-cc216de8b17f: 200 in 34ms
+2025-12-09 16:01:53.338 +03:30 [INF] Request c56022ec-b78e-4026-8a63-1696a74d0cc3: GET /Vazir.woff2  from ::1
+2025-12-09 16:01:53.343 +03:30 [INF] Response c56022ec-b78e-4026-8a63-1696a74d0cc3: 404 in 0ms
+2025-12-09 16:01:56.468 +03:30 [INF] Request 1e33561d-aef6-4592-a32a-7d1a78ba51cb: POST /Admin/Account/Login  from ::1
+2025-12-09 16:01:56.592 +03:30 [INF] Admin user admin logged in successfully with UserID: 6
+2025-12-09 16:01:56.594 +03:30 [INF] Response 1e33561d-aef6-4592-a32a-7d1a78ba51cb: 302 in 121ms
+2025-12-09 16:01:56.602 +03:30 [INF] Request d7cbd96a-a5b2-45af-abd3-a3b6a95bf985: GET /Admin/Category  from ::1
+2025-12-09 16:01:56.685 +03:30 [INF] Response d7cbd96a-a5b2-45af-abd3-a3b6a95bf985: 200 in 79ms
+2025-12-09 16:01:56.742 +03:30 [INF] Request 48299a34-be10-408f-931f-9a1d9cb7dfb8: GET /Vazir.woff2  from ::1
+2025-12-09 16:01:56.746 +03:30 [INF] Response 48299a34-be10-408f-931f-9a1d9cb7dfb8: 404 in 0ms
+2025-12-09 16:01:58.366 +03:30 [INF] Request 8a1f2f05-11f3-4aab-9b80-e93c62768497: GET /Admin/Order  from ::1
+2025-12-09 16:01:58.404 +03:30 [INF] Retrieved 10 orders for display in Order Index page.
+2025-12-09 16:01:58.417 +03:30 [INF] Response 8a1f2f05-11f3-4aab-9b80-e93c62768497: 200 in 27ms
+2025-12-09 16:01:58.452 +03:30 [INF] Request ab154a4d-44ae-4451-890a-560a878a0265: GET /Vazir.woff2  from ::1
+2025-12-09 16:01:58.457 +03:30 [INF] Response ab154a4d-44ae-4451-890a-560a878a0265: 404 in 0ms
+2025-12-09 16:02:00.986 +03:30 [INF] Request a7d08aa6-0630-4e2b-9cc0-64d4072daf95: GET /Admin/Order/Detail ?orderId=5 from ::1
+2025-12-09 16:02:44.752 +03:30 [INF] Retrieved order items for OrderId 5 successfully.
+2025-12-09 16:02:48.878 +03:30 [ERR] The view 'Detail' was not found. Searched locations: ["/Areas/Admin/Views/Order/Detail.cshtml","/Areas/Admin/Views/Shared/Detail.cshtml","/Views/Shared/Detail.cshtml"]
+2025-12-09 16:05:45.140 +03:30 [INF] Request 568271d1-faed-4ba2-b857-49763ae9c0d5: GET /  from ::1
+2025-12-09 16:05:45.835 +03:30 [WRN] Entity 'User' has a global query filter defined and is the required end of a relationship with the entity 'Order'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-09 16:05:45.906 +03:30 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 16:05:45.909 +03:30 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 16:05:45.910 +03:30 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'User'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 16:05:46.797 +03:30 [INF] Response 568271d1-faed-4ba2-b857-49763ae9c0d5: 200 in 1606ms
+2025-12-09 16:05:46.839 +03:30 [INF] Request e176d817-c6e3-4945-bcdd-51d8445c49ec: GET /WebApplication1.styles.css  from ::1
+2025-12-09 16:05:46.876 +03:30 [INF] Response e176d817-c6e3-4945-bcdd-51d8445c49ec: 404 in 33ms
+2025-12-09 16:05:48.132 +03:30 [INF] Request a8062288-6438-4eb8-8a0c-ec06381c5689: GET /Admin/Account  from ::1
+2025-12-09 16:05:48.204 +03:30 [INF] Response a8062288-6438-4eb8-8a0c-ec06381c5689: 200 in 68ms
+2025-12-09 16:05:48.265 +03:30 [INF] Request 17b1d47c-cdb0-4eac-8571-f349c8b7bedb: GET /Vazir.woff2  from ::1
+2025-12-09 16:05:48.270 +03:30 [INF] Response 17b1d47c-cdb0-4eac-8571-f349c8b7bedb: 404 in 0ms
+2025-12-09 16:05:51.775 +03:30 [INF] Request 96bead67-7b3a-4168-a4e5-d473f0378b9e: POST /Admin/Account/Login  from ::1
+2025-12-09 16:05:51.897 +03:30 [INF] Admin user admin logged in successfully with UserID: 6
+2025-12-09 16:05:51.900 +03:30 [INF] Response 96bead67-7b3a-4168-a4e5-d473f0378b9e: 302 in 121ms
+2025-12-09 16:05:51.907 +03:30 [INF] Request b8d09a35-803b-469c-94b7-add047f93745: GET /Admin/Category  from ::1
+2025-12-09 16:05:51.974 +03:30 [INF] Response b8d09a35-803b-469c-94b7-add047f93745: 200 in 63ms
+2025-12-09 16:05:52.014 +03:30 [INF] Request 5ad5d6f6-caa7-4642-b5c0-25fbe9a48542: GET /Vazir.woff2  from ::1
+2025-12-09 16:05:52.018 +03:30 [INF] Response 5ad5d6f6-caa7-4642-b5c0-25fbe9a48542: 404 in 0ms
+2025-12-09 16:05:53.587 +03:30 [INF] Request 250e5604-e3eb-4854-b360-0c8bb5f739bf: GET /Admin/Order  from ::1
+2025-12-09 16:05:53.605 +03:30 [INF] Retrieved 10 orders for display in Order Index page.
+2025-12-09 16:05:53.619 +03:30 [INF] Response 250e5604-e3eb-4854-b360-0c8bb5f739bf: 200 in 27ms
+2025-12-09 16:05:53.657 +03:30 [INF] Request bb13fa07-d12a-49a1-9d27-22eae09b62bb: GET /Vazir.woff2  from ::1
+2025-12-09 16:05:53.661 +03:30 [INF] Response bb13fa07-d12a-49a1-9d27-22eae09b62bb: 404 in 0ms
+2025-12-09 16:05:54.954 +03:30 [INF] Request c1d71ca6-eb68-45d1-ac1b-9d76ff49262a: GET /Admin/Order/Detail ?orderId=5 from ::1
+2025-12-09 16:05:54.978 +03:30 [INF] Retrieved order items for OrderId 5 successfully.
+2025-12-09 16:05:54.981 +03:30 [ERR] The view 'Detail' was not found. Searched locations: ["/Areas/Admin/Views/Order/Detail.cshtml","/Areas/Admin/Views/Shared/Detail.cshtml","/Views/Shared/Detail.cshtml"]
+2025-12-09 16:05:55.119 +03:30 [ERR] Request c1d71ca6-eb68-45d1-ac1b-9d76ff49262a failed after 160ms
+System.InvalidOperationException: The view 'Detail' was not found. The following locations were searched:
+/Areas/Admin/Views/Order/Detail.cshtml
+/Areas/Admin/Views/Shared/Detail.cshtml
+/Views/Shared/Detail.cshtml
+   at Microsoft.AspNetCore.Mvc.ViewEngines.ViewEngineResult.EnsureSuccessful(IEnumerable`1 originalLocations)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at UI_MVC.Middlwares.RequestLoggingMiddleware.InvokeAsync(HttpContext context) in D:\maktabsharifc#part2\recordcalses\week23\HWW23\src\03.Presentation\App.EndPoints.MVC.HWW22\Middlwares\RequestLoggingMiddleware.cs:line 35
+2025-12-09 16:05:55.145 +03:30 [INF] Request 8ed46498-c889-4506-bbc5-d6c32f5117e0: GET /Home/Error  from ::1
+2025-12-09 16:05:55.154 +03:30 [INF] Response 8ed46498-c889-4506-bbc5-d6c32f5117e0: 200 in 7ms
+2025-12-09 16:05:58.768 +03:30 [INF] Request 0bfeb709-ceaf-4217-8dfc-1048ff4a9e20: GET /  from ::1
+2025-12-09 16:05:58.784 +03:30 [INF] Response 0bfeb709-ceaf-4217-8dfc-1048ff4a9e20: 200 in 12ms
+2025-12-09 16:05:58.812 +03:30 [INF] Request 14e5b183-da1d-4a32-adec-03b67d8520c9: GET /WebApplication1.styles.css  from ::1
+2025-12-09 16:05:58.814 +03:30 [INF] Response 14e5b183-da1d-4a32-adec-03b67d8520c9: 404 in 0ms
+2025-12-09 16:06:27.000 +03:30 [INF] Request fa8319a7-b4d7-4b4f-ad43-f7e46c1196e0: GET /  from ::1
+2025-12-09 16:06:27.695 +03:30 [WRN] Entity 'User' has a global query filter defined and is the required end of a relationship with the entity 'Order'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-09 16:06:27.763 +03:30 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 16:06:27.768 +03:30 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 16:06:27.772 +03:30 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'User'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 16:06:28.545 +03:30 [INF] Response fa8319a7-b4d7-4b4f-ad43-f7e46c1196e0: 200 in 1504ms
+2025-12-09 16:06:28.585 +03:30 [INF] Request eca55474-4076-42e6-8747-0c467bdecda0: GET /WebApplication1.styles.css  from ::1
+2025-12-09 16:06:28.599 +03:30 [INF] Response eca55474-4076-42e6-8747-0c467bdecda0: 404 in 2ms
+2025-12-09 16:06:29.887 +03:30 [INF] Request 4fbea674-640e-4391-b999-a6f026826e48: GET /Admin/Account  from ::1
+2025-12-09 16:06:29.953 +03:30 [INF] Response 4fbea674-640e-4391-b999-a6f026826e48: 200 in 63ms
+2025-12-09 16:06:30.006 +03:30 [INF] Request 128c2fc1-0c1a-4395-8996-3d16d19b2cf6: GET /Vazir.woff2  from ::1
+2025-12-09 16:06:30.009 +03:30 [INF] Response 128c2fc1-0c1a-4395-8996-3d16d19b2cf6: 404 in 0ms
+2025-12-09 16:06:33.010 +03:30 [INF] Request 6ddf39d9-b535-4ad3-8073-447adb487868: POST /Admin/Account/Login  from ::1
+2025-12-09 16:06:33.153 +03:30 [INF] Admin user admin logged in successfully with UserID: 6
+2025-12-09 16:06:33.156 +03:30 [INF] Response 6ddf39d9-b535-4ad3-8073-447adb487868: 302 in 137ms
+2025-12-09 16:06:33.163 +03:30 [INF] Request fc530fe8-4c6c-4915-b42f-7fdebc17a8a9: GET /Admin/Category  from ::1
+2025-12-09 16:06:33.230 +03:30 [INF] Response fc530fe8-4c6c-4915-b42f-7fdebc17a8a9: 200 in 63ms
+2025-12-09 16:06:33.270 +03:30 [INF] Request 61fb2e32-8035-4750-bd6d-fa0b57412bdf: GET /Vazir.woff2  from ::1
+2025-12-09 16:06:33.273 +03:30 [INF] Response 61fb2e32-8035-4750-bd6d-fa0b57412bdf: 404 in 0ms
+2025-12-09 16:06:34.706 +03:30 [INF] Request ae483edc-edf5-42c7-99ad-e24047ffc321: GET /Admin/Order  from ::1
+2025-12-09 16:06:34.725 +03:30 [INF] Retrieved 10 orders for display in Order Index page.
+2025-12-09 16:06:34.739 +03:30 [INF] Response ae483edc-edf5-42c7-99ad-e24047ffc321: 200 in 28ms
+2025-12-09 16:06:34.773 +03:30 [INF] Request dc22148c-0765-4e5a-bf37-43e4acf68b4c: GET /Vazir.woff2  from ::1
+2025-12-09 16:06:34.778 +03:30 [INF] Response dc22148c-0765-4e5a-bf37-43e4acf68b4c: 404 in 0ms
+2025-12-09 16:06:37.729 +03:30 [INF] Request 7a4ddcb6-d82a-456b-9363-b160482e61ea: GET /Admin/Order/Detail ?orderId=1 from ::1
+2025-12-09 16:06:52.568 +03:30 [INF] Retrieved order items for OrderId 1 successfully.
+2025-12-09 16:07:10.096 +03:30 [ERR] The view 'Detail' was not found. Searched locations: ["/Areas/Admin/Views/Order/Detail.cshtml","/Areas/Admin/Views/Shared/Detail.cshtml","/Views/Shared/Detail.cshtml"]
+2025-12-09 16:08:46.138 +03:30 [INF] Request 284f086b-63b2-4fc2-b964-d80bb4f36105: GET /  from ::1
+2025-12-09 16:08:46.856 +03:30 [WRN] Entity 'User' has a global query filter defined and is the required end of a relationship with the entity 'Order'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-09 16:08:46.929 +03:30 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 16:08:46.931 +03:30 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 16:08:46.932 +03:30 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'User'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 16:08:47.732 +03:30 [INF] Response 284f086b-63b2-4fc2-b964-d80bb4f36105: 200 in 1518ms
+2025-12-09 16:08:47.775 +03:30 [INF] Request c674d015-70b4-41c8-88b6-425f2cc042ab: GET /WebApplication1.styles.css  from ::1
+2025-12-09 16:08:47.787 +03:30 [INF] Response c674d015-70b4-41c8-88b6-425f2cc042ab: 404 in 9ms
+2025-12-09 16:08:49.456 +03:30 [INF] Request 10497d85-1e28-4636-a32a-584cf914ddb0: GET /Admin/Account  from ::1
+2025-12-09 16:08:49.517 +03:30 [INF] Response 10497d85-1e28-4636-a32a-584cf914ddb0: 200 in 58ms
+2025-12-09 16:08:49.570 +03:30 [INF] Request ddc2cbd2-870b-4a4f-b67b-dacacf72423f: GET /Vazir.woff2  from ::1
+2025-12-09 16:08:49.575 +03:30 [INF] Response ddc2cbd2-870b-4a4f-b67b-dacacf72423f: 404 in 0ms
+2025-12-09 16:08:52.259 +03:30 [INF] Request 14a3f8b6-bdbb-4095-b904-842817472cae: POST /Admin/Account/Login  from ::1
+2025-12-09 16:08:52.376 +03:30 [INF] Admin user admin logged in successfully with UserID: 6
+2025-12-09 16:08:52.379 +03:30 [INF] Response 14a3f8b6-bdbb-4095-b904-842817472cae: 302 in 117ms
+2025-12-09 16:08:52.386 +03:30 [INF] Request aa659a45-57b3-4564-8c02-9157db61aafe: GET /Admin/Category  from ::1
+2025-12-09 16:08:52.454 +03:30 [INF] Response aa659a45-57b3-4564-8c02-9157db61aafe: 200 in 65ms
+2025-12-09 16:08:52.494 +03:30 [INF] Request b0bcd6dc-fc49-4b08-ab72-581bee05e349: GET /Vazir.woff2  from ::1
+2025-12-09 16:08:52.497 +03:30 [INF] Response b0bcd6dc-fc49-4b08-ab72-581bee05e349: 404 in 0ms
+2025-12-09 16:08:53.864 +03:30 [INF] Request 55f05081-2c5b-4266-8e1e-c0873b360a3d: GET /Admin/Order  from ::1
+2025-12-09 16:08:53.882 +03:30 [INF] Retrieved 10 orders for display in Order Index page.
+2025-12-09 16:08:53.897 +03:30 [INF] Response 55f05081-2c5b-4266-8e1e-c0873b360a3d: 200 in 28ms
+2025-12-09 16:08:53.936 +03:30 [INF] Request fc4c7737-47f0-4789-89e4-133de0ac5d06: GET /Vazir.woff2  from ::1
+2025-12-09 16:08:53.940 +03:30 [INF] Response fc4c7737-47f0-4789-89e4-133de0ac5d06: 404 in 0ms
+2025-12-09 16:08:55.220 +03:30 [INF] Request 6eb04ad2-ff09-47f6-b157-bc7bf337e6f0: GET /Admin/Order/Detail ?orderId=1 from ::1
+2025-12-09 16:08:56.825 +03:30 [INF] Retrieved order items for OrderId 1 successfully.
+2025-12-09 16:08:59.668 +03:30 [INF] Response 6eb04ad2-ff09-47f6-b157-bc7bf337e6f0: 200 in 4444ms
+2025-12-09 16:08:59.703 +03:30 [INF] Request a77dc0e1-6a3b-4548-870e-a67e72c1dc5b: GET /Vazir.woff2  from ::1
+2025-12-09 16:08:59.708 +03:30 [INF] Response a77dc0e1-6a3b-4548-870e-a67e72c1dc5b: 404 in 0ms
+2025-12-09 16:09:44.840 +03:30 [INF] Request 6ecff21d-fece-4ee6-8772-269b06d98627: GET /Admin/Order  from ::1
+2025-12-09 16:09:44.854 +03:30 [INF] Retrieved 10 orders for display in Order Index page.
+2025-12-09 16:09:44.857 +03:30 [INF] Response 6ecff21d-fece-4ee6-8772-269b06d98627: 200 in 12ms
+2025-12-09 16:09:44.897 +03:30 [INF] Request c885541c-a270-4406-a2ac-26722470b2db: GET /Vazir.woff2  from ::1
+2025-12-09 16:09:44.907 +03:30 [INF] Response c885541c-a270-4406-a2ac-26722470b2db: 404 in 0ms
+2025-12-09 16:15:56.509 +03:30 [INF] Request 82888a33-d18c-483e-93cd-8a2958d9b2b5: GET /  from ::1
+2025-12-09 16:15:57.196 +03:30 [WRN] Entity 'User' has a global query filter defined and is the required end of a relationship with the entity 'Order'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-09 16:15:57.264 +03:30 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 16:15:57.267 +03:30 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 16:15:57.268 +03:30 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'User'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 16:15:58.052 +03:30 [INF] Response 82888a33-d18c-483e-93cd-8a2958d9b2b5: 200 in 1503ms
+2025-12-09 16:15:58.101 +03:30 [INF] Request fb64abad-8f14-4cad-85ec-ef70948262c0: GET /WebApplication1.styles.css  from ::1
+2025-12-09 16:15:58.140 +03:30 [INF] Response fb64abad-8f14-4cad-85ec-ef70948262c0: 404 in 35ms
+2025-12-09 16:15:59.281 +03:30 [INF] Request aa4fee55-7b00-4e31-9d0a-714cefba8920: GET /Admin/Account  from ::1
+2025-12-09 16:15:59.347 +03:30 [INF] Response aa4fee55-7b00-4e31-9d0a-714cefba8920: 200 in 62ms
+2025-12-09 16:15:59.398 +03:30 [INF] Request b51a6957-9ffb-49b5-89ff-3319400f011e: GET /Vazir.woff2  from ::1
+2025-12-09 16:15:59.403 +03:30 [INF] Response b51a6957-9ffb-49b5-89ff-3319400f011e: 404 in 0ms
+2025-12-09 16:16:02.552 +03:30 [INF] Request de4009d8-21e4-4569-8b1e-054d3284859d: POST /Admin/Account/Login  from ::1
+2025-12-09 16:16:02.675 +03:30 [INF] Admin user admin logged in successfully with UserID: 6
+2025-12-09 16:16:02.678 +03:30 [INF] Response de4009d8-21e4-4569-8b1e-054d3284859d: 302 in 122ms
+2025-12-09 16:16:02.685 +03:30 [INF] Request 3e831006-6cf2-4df2-a87b-5f43a1c950e7: GET /Admin/Category  from ::1
+2025-12-09 16:16:02.757 +03:30 [INF] Response 3e831006-6cf2-4df2-a87b-5f43a1c950e7: 200 in 69ms
+2025-12-09 16:16:02.796 +03:30 [INF] Request 6d2c49a7-9e0a-408f-864d-a9c5c244c42c: GET /Vazir.woff2  from ::1
+2025-12-09 16:16:02.799 +03:30 [INF] Response 6d2c49a7-9e0a-408f-864d-a9c5c244c42c: 404 in 0ms
+2025-12-09 16:16:04.194 +03:30 [INF] Request 514d4ca0-4cf8-4c35-a1cc-12ad29d0bdc7: GET /Admin/Order  from ::1
+2025-12-09 16:16:04.214 +03:30 [INF] Retrieved 10 orders for display in Order Index page.
+2025-12-09 16:16:04.228 +03:30 [INF] Response 514d4ca0-4cf8-4c35-a1cc-12ad29d0bdc7: 200 in 29ms
+2025-12-09 16:16:04.261 +03:30 [INF] Request f12b4a8d-1c8a-474a-ac6c-c8933826dd5f: GET /Vazir.woff2  from ::1
+2025-12-09 16:16:04.267 +03:30 [INF] Response f12b4a8d-1c8a-474a-ac6c-c8933826dd5f: 404 in 0ms
+2025-12-09 16:16:05.353 +03:30 [INF] Request 41798089-55d2-4e5d-8244-fc0d01d3c41e: GET /Admin/Order/Detail ?orderId=5 from ::1
+2025-12-09 16:16:52.443 +03:30 [INF] Request b8ea272d-7585-438e-979d-e3c6665ff547: GET /  from ::1
+2025-12-09 16:16:53.149 +03:30 [WRN] Entity 'User' has a global query filter defined and is the required end of a relationship with the entity 'Order'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-09 16:16:53.224 +03:30 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 16:16:53.228 +03:30 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 16:16:53.229 +03:30 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'User'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-09 16:16:54.055 +03:30 [INF] Response b8ea272d-7585-438e-979d-e3c6665ff547: 200 in 1569ms
+2025-12-09 16:16:54.095 +03:30 [INF] Request 48182374-4a85-4b5e-b3ce-2129a0c0aae3: GET /WebApplication1.styles.css  from ::1
+2025-12-09 16:16:54.107 +03:30 [INF] Response 48182374-4a85-4b5e-b3ce-2129a0c0aae3: 404 in 10ms
+2025-12-09 16:16:55.042 +03:30 [INF] Request febb80ab-5e92-4d8e-b4ce-339988a8bb57: GET /Admin/Account  from ::1
+2025-12-09 16:16:55.123 +03:30 [INF] Response febb80ab-5e92-4d8e-b4ce-339988a8bb57: 200 in 77ms
+2025-12-09 16:16:55.183 +03:30 [INF] Request 523ca6bf-c3b8-4f28-8208-726ad82330f9: GET /Vazir.woff2  from ::1
+2025-12-09 16:16:55.187 +03:30 [INF] Response 523ca6bf-c3b8-4f28-8208-726ad82330f9: 404 in 0ms
+2025-12-09 16:16:58.361 +03:30 [INF] Request abaa00ce-a014-4f8f-8440-e4aa275ab7f5: POST /Admin/Account/Login  from ::1
+2025-12-09 16:16:58.465 +03:30 [INF] Admin user admin logged in successfully with UserID: 6
+2025-12-09 16:16:58.468 +03:30 [INF] Response abaa00ce-a014-4f8f-8440-e4aa275ab7f5: 302 in 102ms
+2025-12-09 16:16:58.475 +03:30 [INF] Request fbfa1448-bee6-4adc-b090-6da249c52119: GET /Admin/Category  from ::1
+2025-12-09 16:16:58.563 +03:30 [INF] Response fbfa1448-bee6-4adc-b090-6da249c52119: 200 in 85ms
+2025-12-09 16:16:58.618 +03:30 [INF] Request 1f5905e2-cb28-44d2-a050-f454078c6678: GET /Vazir.woff2  from ::1
+2025-12-09 16:16:58.623 +03:30 [INF] Response 1f5905e2-cb28-44d2-a050-f454078c6678: 404 in 0ms
+2025-12-09 16:17:00.341 +03:30 [INF] Request af8cea8b-f1fa-4664-a2fe-30496a6f568b: GET /Admin/Order  from ::1
+2025-12-09 16:17:00.358 +03:30 [INF] Retrieved 10 orders for display in Order Index page.
+2025-12-09 16:17:00.372 +03:30 [INF] Response af8cea8b-f1fa-4664-a2fe-30496a6f568b: 200 in 27ms
+2025-12-09 16:17:00.406 +03:30 [INF] Request febe4643-79d8-4f5f-bdd4-a217df2c0299: GET /Vazir.woff2  from ::1
+2025-12-09 16:17:00.411 +03:30 [INF] Response febe4643-79d8-4f5f-bdd4-a217df2c0299: 404 in 0ms
+2025-12-09 16:17:01.275 +03:30 [INF] Request 21b27006-1867-4075-9a88-0ba4495569ff: GET /Admin/Order/Detail ?orderId=1 from ::1
+2025-12-09 16:17:03.051 +03:30 [INF] Retrieved order items for OrderId 1 successfully.
+2025-12-09 16:17:03.062 +03:30 [INF] Response 21b27006-1867-4075-9a88-0ba4495569ff: 200 in 1783ms
+2025-12-09 16:17:03.103 +03:30 [INF] Request d0dc28e0-4ce5-4c35-89de-43cfd1b7172c: GET /Vazir.woff2  from ::1
+2025-12-09 16:17:03.105 +03:30 [INF] Response d0dc28e0-4ce5-4c35-89de-43cfd1b7172c: 404 in 0ms

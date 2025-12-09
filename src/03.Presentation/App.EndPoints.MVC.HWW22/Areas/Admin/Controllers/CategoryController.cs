@@ -36,11 +36,17 @@ namespace App.EndPoints.MVC.HWW22.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(CategoryDto categoryDto,CancellationToken cancellationToken)
         {
-
+            if (LocalStorage.LoginUser == null || LocalStorage.LoginUser.RoleEnum != RoleEnum.Admin)
+            {
+                TempData["Error"] = "فقط کاربر ادمین به این صفحه  امکان دسترسی دارد.";
+                _logger.LogWarning("Unauthorized access attempt to Create  page.");
+                return RedirectToAction("Index", "Account");
+            }
             if (!ModelState.IsValid)
             {
                 return View("Create", categoryDto);
             }
+           
 
             Result<int> result = await _categoryAppService.Create(categoryDto, cancellationToken);
             if (!result.IsSuccess)
@@ -59,6 +65,12 @@ namespace App.EndPoints.MVC.HWW22.Areas.Admin.Controllers
 
         public async Task<IActionResult> Edit(int categoryId , CancellationToken cancellationToken) 
         {
+            if (LocalStorage.LoginUser == null || LocalStorage.LoginUser.RoleEnum != RoleEnum.Admin)
+            {
+                TempData["Error"] = "فقط کاربر ادمین به این صفحه  امکان دسترسی دارد.";
+                _logger.LogWarning("Unauthorized access attempt to Edit  page.");
+                return RedirectToAction("Index", "Account");
+            }
             Result<CategoryDto> result=await _categoryAppService.GetById(categoryId , cancellationToken);
             if (!result.IsSuccess) 
             {
@@ -76,6 +88,12 @@ namespace App.EndPoints.MVC.HWW22.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> Edit(CategoryDto categoryDto, CancellationToken cancellationToken) 
         {
+            if (LocalStorage.LoginUser == null || LocalStorage.LoginUser.RoleEnum != RoleEnum.Admin)
+            {
+                TempData["Error"] = "فقط کاربر ادمین به این صفحه  امکان دسترسی دارد.";
+                _logger.LogWarning("Unauthorized access attempt to Edit  page.");
+                return RedirectToAction("Index", "Account");
+            }
 
             if (!ModelState.IsValid)
             {
@@ -103,6 +121,12 @@ namespace App.EndPoints.MVC.HWW22.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> Delete(int categoryId, CancellationToken cancellationToken) 
         {
+            if (LocalStorage.LoginUser == null || LocalStorage.LoginUser.RoleEnum != RoleEnum.Admin)
+            {
+                TempData["Error"] = "فقط کاربر ادمین به این صفحه  امکان دسترسی دارد.";
+                _logger.LogWarning("Unauthorized access attempt to Delete  page.");
+                return RedirectToAction("Index", "Account");
+            }
 
             Result<int> result=await _categoryAppService.Delete(categoryId, cancellationToken);
             if (!result.IsSuccess)

@@ -24,6 +24,7 @@ namespace App.Infra.Data.Repos.Ef.OrderAgg
                return  await _context.Orders
                        .Select(o=>new OrderDto 
                         { 
+                            OrderId = o.Id,
                             UserId = o.UserId,
                             TotalAmount = o.TotalAmount,
                             CreatedAt = o.CreatedAt,
