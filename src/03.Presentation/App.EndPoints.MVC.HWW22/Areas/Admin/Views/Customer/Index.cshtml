@@ -1,0 +1,51 @@
+﻿@model List<App.Domain.Core.Dtos.UserAgg.UserDto>
+
+@{
+    ViewData["Title"] = "مدیریت مشتری ها";
+}
+
+<link rel="stylesheet" href="~/css/admin-customer.css" />
+
+<div class="container mt-4">
+
+    <h2 class="text-center mb-4">مدیریت مشتری‌ها</h2>
+
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger text-center">@TempData["Error"]</div>
+    }
+
+    <div class="table-responsive shadow-lg bg-white p-3 rounded">
+
+        <table class="table table-hover text-center align-middle">
+            <thead class="table-dark">
+                <tr>
+                    <th>شناسه</th>
+                    <th>نام کاربری</th>
+                    <th>جزئیات</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var user in Model)
+                {
+                    <tr>
+                        <td>@user.Id</td>
+                        <td>@user.Username</td>
+                        <td>
+                            <a asp-area="Admin"
+                               asp-controller="Customer"
+                               asp-action="Detail"
+                               asp-route-userId="@user.Id"
+                               class="btn btn-sm btn-outline-primary px-3">
+                                مشاهده
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+    </div>
+
+</div>

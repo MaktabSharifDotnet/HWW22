@@ -1,0 +1,63 @@
+﻿@model App.Domain.Core.Dtos.UserAgg.UserDetailDto
+
+@{
+    ViewData["Title"] = "جزئیات مشتری";
+}
+
+<link rel="stylesheet" href="~/css/admin-customer-detail.css" />
+
+<div class="container mt-4">
+
+    <h2 class="mb-4 text-center">جزئیات مشتری</h2>
+
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger text-center">@TempData["Error"]</div>
+    }
+
+    <div class="card shadow-lg">
+
+        <div class="card-header bg-dark text-white text-center fs-5">
+            اطلاعات کاربر
+        </div>
+
+        <div class="card-body">
+
+            <table class="table table-bordered table-striped text-center align-middle">
+                <tbody>
+                    <tr>
+                        <th>شناسه</th>
+                        <td>@Model.Id</td>
+                    </tr>
+
+                    <tr>
+                        <th>نام کاربری</th>
+                        <td>@Model.Username</td>
+                    </tr>
+
+                    <tr>
+                        <th>موجودی حساب</th>
+                        <td>@Model.Balance.ToString("#,0") تومان</td>
+                    </tr>
+
+                    <tr>
+                        <th>رمز عبور</th>
+                        <td>@Model.Password</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="text-center mt-4">
+                <a asp-area="Admin"
+                   asp-controller="Customer"
+                   asp-action="Index"
+                   class="btn btn-secondary px-4">
+                    بازگشت
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

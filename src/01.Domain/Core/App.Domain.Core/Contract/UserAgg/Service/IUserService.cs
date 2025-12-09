@@ -20,8 +20,8 @@ namespace App.Domain.Core.Contract.UserAgg.Service
         public void Withdraw(User user, decimal totalPrice, List<CartProduct> cartProducts);
         public void DecreaseInventory(int cartId, List<CartProduct> cartProducts);
 
-        public Task<List<UserDto>> GetAllById(CancellationToken cancellationToken);
-
+        public Task<List<UserDto>> GetAll(CancellationToken cancellationToken);
+        public Task<UserDetailDto?> GetDetailById(int userId, CancellationToken cancellationToken);
 
     }
 }

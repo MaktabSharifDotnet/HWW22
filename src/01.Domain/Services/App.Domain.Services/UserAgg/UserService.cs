@@ -87,9 +87,14 @@ namespace App.Domain.Services.UserAgg
             cartItem!.Product.Inventory = cartItem!.Product.Inventory - cartItem.Count;
         }
 
-        public async Task<List<UserDto>> GetAllById(CancellationToken cancellationToken)
+        public async Task<List<UserDto>> GetAll(CancellationToken cancellationToken)
         {
-           return await _userRepository.GetAllById(cancellationToken);
+           return await _userRepository.GetAll(cancellationToken);
+        }
+
+        public async Task<UserDetailDto?> GetDetailById(int userId, CancellationToken cancellationToken)
+        {
+            return await _userRepository.GetDetailById(userId, cancellationToken);
         }
     }
 }
