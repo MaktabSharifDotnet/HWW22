@@ -19,5 +19,11 @@ namespace App.Domain.Core.Contract.OrderAgg.Service
         public  Task<int> SaveAsync(CancellationToken cancellationToken);
 
         public Task<List<OrderDto>> GetOrderDtos(CancellationToken cancellationToken);
+        
+      
+     
+        public Task<decimal> GetTotalSales(CancellationToken cancellationToken);
+        public  Task<List<DashboardChartDto>> GetDailySalesCountAsync(CancellationToken cancellationToken);
+
     }
 }

@@ -27,5 +27,10 @@ namespace App.Domain.Services.ProductAgg
             }
             return productDto;
         }
+
+        public async Task<int> GetCountProduct(CancellationToken cancellationToken)
+        {
+            return await productRepository.GetCount(cancellationToken);
+        }
     }
 }

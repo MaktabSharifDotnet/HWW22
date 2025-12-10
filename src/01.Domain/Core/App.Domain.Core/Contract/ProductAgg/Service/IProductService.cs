@@ -1,4 +1,5 @@
-﻿using App.Domain.Core.Dtos.ProductAgg;
+﻿using App.Domain.Core.Contract.ProductAgg.Repository;
+using App.Domain.Core.Dtos.ProductAgg;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,5 +13,7 @@ namespace App.Domain.Core.Contract.ProductAgg.Service
         public Task<ProductListDto> GetAll(int pageNumber, int pageSize, int? categoryId = null , CancellationToken cancellationToken=default);
 
         public Task<ProductDto?> GetById(int productId, CancellationToken cancellationToken);
+        public Task<int> GetCountProduct(CancellationToken cancellationToken);
+        
     }
 }

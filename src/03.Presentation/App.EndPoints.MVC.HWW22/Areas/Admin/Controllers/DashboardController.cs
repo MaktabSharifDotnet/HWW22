@@ -1,15 +1,30 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using App.Domain.Core.Contract.OrderAgg.AppService;
+using App.Domain.Core.Dtos.OrderAgg;
+using App.Domain.Core.Entities;
+using App.Domain.Core.Enums.UserAgg;
 using App.EndPoints.MVC.HWW22.Constants;
+using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 
 
 namespace App.EndPoints.MVC.HWW22.Areas.Admin.Controllers
 {
-    public class DashboardController : Controller
+    public class DashboardController(ILogger<DashboardController> _logger , IOrderAppService _orderAppService) : Controller
     {
         [Area(AreaConstants.Admin)]
-        public IActionResult Index()
+        public async Task<IActionResult> Index(CancellationToken cancellationToken)
         {
-            return View();
+
+            if (LocalStorage.LoginUser == null || LocalStorage.LoginUser.RoleEnum != RoleEnum.Admin)
+            {
+                TempData["Error"] = "فقط کاربر ادمین به این صفحه  امکان دسترسی دارد.";
+                _logger.LogWarning("Unauthorized access attempt to Dashboard page.");
+                 return RedirectToAction("Index", "Account");
+            }
+
+            DashboardDataDto dashboardDataDto=await _orderAppService.GetDashboardData(cancellationToken);
+            _logger.LogInformation("Admin accessed the Dashboard page successfully.");
+            return View(dashboardDataDto);
         }
     }
 }

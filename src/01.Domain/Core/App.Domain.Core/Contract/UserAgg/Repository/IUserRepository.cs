@@ -14,6 +14,7 @@ namespace App.Domain.Core.Contract.UserAgg.Repository
         public Task<User?> GetById(int userId, CancellationToken cancellationToken);
         public Task<List<UserDto>> GetAll(CancellationToken cancellationToken);
         public Task<int> Save(CancellationToken cancellationToken);
+        public Task<int> GetCountCustomer(CancellationToken cancellationToken);
 
         public Task<UserDetailDto?> GetDetailById(int userId, CancellationToken cancellationToken);
 

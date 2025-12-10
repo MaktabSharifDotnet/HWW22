@@ -19,6 +19,20 @@ namespace App.Infra.Data.Repos.Ef.OrderAgg
            
         }
 
+        public async Task<List<DashboardChartDto>> GetDailySalesCountAsync(CancellationToken cancellationToken)
+        {
+              return await _context.Orders
+                .Where(o=>o.IsPaid)
+                .GroupBy(o=>o.CreatedAt.Date)
+                .Select(g=>new DashboardChartDto 
+                {
+                   Date = g.Key,
+                   Count = g.Count()
+                })
+                .OrderBy(x => x.Date)
+                .ToListAsync(cancellationToken);
+        }
+
         public async Task<List<OrderDto>> GetOrderDtos(CancellationToken cancellationToken)
         {
                return  await _context.Orders
@@ -33,10 +47,19 @@ namespace App.Infra.Data.Repos.Ef.OrderAgg
                        .ToListAsync(cancellationToken);
         }
 
+        
+        public async Task<decimal> GetTotalSales(CancellationToken cancellationToken)
+        {
+            return await _context.Orders.Where(o=>o.IsPaid).SumAsync(x => x.TotalAmount, cancellationToken);
+        }
+
+       
         public async Task<int> SaveAsync(CancellationToken cancellationToken)
         {
             return await _context.SaveChangesAsync(cancellationToken);
         }
+
+
 
 
 

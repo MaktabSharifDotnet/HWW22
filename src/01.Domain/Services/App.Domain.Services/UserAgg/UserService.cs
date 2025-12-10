@@ -96,5 +96,11 @@ namespace App.Domain.Services.UserAgg
         {
             return await _userRepository.GetDetailById(userId, cancellationToken);
         }
+
+        public async Task<int> GetCountCustomer(CancellationToken cancellationToken)
+        {
+            return await _userRepository.GetCountCustomer(cancellationToken);
+        }
+
     }
 }

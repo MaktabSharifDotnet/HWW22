@@ -37,6 +37,11 @@ namespace App.Infra.Data.Repos.Ef.UserAgg
             return await _context.Users.FirstOrDefaultAsync(u => u.Username == username, cancellationToken);
         }
 
+        public async Task<int> GetCountCustomer(CancellationToken cancellationToken)
+        {
+          return await _context.Users.CountAsync(U=>U.RoleEnum==RoleEnum.Customer , cancellationToken);
+        }
+
         public async Task<UserDetailDto?> GetDetailById(int userId, CancellationToken cancellationToken)
         {
             return await _context.Users.Where(u => u.Id == userId &&u.RoleEnum==RoleEnum.Customer)
@@ -54,5 +59,8 @@ namespace App.Infra.Data.Repos.Ef.UserAgg
         {
             return await _context.SaveChangesAsync(cancellationToken);
         }
+
+
+
     }
 }

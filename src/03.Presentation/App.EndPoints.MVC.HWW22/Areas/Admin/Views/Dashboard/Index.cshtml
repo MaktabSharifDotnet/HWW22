@@ -1,6 +1,104 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@using App.Domain.Core.Dtos.OrderAgg
+@model DashboardDataDto
+
 @{
+    ViewData["Title"] = "داشبورد مدیریتی";
+    Layout = "_Layout";
 }
-<h1>داشبورد</h1>
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/dashboard.css" />
+}
+
+<div class="container-fluid p-0">
+    <h3 class="mb-4 text-gray-800 border-bottom pb-3">داشبورد وضعیت فروشگاه</h3>
+
+    <div class="row mb-4">
+
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card stat-card bg-gradient-success h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col me-2">
+                            <div class="text-xs fw-bold text-uppercase mb-1">مجموع فروش</div>
+                            <div class="h5 mb-0 fw-bold">@Model.TotalSales.ToString("N0") تومان</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="bi bi-currency-dollar stat-icon"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card stat-card bg-gradient-primary h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col me-2">
+                            <div class="text-xs fw-bold text-uppercase mb-1">سفارشات اخیر</div>
+                            <div class="h5 mb-0 fw-bold">@Model.DashboardChartDtos.Sum(x => x.Count)</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="bi bi-cart-check stat-icon"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card stat-card bg-gradient-info h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col me-2">
+                            <div class="text-xs fw-bold text-uppercase mb-1">تعداد مشتریان</div>
+                            <div class="h5 mb-0 fw-bold">@Model.CountCustomer</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="bi bi-people-fill stat-icon"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card stat-card bg-gradient-warning h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col me-2">
+                            <div class="text-xs fw-bold text-uppercase mb-1">محصولات موجود</div>
+                            <div class="h5 mb-0 fw-bold">@Model.CountProduct</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="bi bi-box-seam stat-icon"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="chart-container">
+                <h5 class="mb-4 fw-bold text-secondary">نمودار فروش روزانه</h5>
+
+                <div style="height: 350px; position: relative;">
+                    <canvas id="salesChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="salesChartData"
+     data-json='@Json.Serialize(Model.DashboardChartDtos)'
+     style="display:none;"></div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="~/js/dashboard-chart.js"></script>
+}

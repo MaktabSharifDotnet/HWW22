@@ -1,4 +1,5 @@
-﻿using App.Domain.Core.Dtos.OrderAgg;
+﻿using App.Domain.Core.Contract.UserAgg.Repository;
+using App.Domain.Core.Dtos.OrderAgg;
 using App.Domain.Core.Dtos.UserAgg;
 using App.Domain.Core.Entities;
 using System;
@@ -22,6 +23,9 @@ namespace App.Domain.Core.Contract.UserAgg.Service
 
         public Task<List<UserDto>> GetAll(CancellationToken cancellationToken);
         public Task<UserDetailDto?> GetDetailById(int userId, CancellationToken cancellationToken);
+
+        public Task<int> GetCountCustomer(CancellationToken cancellationToken);
+       
 
     }
 }

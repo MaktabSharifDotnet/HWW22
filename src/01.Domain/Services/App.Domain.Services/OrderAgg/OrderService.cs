@@ -1,5 +1,7 @@
 ﻿using App.Domain.Core.Contract.OrderAgg.Repository;
 using App.Domain.Core.Contract.OrderAgg.Service;
+using App.Domain.Core.Contract.ProductAgg.Repository;
+using App.Domain.Core.Contract.UserAgg.Repository;
 using App.Domain.Core.Contract.UserAgg.Service;
 using App.Domain.Core.Dtos.OrderAgg;
 using App.Domain.Core.Entities;
@@ -11,7 +13,8 @@ using System.Threading.Tasks;
 
 namespace App.Domain.Services.OrderAgg
 {
-    public class OrderService(IOrderRepository _orderRepository) : IOrderService
+    public class OrderService(IOrderRepository _orderRepository 
+        , IUserRepository _userRepository , IProductRepository _productRepository) : IOrderService
     {
         public List<OrderItem> CreateOrderItems(List<CartProduct> cartProducts)
         {
@@ -59,6 +62,19 @@ namespace App.Domain.Services.OrderAgg
         public async Task<List<OrderDto>> GetOrderDtos(CancellationToken cancellationToken)
         {
            return await _orderRepository.GetOrderDtos(cancellationToken);
+        }
+
+      
+      
+
+        public async Task<decimal> GetTotalSales(CancellationToken cancellationToken)
+        {
+            return await  _orderRepository.GetTotalSales(cancellationToken);
+        }
+
+        public async Task<List<DashboardChartDto>> GetDailySalesCountAsync(CancellationToken cancellationToken)
+        {
+          return await  _orderRepository.GetDailySalesCountAsync(cancellationToken);
         }
     }
 }

@@ -72,6 +72,11 @@ namespace App.Infra.Data.Repos.Ef.ProductAgg
                 .FirstOrDefaultAsync(cancellationToken);
         }
 
-       
+        public async Task<int> GetCount(CancellationToken cancellationToken)
+        {
+            return await _context.Products.CountAsync(cancellationToken);
+        }
+
+      
     }
 }

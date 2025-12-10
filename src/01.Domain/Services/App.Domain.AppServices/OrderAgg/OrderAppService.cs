@@ -1,6 +1,7 @@
 ﻿using App.Domain.Core.Contract.CartAgg.Service;
 using App.Domain.Core.Contract.OrderAgg.AppService;
 using App.Domain.Core.Contract.OrderAgg.Service;
+using App.Domain.Core.Contract.ProductAgg.Service;
 using App.Domain.Core.Contract.UserAgg.Service;
 using App.Domain.Core.Dtos.OrderAgg;
 using App.Domain.Core.Entities;
@@ -12,8 +13,8 @@ using System.Threading.Tasks;
 
 namespace App.Domain.AppServices.OrderAgg
 {
-    public class OrderAppService(IUserService _userService , ICartService _cartService
-        ,IOrderService _orderService) : IOrderAppService
+    public class OrderAppService(IUserService _userService, ICartService _cartService
+        , IOrderService _orderService , IProductService _productService) : IOrderAppService
     {
         public async Task Create(int userId, int cartId, CancellationToken cancellationToken)
         {
@@ -32,21 +33,21 @@ namespace App.Domain.AppServices.OrderAgg
 
             decimal totalAmount = _userService.CalculateTotalPrice(cart.CartProducts);
 
-           
-           
-             var orderItems = _orderService.CreateOrderItems(cart.CartProducts);
-
-              OrderDto orderDto = new OrderDto()
-              {
-                  UserId = userId,
-                  TotalAmount = totalAmount,
-              
-              };
-
-            Order order=_orderService.CreateOrder(orderItems, orderDto);
 
 
-            await _orderService.AddAsync(order , cancellationToken);
+            var orderItems = _orderService.CreateOrderItems(cart.CartProducts);
+
+            OrderDto orderDto = new OrderDto()
+            {
+                UserId = userId,
+                TotalAmount = totalAmount,
+
+            };
+
+            Order order = _orderService.CreateOrder(orderItems, orderDto);
+
+
+            await _orderService.AddAsync(order, cancellationToken);
 
 
         }
@@ -73,17 +74,39 @@ namespace App.Domain.AppServices.OrderAgg
 
             _userService.DecreaseInventory(cartId, cart.CartProducts);
 
-            await Create(userId, cartId  ,cancellationToken);
+            await Create(userId, cartId, cancellationToken);
 
             await _cartService.RemoveCart(cart.Id, cancellationToken);
 
-             return  await _orderService.SaveAsync(cancellationToken);
-           
+            return await _orderService.SaveAsync(cancellationToken);
+
         }
 
         public async Task<List<OrderDto>> GetOrderDtos(CancellationToken cancellationToken)
         {
-           return await _orderService.GetOrderDtos(cancellationToken);
+            return await _orderService.GetOrderDtos(cancellationToken);
+        }
+
+        public async Task<DashboardDataDto> GetDashboardData(CancellationToken cancellationToken)
+        {
+            int countCustomer = await _userService.GetCountCustomer(cancellationToken);
+
+            int countProduct = await _productService.GetCountProduct(cancellationToken);
+
+            decimal totalSales = await _orderService.GetTotalSales(cancellationToken);
+
+            List<DashboardChartDto> dashboardChartDtos =await _orderService.GetDailySalesCountAsync(cancellationToken);
+
+            DashboardDataDto dashboardDataDto = new DashboardDataDto() 
+            {
+              CountCustomer = countCustomer,
+              CountProduct = countProduct,
+              TotalSales = totalSales,
+              DashboardChartDtos=dashboardChartDtos
+            };
+
+            return dashboardDataDto;
+
         }
     }
 }

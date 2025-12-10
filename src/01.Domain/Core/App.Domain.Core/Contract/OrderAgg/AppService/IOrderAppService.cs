@@ -14,5 +14,6 @@ namespace App.Domain.Core.Contract.OrderAgg.AppService
         public Task<int> CheckOut(int userId, int cartId, CancellationToken cancellationToken);
 
         public Task<List<OrderDto>> GetOrderDtos(CancellationToken cancellationToken);
+        public Task<DashboardDataDto> GetDashboardData(CancellationToken cancellationToken);
     }
 }
