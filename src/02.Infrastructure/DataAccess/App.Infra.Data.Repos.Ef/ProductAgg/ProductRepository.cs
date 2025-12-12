@@ -1,4 +1,5 @@
-﻿using App.Domain.Core.Contract.ProductAgg.Repository;
+﻿using App.Domain.Core._common;
+using App.Domain.Core.Contract.ProductAgg.Repository;
 using App.Domain.Core.Dtos.ProductAgg;
 using App.Domain.Core.Entities;
 using App.Infra.Db.SqlServer.Ef.DbContextAgg;
@@ -14,6 +15,22 @@ namespace App.Infra.Data.Repos.Ef.ProductAgg
 {
     public class ProductRepository(AppDbContext _context) : IProductRepository
     {
+        public async Task<int> Edit(ProductDto productDto, CancellationToken cancellationToken)
+        {
+            Product? product=await _context.Products
+                .FirstOrDefaultAsync(p => p.Id == productDto.Id , cancellationToken);
+
+            product!.Title = productDto.Title;
+            product.Description = productDto.Description;
+            product.Image=productDto.Image;
+            product.Price=productDto.Price;
+            product.CreatedAt=productDto.CreatedAt;
+            product.Inventory=productDto.Inventory;
+            product.CategoryId=productDto.CategoryId;
+
+            return await _context.SaveChangesAsync(cancellationToken);
+
+        }
 
         public async Task<ProductListDto> GetAll(int pageNumber,int pageSize  ,int? categoryId = null, CancellationToken cancellationToken = default )
         {
@@ -66,8 +83,9 @@ namespace App.Infra.Data.Repos.Ef.ProductAgg
                    Price = p.Price,
                    CreatedAt= p.CreatedAt,
                    Inventory = p.Inventory,
-                   
-                  
+                   CategoryId = p.Category.Id
+
+
                 })
                 .FirstOrDefaultAsync(cancellationToken);
         }

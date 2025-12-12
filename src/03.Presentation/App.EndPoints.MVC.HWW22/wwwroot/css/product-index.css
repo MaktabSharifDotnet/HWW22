@@ -1,0 +1,46 @@
+﻿/* استایل جدول محصولات */
+.product-table-card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    padding: 20px;
+}
+
+.product-img-thumbnail {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+}
+
+.table thead th {
+    background-color: #f1f5f9;
+    color: #475569;
+    font-weight: 600;
+}
+
+/* استایل Pagination */
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.page-link {
+    color: #333;
+    border-radius: 5px;
+    margin: 0 3px;
+    border: 1px solid #e2e8f0;
+}
+
+    .page-link.active {
+        background-color: #343a40;
+        border-color: #343a40;
+        color: white;
+    }
+
+.inventory-badge {
+    min-width: 30px;
+    text-align: center;
+}

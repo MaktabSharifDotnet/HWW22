@@ -1,0 +1,107 @@
+﻿@using App.EndPoints.MVC.HWW22.Areas.Admin.Models
+@model ProductViewModel
+
+@{
+    ViewData["Title"] = "ویرایش محصول";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/product-edit.css" />
+}
+
+<div class="container">
+    <div class="d-flex justify-content-between align-items-center mb-4" style="max-width: 800px; margin: 0 auto;">
+        <h4 class="fw-bold text-secondary">ویرایش محصول</h4>
+        <a asp-action="Index" class="btn btn-outline-secondary">
+            <i class="bi bi-arrow-right"></i> بازگشت
+        </a>
+    </div>
+
+    <div class="edit-product-card">
+        <form asp-action="Edit" method="post" enctype="multipart/form-data">
+
+            <input type="hidden" asp-for="Id" />
+            <input type="hidden" asp-for="ImagePath" />
+           
+
+            <div asp-validation-summary="ModelOnly" class="alert alert-danger mb-3"></div>
+
+            <div class="row">
+                <div class="col-md-7">
+
+                    <div class="mb-3">
+                        <label asp-for="Title" class="form-label"></label>
+                        <input asp-for="Title" class="form-control" />
+                        <span asp-validation-for="Title" class="text-danger"></span>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label asp-for="CategoryId" class="form-label"></label>
+                            <select asp-for="CategoryId" class="form-select" asp-items="ViewBag.Categories">
+                                <option value="">-- انتخاب دسته‌بندی --</option>
+                            </select>
+                            <span asp-validation-for="CategoryId" class="text-danger"></span>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label asp-for="Price" class="form-label"></label>
+                            <input asp-for="Price" type="number" class="form-control" />
+                            <span asp-validation-for="Price" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="Inventory" class="form-label"></label>
+                        <input asp-for="Inventory" type="number" class="form-control" />
+                        <span asp-validation-for="Inventory" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="Description" class="form-label"></label>
+                        <textarea asp-for="Description" class="form-control" rows="4"></textarea>
+                        <span asp-validation-for="Description" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="col-md-5">
+                    <div class="image-upload-wrapper text-center">
+                        <label class="form-label d-block mb-3">تصویر فعلی محصول</label>
+
+                        @if (!string.IsNullOrEmpty(Model.ImagePath))
+                        {
+                            <img src="~/images/ProductsAgg/@Model.ImagePath" class="current-image-preview" alt="تصویر محصول" />
+                        }
+                        else
+                        {
+                            <div class="alert alert-warning p-2 small">تصویری ثبت نشده است</div>
+                        }
+
+                        <hr class="my-4" />
+
+                        <label asp-for="Image" class="form-label text-primary">
+                            <i class="bi bi-cloud-upload"></i> آپلود تصویر جدید
+                        </label>
+                        <input asp-for="Image" type="file" class="form-control" accept="image/*" />
+                        <div class="form-text small text-muted mt-2">
+                            اگر نمی‌خواهید تصویر تغییر کند، این بخش را خالی بگذارید.
+                        </div>
+                        <span asp-validation-for="Image" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-4 pt-3 border-top d-flex gap-2">
+                <button type="submit" class="btn btn-warning px-4">
+                    <i class="bi bi-check-circle"></i> ثبت تغییرات
+                </button>
+                <a asp-action="Index" class="btn btn-light border">انصراف</a>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -1,4 +1,6 @@
-﻿using App.Domain.Core.Contract.ProductAgg.Repository;
+﻿using App.Domain.Core._common;
+using App.Domain.Core.Contract.CategoryAgg.Repository;
+using App.Domain.Core.Contract.ProductAgg.Repository;
 using App.Domain.Core.Contract.ProductAgg.Service;
 using App.Domain.Core.Dtos.ProductAgg;
 using System;
@@ -9,9 +11,24 @@ using System.Threading.Tasks;
 
 namespace App.Domain.Services.ProductAgg
 {
-    public class ProductService(IProductRepository productRepository) : IProductService
+    public class ProductService(IProductRepository productRepository , ICategoryRepository categoryRepository) : IProductService
     {
-        
+        public async Task<Result<int>> Edit(ProductDto productDto, CancellationToken cancellationToken)
+        {
+            ProductDto? productDtoDb= await productRepository.GetById(productDto.Id , cancellationToken);
+            if (productDtoDb == null)
+            {
+                Result<int>.Failure("همچین محصولی موجود نیست.");
+            }
+            var categoryDto =await categoryRepository.GetById(productDto.CategoryId , cancellationToken);
+            if (categoryDto.Data == null) 
+            {
+                Result<int>.Failure("همچین دسته بندی ای موجود نیست.");
+            }
+
+           return Result<int>.Success(await productRepository.Edit(productDto, cancellationToken));
+
+        }
 
         public async Task<ProductListDto> GetAll(int pageNumber, int pageSize, int? categoryId = null, CancellationToken cancellationToken = default)
         {

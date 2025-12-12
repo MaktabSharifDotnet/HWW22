@@ -1,4 +1,5 @@
-﻿using App.Domain.Core.Contract.ProductAgg.Repository;
+﻿using App.Domain.Core._common;
+using App.Domain.Core.Contract.ProductAgg.Repository;
 using App.Domain.Core.Dtos.ProductAgg;
 using System;
 using System.Collections.Generic;
@@ -14,6 +15,8 @@ namespace App.Domain.Core.Contract.ProductAgg.Service
 
         public Task<ProductDto?> GetById(int productId, CancellationToken cancellationToken);
         public Task<int> GetCountProduct(CancellationToken cancellationToken);
-        
+        public Task<Result<int>> Edit(ProductDto productDto, CancellationToken cancellationToken);
+
+
     }
 }
