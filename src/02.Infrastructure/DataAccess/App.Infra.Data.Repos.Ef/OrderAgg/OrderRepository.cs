@@ -47,7 +47,6 @@ namespace App.Infra.Data.Repos.Ef.OrderAgg
                        .ToListAsync(cancellationToken);
         }
 
-        
         public async Task<decimal> GetTotalSales(CancellationToken cancellationToken)
         {
             return await _context.Orders.Where(o=>o.IsPaid).SumAsync(x => x.TotalAmount, cancellationToken);

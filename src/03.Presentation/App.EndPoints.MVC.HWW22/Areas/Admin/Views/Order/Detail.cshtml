@@ -1,58 +1,90 @@
-﻿@model App.Domain.Core.Dtos.OrderItemAgg.OrderItemDto
+﻿@using App.Domain.Core.Dtos.OrderItemAgg
+@model List<OrderItemDto>
 
 @{
-    ViewData["Title"] = "جزئیات آیتم‌های سفارش";
+    ViewData["Title"] = "جزئیات اقلام سفارش";
+    // گرفتن شناسه سفارش از اولین آیتم برای نمایش در تیتر
+    var orderId = Model.FirstOrDefault()?.OrderId;
 }
 
-<link rel="stylesheet" href="~/css/admin-order-detail.css" />
+@section Styles {
+    <link rel="stylesheet" href="~/css/order-detail.css" />
+}
 
-<div class="container mt-4">
+<div class="container-fluid">
 
-    <h2 class="mb-4 text-center">جزئیات آیتم‌های سفارش</h2>
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h4 class="fw-bold text-secondary">
+            <i class="bi bi-list-check"></i> اقلام سفارش
+            @if (orderId != null)
+            {
+                <span class="text-primary">#@orderId</span>
+            }
+        </h4>
 
-    @if (TempData["Error"] != null)
-    {
-        <div class="alert alert-danger text-center">@TempData["Error"]</div>
-    }
+        <a asp-action="Index" asp-controller="Order" class="btn btn-outline-secondary">
+            <i class="bi bi-arrow-right"></i> بازگشت به لیست
+        </a>
+    </div>
 
-    <div class="card shadow-lg">
+    <div class="order-detail-card">
+        @if (Model != null && Model.Any())
+        {
+            <div class="table-responsive">
+                <table class="table table-hover align-middle">
+                    <thead>
+                        <tr>
+                            <th style="width: 50px;">#</th>
+                            <th>نام محصول</th>
+                            <th class="text-center">تعداد</th>
+                            <th>قیمت واحد (تومان)</th>
+                            <th>قیمت کل (تومان)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @{
+                            int rowCount = 1;
+                        }
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@(rowCount++)</td>
 
-        <div class="card-header bg-dark text-white text-center fs-5">
-            اطلاعات آیتم سفارش
-        </div>
+                                <td class="product-name">
+                                    @item.Name
+                                    <span class="d-block small text-muted font-weight-normal">کد محصول: @item.ProductId</span>
+                                </td>
 
-        <div class="card-body">
+                                <td class="text-center">
+                                    <span class="badge bg-light text-dark border badge-count">@item.Count</span>
+                                </td>
 
-            <table class="table table-bordered table-striped text-center align-middle">
-                <tbody>
-                    <tr>
-                        <th>شماره سفارش</th>
-                        <td>@Model.OrderId</td>
-                    </tr>
-                    <tr>
-                        <th>شناسه محصول</th>
-                        <td>@Model.ProductId , @Model.Name</td>
-                    </tr>
-                    <tr>
-                        <th>تعداد</th>
-                        <td>@Model.Count</td>
-                    </tr>
-                    <tr>
-                        <th>قیمت واحد</th>
-                        <td>@Model.UnitPrice.ToString("#,0") تومان</td>
-                    </tr>
-                </tbody>
-            </table>
+                                <td>@item.UnitPrice.ToString("N0")</td>
 
-            <div class="text-center mt-4">
-                <a asp-area="Admin"
-                   asp-controller="Order"
-                   asp-action="Index"
-                   class="btn btn-secondary px-4">
-                    بازگشت
-                </a>
+                                <td class="text-primary fw-bold">
+                                    @item.TotalPrice.ToString("N0")
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+
+                    <tfoot>
+                        <tr class="total-row">
+                            <td colspan="4" class="text-end">جمع کل اقلام:</td>
+                            <td class="text-success">
+                                @Model.Sum(x => x.TotalPrice).ToString("N0") تومان
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
             </div>
-
-        </div>
+        }
+        else
+        {
+            <div class="alert alert-warning text-center">
+                <i class="bi bi-exclamation-triangle-fill me-2"></i>
+                هیچ آیتمی برای نمایش در این سفارش یافت نشد.
+            </div>
+        }
     </div>
 </div>

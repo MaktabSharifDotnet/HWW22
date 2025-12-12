@@ -14,5 +14,6 @@ namespace App.Domain.Core.Dtos.OrderItemAgg
         public string Name { get; set; }
         public int Count { get; set; }
         public decimal UnitPrice { get; set; }
+        public decimal TotalPrice { get; set; }
     }
 }

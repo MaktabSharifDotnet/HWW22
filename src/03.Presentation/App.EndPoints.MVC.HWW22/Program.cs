@@ -81,6 +81,7 @@ builder.Services.AddSession(options =>
     options.Cookie.IsEssential = true;
 });
 
+builder.Logging.ClearProviders();
 
 builder.Host.UseSerilog((context, configuration) =>
 {

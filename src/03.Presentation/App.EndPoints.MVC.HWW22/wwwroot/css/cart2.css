@@ -1,0 +1,169 @@
+﻿/* کانتینر اصلی */
+.cart-page {
+    background-color: #f8f9fa;
+    min-height: 80vh;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+/* کارت سفید برای لیست محصولات */
+.cart-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.03);
+    border: none;
+    overflow: hidden;
+}
+
+.cart-header {
+    background-color: #fcfcfc;
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+    font-weight: bold;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.cart-item-row {
+    padding: 20px;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background-color 0.2s;
+}
+
+    .cart-item-row:last-child {
+        border-bottom: none;
+    }
+
+    .cart-item-row:hover {
+        background-color: #fafafa;
+    }
+
+/* تصویر محصول */
+.cart-img-wrapper {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #eee;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+/* متن‌ها */
+.product-title {
+    font-weight: 700;
+    color: #333;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    display: block;
+    text-decoration: none;
+}
+
+.unit-price {
+    color: #777;
+    font-size: 0.95rem;
+}
+
+.total-line-price {
+    color: #333;
+    font-weight: 800;
+    font-size: 1.1rem;
+}
+
+/* کنترل تعداد */
+.qty-group {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.btn-qty {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    color: #555;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+    .btn-qty:hover {
+        background-color: #f0f0f0;
+        color: #000;
+    }
+
+.qty-number {
+    width: 40px;
+    text-align: center;
+    font-weight: bold;
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+    font-size: 0.9rem;
+    line-height: 32px;
+}
+
+/* دکمه حذف */
+.btn-remove-icon {
+    color: #999;
+    font-size: 1.2rem;
+    transition: color 0.2s;
+}
+
+    .btn-remove-icon:hover {
+        color: #ef4056;
+    }
+
+/* کارت خلاصه وضعیت (سمت چپ) */
+.summary-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.03);
+    padding: 25px;
+    position: sticky;
+    top: 20px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.summary-total {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #000;
+}
+
+.btn-checkout {
+    background-color: #ef394e;
+    color: white;
+    border-radius: 8px;
+    padding: 12px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+    .btn-checkout:hover {
+        background-color: #d62f41;
+        color: white;
+    }

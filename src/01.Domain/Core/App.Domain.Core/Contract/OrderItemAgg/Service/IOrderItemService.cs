@@ -10,6 +10,7 @@ namespace App.Domain.Core.Contract.OrderItemAgg.Service
     public interface IOrderItemService
     {
        
-        public Task<OrderItemDto?> GetbyOrderId(int orderId, CancellationToken cancellationToken);
+       // public Task<OrderItemDto?> GetbyOrderId(int orderId, CancellationToken cancellationToken);
+        public Task<List<OrderItemDto>> GetOrderItemDtos(int orderId, CancellationToken cancellationToken);
     }
 }

@@ -14,17 +14,31 @@ namespace App.Infra.Data.Repos.Ef.OrderItemAgg
     {
        
 
-        public async Task<OrderItemDto?> GetbyOrderId(int orderId, CancellationToken cancellationToken)
+        //public async Task<OrderItemDto?> GetbyOrderId(int orderId, CancellationToken cancellationToken)
+        //{
+        //    return await _context.OrderItems.Where(oi=>oi.OrderId==orderId)
+        //                  .Select(oi => new OrderItemDto
+        //                  {
+        //                      OrderId = oi.OrderId,
+        //                      ProductId = oi.ProductId,
+        //                      Name = oi.Product.Title,
+        //                      Count = oi.Count,
+        //                      UnitPrice = oi.UnitPrice
+        //                  }).FirstOrDefaultAsync(cancellationToken);
+        //}
+
+        public async Task<List<OrderItemDto>> GetOrderItemDtos(int orderId, CancellationToken cancellationToken)
         {
-            return await _context.OrderItems.Where(oi=>oi.OrderId==orderId)
+            return await _context.OrderItems.Where(oi => oi.OrderId == orderId)
                           .Select(oi => new OrderItemDto
                           {
                               OrderId = oi.OrderId,
                               ProductId = oi.ProductId,
                               Name = oi.Product.Title,
                               Count = oi.Count,
-                              UnitPrice = oi.UnitPrice
-                          }).FirstOrDefaultAsync(cancellationToken);
+                              UnitPrice = oi.UnitPrice,
+                              TotalPrice = oi.TotalPrice,
+                          }).ToListAsync(cancellationToken);
         }
     }
 }

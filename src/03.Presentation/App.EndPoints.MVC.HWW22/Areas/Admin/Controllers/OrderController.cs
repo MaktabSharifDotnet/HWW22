@@ -42,12 +42,12 @@ namespace App.EndPoints.MVC.HWW22.Areas.Admin.Controllers
                 return RedirectToAction("Index", "Account");
             }
 
-             Result<OrderItemDto>  result= await _orderItemAppService.GetbyOrderId(orderId,cancellationToken);
+            var  result= await _orderItemAppService.GetOrderItemDtos(orderId,cancellationToken);
             if (!result.IsSuccess)
             {
                 TempData["Error"] = result.Message;
                _logger.LogWarning("Failed to retrieve order items for OrderId {OrderId}: {WarningMessage}", orderId, result.Message);
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", "Order");
             }
             _logger.LogInformation("Retrieved order items for OrderId {OrderId} successfully.", orderId);
             return View(result.Data);

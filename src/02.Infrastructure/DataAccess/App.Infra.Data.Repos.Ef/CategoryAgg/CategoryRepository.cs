@@ -34,7 +34,7 @@ namespace App.Infra.Data.Repos.Ef.CategoryAgg
                 return Result<int>.Failure("همچین کتگوری ای موجود نیست.");
             }
             category.IsDeleted = true;
-            int result= await _context.SaveChangesAsync();
+            int result= await _context.SaveChangesAsync(cancellationToken);
             if (result<=0)
             {
                 return Result<int>.Failure("تغییری رخ نداد.");

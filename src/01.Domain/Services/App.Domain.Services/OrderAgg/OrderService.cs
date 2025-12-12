@@ -25,7 +25,8 @@ namespace App.Domain.Services.OrderAgg
                     OrderItem orderItem = new OrderItem();
                     orderItem.ProductId = cartItem.ProductId;
                     orderItem.Count = cartItem.Count;
-                    orderItem.UnitPrice = (cartItem.Count * cartItem.Product.Price);
+                    orderItem.TotalPrice = (cartItem.Count * cartItem.Product.Price);
+                    orderItem.UnitPrice = cartItem.Product.Price;
                     orderItems.Add(orderItem);
                 
             }

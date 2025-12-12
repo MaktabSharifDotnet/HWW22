@@ -1,0 +1,267 @@
+2025-12-12 14:03:14.971 +03:30 [INF] Request 862ce0ce-712e-4297-9571-baee098d576f: GET /  from ::1
+2025-12-12 14:03:15.990 +03:30 [WRN] Entity 'User' has a global query filter defined and is the required end of a relationship with the entity 'Order'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-12 14:03:16.101 +03:30 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-12 14:03:16.103 +03:30 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-12 14:03:16.104 +03:30 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'User'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-12 14:03:17.386 +03:30 [INF] Response 862ce0ce-712e-4297-9571-baee098d576f: 200 in 2363ms
+2025-12-12 14:03:17.441 +03:30 [INF] Request d70470e6-a55c-4207-8b86-bf10f5f1f1d8: GET /WebApplication1.styles.css  from ::1
+2025-12-12 14:03:17.524 +03:30 [INF] Response d70470e6-a55c-4207-8b86-bf10f5f1f1d8: 404 in 74ms
+2025-12-12 14:03:19.887 +03:30 [INF] Request 50d79d4f-4153-48b7-9fa9-0e1bfdbb88c4: GET /Admin/Account  from ::1
+2025-12-12 14:03:19.973 +03:30 [INF] Response 50d79d4f-4153-48b7-9fa9-0e1bfdbb88c4: 200 in 83ms
+2025-12-12 14:03:20.057 +03:30 [INF] Request 938db55a-41de-41ed-a58f-82002990d8f9: GET /Vazir.woff2  from ::1
+2025-12-12 14:03:20.062 +03:30 [INF] Response 938db55a-41de-41ed-a58f-82002990d8f9: 404 in 0ms
+2025-12-12 14:03:24.323 +03:30 [INF] Request 9e66d204-37d1-4447-a59a-ea2dc7207faa: POST /Admin/Account/Login  from ::1
+2025-12-12 14:03:24.441 +03:30 [INF] Admin user admin logged in successfully with UserID: 6
+2025-12-12 14:03:24.445 +03:30 [INF] Response 9e66d204-37d1-4447-a59a-ea2dc7207faa: 302 in 118ms
+2025-12-12 14:03:24.453 +03:30 [INF] Request ea2fdc12-3870-4720-84a6-dbd39c340591: GET /Admin/Category  from ::1
+2025-12-12 14:03:24.530 +03:30 [INF] Response ea2fdc12-3870-4720-84a6-dbd39c340591: 200 in 74ms
+2025-12-12 14:03:24.589 +03:30 [INF] Request 969b333b-3715-43c5-a31c-652d5a3e088f: GET /Vazir.woff2  from ::1
+2025-12-12 14:03:24.593 +03:30 [INF] Response 969b333b-3715-43c5-a31c-652d5a3e088f: 404 in 0ms
+2025-12-12 14:03:33.346 +03:30 [INF] Request 737baf6d-d0d2-4e35-aea9-c591042033b7: GET /Admin/Account  from ::1
+2025-12-12 14:03:33.356 +03:30 [INF] Response 737baf6d-d0d2-4e35-aea9-c591042033b7: 200 in 5ms
+2025-12-12 14:03:41.380 +03:30 [INF] Request 1b76c56c-687b-42be-b00d-11839b78a58d: GET /Admin/Order  from ::1
+2025-12-12 14:03:41.402 +03:30 [INF] Retrieved 10 orders for display in Order Index page.
+2025-12-12 14:03:41.420 +03:30 [INF] Response 1b76c56c-687b-42be-b00d-11839b78a58d: 200 in 37ms
+2025-12-12 14:03:41.459 +03:30 [INF] Request d3d09590-2a18-43c2-9e81-1603b8257316: GET /Vazir.woff2  from ::1
+2025-12-12 14:03:41.465 +03:30 [INF] Response d3d09590-2a18-43c2-9e81-1603b8257316: 404 in 0ms
+2025-12-12 14:03:43.334 +03:30 [INF] Request d8aefc9e-4638-47e2-8c74-2946d1ecf13f: GET /Admin/Account  from ::1
+2025-12-12 14:03:43.340 +03:30 [INF] Response d8aefc9e-4638-47e2-8c74-2946d1ecf13f: 200 in 3ms
+2025-12-12 14:03:46.546 +03:30 [INF] Request fd02fd13-345a-4bb1-b41b-3118638d1bea: GET /Admin/Account  from ::1
+2025-12-12 14:03:46.550 +03:30 [INF] Response fd02fd13-345a-4bb1-b41b-3118638d1bea: 200 in 1ms
+2025-12-12 14:03:46.593 +03:30 [INF] Request 5ead79bc-6c16-4797-ad81-7de778177a7a: GET /Vazir.woff2  from ::1
+2025-12-12 14:03:46.596 +03:30 [INF] Response 5ead79bc-6c16-4797-ad81-7de778177a7a: 404 in 0ms
+2025-12-12 14:03:48.155 +03:30 [INF] Request 3d9712a9-21ca-4687-b1e0-f084f0cadc5a: GET /Admin/Customer  from ::1
+2025-12-12 14:03:48.171 +03:30 [INF] Accessed Customer Index page successfully.
+2025-12-12 14:03:48.182 +03:30 [INF] Response 3d9712a9-21ca-4687-b1e0-f084f0cadc5a: 200 in 23ms
+2025-12-12 14:03:48.214 +03:30 [INF] Request bbeb66b9-ba85-4c4b-984a-d199350c814c: GET /Vazir.woff2  from ::1
+2025-12-12 14:03:48.219 +03:30 [INF] Response bbeb66b9-ba85-4c4b-984a-d199350c814c: 404 in 0ms
+2025-12-12 14:03:50.513 +03:30 [INF] Request cd0158a8-0beb-4795-8dbc-b48e41453f4e: GET /Admin/Dashboard  from ::1
+2025-12-12 14:03:50.586 +03:30 [INF] Admin accessed the Dashboard page successfully.
+2025-12-12 14:03:50.605 +03:30 [INF] Response cd0158a8-0beb-4795-8dbc-b48e41453f4e: 200 in 88ms
+2025-12-12 14:03:50.701 +03:30 [INF] Request aefb1b40-d8cc-4cd3-beb0-53cff233ef1e: GET /Vazir.woff2  from ::1
+2025-12-12 14:03:50.706 +03:30 [INF] Response aefb1b40-d8cc-4cd3-beb0-53cff233ef1e: 404 in 0ms
+2025-12-12 14:03:51.977 +03:30 [INF] Request ef2b0df2-bd41-4672-b049-a36b69b4b4c7: GET /Admin/Category  from ::1
+2025-12-12 14:03:51.985 +03:30 [INF] Response ef2b0df2-bd41-4672-b049-a36b69b4b4c7: 200 in 4ms
+2025-12-12 14:03:52.022 +03:30 [INF] Request 79938044-f188-4b03-8686-9ac72fd3ffd4: GET /Vazir.woff2  from ::1
+2025-12-12 14:03:52.027 +03:30 [INF] Response 79938044-f188-4b03-8686-9ac72fd3ffd4: 404 in 0ms
+2025-12-12 14:03:55.059 +03:30 [INF] Request dbc2d61f-a03a-4f06-9140-4faa6bd08e18: GET /Admin/Category/Edit ?categoryId=1 from ::1
+2025-12-12 14:03:55.112 +03:30 [INF] Response dbc2d61f-a03a-4f06-9140-4faa6bd08e18: 200 in 49ms
+2025-12-12 14:03:55.145 +03:30 [INF] Request 97369788-6f32-490e-a69f-a6fc7d7a43f7: GET /Vazir.woff2  from ::1
+2025-12-12 14:03:55.151 +03:30 [INF] Response 97369788-6f32-490e-a69f-a6fc7d7a43f7: 404 in 0ms
+2025-12-12 14:03:56.769 +03:30 [INF] Request db26efc7-485e-4cab-af01-25d347ee1a77: GET /Admin/Category  from ::1
+2025-12-12 14:03:56.776 +03:30 [INF] Response db26efc7-485e-4cab-af01-25d347ee1a77: 200 in 3ms
+2025-12-12 14:04:02.417 +03:30 [INF] Request 11b1aa1c-d135-4d80-ba0e-7aa8b8832742: GET /  from ::1
+2025-12-12 14:04:03.221 +03:30 [WRN] Entity 'User' has a global query filter defined and is the required end of a relationship with the entity 'Order'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2025-12-12 14:04:03.307 +03:30 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-12 14:04:03.311 +03:30 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-12 14:04:03.312 +03:30 [WRN] No store type was specified for the decimal property 'Balance' on entity type 'User'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-12-12 14:04:04.260 +03:30 [INF] Response 11b1aa1c-d135-4d80-ba0e-7aa8b8832742: 200 in 1795ms
+2025-12-12 14:04:04.302 +03:30 [INF] Request a0a4b58f-450d-4fea-8afb-7ce167a1a959: GET /WebApplication1.styles.css  from ::1
+2025-12-12 14:04:04.318 +03:30 [INF] Response a0a4b58f-450d-4fea-8afb-7ce167a1a959: 404 in 11ms
+2025-12-12 14:04:10.486 +03:30 [INF] Request 2c2474f3-3411-4172-9c9f-3b4b3bd5d8ad: GET /Admin/Account  from ::1
+2025-12-12 14:04:10.550 +03:30 [INF] Response 2c2474f3-3411-4172-9c9f-3b4b3bd5d8ad: 200 in 61ms
+2025-12-12 14:04:10.619 +03:30 [INF] Request 856b0d3e-b337-472a-9c8a-75b62cc3c29c: GET /Vazir.woff2  from ::1
+2025-12-12 14:04:10.623 +03:30 [INF] Response 856b0d3e-b337-472a-9c8a-75b62cc3c29c: 404 in 0ms
+2025-12-12 14:04:14.530 +03:30 [INF] Request 7a38669a-1dfc-4960-935d-0dc40accae0a: GET /Admin/Order  from ::1
+2025-12-12 14:04:14.543 +03:30 [WRN] Unauthorized access attempt to Order Index page.
+2025-12-12 14:04:14.546 +03:30 [INF] Response 7a38669a-1dfc-4960-935d-0dc40accae0a: 302 in 11ms
+2025-12-12 14:04:14.558 +03:30 [INF] Request bf23e39c-94f6-4c5f-a63c-b710ae6aa3d1: GET /Admin/Account  from ::1
+2025-12-12 14:04:14.566 +03:30 [INF] Response bf23e39c-94f6-4c5f-a63c-b710ae6aa3d1: 200 in 4ms
+2025-12-12 14:04:14.612 +03:30 [INF] Request 23605853-4be8-4d50-8bf7-001b3b479fbf: GET /Vazir.woff2  from ::1
+2025-12-12 14:04:14.621 +03:30 [INF] Response 23605853-4be8-4d50-8bf7-001b3b479fbf: 404 in 0ms
+2025-12-12 14:04:27.701 +03:30 [INF] Request 94668f09-7fa1-4652-a64d-a47da97624b8: GET /Admin/Account  from ::1
+2025-12-12 14:04:27.709 +03:30 [INF] Response 94668f09-7fa1-4652-a64d-a47da97624b8: 200 in 4ms
+2025-12-12 14:04:46.015 +03:30 [INF] Request 38cd664d-7289-444f-9b33-8b4643bb1758: GET /Admin/Account  from ::1
+2025-12-12 14:04:46.021 +03:30 [INF] Response 38cd664d-7289-444f-9b33-8b4643bb1758: 200 in 1ms
+2025-12-12 14:04:46.058 +03:30 [INF] Request b8b352cf-92bc-43cc-bffc-c53f6a55f87e: GET /Vazir.woff2  from ::1
+2025-12-12 14:04:46.065 +03:30 [INF] Response b8b352cf-92bc-43cc-bffc-c53f6a55f87e: 404 in 0ms
+2025-12-12 14:05:01.104 +03:30 [INF] Request c2c50263-1a8c-4834-b206-ef03d41518ba: POST /Admin/Account/Login  from ::1
+2025-12-12 14:05:01.263 +03:30 [INF] Admin user admin logged in successfully with UserID: 6
+2025-12-12 14:05:01.265 +03:30 [INF] Response c2c50263-1a8c-4834-b206-ef03d41518ba: 302 in 157ms
+2025-12-12 14:05:01.272 +03:30 [INF] Request 177f29ec-6c7c-4ea8-818b-8c931561015b: GET /Admin/Category  from ::1
+2025-12-12 14:05:01.347 +03:30 [INF] Response 177f29ec-6c7c-4ea8-818b-8c931561015b: 200 in 71ms
+2025-12-12 14:05:01.396 +03:30 [INF] Request 9099bd14-1f05-4620-8dd9-bf3105b0628a: GET /Vazir.woff2  from ::1
+2025-12-12 14:05:01.399 +03:30 [INF] Response 9099bd14-1f05-4620-8dd9-bf3105b0628a: 404 in 0ms
+2025-12-12 14:05:09.077 +03:30 [INF] Request c69e65db-d6ad-4012-bacf-53bf7650209d: GET /Admin/Category/Edit ?categoryId=9 from ::1
+2025-12-12 14:05:09.125 +03:30 [INF] Response c69e65db-d6ad-4012-bacf-53bf7650209d: 200 in 44ms
+2025-12-12 14:05:09.163 +03:30 [INF] Request a1dc0510-8f66-41d7-b8a0-b07486273393: GET /Vazir.woff2  from ::1
+2025-12-12 14:05:09.167 +03:30 [INF] Response a1dc0510-8f66-41d7-b8a0-b07486273393: 404 in 0ms
+2025-12-12 14:05:17.633 +03:30 [INF] Request 0f850dbe-5f79-47b2-bb44-cef2662f81e6: POST /Admin/Category/Edit  from ::1
+2025-12-12 14:05:17.744 +03:30 [INF] Category تست ویرایش updated successfully with ID: 9
+2025-12-12 14:05:17.747 +03:30 [INF] Response 0f850dbe-5f79-47b2-bb44-cef2662f81e6: 302 in 111ms
+2025-12-12 14:05:17.756 +03:30 [INF] Request afe3bfb6-74cb-4d71-9eb0-85a8b14af1c9: GET /Admin/Category  from ::1
+2025-12-12 14:05:17.762 +03:30 [INF] Response afe3bfb6-74cb-4d71-9eb0-85a8b14af1c9: 200 in 2ms
+2025-12-12 14:05:17.796 +03:30 [INF] Request 94aa5d28-bf89-45f2-8044-55d3ebd17d9d: GET /Vazir.woff2  from ::1
+2025-12-12 14:05:17.800 +03:30 [INF] Response 94aa5d28-bf89-45f2-8044-55d3ebd17d9d: 404 in 0ms
+2025-12-12 14:05:21.881 +03:30 [INF] Request a72a465c-6a59-457e-98a0-d60053cdccd3: POST /Admin/Category/Delete ?categoryId=9 from ::1
+2025-12-12 14:05:21.899 +03:30 [INF] Category with ID: 9 was soft-deleted successfully.
+2025-12-12 14:05:21.901 +03:30 [INF] Response a72a465c-6a59-457e-98a0-d60053cdccd3: 302 in 15ms
+2025-12-12 14:05:21.912 +03:30 [INF] Request dca36719-84ec-4285-9174-915b92852465: GET /Admin/Category  from ::1
+2025-12-12 14:05:21.917 +03:30 [INF] Response dca36719-84ec-4285-9174-915b92852465: 200 in 2ms
+2025-12-12 14:05:21.952 +03:30 [INF] Request 2d86a9e2-c82f-4478-8c06-9d35b57c6a35: GET /Vazir.woff2  from ::1
+2025-12-12 14:05:21.956 +03:30 [INF] Response 2d86a9e2-c82f-4478-8c06-9d35b57c6a35: 404 in 0ms
+2025-12-12 14:05:23.765 +03:30 [INF] Request cfa533f7-62c6-4efa-863f-4c694f4bcc88: GET /Admin/Category/Create  from ::1
+2025-12-12 14:05:23.780 +03:30 [INF] Response cfa533f7-62c6-4efa-863f-4c694f4bcc88: 200 in 13ms
+2025-12-12 14:05:23.828 +03:30 [INF] Request 28c4b563-c8dd-4d54-85e8-e934087e7406: GET /Vazir.woff2  from ::1
+2025-12-12 14:05:23.830 +03:30 [INF] Response 28c4b563-c8dd-4d54-85e8-e934087e7406: 404 in 0ms
+2025-12-12 14:05:31.370 +03:30 [INF] Request eeaeb8f7-f795-4b89-b836-92b8d06ead6f: POST /Admin/Category/Create  from ::1
+2025-12-12 14:05:31.460 +03:30 [INF] Category تست اضافه  created successfully with New ID: 10
+2025-12-12 14:05:31.462 +03:30 [INF] Response eeaeb8f7-f795-4b89-b836-92b8d06ead6f: 302 in 88ms
+2025-12-12 14:05:31.470 +03:30 [INF] Request dccc12bf-6bf6-4070-8f31-8250ea63c181: GET /Admin/Category  from ::1
+2025-12-12 14:05:31.475 +03:30 [INF] Response dccc12bf-6bf6-4070-8f31-8250ea63c181: 200 in 3ms
+2025-12-12 14:05:31.511 +03:30 [INF] Request c090c287-6287-4f25-9a43-23891472bc44: GET /Vazir.woff2  from ::1
+2025-12-12 14:05:31.514 +03:30 [INF] Response c090c287-6287-4f25-9a43-23891472bc44: 404 in 0ms
+2025-12-12 14:05:46.562 +03:30 [INF] Request ebb6bddd-8dfa-41a7-8bf9-a0cd68650b33: GET /Admin/Order  from ::1
+2025-12-12 14:05:46.587 +03:30 [INF] Retrieved 10 orders for display in Order Index page.
+2025-12-12 14:05:46.604 +03:30 [INF] Response ebb6bddd-8dfa-41a7-8bf9-a0cd68650b33: 200 in 37ms
+2025-12-12 14:05:46.637 +03:30 [INF] Request b72c421a-2f92-4029-9b49-8cf5d8c16fbc: GET /Vazir.woff2  from ::1
+2025-12-12 14:05:46.640 +03:30 [INF] Response b72c421a-2f92-4029-9b49-8cf5d8c16fbc: 404 in 0ms
+2025-12-12 14:06:30.452 +03:30 [INF] Request 669f647c-9205-4f78-819a-372a3a582e80: GET /Admin/Order/Detail ?orderId=1 from ::1
+2025-12-12 14:06:30.509 +03:30 [INF] Retrieved order items for OrderId 1 successfully.
+2025-12-12 14:06:30.516 +03:30 [INF] Response 669f647c-9205-4f78-819a-372a3a582e80: 200 in 61ms
+2025-12-12 14:06:30.555 +03:30 [INF] Request b85706c5-fd4a-4094-9633-9738b9eb1925: GET /Vazir.woff2  from ::1
+2025-12-12 14:06:30.564 +03:30 [INF] Response b85706c5-fd4a-4094-9633-9738b9eb1925: 404 in 0ms
+2025-12-12 14:06:44.582 +03:30 [INF] Request 828fdb2d-44f5-479c-97cc-d57b27d7ff5c: GET /Admin/Order  from ::1
+2025-12-12 14:06:44.589 +03:30 [INF] Retrieved 10 orders for display in Order Index page.
+2025-12-12 14:06:44.592 +03:30 [INF] Response 828fdb2d-44f5-479c-97cc-d57b27d7ff5c: 200 in 7ms
+2025-12-12 14:06:44.635 +03:30 [INF] Request ab137c7e-0c13-4c03-8518-ab4f5d0f7ee5: GET /Vazir.woff2  from ::1
+2025-12-12 14:06:44.638 +03:30 [INF] Response ab137c7e-0c13-4c03-8518-ab4f5d0f7ee5: 404 in 0ms
+2025-12-12 14:06:47.856 +03:30 [INF] Request 632ea7d8-cb81-4801-8992-0980bfe92fad: GET /Admin/Customer  from ::1
+2025-12-12 14:06:47.876 +03:30 [INF] Accessed Customer Index page successfully.
+2025-12-12 14:06:47.885 +03:30 [INF] Response 632ea7d8-cb81-4801-8992-0980bfe92fad: 200 in 24ms
+2025-12-12 14:06:47.918 +03:30 [INF] Request 3d267265-eff2-462a-a82d-fca8f35f47f8: GET /Vazir.woff2  from ::1
+2025-12-12 14:06:47.921 +03:30 [INF] Response 3d267265-eff2-462a-a82d-fca8f35f47f8: 404 in 0ms
+2025-12-12 14:06:52.740 +03:30 [INF] Request 7c321c81-2258-4884-bcce-843e543912b1: GET /Admin/Customer/Detail ?userId=1 from ::1
+2025-12-12 14:06:52.756 +03:30 [INF] Accessed Customer Detail page successfully for UserId: 1
+2025-12-12 14:06:52.765 +03:30 [INF] Response 7c321c81-2258-4884-bcce-843e543912b1: 200 in 23ms
+2025-12-12 14:06:52.805 +03:30 [INF] Request 196b9aec-6f49-4fd2-b816-deceb12391ff: GET /Vazir.woff2  from ::1
+2025-12-12 14:06:52.809 +03:30 [INF] Response 196b9aec-6f49-4fd2-b816-deceb12391ff: 404 in 0ms
+2025-12-12 14:07:04.840 +03:30 [INF] Request 9624a039-bd86-491a-b29a-0e33786568a2: GET /Admin/Customer  from ::1
+2025-12-12 14:07:04.846 +03:30 [INF] Accessed Customer Index page successfully.
+2025-12-12 14:07:04.848 +03:30 [INF] Response 9624a039-bd86-491a-b29a-0e33786568a2: 200 in 4ms
+2025-12-12 14:07:04.903 +03:30 [INF] Request 82f46ce6-8f20-4202-849d-17b2282fb42c: GET /Vazir.woff2  from ::1
+2025-12-12 14:07:04.906 +03:30 [INF] Response 82f46ce6-8f20-4202-849d-17b2282fb42c: 404 in 0ms
+2025-12-12 14:07:06.497 +03:30 [INF] Request e4a8107f-f512-4bd3-96c5-f7337ffccb21: GET /Admin/Dashboard  from ::1
+2025-12-12 14:07:06.559 +03:30 [INF] Admin accessed the Dashboard page successfully.
+2025-12-12 14:07:06.578 +03:30 [INF] Response e4a8107f-f512-4bd3-96c5-f7337ffccb21: 200 in 78ms
+2025-12-12 14:07:06.627 +03:30 [INF] Request 352d6920-65a2-43b9-a6fd-39d4f9e55b12: GET /Vazir.woff2  from ::1
+2025-12-12 14:07:06.632 +03:30 [INF] Response 352d6920-65a2-43b9-a6fd-39d4f9e55b12: 404 in 0ms
+2025-12-12 14:07:27.156 +03:30 [INF] Request dc4b9f51-23d1-4198-aab3-2b1ac8fc4411: GET /Admin/Dashboard  from ::1
+2025-12-12 14:07:27.165 +03:30 [INF] Admin accessed the Dashboard page successfully.
+2025-12-12 14:07:27.167 +03:30 [INF] Response dc4b9f51-23d1-4198-aab3-2b1ac8fc4411: 200 in 8ms
+2025-12-12 14:07:27.207 +03:30 [INF] Request 57b78531-9a82-43dc-98e8-26e02300c7ea: GET /Vazir.woff2  from ::1
+2025-12-12 14:07:27.210 +03:30 [INF] Response 57b78531-9a82-43dc-98e8-26e02300c7ea: 404 in 0ms
+2025-12-12 14:07:28.153 +03:30 [INF] Request 4bf9f93c-4976-4abe-a45c-7bffdbfc5402: GET /Admin/Category  from ::1
+2025-12-12 14:07:28.167 +03:30 [INF] Response 4bf9f93c-4976-4abe-a45c-7bffdbfc5402: 200 in 9ms
+2025-12-12 14:07:28.203 +03:30 [INF] Request 7565cb12-1fa5-4cf6-8e1c-7afb74286fab: GET /Vazir.woff2  from ::1
+2025-12-12 14:07:28.208 +03:30 [INF] Response 7565cb12-1fa5-4cf6-8e1c-7afb74286fab: 404 in 0ms
+2025-12-12 14:07:32.329 +03:30 [INF] Request 250118ee-ba3e-49e4-a9fc-14a115c3290a: GET /Admin/Order  from ::1
+2025-12-12 14:07:32.334 +03:30 [INF] Retrieved 10 orders for display in Order Index page.
+2025-12-12 14:07:32.336 +03:30 [INF] Response 250118ee-ba3e-49e4-a9fc-14a115c3290a: 200 in 3ms
+2025-12-12 14:07:32.380 +03:30 [INF] Request c9bbf2f4-5a51-4a47-80f4-39f3bf77f891: GET /Vazir.woff2  from ::1
+2025-12-12 14:07:32.388 +03:30 [INF] Response c9bbf2f4-5a51-4a47-80f4-39f3bf77f891: 404 in 0ms
+2025-12-12 14:07:39.717 +03:30 [INF] Request 74a0a537-39d4-4e20-9585-cae15f6f065f: GET /Admin/Order/Detail ?orderId=3 from ::1
+2025-12-12 14:07:39.727 +03:30 [INF] Retrieved order items for OrderId 3 successfully.
+2025-12-12 14:07:39.731 +03:30 [INF] Response 74a0a537-39d4-4e20-9585-cae15f6f065f: 200 in 11ms
+2025-12-12 14:07:39.766 +03:30 [INF] Request 62fb2931-9315-4109-a653-b4a5469f7d8a: GET /Vazir.woff2  from ::1
+2025-12-12 14:07:39.770 +03:30 [INF] Response 62fb2931-9315-4109-a653-b4a5469f7d8a: 404 in 0ms
+2025-12-12 14:08:03.470 +03:30 [INF] Request a70d9065-8849-4b03-9a5f-abe5f4a6f803: GET /Admin/Order  from ::1
+2025-12-12 14:08:03.479 +03:30 [INF] Retrieved 10 orders for display in Order Index page.
+2025-12-12 14:08:03.483 +03:30 [INF] Response a70d9065-8849-4b03-9a5f-abe5f4a6f803: 200 in 9ms
+2025-12-12 14:08:03.542 +03:30 [INF] Request f1529e03-be09-46f4-bd65-5247c9dad712: GET /Vazir.woff2  from ::1
+2025-12-12 14:08:03.552 +03:30 [INF] Response f1529e03-be09-46f4-bd65-5247c9dad712: 404 in 0ms
+2025-12-12 14:08:05.404 +03:30 [INF] Request 4411f11f-3515-4d0a-b725-25a69bf41f51: GET /Admin/Order/Detail ?orderId=6 from ::1
+2025-12-12 14:08:05.412 +03:30 [INF] Retrieved order items for OrderId 6 successfully.
+2025-12-12 14:08:05.415 +03:30 [INF] Response 4411f11f-3515-4d0a-b725-25a69bf41f51: 200 in 8ms
+2025-12-12 14:08:05.451 +03:30 [INF] Request 96767ae1-0bba-4bf0-95a6-0a54b1052e59: GET /Vazir.woff2  from ::1
+2025-12-12 14:08:05.455 +03:30 [INF] Response 96767ae1-0bba-4bf0-95a6-0a54b1052e59: 404 in 0ms
+2025-12-12 14:08:09.097 +03:30 [INF] Request 4bd23c73-0dbf-42ff-8cb2-f1f86ba775ee: GET /Admin/Order  from ::1
+2025-12-12 14:08:09.103 +03:30 [INF] Retrieved 10 orders for display in Order Index page.
+2025-12-12 14:08:09.107 +03:30 [INF] Response 4bd23c73-0dbf-42ff-8cb2-f1f86ba775ee: 200 in 6ms
+2025-12-12 14:08:09.147 +03:30 [INF] Request f5b81f7c-42f6-44ad-9096-82aa4a0c82c2: GET /Vazir.woff2  from ::1
+2025-12-12 14:08:09.149 +03:30 [INF] Response f5b81f7c-42f6-44ad-9096-82aa4a0c82c2: 404 in 0ms
+2025-12-12 14:08:10.661 +03:30 [INF] Request 21308714-c545-4241-92c9-b7bc26ea840b: GET /Admin/Order/Detail ?orderId=1 from ::1
+2025-12-12 14:08:10.666 +03:30 [INF] Retrieved order items for OrderId 1 successfully.
+2025-12-12 14:08:10.668 +03:30 [INF] Response 21308714-c545-4241-92c9-b7bc26ea840b: 200 in 3ms
+2025-12-12 14:08:10.716 +03:30 [INF] Request 188aba9c-a5f6-4607-b0e0-d54b158e4e15: GET /Vazir.woff2  from ::1
+2025-12-12 14:08:10.719 +03:30 [INF] Response 188aba9c-a5f6-4607-b0e0-d54b158e4e15: 404 in 0ms
+2025-12-12 14:08:31.376 +03:30 [INF] Request 8f606249-5289-47f9-9603-b5f7f03c8847: GET /Admin/Order  from ::1
+2025-12-12 14:08:31.383 +03:30 [INF] Retrieved 10 orders for display in Order Index page.
+2025-12-12 14:08:31.387 +03:30 [INF] Response 8f606249-5289-47f9-9603-b5f7f03c8847: 200 in 7ms
+2025-12-12 14:08:31.463 +03:30 [INF] Request d647845b-03c4-4057-9e0f-033172ea55d1: GET /Vazir.woff2  from ::1
+2025-12-12 14:08:31.467 +03:30 [INF] Response d647845b-03c4-4057-9e0f-033172ea55d1: 404 in 0ms
+2025-12-12 14:08:46.725 +03:30 [INF] Request 88c3b67f-2bde-4d19-b504-ef413d57aeb2: GET /Admin/Order/Detail ?orderId=3 from ::1
+2025-12-12 14:08:46.735 +03:30 [INF] Retrieved order items for OrderId 3 successfully.
+2025-12-12 14:08:46.737 +03:30 [INF] Response 88c3b67f-2bde-4d19-b504-ef413d57aeb2: 200 in 9ms
+2025-12-12 14:08:46.781 +03:30 [INF] Request 867e894f-9ece-4ef9-ae98-e45f603af53f: GET /Vazir.woff2  from ::1
+2025-12-12 14:08:46.785 +03:30 [INF] Response 867e894f-9ece-4ef9-ae98-e45f603af53f: 404 in 0ms
+2025-12-12 14:08:50.842 +03:30 [INF] Request f349cac2-ab90-41fa-a4ca-7ce62cde8572: GET /Admin/Order  from ::1
+2025-12-12 14:08:50.849 +03:30 [INF] Retrieved 10 orders for display in Order Index page.
+2025-12-12 14:08:50.852 +03:30 [INF] Response f349cac2-ab90-41fa-a4ca-7ce62cde8572: 200 in 6ms
+2025-12-12 14:08:50.895 +03:30 [INF] Request 65376db5-4157-40b1-b030-d1f4bf23c557: GET /Vazir.woff2  from ::1
+2025-12-12 14:08:50.901 +03:30 [INF] Response 65376db5-4157-40b1-b030-d1f4bf23c557: 404 in 0ms
+2025-12-12 14:08:57.886 +03:30 [INF] Request fa5afe3e-4fc7-460a-aa58-24de61a9693f: GET /Admin/Order/Detail ?orderId=5 from ::1
+2025-12-12 14:08:57.892 +03:30 [INF] Retrieved order items for OrderId 5 successfully.
+2025-12-12 14:08:57.894 +03:30 [INF] Response fa5afe3e-4fc7-460a-aa58-24de61a9693f: 200 in 5ms
+2025-12-12 14:08:57.935 +03:30 [INF] Request 9d88e999-b4e8-44e8-a5f5-1f6f98bbbf55: GET /Vazir.woff2  from ::1
+2025-12-12 14:08:57.937 +03:30 [INF] Response 9d88e999-b4e8-44e8-a5f5-1f6f98bbbf55: 404 in 0ms
+2025-12-12 14:09:41.217 +03:30 [INF] Request 77acc0fe-c296-4330-900e-aceb14e2017a: GET /Admin/Order  from ::1
+2025-12-12 14:09:41.222 +03:30 [INF] Retrieved 10 orders for display in Order Index page.
+2025-12-12 14:09:41.225 +03:30 [INF] Response 77acc0fe-c296-4330-900e-aceb14e2017a: 200 in 4ms
+2025-12-12 14:09:41.267 +03:30 [INF] Request 8eb5657f-f39c-436e-8b09-37e1f5ed8794: GET /Vazir.woff2  from ::1
+2025-12-12 14:09:41.287 +03:30 [INF] Response 8eb5657f-f39c-436e-8b09-37e1f5ed8794: 404 in 0ms
+2025-12-12 14:09:43.512 +03:30 [INF] Request e4b4fbb6-602f-42f3-beb1-f7ab9b3f9731: GET /Admin/Order/Detail ?orderId=10 from ::1
+2025-12-12 14:09:43.518 +03:30 [INF] Retrieved order items for OrderId 10 successfully.
+2025-12-12 14:09:43.520 +03:30 [INF] Response e4b4fbb6-602f-42f3-beb1-f7ab9b3f9731: 200 in 3ms
+2025-12-12 14:09:43.558 +03:30 [INF] Request a7cac362-2a8e-4784-b820-7d68dc91fafd: GET /Vazir.woff2  from ::1
+2025-12-12 14:09:43.562 +03:30 [INF] Response a7cac362-2a8e-4784-b820-7d68dc91fafd: 404 in 0ms
+2025-12-12 14:09:45.210 +03:30 [INF] Request 67bb4875-1e2f-4ab7-8326-75245ae367a3: GET /Admin/Order  from ::1
+2025-12-12 14:09:45.214 +03:30 [INF] Retrieved 10 orders for display in Order Index page.
+2025-12-12 14:09:45.216 +03:30 [INF] Response 67bb4875-1e2f-4ab7-8326-75245ae367a3: 200 in 2ms
+2025-12-12 14:09:45.255 +03:30 [INF] Request 49d774f0-6751-4f90-9633-2c04907effa4: GET /Vazir.woff2  from ::1
+2025-12-12 14:09:45.271 +03:30 [INF] Response 49d774f0-6751-4f90-9633-2c04907effa4: 404 in 0ms
+2025-12-12 14:09:46.166 +03:30 [INF] Request 49bbafff-9b75-42f2-81cb-03a75ff95749: GET /Admin/Order/Detail ?orderId=9 from ::1
+2025-12-12 14:09:46.171 +03:30 [INF] Retrieved order items for OrderId 9 successfully.
+2025-12-12 14:09:46.173 +03:30 [INF] Response 49bbafff-9b75-42f2-81cb-03a75ff95749: 200 in 4ms
+2025-12-12 14:09:46.207 +03:30 [INF] Request 93b5d4c8-de3e-47ac-8f81-ff7397184944: GET /Vazir.woff2  from ::1
+2025-12-12 14:09:46.211 +03:30 [INF] Response 93b5d4c8-de3e-47ac-8f81-ff7397184944: 404 in 0ms
+2025-12-12 14:09:49.009 +03:30 [INF] Request c4c4f667-1ae7-4502-8ad7-38757d435a9a: GET /Admin/Order  from ::1
+2025-12-12 14:09:49.014 +03:30 [INF] Retrieved 10 orders for display in Order Index page.
+2025-12-12 14:09:49.015 +03:30 [INF] Response c4c4f667-1ae7-4502-8ad7-38757d435a9a: 200 in 3ms
+2025-12-12 14:09:49.055 +03:30 [INF] Request e77d3e69-e8ea-4195-a91d-f211eaa3861b: GET /Vazir.woff2  from ::1
+2025-12-12 14:09:49.061 +03:30 [INF] Response e77d3e69-e8ea-4195-a91d-f211eaa3861b: 404 in 0ms
+2025-12-12 14:09:50.287 +03:30 [INF] Request 4b2741ca-5ca2-4ec7-adfc-001526871a41: GET /Admin/Order/Detail ?orderId=8 from ::1
+2025-12-12 14:09:50.295 +03:30 [INF] Retrieved order items for OrderId 8 successfully.
+2025-12-12 14:09:50.298 +03:30 [INF] Response 4b2741ca-5ca2-4ec7-adfc-001526871a41: 200 in 7ms
+2025-12-12 14:09:50.338 +03:30 [INF] Request 0bd666b4-2403-41ed-8df7-6faa794cd8cf: GET /Vazir.woff2  from ::1
+2025-12-12 14:09:50.344 +03:30 [INF] Response 0bd666b4-2403-41ed-8df7-6faa794cd8cf: 404 in 0ms
+2025-12-12 14:09:51.184 +03:30 [INF] Request 15b28cc5-1b98-46e6-8a8e-29a53396472f: GET /Admin/Order  from ::1
+2025-12-12 14:09:51.191 +03:30 [INF] Retrieved 10 orders for display in Order Index page.
+2025-12-12 14:09:51.193 +03:30 [INF] Response 15b28cc5-1b98-46e6-8a8e-29a53396472f: 200 in 4ms
+2025-12-12 14:09:51.234 +03:30 [INF] Request 723a37d0-d919-4f98-ac80-ec601d9babe6: GET /Vazir.woff2  from ::1
+2025-12-12 14:09:51.240 +03:30 [INF] Response 723a37d0-d919-4f98-ac80-ec601d9babe6: 404 in 0ms
+2025-12-12 14:10:48.198 +03:30 [INF] Request e6c4b6d0-f1d3-438f-b5ff-55b53293a16e: GET /Admin/Order  from ::1
+2025-12-12 14:10:48.203 +03:30 [INF] Retrieved 10 orders for display in Order Index page.
+2025-12-12 14:10:48.205 +03:30 [INF] Response e6c4b6d0-f1d3-438f-b5ff-55b53293a16e: 200 in 4ms
+2025-12-12 14:10:48.249 +03:30 [INF] Request ce246f96-cc79-42d8-b277-34de256dc207: GET /Vazir.woff2  from ::1
+2025-12-12 14:10:48.253 +03:30 [INF] Response ce246f96-cc79-42d8-b277-34de256dc207: 404 in 0ms
+2025-12-12 14:11:26.382 +03:30 [INF] Request a06378f3-3520-46ef-9091-5d0368089eb2: GET /Admin/Order/Detail ?orderId=8 from ::1
+2025-12-12 14:11:26.391 +03:30 [INF] Retrieved order items for OrderId 8 successfully.
+2025-12-12 14:11:26.394 +03:30 [INF] Response a06378f3-3520-46ef-9091-5d0368089eb2: 200 in 8ms
+2025-12-12 14:11:26.495 +03:30 [INF] Request e8013baa-f896-4626-a4b4-6d0c24e5ddc5: GET /Vazir.woff2  from ::1
+2025-12-12 14:11:26.533 +03:30 [INF] Response e8013baa-f896-4626-a4b4-6d0c24e5ddc5: 404 in 0ms
+2025-12-12 14:11:34.885 +03:30 [INF] Request 3c5477d5-bc00-4ce9-8651-c1215b46efc8: GET /Admin/Order/Detail ?orderId=9 from ::1
+2025-12-12 14:11:34.891 +03:30 [INF] Retrieved order items for OrderId 9 successfully.
+2025-12-12 14:11:34.892 +03:30 [INF] Response 3c5477d5-bc00-4ce9-8651-c1215b46efc8: 200 in 2ms
+2025-12-12 14:11:34.938 +03:30 [INF] Request b0fba28d-5724-40a8-b21c-37d96cba1e5b: GET /Vazir.woff2  from ::1
+2025-12-12 14:11:34.941 +03:30 [INF] Response b0fba28d-5724-40a8-b21c-37d96cba1e5b: 404 in 0ms
+2025-12-12 14:11:40.405 +03:30 [INF] Request 4e2c8828-e93d-43e0-8195-b45a4fde371c: GET /Admin/Order/Detail ?orderId=9 from ::1
+2025-12-12 14:11:40.410 +03:30 [INF] Retrieved order items for OrderId 9 successfully.
+2025-12-12 14:11:40.412 +03:30 [INF] Response 4e2c8828-e93d-43e0-8195-b45a4fde371c: 200 in 4ms
+2025-12-12 14:11:40.450 +03:30 [INF] Request 81fd01ba-845f-4189-9b49-8646e65b4be8: GET /Vazir.woff2  from ::1
+2025-12-12 14:11:40.453 +03:30 [INF] Response 81fd01ba-845f-4189-9b49-8646e65b4be8: 404 in 0ms
+2025-12-12 14:11:43.921 +03:30 [INF] Request ac26fd1c-9d7c-4ad9-9734-b4b79c1a7c75: GET /Admin/Order  from ::1
+2025-12-12 14:11:43.926 +03:30 [INF] Retrieved 10 orders for display in Order Index page.
+2025-12-12 14:11:43.928 +03:30 [INF] Response ac26fd1c-9d7c-4ad9-9734-b4b79c1a7c75: 200 in 3ms
+2025-12-12 14:11:43.971 +03:30 [INF] Request 173d7af0-f193-4ab1-b138-a1931054c760: GET /Vazir.woff2  from ::1
+2025-12-12 14:11:43.975 +03:30 [INF] Response 173d7af0-f193-4ab1-b138-a1931054c760: 404 in 0ms
