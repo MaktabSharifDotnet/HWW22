@@ -71,6 +71,7 @@ namespace App.EndPoints.MVC.HWW22.Areas.Admin.Controllers
 
         }
 
+
         [HttpPost]
        
         public async Task<IActionResult> Edit(ProductViewModel model, CancellationToken cancellationToken)
@@ -134,5 +135,71 @@ namespace App.EndPoints.MVC.HWW22.Areas.Admin.Controllers
                 return RedirectToAction("Index");
             }
         }
+
+        public async Task<IActionResult> Create(CancellationToken cancellationToken)
+        {
+            
+            if (LocalStorage.LoginUser == null || LocalStorage.LoginUser.RoleEnum != RoleEnum.Admin)
+            {
+                TempData["Error"] = "فقط کاربر ادمین به این صفحه امکان دسترسی دارد.";
+                _logger.LogWarning("Unauthorized access attempt to Product Create page.");
+                return RedirectToAction("Index", "Account");
+            }
+
+      
+            var categoryDtos = await _categoryAppService.GetAll(cancellationToken);
+            ViewBag.Categories = new SelectList(categoryDtos, "Id", "Name");
+
+            return View();
+        }
+
+
+        [HttpPost]
+        
+        public async Task<IActionResult> Create(CreateProductViewModel model, CancellationToken cancellationToken)
+        {
+            
+            if (LocalStorage.LoginUser == null || LocalStorage.LoginUser.RoleEnum != RoleEnum.Admin)
+                return RedirectToAction("Index", "Account");
+
+            if (!ModelState.IsValid)
+            {
+               
+                var categoryDtos = await _categoryAppService.GetAll(cancellationToken);
+                ViewBag.Categories = new SelectList(categoryDtos, "Id", "Name");
+                return View(model);
+            }
+
+          
+              
+                string imageName = model.Image.UploadFile("ProductsAgg");
+
+                
+                var productDto = new ProductDto
+                {
+                    Title = model.Title,
+                    CategoryId = model.CategoryId,
+                    Description = model.Description,
+                    Price = model.Price,
+                    Inventory = model.Inventory,
+                    Image = imageName!,
+                    CreatedAt = DateTime.Now
+                };
+
+               
+               var result= await _productAppService.Create(productDto, cancellationToken);
+                if (!result.IsSuccess)
+                {
+                    _logger.LogError(result.Message, "Error in Create Product");
+                    TempData["Error"] = "خطا در ثبت محصول";
+                    return RedirectToAction("Index");
+                }
+
+                TempData["Success"] = "محصول جدید با موفقیت ثبت شد.";
+                return RedirectToAction("Index");
+            
+          
+        }
+
     }
 }

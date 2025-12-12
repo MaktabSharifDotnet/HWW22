@@ -13,6 +13,18 @@ namespace App.Domain.Services.ProductAgg
 {
     public class ProductService(IProductRepository productRepository , ICategoryRepository categoryRepository) : IProductService
     {
+        public async Task<Result<int>> Create(ProductDto productDto, CancellationToken cancellationToken)
+        {
+           var productId=await productRepository.Create(productDto, cancellationToken);
+            if (productId<=0)
+            {
+                return Result<int>.Failure("خطایی رخ داد دوباره تلاش کنید.");
+               
+
+            }
+            return Result<int>.Success(productId);
+        }
+
         public async Task<Result<int>> Edit(ProductDto productDto, CancellationToken cancellationToken)
         {
             ProductDto? productDtoDb= await productRepository.GetById(productDto.Id , cancellationToken);

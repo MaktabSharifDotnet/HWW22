@@ -12,6 +12,11 @@ namespace App.Domain.AppServices.ProductAgg
 {
     public class ProductAppService(IProductService productService) : IProductAppService
     {
+        public async Task<Result<int>> Create(ProductDto productDto, CancellationToken cancellationToken)
+        {
+           return await productService.Create(productDto, cancellationToken);
+        }
+
         public async Task<Result<int>> Edit(ProductDto productDto, CancellationToken cancellationToken)
         {
           return await productService.Edit(productDto, cancellationToken);

@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace App.Domain.Core.Contract.ProductAgg.Repository
@@ -14,6 +15,7 @@ namespace App.Domain.Core.Contract.ProductAgg.Repository
         public Task<ProductDto?> GetById(int productId, CancellationToken cancellationToken );
         public Task<int> GetCount(CancellationToken cancellationToken );
         public  Task<int> Edit(ProductDto productDto, CancellationToken cancellationToken);
+        public Task<int>  Create(ProductDto productDto, CancellationToken cancellationToken);
 
 
     }

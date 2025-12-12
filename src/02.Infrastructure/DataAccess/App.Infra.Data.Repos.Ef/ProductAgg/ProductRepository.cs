@@ -15,6 +15,25 @@ namespace App.Infra.Data.Repos.Ef.ProductAgg
 {
     public class ProductRepository(AppDbContext _context) : IProductRepository
     {
+        public async Task<int> Create(ProductDto productDto, CancellationToken cancellationToken)
+        {
+            Product product = new Product()
+            {
+                Id = productDto.Id,
+                Title= productDto.Title,
+                Description= productDto.Description,
+                Image= productDto.Image,
+                Price= productDto.Price,
+                Inventory = productDto.Inventory,
+                CreatedAt= productDto.CreatedAt,
+                CategoryId= productDto.CategoryId,
+
+            };
+            await _context.Products.AddAsync(product);
+             await _context.SaveChangesAsync();
+            return product.Id;
+        }
+
         public async Task<int> Edit(ProductDto productDto, CancellationToken cancellationToken)
         {
             Product? product=await _context.Products
