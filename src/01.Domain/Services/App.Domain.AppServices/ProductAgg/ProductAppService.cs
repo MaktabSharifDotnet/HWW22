@@ -17,6 +17,11 @@ namespace App.Domain.AppServices.ProductAgg
            return await productService.Create(productDto, cancellationToken);
         }
 
+        public async Task<Result<int>> Delete(int productId, CancellationToken cancellationToken)
+        {
+          return await  productService.Delete(productId, cancellationToken);
+        }
+
         public async Task<Result<int>> Edit(ProductDto productDto, CancellationToken cancellationToken)
         {
           return await productService.Edit(productDto, cancellationToken);

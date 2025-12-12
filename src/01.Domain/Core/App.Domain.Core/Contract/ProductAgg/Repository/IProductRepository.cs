@@ -1,5 +1,6 @@
 ﻿using App.Domain.Core._common;
 using App.Domain.Core.Dtos.ProductAgg;
+using App.Domain.Core.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +17,7 @@ namespace App.Domain.Core.Contract.ProductAgg.Repository
         public Task<int> GetCount(CancellationToken cancellationToken );
         public  Task<int> Edit(ProductDto productDto, CancellationToken cancellationToken);
         public Task<int>  Create(ProductDto productDto, CancellationToken cancellationToken);
+        public Task<int> Delete(int productId, CancellationToken cancellationToken);
 
 
     }

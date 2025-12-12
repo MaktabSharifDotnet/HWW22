@@ -25,6 +25,18 @@ namespace App.Domain.Services.ProductAgg
             return Result<int>.Success(productId);
         }
 
+        public async Task<Result<int>> Delete(int productId, CancellationToken cancellationToken)
+        {
+           
+
+            int result=await productRepository.Delete(productId, cancellationToken);
+            if (result<=0)
+            {
+               return  Result<int>.Failure("خطایی رخ داد دوباره تلاش کنید.");
+            }
+            return Result<int>.Success(result);
+        }
+
         public async Task<Result<int>> Edit(ProductDto productDto, CancellationToken cancellationToken)
         {
             ProductDto? productDtoDb= await productRepository.GetById(productDto.Id , cancellationToken);

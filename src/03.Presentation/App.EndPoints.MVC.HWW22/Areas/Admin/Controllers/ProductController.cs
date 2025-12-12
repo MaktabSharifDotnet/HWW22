@@ -15,9 +15,9 @@ namespace App.EndPoints.MVC.HWW22.Areas.Admin.Controllers
 {
     [Area(AreaConstants.Admin)]
     public class ProductController(ILogger<ProductController> _logger
-        , IProductAppService _productAppService , ICategoryAppService _categoryAppService) : Controller
+        , IProductAppService _productAppService, ICategoryAppService _categoryAppService) : Controller
     {
-       
+
         public async Task<IActionResult> Index(int pageNumber = 1, int pageSize = 10, int? categoryId = null, CancellationToken cancellationToken = default)
         {
             if (LocalStorage.LoginUser == null || LocalStorage.LoginUser.RoleEnum != RoleEnum.Admin)
@@ -27,14 +27,14 @@ namespace App.EndPoints.MVC.HWW22.Areas.Admin.Controllers
                 return RedirectToAction("Index", "Account");
             }
 
-            ProductListDto productListDto = await _productAppService.GetAll(pageNumber ,pageSize , categoryId,cancellationToken);
+            ProductListDto productListDto = await _productAppService.GetAll(pageNumber, pageSize, categoryId, cancellationToken);
             return View(productListDto);
 
 
         }
 
 
-        public async Task<IActionResult> Edit(int productId , CancellationToken cancellationToken)
+        public async Task<IActionResult> Edit(int productId, CancellationToken cancellationToken)
         {
             if (LocalStorage.LoginUser == null || LocalStorage.LoginUser.RoleEnum != RoleEnum.Admin)
             {
@@ -52,36 +52,36 @@ namespace App.EndPoints.MVC.HWW22.Areas.Admin.Controllers
                     CategoryName = productDto.CategoryName,
                     Description = productDto.Description,
                     Price = productDto.Price,
-                    ImagePath=productDto.Image,
-                    CreatedAt=productDto.CreatedAt,
-                    Inventory=productDto.Inventory,
-                    CategoryId=productDto.CategoryId
+                    ImagePath = productDto.Image,
+                    CreatedAt = productDto.CreatedAt,
+                    Inventory = productDto.Inventory,
+                    CategoryId = productDto.CategoryId
                 };
                 List<CategoryDto> categoryDtos = await _categoryAppService.GetAll(cancellationToken);
                 ViewBag.Categories = new SelectList(categoryDtos, "Id", "Name", productDto.CategoryId);
                 return View(productViewModel);
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
-               _logger.LogError(ex.Message, "Error occurred while accessing Product Edit page.");
+                _logger.LogError(ex.Message, "Error occurred while accessing Product Edit page.");
                 TempData["Error"] = ex.Message;
                 return RedirectToAction("Index");
             }
-            
+
 
         }
 
 
         [HttpPost]
-       
+
         public async Task<IActionResult> Edit(ProductViewModel model, CancellationToken cancellationToken)
         {
-          
-           
+
+
 
             if (!ModelState.IsValid)
             {
-              
+
                 var categoryDtos = await _categoryAppService.GetAll(cancellationToken);
                 ViewBag.Categories = new SelectList(categoryDtos, "Id", "Name", model.CategoryId);
                 return View(model);
@@ -89,21 +89,21 @@ namespace App.EndPoints.MVC.HWW22.Areas.Admin.Controllers
 
             try
             {
-                
-                string finalImageName = model.ImagePath; 
+
+                string finalImageName = model.ImagePath;
 
                 if (model.Image != null)
                 {
-                   
+
                     var uploadedName = model.Image.UploadFile("ProductsAgg");
                     if (uploadedName != null)
                     {
                         finalImageName = uploadedName;
-                       
+
                     }
                 }
 
-               
+
                 var productDto = new ProductDto
                 {
                     Id = model.Id,
@@ -112,11 +112,11 @@ namespace App.EndPoints.MVC.HWW22.Areas.Admin.Controllers
                     Description = model.Description,
                     Price = model.Price,
                     Inventory = model.Inventory,
-                    Image = finalImageName, 
-                    CreatedAt=DateTime.Now.Date
+                    Image = finalImageName,
+                    CreatedAt = DateTime.Now.Date
                 };
 
-               var result=await _productAppService.Edit(productDto, cancellationToken);
+                var result = await _productAppService.Edit(productDto, cancellationToken);
                 if (!result.IsSuccess)
                 {
                     _logger.LogError(result.Message, "Error in Edit POST");
@@ -124,7 +124,7 @@ namespace App.EndPoints.MVC.HWW22.Areas.Admin.Controllers
                     return RedirectToAction("Index");
                 }
 
-           
+
                 _logger.LogInformation("Product with ID {ProductId} edited successfully.", model.Id);
                 return RedirectToAction("Index");
             }
@@ -138,7 +138,7 @@ namespace App.EndPoints.MVC.HWW22.Areas.Admin.Controllers
 
         public async Task<IActionResult> Create(CancellationToken cancellationToken)
         {
-            
+
             if (LocalStorage.LoginUser == null || LocalStorage.LoginUser.RoleEnum != RoleEnum.Admin)
             {
                 TempData["Error"] = "فقط کاربر ادمین به این صفحه امکان دسترسی دارد.";
@@ -146,7 +146,7 @@ namespace App.EndPoints.MVC.HWW22.Areas.Admin.Controllers
                 return RedirectToAction("Index", "Account");
             }
 
-      
+
             var categoryDtos = await _categoryAppService.GetAll(cancellationToken);
             ViewBag.Categories = new SelectList(categoryDtos, "Id", "Name");
 
@@ -155,51 +155,77 @@ namespace App.EndPoints.MVC.HWW22.Areas.Admin.Controllers
 
 
         [HttpPost]
-        
+
         public async Task<IActionResult> Create(CreateProductViewModel model, CancellationToken cancellationToken)
         {
-            
+
             if (LocalStorage.LoginUser == null || LocalStorage.LoginUser.RoleEnum != RoleEnum.Admin)
                 return RedirectToAction("Index", "Account");
 
             if (!ModelState.IsValid)
             {
-               
+
                 var categoryDtos = await _categoryAppService.GetAll(cancellationToken);
                 ViewBag.Categories = new SelectList(categoryDtos, "Id", "Name");
                 return View(model);
             }
 
-          
-              
-                string imageName = model.Image.UploadFile("ProductsAgg");
 
-                
-                var productDto = new ProductDto
-                {
-                    Title = model.Title,
-                    CategoryId = model.CategoryId,
-                    Description = model.Description,
-                    Price = model.Price,
-                    Inventory = model.Inventory,
-                    Image = imageName!,
-                    CreatedAt = DateTime.Now
-                };
 
-               
-               var result= await _productAppService.Create(productDto, cancellationToken);
-                if (!result.IsSuccess)
-                {
-                    _logger.LogError(result.Message, "Error in Create Product");
-                    TempData["Error"] = "خطا در ثبت محصول";
-                    return RedirectToAction("Index");
-                }
+            string imageName = model.Image.UploadFile("ProductsAgg");
 
-                TempData["Success"] = "محصول جدید با موفقیت ثبت شد.";
+
+            var productDto = new ProductDto
+            {
+                Title = model.Title,
+                CategoryId = model.CategoryId,
+                Description = model.Description,
+                Price = model.Price,
+                Inventory = model.Inventory,
+                Image = imageName!,
+                CreatedAt = DateTime.Now
+            };
+
+
+            var result = await _productAppService.Create(productDto, cancellationToken);
+            if (!result.IsSuccess)
+            {
+                _logger.LogError(result.Message, "Error in Create Product");
+                TempData["Error"] = "خطا در ثبت محصول";
                 return RedirectToAction("Index");
-            
-          
+            }
+
+            TempData["Success"] = "محصول جدید با موفقیت ثبت شد.";
+            return RedirectToAction("Index");
+
+
         }
 
+
+        [HttpPost]
+        public async Task<IActionResult> Delete(int productId, CancellationToken cancellationToken)
+        {
+            if (LocalStorage.LoginUser == null || LocalStorage.LoginUser.RoleEnum != RoleEnum.Admin)
+            {
+                TempData["Error"] = "فقط کاربر ادمین به این صفحه امکان دسترسی دارد.";
+                _logger.LogWarning("Unauthorized access attempt to Product Delete action.");
+                return RedirectToAction("Index", "Account");
+            }
+
+            var result = await _productAppService.Delete(productId, cancellationToken);
+            if (!result.IsSuccess)
+            {
+
+                _logger.LogWarning("Failed to delete product {ProductId}. Reason: {Message}", productId, result.Message);
+
+                TempData["Error"] = result.Message;
+                return RedirectToAction("Index");
+            }
+            TempData["Success"] = "محصول با موفقیت حذف شد.";
+            return RedirectToAction("Index");
+
+
+
+        }
     }
 }

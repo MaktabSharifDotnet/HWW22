@@ -14,5 +14,6 @@ namespace App.Domain.Core.Contract.ProductAgg.AppService
         public Task<ProductDto?> GetById(int productId , CancellationToken cancellationToken);
         public Task<Result<int>> Edit(ProductDto productDto, CancellationToken cancellationToken);
         public Task<Result<int>> Create(ProductDto productDto, CancellationToken cancellationToken);
+        public Task<Result<int>> Delete(int productId, CancellationToken cancellationToken);
     }
 }

@@ -34,6 +34,17 @@ namespace App.Infra.Data.Repos.Ef.ProductAgg
             return product.Id;
         }
 
+       
+        public async Task<int> Delete(int productId, CancellationToken cancellationToken)
+        {
+          
+            return await _context.Products
+                .Where(p => p.Id == productId)
+                .ExecuteUpdateAsync(setters => setters
+                    .SetProperty(p => p.IsDeleted, true),
+                    cancellationToken);
+        }
+
         public async Task<int> Edit(ProductDto productDto, CancellationToken cancellationToken)
         {
             Product? product=await _context.Products
