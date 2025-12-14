@@ -14,54 +14,61 @@ namespace App.Infra.Db.SqlServer.Ef.Configorations
     {
         public void Configure(EntityTypeBuilder<User> builder)
         {
-            builder.HasData(
-                  new User
-                  {
-                      Id = 1,
-                      Username = "ali",
-                      Password = "123",
-                      Balance = 10000000M,
-                      RoleEnum=RoleEnum.Customer,
-                      IsDeleted = false
-                  },
-                  new User
-                  {
-                      Id = 2,
-                      Username = "ali_rezaei",
-                      Password = "123",
-                      Balance = 500000M,
-                      RoleEnum = RoleEnum.Customer,
-                      IsDeleted = false
-                  },
-                  new User
-                  {
-                      Id = 3,
-                      Username = "sara_kamali",
-                      Password = "123",
-                      Balance = 0,
-                      RoleEnum = RoleEnum.Customer,
-                      IsDeleted = false
-                  },
-                  new User
-                  {
-                      Id = 4,
-                      Username = "test_user",
-                      Password = "123",
-                      Balance = 2500000M,
-                      RoleEnum = RoleEnum.Customer,
-                      IsDeleted = false
-                  }
-                  ,
-                  new User
-                  {
-                      Id = 6,
-                      Username = "admin",
-                      Password = "123",
-                      Balance = 2500000M,
-                      RoleEnum = RoleEnum.Admin,
-                      IsDeleted = false
-                  }
-              );
+
+
+            builder.HasOne(u=>u.IdentityUser)
+                .WithOne()
+                .HasForeignKey<User>(u => u.IdentityUserId)
+                .OnDelete(DeleteBehavior.NoAction);
+
+            //builder.HasData(
+            //      new User
+            //      {
+            //          Id = 1,
+            //          Username = "ali",
+            //          Password = "123",
+            //          Balance = 10000000M,
+            //          RoleEnum=RoleEnum.Customer,
+            //          IsDeleted = false
+            //      },
+            //      new User
+            //      {
+            //          Id = 2,
+            //          Username = "ali_rezaei",
+            //          Password = "123",
+            //          Balance = 500000M,
+            //          RoleEnum = RoleEnum.Customer,
+            //          IsDeleted = false
+            //      },
+            //      new User
+            //      {
+            //          Id = 3,
+            //          Username = "sara_kamali",
+            //          Password = "123",
+            //          Balance = 0,
+            //          RoleEnum = RoleEnum.Customer,
+            //          IsDeleted = false
+            //      },
+            //      new User
+            //      {
+            //          Id = 4,
+            //          Username = "test_user",
+            //          Password = "123",
+            //          Balance = 2500000M,
+            //          RoleEnum = RoleEnum.Customer,
+            //          IsDeleted = false
+            //      }
+            //      ,
+            //      new User
+            //      {
+            //          Id = 6,
+            //          Username = "admin",
+            //          Password = "123",
+            //          Balance = 2500000M,
+            //          RoleEnum = RoleEnum.Admin,
+            //          IsDeleted = false
+            //      }
+            //  );
 
             builder.HasQueryFilter(u => !u.IsDeleted);
 

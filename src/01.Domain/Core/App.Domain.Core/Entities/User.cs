@@ -12,7 +12,7 @@ namespace App.Domain.Core.Entities
     {
 
         public int IdentityUserId { get; set; }
-        public IdentityUser IdentityUser { get; set; }
+        public IdentityUser<int> IdentityUser { get; set; }
 
         public int Id { get; set; }
         public string Username { get; set; }

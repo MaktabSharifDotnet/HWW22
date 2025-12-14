@@ -21,6 +21,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<ProjectReference Include="..\..\..\00.Framework\App.Framework\App.Framework.csproj" />
+		<ProjectReference Include="..\..\..\00.Framewrok\MaktabGram.Framework\App.Framework.csproj" />
 		<ProjectReference Include="..\..\01.Domain\Services\App.Domain.AppServices\App.Domain.AppServices.csproj" />
 		<ProjectReference Include="..\..\01.Domain\Services\App.Domain.Services\App.Domain.Services.csproj" />
 		<ProjectReference Include="..\..\02.Infrastructure\DataAccess\App.Infra.Data.Repos.Ef\App.Infra.Data.Repos.Ef.csproj" />

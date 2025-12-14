@@ -28,6 +28,7 @@ using App.Domain.Services.OrderAgg;
 using App.Domain.Services.OrderItemAgg;
 using App.Domain.Services.ProductAgg;
 using App.Domain.Services.UserAgg;
+using App.Framework;
 using App.Infra.Data.Repos.Ef.CartAgg;
 using App.Infra.Data.Repos.Ef.CategoryAgg;
 using App.Infra.Data.Repos.Ef.OrderAgg;
@@ -35,6 +36,7 @@ using App.Infra.Data.Repos.Ef.OrderItemAgg;
 using App.Infra.Data.Repos.Ef.ProductAgg;
 using App.Infra.Data.Repos.Ef.UserAgg;
 using App.Infra.Db.SqlServer.Ef.DbContextAgg;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
 using System;
@@ -45,7 +47,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
 
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlServer("Server=DESKTOP-M2BLLND\\SQLEXPRESS;Database=HWW22;Integrated Security=True;Encrypt=True;TrustServerCertificate=True;"));
+    options.UseSqlServer("Server=DESKTOP-M2BLLND\\SQLEXPRESS;Database=HWW24;Integrated Security=True;Encrypt=True;TrustServerCertificate=True;"));
 
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<IProductService, ProductService>();
@@ -91,8 +93,22 @@ builder.Host.UseSerilog((context, configuration) =>
 
 
 
+
+builder.Services.AddIdentity<IdentityUser<int>, IdentityRole<int>>(options =>
+{
+    options.Password.RequireDigit = false;
+    options.Password.RequiredLength = 3;
+    options.Password.RequireNonAlphanumeric = false;
+    options.Password.RequireUppercase = false;
+    options.Password.RequireLowercase = false;
+})
+.AddEntityFrameworkStores<AppDbContext>()
+.AddDefaultTokenProviders()
+.AddErrorDescriber<PersianIdentityErrorDescriber>();
+
 var app = builder.Build();
 
+app.UseMiddleware<RequestLoggingMiddleware>();
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
@@ -105,11 +121,13 @@ app.UseHttpsRedirection();
 
 app.UseStaticFiles();
 
-app.UseMiddleware<RequestLoggingMiddleware>();
+
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
+
 app.UseSession();
 
 app.MapControllerRoute(
