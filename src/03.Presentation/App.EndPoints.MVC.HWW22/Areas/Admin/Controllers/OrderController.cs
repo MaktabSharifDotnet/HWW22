@@ -6,6 +6,7 @@ using App.Domain.Core.Dtos.OrderItemAgg;
 using App.Domain.Core.Entities;
 using App.Domain.Core.Enums.UserAgg;
 using App.EndPoints.MVC.HWW22.Constants;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
@@ -13,6 +14,7 @@ namespace App.EndPoints.MVC.HWW22.Areas.Admin.Controllers
 {
 
     [Area(AreaConstants.Admin)]
+    [Authorize(Roles = "Admin")]
     public class OrderController(ILogger<OrderController> _logger , IOrderAppService _orderAppService,
         IOrderItemAppService _orderItemAppService) : Controller
     {

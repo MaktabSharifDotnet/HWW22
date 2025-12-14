@@ -3,6 +3,7 @@ using App.Domain.Core.Contract.UserAgg.Service;
 using App.Domain.Core.Dtos.OrderAgg;
 using App.Domain.Core.Dtos.UserAgg;
 using App.Domain.Core.Entities;
+using App.Domain.Core.Enums.UserAgg;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -57,7 +58,6 @@ namespace App.Domain.Services.UserAgg
             }
         }
 
-
         public decimal CalculateTotalPrice(List<CartProduct> cartProducts)
         {
             decimal total = 0m;
@@ -102,5 +102,28 @@ namespace App.Domain.Services.UserAgg
             return await _userRepository.GetCountCustomer(cancellationToken);
         }
 
+        public async Task<int> GetUserIdByIdentityId(int identityUserId, CancellationToken cancellationToken)
+        {
+           return await _userRepository.GetUserIdByIdentityId(identityUserId, cancellationToken);
+        }
+
+        public async Task<int> RegisterUser(string username, int identityUserId, CancellationToken cancellationToken)
+        {
+            var user = new User
+            {
+                Username = username,
+                IdentityUserId = identityUserId,
+                RoleEnum = RoleEnum.Customer, 
+                Balance = 0,
+                IsDeleted = false,
+                Password=""
+                
+            };
+
+
+          return await _userRepository.CreateAsync(user , cancellationToken);
+
+
+        }
     }
 }

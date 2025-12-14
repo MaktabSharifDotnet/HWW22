@@ -14,6 +14,14 @@ namespace App.Infra.Data.Repos.Ef.UserAgg
 {
     public class UserRepository(AppDbContext _context) : IUserRepository
     {
+        public async Task<int> CreateAsync(User user, CancellationToken cancellationToken)
+        {
+             await _context.Users.AddAsync(user);    
+             await _context.SaveChangesAsync();
+             
+             return user.Id;
+        }
+
         public async Task<List<UserDto>> GetAll(CancellationToken cancellationToken)
         {
             return await _context.Users.Where(u=>u.RoleEnum==RoleEnum.Customer).Select(u => new UserDto
@@ -53,6 +61,12 @@ namespace App.Infra.Data.Repos.Ef.UserAgg
                        Password = u.Password
                    }).FirstOrDefaultAsync();
 
+        }
+
+        public async Task<int> GetUserIdByIdentityId(int identityUserId, CancellationToken cancellationToken)
+        {
+           return await _context.Users.Where(u => u.IdentityUserId == identityUserId)
+                .Select(u => u.Id).FirstOrDefaultAsync(cancellationToken);
         }
 
         public async Task<int> Save(CancellationToken cancellationToken)

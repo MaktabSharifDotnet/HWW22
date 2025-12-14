@@ -1,18 +1,27 @@
 ﻿using App.Domain.Core.Contract.UserAgg.AppService;
 using App.EndPoints.MVC.HWW22.Constants;
 using App.EndPoints.MVC.HWW22.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
 namespace App.EndPoints.MVC.HWW22.Areas.Admin.Controllers
 {
     [Area(AreaConstants.Admin)]
-    public class AccountController(IUserAppService _userAppService , ILogger<AccountController> _logger) : Controller
+    public class AccountController(IUserAppService _userAppService , ILogger<AccountController> _logger
+        , SignInManager<IdentityUser<int>> _signInManager
+        , UserManager<IdentityUser<int>> _userManager
+
+
+        ) : Controller
     {
         
         public IActionResult Index()
         {
-
+            if (User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Index", "Category"); 
+            }
             return View();
         }
 
@@ -24,24 +33,32 @@ namespace App.EndPoints.MVC.HWW22.Areas.Admin.Controllers
                 return View("Index", adminLoginViewModel);
             }
 
-            
-            int userId = await _userAppService.Login(adminLoginViewModel.Username, adminLoginViewModel.Password, cancellationToken);
-            if (userId==0)
+            var result = await _signInManager.PasswordSignInAsync(adminLoginViewModel.Username, adminLoginViewModel.Password, false, false);
+            if (result.Succeeded)
             {
-
-                _logger.LogWarning("Failed login attempt for username: {Username}", adminLoginViewModel.Username);
-                TempData["Error"] ="نام کاربری یا رمز عبور اشتباه است.";
-                return View("Index", adminLoginViewModel);
-                
-            }
-            _logger.LogInformation("Admin user {Username} logged in successfully with UserID: {UserId}",
-                                       adminLoginViewModel.Username,
-                                       userId);
+                _logger.LogInformation("Admin user {Username} logged in.", adminLoginViewModel.Username);
 
                 return RedirectToAction("Index", "Category");
-        
+            }
+            if (result.IsLockedOut)
+            {
+                _logger.LogWarning("User account locked out.");
+                TempData["Error"] = "حساب کاربری شما به دلیل تلاش‌های ناموفق قفل شده است.";
+                return View("Index", adminLoginViewModel);
+            }
 
+
+            TempData["Error"] = "نام کاربری یا رمز عبور اشتباه است.";
+            return View("Index", adminLoginViewModel);
             
+            
+        }
+
+        public async Task<IActionResult> Logout()
+        {
+            await _signInManager.SignOutAsync();
+            _logger.LogInformation("User logged out.");
+            return RedirectToAction("Index");
         }
 
 

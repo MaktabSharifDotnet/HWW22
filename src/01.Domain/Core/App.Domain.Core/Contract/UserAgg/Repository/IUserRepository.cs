@@ -1,9 +1,11 @@
 ﻿using App.Domain.Core.Dtos.UserAgg;
 using App.Domain.Core.Entities;
+using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace App.Domain.Core.Contract.UserAgg.Repository
@@ -17,6 +19,10 @@ namespace App.Domain.Core.Contract.UserAgg.Repository
         public Task<int> GetCountCustomer(CancellationToken cancellationToken);
 
         public Task<UserDetailDto?> GetDetailById(int userId, CancellationToken cancellationToken);
+
+        public Task<int> GetUserIdByIdentityId(int identityUserId, CancellationToken cancellationToken);
+
+        public Task<int> CreateAsync(User user, CancellationToken  cancellationToken);
 
     }
 }

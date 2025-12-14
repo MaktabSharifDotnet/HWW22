@@ -25,7 +25,10 @@ namespace App.Domain.Core.Contract.UserAgg.Service
         public Task<UserDetailDto?> GetDetailById(int userId, CancellationToken cancellationToken);
 
         public Task<int> GetCountCustomer(CancellationToken cancellationToken);
-       
+        public Task<int> GetUserIdByIdentityId(int identityUserId, CancellationToken cancellationToken);
+
+        public Task<int> RegisterUser(string username, int identityUserId, CancellationToken cancellationToken);
+
 
     }
 }

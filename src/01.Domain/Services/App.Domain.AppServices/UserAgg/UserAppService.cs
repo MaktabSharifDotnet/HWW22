@@ -30,6 +30,11 @@ namespace App.Domain.AppServices.UserAgg
             return Result<UserDetailDto>.Success(userDetailDto);
         }
 
+        public async Task<int> GetUserIdByIdentityId(int identityUserId, CancellationToken cancellationToken)
+        {
+           return await _userService.GetUserIdByIdentityId(identityUserId, cancellationToken);
+        }
+
         public async Task<int> Login(string username, string password, CancellationToken cancellationToken)
         {
           return await _userService.Login(username, password, cancellationToken);
@@ -37,6 +42,11 @@ namespace App.Domain.AppServices.UserAgg
         public void LogOut()
         {
             _userService.LogOut ();
+        }
+
+        public async Task<int> RegisterUser(string username, int identityUserId, CancellationToken cancellationToken)
+        {
+           return await _userService.RegisterUser(username, identityUserId, cancellationToken);
         }
     }
 }

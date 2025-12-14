@@ -1,17 +1,12 @@
-﻿@using App.Domain.Core.Entities
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - مکتب شاپ</title>
-    <script type="importmap"></script>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" />
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/WebApplication1.styles.css" asp-append-version="true" />
 </head>
@@ -37,19 +32,18 @@
 
                     <div class="auth-buttons ms-auto mt-2 mt-sm-0 d-flex align-items-center">
 
-                        <a asp-action="Index" asp-controller ="Cart" class="btn-cart" title="سبد خرید">
+                        <a asp-action="Index" asp-controller="Cart" class="btn-cart" title="سبد خرید">
                             <i class="bi bi-cart3"></i>
-                            
                         </a>
 
-                        @if (LocalStorage.LoginUser != null)
+                        @if (User.Identity?.IsAuthenticated == true)
                         {
                             <div class="text-white me-3 fw-bold">
                                 <i class="bi bi-person-circle h5 align-middle mb-0"></i>
-                                <span class="align-middle">@LocalStorage.LoginUser.Username</span>
+                                <span class="align-middle">@User.Identity.Name</span>
                             </div>
 
-                            <a class="btn-login" asp-controller="Account" asp-action="Logout">
+                            <a class="btn-login" asp-controller="Account" asp-action="LogOut">
                                 <i class="bi bi-box-arrow-left"></i> خروج
                             </a>
                         }
@@ -70,13 +64,35 @@
 
     <div class="container">
         <main role="main" class="pb-3">
+            @if (TempData["Success"] != null)
+            {
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    @TempData["Success"]
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            }
+            @if (TempData["Error"] != null)
+            {
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    @TempData["Error"]
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            }
+            @if (TempData["Warning"] != null)
+            {
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    @TempData["Warning"]
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            }
+
             @RenderBody()
         </main>
     </div>
 
     <footer class="custom-footer">
         <div class="container text-center">
-            &copy; 1404 - مکتب شاپ  
+            &copy; 1404 - مکتب شاپ
         </div>
     </footer>
 

@@ -4,6 +4,7 @@ using App.Domain.Core.Dtos.UserAgg;
 using App.Domain.Core.Entities;
 using App.Domain.Core.Enums.UserAgg;
 using App.EndPoints.MVC.HWW22.Constants;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -11,6 +12,7 @@ using System.Threading.Tasks;
 namespace App.EndPoints.MVC.HWW22.Areas.Admin.Controllers
 {
     [Area(AreaConstants.Admin)]
+    [Authorize(Roles = "Admin")]
     public class CustomerController(ILogger<CustomerController> _logger , IUserAppService _userAppService) : Controller
     {
         public async Task<IActionResult> Index(CancellationToken cancellationToken)

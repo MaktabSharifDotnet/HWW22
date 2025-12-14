@@ -5,12 +5,14 @@ using App.Domain.Core.Entities;
 using App.Domain.Core.Enums.UserAgg;
 using App.EndPoints.MVC.HWW22.Constants;
 using App.EndPoints.MVC.HWW22.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
 namespace App.EndPoints.MVC.HWW22.Areas.Admin.Controllers
 {
     [Area(AreaConstants.Admin)]
+    [Authorize(Roles = "Admin")]
     public class CategoryController(ICategoryAppService _categoryAppService , ILogger<CategoryController> _logger) : Controller
     {
 

@@ -7,6 +7,7 @@ using App.Domain.Core.Enums.UserAgg;
 using App.EndPoints.MVC.HWW22.Areas.Admin.Models;
 using App.EndPoints.MVC.HWW22.Constants;
 using App.EndPoints.MVC.HWW22.Extentions;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Threading.Tasks;
@@ -14,6 +15,7 @@ using System.Threading.Tasks;
 namespace App.EndPoints.MVC.HWW22.Areas.Admin.Controllers
 {
     [Area(AreaConstants.Admin)]
+    [Authorize(Roles = "Admin")]
     public class ProductController(ILogger<ProductController> _logger
         , IProductAppService _productAppService, ICategoryAppService _categoryAppService) : Controller
     {
