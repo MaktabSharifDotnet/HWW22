@@ -1,4 +1,5 @@
 ﻿using App.Domain.Core.Enums.UserAgg;
+using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,10 @@ namespace App.Domain.Core.Entities
 {
     public class User
     {
+
+        public int IdentityUserId { get; set; }
+        public IdentityUser IdentityUser { get; set; }
+
         public int Id { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }
