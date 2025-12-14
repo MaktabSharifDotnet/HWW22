@@ -102,6 +102,7 @@ builder.Services.AddIdentity<IdentityUser<int>, IdentityRole<int>>(options =>
     options.Password.RequireUppercase = false;
     options.Password.RequireLowercase = false;
     options.SignIn.RequireConfirmedAccount = false;
+    options.User.AllowedUserNameCharacters = null;
 })
 .AddEntityFrameworkStores<AppDbContext>()
 .AddDefaultTokenProviders()

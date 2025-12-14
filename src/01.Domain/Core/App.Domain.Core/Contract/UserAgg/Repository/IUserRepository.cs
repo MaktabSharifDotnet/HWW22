@@ -23,6 +23,9 @@ namespace App.Domain.Core.Contract.UserAgg.Repository
         public Task<int> GetUserIdByIdentityId(int identityUserId, CancellationToken cancellationToken);
 
         public Task<int> CreateAsync(User user, CancellationToken  cancellationToken);
+        public Task<User?> GetByIdentityId(int identityUserId, CancellationToken cancellationToken);
+
+        public Task<int> UpdateAsync(User domainUser, CancellationToken cancellationToken);
 
     }
 }

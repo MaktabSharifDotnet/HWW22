@@ -162,5 +162,144 @@ namespace App.EndPoints.MVC.HWW22.Controllers
 
             return View(model);
         }
+
+
+        [HttpGet]
+        public async Task<IActionResult> Profile()
+        {
+            if (User.Identity != null && !User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Login");
+            }
+
+            var user = await _userManager.GetUserAsync(User);
+
+            if (user == null) return RedirectToAction("Login");
+
+            
+            var model = new EditProfileViewModel
+            {
+                Username = user.UserName,
+                PhoneNumber = user.PhoneNumber,
+                Email = user.Email
+            };
+
+            return View(model);
+        }
+        public async Task<IActionResult> EditProfile() 
+        {
+
+            if (User.Identity != null && !User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Login");
+            }
+
+            var user = await _userManager.GetUserAsync(User);
+
+            if (user == null) return RedirectToAction("Login");
+
+            var model = new EditProfileViewModel
+            {
+                Username = user.UserName,
+                PhoneNumber = user.PhoneNumber,
+                Email = user.Email
+            };
+
+            return View(model);
+        }
+        [HttpPost]
+        public async Task<IActionResult> EditProfile(EditProfileViewModel model, CancellationToken cancellationToken)
+        {
+            if (!ModelState.IsValid) return View(model);
+
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null) return RedirectToAction("Login");
+
+           
+            bool usernameChanged = model.Username != user.UserName;
+
+         
+            user.PhoneNumber = model.PhoneNumber;
+           
+            user.UserName = model.Username;
+            if (string.IsNullOrWhiteSpace(model.Email))
+            {
+                user.Email = null;
+            }
+            else
+            {
+                user.Email = model.Email;
+            }
+
+            var result = await _userManager.UpdateAsync(user);
+
+            if (result.Succeeded)
+            {
+              
+                if (usernameChanged)
+                {
+                    try
+                    {
+                       
+                        await userAppService.ChangeDatabaseUsername(user.Id, model.Username, cancellationToken);
+                    }
+                    catch (Exception ex)
+                    {
+                       
+                        _logger.LogError(ex, "Identity updated but Domain User update failed.");
+                        TempData["Warning"] = "اطلاعات لاگین بروز شد اما در پروفایل ممکن است نام قدیم نمایش داده شود.";
+                    }
+                }
+
+                await _signInManager.RefreshSignInAsync(user);
+
+                TempData["Success"] = "پروفایل با موفقیت بروزرسانی شد.";
+                return RedirectToAction("Profile");
+            }
+
+            
+            foreach (var error in result.Errors)
+            {
+               
+                ModelState.AddModelError("", error.Description);
+            }
+
+            return View(model);
+        }
+
+        [HttpGet]
+        public IActionResult ChangePassword()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> ChangePassword(ChangePasswordViewModel model)
+        {
+            if (!ModelState.IsValid) return View(model);
+
+            var user = await _userManager.GetUserAsync(User);
+            if (user == null) return RedirectToAction("Login");
+
+ 
+            var result = await _userManager.ChangePasswordAsync(user, model.OldPassword, model.NewPassword);
+
+            if (result.Succeeded)
+            {
+               
+                await _signInManager.RefreshSignInAsync(user);
+
+                TempData["Success"] = "رمز عبور شما با موفقیت تغییر کرد.";
+                return RedirectToAction("Profile");
+            }
+
+            foreach (var error in result.Errors)
+            {
+                ModelState.AddModelError("", error.Description);
+            }
+
+            return View(model);
+        }
+
     }
 }

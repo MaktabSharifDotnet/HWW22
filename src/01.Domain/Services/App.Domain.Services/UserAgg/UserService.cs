@@ -125,5 +125,21 @@ namespace App.Domain.Services.UserAgg
 
 
         }
+
+        public async Task<int> ChangeDatabaseUsername(int identityUserId, string newUsername, CancellationToken cancellationToken)
+        {
+            var domainUser = await _userRepository.GetByIdentityId(identityUserId, cancellationToken);
+
+            if (domainUser != null)
+            {
+                
+                domainUser.Username = newUsername;
+
+               
+               return await _userRepository.UpdateAsync(domainUser, cancellationToken);
+              
+            }
+            return 0;
+        }
     }
 }

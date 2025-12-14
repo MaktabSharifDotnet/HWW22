@@ -35,6 +35,7 @@
                         <a asp-action="Index" asp-controller="Cart" class="btn-cart" title="سبد خرید">
                             <i class="bi bi-cart3"></i>
                         </a>
+                       
 
                         @if (User.Identity?.IsAuthenticated == true)
                         {
@@ -42,6 +43,9 @@
                                 <i class="bi bi-person-circle h5 align-middle mb-0"></i>
                                 <span class="align-middle">@User.Identity.Name</span>
                             </div>
+                            <a class="me-3 text-decoration-none" asp-controller="Account" asp-action="Profile">
+                                <i class="bi bi-person-lines-fill"></i> پروفایل
+                            </a>
 
                             <a class="btn-login" asp-controller="Account" asp-action="LogOut">
                                 <i class="bi bi-box-arrow-left"></i> خروج

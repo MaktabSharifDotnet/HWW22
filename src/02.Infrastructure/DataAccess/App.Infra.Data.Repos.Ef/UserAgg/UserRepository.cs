@@ -16,15 +16,15 @@ namespace App.Infra.Data.Repos.Ef.UserAgg
     {
         public async Task<int> CreateAsync(User user, CancellationToken cancellationToken)
         {
-             await _context.Users.AddAsync(user);    
-             await _context.SaveChangesAsync();
-             
-             return user.Id;
+            await _context.Users.AddAsync(user);
+            await _context.SaveChangesAsync();
+
+            return user.Id;
         }
 
         public async Task<List<UserDto>> GetAll(CancellationToken cancellationToken)
         {
-            return await _context.Users.Where(u=>u.RoleEnum==RoleEnum.Customer).Select(u => new UserDto
+            return await _context.Users.Where(u => u.RoleEnum == RoleEnum.Customer).Select(u => new UserDto
             {
                 Id = u.Id,
                 Username = u.Username
@@ -40,6 +40,11 @@ namespace App.Infra.Data.Repos.Ef.UserAgg
                   .FirstOrDefaultAsync(u => u.Id == userId);
         }
 
+        public async Task<User?> GetByIdentityId(int identityUserId, CancellationToken cancellationToken)
+        {
+            return await _context.Users.FirstOrDefaultAsync(u => u.IdentityUserId == identityUserId, cancellationToken);
+        }
+
         public async Task<User?> GetByUsername(string username, CancellationToken cancellationToken)
         {
             return await _context.Users.FirstOrDefaultAsync(u => u.Username == username, cancellationToken);
@@ -47,12 +52,12 @@ namespace App.Infra.Data.Repos.Ef.UserAgg
 
         public async Task<int> GetCountCustomer(CancellationToken cancellationToken)
         {
-          return await _context.Users.CountAsync(U=>U.RoleEnum==RoleEnum.Customer , cancellationToken);
+            return await _context.Users.CountAsync(U => U.RoleEnum == RoleEnum.Customer, cancellationToken);
         }
 
         public async Task<UserDetailDto?> GetDetailById(int userId, CancellationToken cancellationToken)
         {
-            return await _context.Users.Where(u => u.Id == userId &&u.RoleEnum==RoleEnum.Customer)
+            return await _context.Users.Where(u => u.Id == userId && u.RoleEnum == RoleEnum.Customer)
                    .Select(u => new UserDetailDto
                    {
                        Id = u.Id,
@@ -65,8 +70,8 @@ namespace App.Infra.Data.Repos.Ef.UserAgg
 
         public async Task<int> GetUserIdByIdentityId(int identityUserId, CancellationToken cancellationToken)
         {
-           return await _context.Users.Where(u => u.IdentityUserId == identityUserId)
-                .Select(u => u.Id).FirstOrDefaultAsync(cancellationToken);
+            return await _context.Users.Where(u => u.IdentityUserId == identityUserId)
+                 .Select(u => u.Id).FirstOrDefaultAsync(cancellationToken);
         }
 
         public async Task<int> Save(CancellationToken cancellationToken)
@@ -74,7 +79,15 @@ namespace App.Infra.Data.Repos.Ef.UserAgg
             return await _context.SaveChangesAsync(cancellationToken);
         }
 
+        public async Task<int> UpdateAsync(User domainUser, CancellationToken cancellationToken)
+        {
+                 return await _context.Users
+             .Where(u => u.Id == domainUser.Id)
+             .ExecuteUpdateAsync(setters => setters
+                 .SetProperty(u => u.Username, domainUser.Username),
+            
+            cancellationToken);
 
-
+        }
     }
 }

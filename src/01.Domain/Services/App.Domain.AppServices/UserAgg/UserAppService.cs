@@ -14,6 +14,11 @@ namespace App.Domain.AppServices.UserAgg
 {
     public class UserAppService(IUserService _userService ) : IUserAppService
     {
+        public async Task<int> ChangeDatabaseUsername(int identityUserId, string newUsername, CancellationToken cancellationToken)
+        {
+         return await _userService.ChangeDatabaseUsername(identityUserId, newUsername, cancellationToken);
+        }
+
         public async Task<List<UserDto>> GetAll(CancellationToken cancellationToken)
         {
             return await _userService.GetAll(cancellationToken);

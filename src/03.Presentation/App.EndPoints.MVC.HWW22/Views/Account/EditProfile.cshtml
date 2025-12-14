@@ -1,0 +1,42 @@
+﻿@model App.EndPoints.MVC.HWW22.Models.EditProfileViewModel
+@{
+    ViewData["Title"] = "ویرایش پروفایل";
+}
+
+<div class="container mt-5 col-md-6">
+    <div class="card">
+        <div class="card-header bg-warning text-dark">
+            <h5>ویرایش اطلاعات کاربری</h5>
+        </div>
+        <div class="card-body">
+
+            <div asp-validation-summary="All" class="alert alert-danger" role="alert"
+                 style="@(ViewData.ModelState.IsValid ? "display:none" : "")">
+            </div>
+            <form asp-action="EditProfile" method="post">
+
+                <div class="mb-3">
+                    <label asp-for="Username" class="form-label"></label>
+                    <input asp-for="Username" class="form-control" />
+                    <span asp-validation-for="Username" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="PhoneNumber" class="form-label"></label>
+                    <input asp-for="PhoneNumber" class="form-control" />
+                    <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Email" class="form-label"></label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                    <div class="form-text">اگر ایمیل ندارید، این فیلد را خالی بگذارید.</div>
+                </div>
+
+                <button type="submit" class="btn btn-warning w-100">ذخیره تغییرات</button>
+                <a asp-action="Profile" class="btn btn-secondary w-100 mt-2">بازگشت</a>
+            </form>
+        </div>
+    </div>
+</div>
