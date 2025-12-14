@@ -22,13 +22,6 @@ namespace App.EndPoints.MVC.HWW22.Areas.Admin.Controllers
 
         public async Task<IActionResult> Index(int pageNumber = 1, int pageSize = 10, int? categoryId = null, CancellationToken cancellationToken = default)
         {
-            if (LocalStorage.LoginUser == null || LocalStorage.LoginUser.RoleEnum != RoleEnum.Admin)
-            {
-                TempData["Error"] = "فقط کاربر ادمین به این صفحه  امکان دسترسی دارد.";
-                _logger.LogWarning("Unauthorized access attempt to Product Index page.");
-                return RedirectToAction("Index", "Account");
-            }
-
             ProductListDto productListDto = await _productAppService.GetAll(pageNumber, pageSize, categoryId, cancellationToken);
             return View(productListDto);
 
@@ -38,12 +31,7 @@ namespace App.EndPoints.MVC.HWW22.Areas.Admin.Controllers
 
         public async Task<IActionResult> Edit(int productId, CancellationToken cancellationToken)
         {
-            if (LocalStorage.LoginUser == null || LocalStorage.LoginUser.RoleEnum != RoleEnum.Admin)
-            {
-                TempData["Error"] = "فقط کاربر ادمین به این صفحه  امکان دسترسی دارد.";
-                _logger.LogWarning("Unauthorized access attempt to Product Edit page.");
-                return RedirectToAction("Index", "Account");
-            }
+           
             try
             {
                 ProductDto? productDto = await _productAppService.GetById(productId, cancellationToken);
@@ -141,12 +129,6 @@ namespace App.EndPoints.MVC.HWW22.Areas.Admin.Controllers
         public async Task<IActionResult> Create(CancellationToken cancellationToken)
         {
 
-            if (LocalStorage.LoginUser == null || LocalStorage.LoginUser.RoleEnum != RoleEnum.Admin)
-            {
-                TempData["Error"] = "فقط کاربر ادمین به این صفحه امکان دسترسی دارد.";
-                _logger.LogWarning("Unauthorized access attempt to Product Create page.");
-                return RedirectToAction("Index", "Account");
-            }
 
 
             var categoryDtos = await _categoryAppService.GetAll(cancellationToken);
@@ -161,8 +143,7 @@ namespace App.EndPoints.MVC.HWW22.Areas.Admin.Controllers
         public async Task<IActionResult> Create(CreateProductViewModel model, CancellationToken cancellationToken)
         {
 
-            if (LocalStorage.LoginUser == null || LocalStorage.LoginUser.RoleEnum != RoleEnum.Admin)
-                return RedirectToAction("Index", "Account");
+            
 
             if (!ModelState.IsValid)
             {
@@ -207,12 +188,7 @@ namespace App.EndPoints.MVC.HWW22.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> Delete(int productId, CancellationToken cancellationToken)
         {
-            if (LocalStorage.LoginUser == null || LocalStorage.LoginUser.RoleEnum != RoleEnum.Admin)
-            {
-                TempData["Error"] = "فقط کاربر ادمین به این صفحه امکان دسترسی دارد.";
-                _logger.LogWarning("Unauthorized access attempt to Product Delete action.");
-                return RedirectToAction("Index", "Account");
-            }
+            
 
             var result = await _productAppService.Delete(productId, cancellationToken);
             if (!result.IsSuccess)

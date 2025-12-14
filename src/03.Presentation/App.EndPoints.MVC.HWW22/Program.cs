@@ -101,10 +101,12 @@ builder.Services.AddIdentity<IdentityUser<int>, IdentityRole<int>>(options =>
     options.Password.RequireNonAlphanumeric = false;
     options.Password.RequireUppercase = false;
     options.Password.RequireLowercase = false;
+    options.SignIn.RequireConfirmedAccount = false;
 })
 .AddEntityFrameworkStores<AppDbContext>()
 .AddDefaultTokenProviders()
 .AddErrorDescriber<PersianIdentityErrorDescriber>();
+
 
 var app = builder.Build();
 

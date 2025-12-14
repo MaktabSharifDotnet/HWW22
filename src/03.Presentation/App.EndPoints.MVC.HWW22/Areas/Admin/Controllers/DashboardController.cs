@@ -18,12 +18,6 @@ namespace App.EndPoints.MVC.HWW22.Areas.Admin.Controllers
         public async Task<IActionResult> Index(CancellationToken cancellationToken)
         {
 
-            if (LocalStorage.LoginUser == null || LocalStorage.LoginUser.RoleEnum != RoleEnum.Admin)
-            {
-                TempData["Error"] = "فقط کاربر ادمین به این صفحه  امکان دسترسی دارد.";
-                _logger.LogWarning("Unauthorized access attempt to Dashboard page.");
-                 return RedirectToAction("Index", "Account");
-            }
 
             DashboardDataDto dashboardDataDto=await _orderAppService.GetDashboardData(cancellationToken);
             _logger.LogInformation("Admin accessed the Dashboard page successfully.");

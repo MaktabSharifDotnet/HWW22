@@ -18,10 +18,12 @@ namespace App.EndPoints.MVC.HWW22.Areas.Admin.Controllers
         
         public IActionResult Index()
         {
-            if (User.Identity.IsAuthenticated)
+
+            if (User.Identity != null && User.Identity.IsAuthenticated)
             {
-                return RedirectToAction("Index", "Category"); 
+                return RedirectToAction("Index", "Category");
             }
+
             return View();
         }
 
@@ -33,27 +35,35 @@ namespace App.EndPoints.MVC.HWW22.Areas.Admin.Controllers
                 return View("Index", adminLoginViewModel);
             }
 
+    
             var result = await _signInManager.PasswordSignInAsync(adminLoginViewModel.Username, adminLoginViewModel.Password, false, false);
+
             if (result.Succeeded)
             {
-                _logger.LogInformation("Admin user {Username} logged in.", adminLoginViewModel.Username);
+              
+                var user = await _userManager.FindByNameAsync(adminLoginViewModel.Username);
 
+               
+                if (user != null && !await _userManager.IsInRoleAsync(user, "Admin"))
+                {
+                    await _signInManager.SignOutAsync();
+
+                    _logger.LogWarning("User {Username} tried to login to Admin Panel without permission.", adminLoginViewModel.Username);
+
+                  
+                    TempData["Error"] = "شما دسترسی ورود به پنل مدیریت را ندارید.";
+                    return View("Index", adminLoginViewModel);
+                }
+
+                _logger.LogInformation("Admin user {Username} logged in.", adminLoginViewModel.Username);
                 return RedirectToAction("Index", "Category");
             }
-            if (result.IsLockedOut)
-            {
-                _logger.LogWarning("User account locked out.");
-                TempData["Error"] = "حساب کاربری شما به دلیل تلاش‌های ناموفق قفل شده است.";
-                return View("Index", adminLoginViewModel);
-            }
 
+         
 
             TempData["Error"] = "نام کاربری یا رمز عبور اشتباه است.";
             return View("Index", adminLoginViewModel);
-            
-            
         }
-
         public async Task<IActionResult> Logout()
         {
             await _signInManager.SignOutAsync();

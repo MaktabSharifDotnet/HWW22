@@ -21,12 +21,7 @@ namespace App.EndPoints.MVC.HWW22.Areas.Admin.Controllers
         public async Task<IActionResult> Index(CancellationToken cancellationToken )
         {
 
-            if (LocalStorage.LoginUser == null || LocalStorage.LoginUser.RoleEnum != RoleEnum.Admin)
-            {
-                TempData["Error"] = "فقط کاربر ادمین به این صفحه  امکان دسترسی دارد.";
-                _logger.LogWarning("Unauthorized access attempt to Order Index page.");
-                return RedirectToAction("Index", "Account");
-            }
+         
 
              List<OrderDto> orderDtos=await _orderAppService.GetOrderDtos(cancellationToken);
             _logger.LogInformation("Retrieved {OrderCount} orders for display in Order Index page.", orderDtos.Count);
@@ -37,12 +32,7 @@ namespace App.EndPoints.MVC.HWW22.Areas.Admin.Controllers
         public async Task<IActionResult> Detail(int orderId,CancellationToken cancellationToken) 
         {
 
-            if (LocalStorage.LoginUser == null || LocalStorage.LoginUser.RoleEnum != RoleEnum.Admin)
-            {
-                TempData["Error"] = "فقط کاربر ادمین به این صفحه  امکان دسترسی دارد.";
-                _logger.LogWarning("Unauthorized access attempt to OrderItem Detail page.");
-                return RedirectToAction("Index", "Account");
-            }
+          
 
             var  result= await _orderItemAppService.GetOrderItemDtos(orderId,cancellationToken);
             if (!result.IsSuccess)

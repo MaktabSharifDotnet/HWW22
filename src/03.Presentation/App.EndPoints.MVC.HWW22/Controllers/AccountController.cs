@@ -21,6 +21,21 @@ namespace App.EndPoints.MVC.HWW22.Controllers
         , UserManager<IdentityUser<int>> _userManager) : Controller
 
     {
+
+
+        [HttpGet]
+        public IActionResult AccessDenied(string returnUrl = null)
+        {
+            
+            if (!string.IsNullOrEmpty(returnUrl) && returnUrl.ToLower().Contains("admin"))
+            {
+                
+                return RedirectToAction("Index", "Account", new { area = "Admin", ReturnUrl = returnUrl });
+            }
+
+           
+            return RedirectToAction("Index", "Home");
+        }
         public IActionResult Login()
         {
 
@@ -117,21 +132,19 @@ namespace App.EndPoints.MVC.HWW22.Controllers
 
             if (result.Succeeded)
             {
+
+                await _userManager.AddToRoleAsync(identityUser, "Customer");
                 try
                 {
                   
                     await userAppService.RegisterUser(model.Username, identityUser.Id, cancellationToken);
-
-                    
                     await _signInManager.SignInAsync(identityUser, isPersistent: false);
-
                     return RedirectToAction("Index", "Home");
                 }
                 catch (Exception ex)
                 {
                     
                     await _userManager.DeleteAsync(identityUser);
-
                     ModelState.AddModelError("", "خطایی در ثبت اطلاعات کاربری رخ داد. لطفا مجدد تلاش کنید.");
                    _logger.LogError(ex, "Error in syncing user to domain");
                     return View(model);

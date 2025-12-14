@@ -17,12 +17,7 @@ namespace App.EndPoints.MVC.HWW22.Areas.Admin.Controllers
     {
         public async Task<IActionResult> Index(CancellationToken cancellationToken)
         {
-            if (LocalStorage.LoginUser == null || LocalStorage.LoginUser.RoleEnum != RoleEnum.Admin)
-            {
-                TempData["Error"] = "فقط کاربر ادمین به این صفحه  امکان دسترسی دارد.";
-                _logger.LogWarning("Unauthorized access attempt to Customer Index page.");
-                return RedirectToAction("Index", "Account");
-            }
+          
 
             List<UserDto> userDtos = await _userAppService.GetAll(cancellationToken);
             _logger.LogInformation("Accessed Customer Index page successfully.");
@@ -31,12 +26,7 @@ namespace App.EndPoints.MVC.HWW22.Areas.Admin.Controllers
 
         public async Task<IActionResult> Detail(int userId, CancellationToken cancellationToken) 
         {
-            if (LocalStorage.LoginUser == null || LocalStorage.LoginUser.RoleEnum != RoleEnum.Admin)
-            {
-                TempData["Error"] = "فقط کاربر ادمین به این صفحه  امکان دسترسی دارد.";
-                _logger.LogWarning("Unauthorized access attempt to Customer Detail page.");
-                return RedirectToAction("Index", "Account");
-            }
+            
             Result<UserDetailDto> result=await _userAppService.GetDetailById(userId, cancellationToken);
             if (!result.IsSuccess)
             {
