@@ -63,14 +63,7 @@ namespace App.EndPoints.MVC.HWW22.Controllers
                 {
                     var identityUser = await _userManager.FindByNameAsync(loginViewModel.Username);
 
-                    
-                    if (identityUser == null)
-                    {
-                        TempData["Error"] = "کاربر یافت نشد.";
-                        return View(loginViewModel);
-                    }
-
-                    var domainUserId = await userAppService.GetUserIdByIdentityId(identityUser.Id, cancellationToken);
+                    var domainUserId = await userAppService.GetUserIdByIdentityId(identityUser!.Id, cancellationToken);
 
                     if (domainUserId > 0)
                     {
@@ -106,10 +99,11 @@ namespace App.EndPoints.MVC.HWW22.Controllers
 
         public IActionResult Register()
         {
-            if (User.Identity?.IsAuthenticated==true)
+            if (User.Identity != null && User.Identity.IsAuthenticated)
             {
                 return RedirectToAction("Index", "Home");
             }
+
             return View();
         }
 
