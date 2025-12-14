@@ -22,19 +22,22 @@ namespace App.EndPoints.MVC.HWW22.Controllers
 
     {
 
-
         [HttpGet]
         public IActionResult AccessDenied(string returnUrl = null)
         {
-            
+            if (User.Identity != null && User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Index", "Home");
+            }
+
+
             if (!string.IsNullOrEmpty(returnUrl) && returnUrl.ToLower().Contains("admin"))
             {
-                
                 return RedirectToAction("Index", "Account", new { area = "Admin", ReturnUrl = returnUrl });
             }
 
-           
-            return RedirectToAction("Index", "Home");
+          
+            return RedirectToAction("Login", "Account", new { ReturnUrl = returnUrl });
         }
         public IActionResult Login()
         {
