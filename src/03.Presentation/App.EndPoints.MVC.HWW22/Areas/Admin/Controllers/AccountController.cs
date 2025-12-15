@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace App.EndPoints.MVC.HWW22.Areas.Admin.Controllers
 {
     [Area(AreaConstants.Admin)]
-    public class AccountController(IUserAppService _userAppService , ILogger<AccountController> _logger
+    public class AccountController( ILogger<AccountController> _logger
         , SignInManager<IdentityUser<int>> _signInManager
         , UserManager<IdentityUser<int>> _userManager
 

@@ -22,7 +22,7 @@ namespace App.EndPoints.MVC.HWW22.Controllers
 
     {
 
-        [HttpGet]
+    
         public IActionResult AccessDenied(string returnUrl = null)
         {
             if (User.Identity != null && User.Identity.IsAuthenticated)
@@ -158,10 +158,11 @@ namespace App.EndPoints.MVC.HWW22.Controllers
         }
 
 
-        [HttpGet]
+       
         public async Task<IActionResult> Profile()
         {
-            if (User.Identity != null && !User.Identity.IsAuthenticated)
+
+            if (User.Identity == null || !User.Identity.IsAuthenticated)
             {
                 return RedirectToAction("Login");
             }
@@ -180,10 +181,12 @@ namespace App.EndPoints.MVC.HWW22.Controllers
 
             return View(model);
         }
+
+
         public async Task<IActionResult> EditProfile() 
         {
 
-            if (User.Identity != null && !User.Identity.IsAuthenticated)
+            if (User.Identity == null || !User.Identity.IsAuthenticated)
             {
                 return RedirectToAction("Login");
             }
@@ -261,9 +264,13 @@ namespace App.EndPoints.MVC.HWW22.Controllers
             return View(model);
         }
 
-        [HttpGet]
+       
         public IActionResult ChangePassword()
         {
+            if (User.Identity == null || !User.Identity.IsAuthenticated)
+            {
+                return RedirectToAction("Login");
+            }
             return View();
         }
 
