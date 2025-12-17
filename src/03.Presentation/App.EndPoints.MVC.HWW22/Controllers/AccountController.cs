@@ -6,12 +6,14 @@ using App.Domain.Core.Dtos.CartAgg;
 using App.Domain.Core.Entities;
 using App.EndPoints.MVC.HWW22.Extensions;
 using App.EndPoints.MVC.HWW22.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
 namespace App.EndPoints.MVC.HWW22.Controllers
 {
+    [Authorize]
     public class AccountController(
         IUserAppService userAppService 
         , ICartAppService cartAppService,
@@ -39,12 +41,14 @@ namespace App.EndPoints.MVC.HWW22.Controllers
           
             return RedirectToAction("Login", "Account", new { ReturnUrl = returnUrl });
         }
+
+        [AllowAnonymous]
         public IActionResult Login()
         {
 
             return View();
         }
-
+        [AllowAnonymous]
         [HttpPost]
         public async Task<IActionResult> Login(AdminLoginViewModel loginViewModel, CancellationToken cancellationToken)
         {
@@ -96,18 +100,15 @@ namespace App.EndPoints.MVC.HWW22.Controllers
             return RedirectToAction("Index", "Home");
         }
 
-
+        [AllowAnonymous]
         public IActionResult Register()
         {
-            if (User.Identity != null && User.Identity.IsAuthenticated)
-            {
-                return RedirectToAction("Index", "Home");
-            }
+           
 
             return View();
         }
 
-
+        [AllowAnonymous]
         [HttpPost]
         public async Task<IActionResult> Register(RegisterViewModel model, CancellationToken cancellationToken)
         {
@@ -162,10 +163,7 @@ namespace App.EndPoints.MVC.HWW22.Controllers
         public async Task<IActionResult> Profile()
         {
 
-            if (User.Identity == null || !User.Identity.IsAuthenticated)
-            {
-                return RedirectToAction("Login");
-            }
+            
 
             var user = await _userManager.GetUserAsync(User);
 
@@ -186,10 +184,6 @@ namespace App.EndPoints.MVC.HWW22.Controllers
         public async Task<IActionResult> EditProfile() 
         {
 
-            if (User.Identity == null || !User.Identity.IsAuthenticated)
-            {
-                return RedirectToAction("Login");
-            }
 
             var user = await _userManager.GetUserAsync(User);
 
@@ -267,10 +261,7 @@ namespace App.EndPoints.MVC.HWW22.Controllers
        
         public IActionResult ChangePassword()
         {
-            if (User.Identity == null || !User.Identity.IsAuthenticated)
-            {
-                return RedirectToAction("Login");
-            }
+            
             return View();
         }
 
