@@ -30,6 +30,7 @@ namespace App.Domain.Core.Contract.UserAgg.Service
         public Task<int> RegisterUser(string username, int identityUserId, CancellationToken cancellationToken);
         public Task<int> ChangeDatabaseUsername(int identityUserId, string newUsername, CancellationToken cancellationToken);
 
+       
 
     }
 }

@@ -3,6 +3,7 @@ using App.Domain.AppServices.UserAgg;
 using App.Domain.Core.Contract.CartAgg.AddService;
 using App.Domain.Core.Contract.UserAgg.AppService;
 using App.Domain.Core.Dtos.CartAgg;
+using App.Domain.Core.Dtos.UserAgg;
 using App.Domain.Core.Entities;
 using App.EndPoints.MVC.HWW22.Extensions;
 using App.EndPoints.MVC.HWW22.Models;
@@ -18,9 +19,9 @@ namespace App.EndPoints.MVC.HWW22.Controllers
         IUserAppService userAppService 
         , ICartAppService cartAppService,
          ILogger <AccountController > _logger
-        ,
-         SignInManager<IdentityUser<int>> _signInManager
-        , UserManager<IdentityUser<int>> _userManager) : Controller
+        , UserManager<IdentityUser<int>> _userManager
+        , SignInManager<IdentityUser<int>> _signInManager
+         ) : Controller
 
     {
 
@@ -59,19 +60,19 @@ namespace App.EndPoints.MVC.HWW22.Controllers
 
             try
             {
-                
-                var result = await _signInManager.PasswordSignInAsync(loginViewModel.Username, loginViewModel.Password, isPersistent: true, lockoutOnFailure: false);
 
-              
+                var result = await userAppService.PasswordSignIn(loginViewModel.Username, loginViewModel.Password, isPersistent: true, lockoutOnFailure: false);
+
+
                 if (result.Succeeded)
                 {
-                    var identityUser = await _userManager.FindByNameAsync(loginViewModel.Username);
+                    var identityUser = await userAppService.FindByName(loginViewModel.Username);
 
                     var domainUserId = await userAppService.GetUserIdByIdentityId(identityUser!.Id, cancellationToken);
 
                     if (domainUserId > 0)
                     {
-                   
+
                         List<CartItemDto>? sessionCartItems = HttpContext.Session.GetObject<List<CartItemDto>>("UserCart");
                         if (sessionCartItems != null && sessionCartItems.Any())
                         {
@@ -96,14 +97,14 @@ namespace App.EndPoints.MVC.HWW22.Controllers
         public async Task<IActionResult> LogOut()
         {
             await _signInManager.SignOutAsync();
-            HttpContext.Session.Remove("UserCart"); 
+            HttpContext.Session.Remove("UserCart");
             return RedirectToAction("Index", "Home");
         }
 
         [AllowAnonymous]
         public IActionResult Register()
         {
-           
+
 
             return View();
         }
@@ -117,15 +118,15 @@ namespace App.EndPoints.MVC.HWW22.Controllers
                 return View(model);
             }
 
-            
+
             var identityUser = new IdentityUser<int>
             {
                 UserName = model.Username,
                 PhoneNumber = model.Mobile,
-                EmailConfirmed = true 
+                EmailConfirmed = true
             };
 
-            
+
             var result = await _userManager.CreateAsync(identityUser, model.Password);
 
             if (result.Succeeded)
@@ -134,22 +135,22 @@ namespace App.EndPoints.MVC.HWW22.Controllers
                 await _userManager.AddToRoleAsync(identityUser, "Customer");
                 try
                 {
-                  
+
                     await userAppService.RegisterUser(model.Username, identityUser.Id, cancellationToken);
                     await _signInManager.SignInAsync(identityUser, isPersistent: false);
                     return RedirectToAction("Index", "Home");
                 }
                 catch (Exception ex)
                 {
-                    
+
                     await _userManager.DeleteAsync(identityUser);
                     ModelState.AddModelError("", "خطایی در ثبت اطلاعات کاربری رخ داد. لطفا مجدد تلاش کنید.");
-                   _logger.LogError(ex, "Error in syncing user to domain");
+                    _logger.LogError(ex, "Error in syncing user to domain");
                     return View(model);
                 }
             }
 
-           
+
             foreach (var error in result.Errors)
             {
                 ModelState.AddModelError("", error.Description);
@@ -159,45 +160,24 @@ namespace App.EndPoints.MVC.HWW22.Controllers
         }
 
 
-       
+
+
         public async Task<IActionResult> Profile()
         {
+         
+            var userDto = await userAppService.GetUserProfileAsync(User);
 
-            
-
-            var user = await _userManager.GetUserAsync(User);
-
-            if (user == null) return RedirectToAction("Login");
-
-            
-            var model = new EditProfileViewModel
+       
+            if (userDto == null)
             {
-                Username = user.UserName,
-                PhoneNumber = user.PhoneNumber,
-                Email = user.Email
-            };
+                return RedirectToAction("Login");
+            }
 
-            return View(model);
+
+            return View(userDto);
         }
 
 
-        public async Task<IActionResult> EditProfile() 
-        {
-
-
-            var user = await _userManager.GetUserAsync(User);
-
-            if (user == null) return RedirectToAction("Login");
-
-            var model = new EditProfileViewModel
-            {
-                Username = user.UserName,
-                PhoneNumber = user.PhoneNumber,
-                Email = user.Email
-            };
-
-            return View(model);
-        }
         [HttpPost]
         public async Task<IActionResult> EditProfile(EditProfileViewModel model, CancellationToken cancellationToken)
         {
@@ -206,12 +186,12 @@ namespace App.EndPoints.MVC.HWW22.Controllers
             var user = await _userManager.GetUserAsync(User);
             if (user == null) return RedirectToAction("Login");
 
-           
+
             bool usernameChanged = model.Username != user.UserName;
 
-         
+
             user.PhoneNumber = model.PhoneNumber;
-           
+
             user.UserName = model.Username;
             if (string.IsNullOrWhiteSpace(model.Email))
             {
@@ -226,17 +206,17 @@ namespace App.EndPoints.MVC.HWW22.Controllers
 
             if (result.Succeeded)
             {
-              
+
                 if (usernameChanged)
                 {
                     try
                     {
-                       
+
                         await userAppService.ChangeDatabaseUsername(user.Id, model.Username, cancellationToken);
                     }
                     catch (Exception ex)
                     {
-                       
+
                         _logger.LogError(ex, "Identity updated but Domain User update failed.");
                         TempData["Warning"] = "اطلاعات لاگین بروز شد اما در پروفایل ممکن است نام قدیم نمایش داده شود.";
                     }
@@ -248,15 +228,16 @@ namespace App.EndPoints.MVC.HWW22.Controllers
                 return RedirectToAction("Profile");
             }
 
-            
+
             foreach (var error in result.Errors)
             {
-               
+
                 ModelState.AddModelError("", error.Description);
             }
 
             return View(model);
         }
+     
 
        
         public IActionResult ChangePassword()
