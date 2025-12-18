@@ -9,6 +9,7 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,9 +19,24 @@ namespace App.Domain.AppServices.UserAgg
     public class UserAppService(IUserService _userService, SignInManager<IdentityUser<int>> _signInManager
         , UserManager<IdentityUser<int>> _userManager , ILogger<UserAppService> _logger) : IUserAppService
     {
+        public async Task<IdentityResult> AddToRole(IdentityUser<int> identityUser, string role)
+        {
+           return  await _userManager.AddToRoleAsync(identityUser, "Customer");
+        }
+
         public async Task<int> ChangeDatabaseUsername(int identityUserId, string newUsername, CancellationToken cancellationToken)
         {
             return await _userService.ChangeDatabaseUsername(identityUserId, newUsername, cancellationToken);
+        }
+
+        public async Task<IdentityResult> Create(IdentityUser<int> identityUser, string pass)
+        {
+           return await _userManager.CreateAsync(identityUser, pass);
+        }
+
+        public async Task<IdentityResult> Delete(IdentityUser<int> identityUser)
+        {
+          return   await _userManager.DeleteAsync(identityUser);
         }
 
         public async Task<IdentityUser<int>?> FindByName(string username )
@@ -79,6 +95,11 @@ namespace App.Domain.AppServices.UserAgg
         public async Task<int> RegisterUser(string username, int identityUserId, CancellationToken cancellationToken)
         {
             return await _userService.RegisterUser(username, identityUserId, cancellationToken);
+        }
+
+        public async Task SignIn(IdentityUser<int> identityUser)
+        {
+            await _signInManager.SignInAsync(identityUser, false);
         }
 
         public async Task SignOut()

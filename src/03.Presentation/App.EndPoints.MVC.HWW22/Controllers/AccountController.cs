@@ -104,8 +104,6 @@ namespace App.EndPoints.MVC.HWW22.Controllers
         [AllowAnonymous]
         public IActionResult Register()
         {
-
-
             return View();
         }
 
@@ -127,23 +125,23 @@ namespace App.EndPoints.MVC.HWW22.Controllers
             };
 
 
-            var result = await _userManager.CreateAsync(identityUser, model.Password);
+            var result = await userAppService.Create(identityUser, model.Password);
 
             if (result.Succeeded)
             {
 
-                await _userManager.AddToRoleAsync(identityUser, "Customer");
+                await userAppService.AddToRole(identityUser, "Customer");
                 try
                 {
 
                     await userAppService.RegisterUser(model.Username, identityUser.Id, cancellationToken);
-                    await _signInManager.SignInAsync(identityUser, isPersistent: false);
+                    await userAppService.SignIn(identityUser);
                     return RedirectToAction("Index", "Home");
                 }
                 catch (Exception ex)
                 {
 
-                    await _userManager.DeleteAsync(identityUser);
+                    await userAppService.Delete(identityUser);
                     ModelState.AddModelError("", "خطایی در ثبت اطلاعات کاربری رخ داد. لطفا مجدد تلاش کنید.");
                     _logger.LogError(ex, "Error in syncing user to domain");
                     return View(model);
