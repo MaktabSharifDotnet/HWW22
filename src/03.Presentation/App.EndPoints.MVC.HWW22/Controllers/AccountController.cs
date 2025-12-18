@@ -19,8 +19,8 @@ namespace App.EndPoints.MVC.HWW22.Controllers
         IUserAppService userAppService 
         , ICartAppService cartAppService,
          ILogger <AccountController > _logger
-        , UserManager<IdentityUser<int>> _userManager
-        , SignInManager<IdentityUser<int>> _signInManager
+        //, UserManager<IdentityUser<int>> _userManager
+        //, SignInManager<IdentityUser<int>> _signInManager
          ) : Controller
 
     {
