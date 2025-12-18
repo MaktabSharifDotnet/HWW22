@@ -9,9 +9,9 @@ namespace App.EndPoints.MVC.HWW22.Areas.Admin.Controllers
 {
     [Area(AreaConstants.Admin)]
     public class AccountController( ILogger<AccountController> _logger
-        , SignInManager<IdentityUser<int>> _signInManager
-        , UserManager<IdentityUser<int>> _userManager
-
+        //, SignInManager<IdentityUser<int>> _signInManager
+        //, UserManager<IdentityUser<int>> _userManager
+        ,IUserAppService userAppService
 
         ) : Controller
     {
@@ -36,21 +36,21 @@ namespace App.EndPoints.MVC.HWW22.Areas.Admin.Controllers
             }
 
     
-            var result = await _signInManager.PasswordSignInAsync(adminLoginViewModel.Username, adminLoginViewModel.Password, false, false);
+            var result = await userAppService.PasswordSignIn(adminLoginViewModel.Username, adminLoginViewModel.Password, false, false);
 
             if (result.Succeeded)
             {
               
-                var user = await _userManager.FindByNameAsync(adminLoginViewModel.Username);
+                var user = await userAppService.FindByName(adminLoginViewModel.Username);
 
-               
-                if (user != null && !await _userManager.IsInRoleAsync(user, "Admin"))
+
+                if (user != null && !await userAppService.IsInRole(user, "Admin"))
                 {
-                    await _signInManager.SignOutAsync();
+                    await userAppService.SignOut();
 
                     _logger.LogWarning("User {Username} tried to login to Admin Panel without permission.", adminLoginViewModel.Username);
 
-                  
+
                     TempData["Error"] = "شما دسترسی ورود به پنل مدیریت را ندارید.";
                     return View("Index", adminLoginViewModel);
                 }
@@ -66,7 +66,7 @@ namespace App.EndPoints.MVC.HWW22.Areas.Admin.Controllers
         }
         public async Task<IActionResult> Logout()
         {
-            await _signInManager.SignOutAsync();
+            await userAppService.SignOut();
             _logger.LogInformation("User logged out.");
             return RedirectToAction("Index");
         }

@@ -36,6 +36,7 @@ namespace App.Domain.Core.Contract.UserAgg.AppService
         public Task<IdentityResult> Create(IdentityUser<int> identityUser , string pass);
         public Task<IdentityResult> AddToRole(IdentityUser<int> identityUser , string role);
         public Task<IdentityUser<int>?> GetUser(ClaimsPrincipal user);
+        public Task<bool> IsInRole(IdentityUser<int> user , string role);
 
         public Task<IdentityResult> Update(IdentityUser<int> identityUser);
         public Task<IdentityResult> ChangePassword(IdentityUser<int> identityUser , string oldPass , string newPass);

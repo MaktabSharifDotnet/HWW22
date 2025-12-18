@@ -76,6 +76,11 @@ namespace App.Domain.AppServices.UserAgg
             return await _userService.GetUserIdByIdentityId(identityUserId, cancellationToken);
         }
 
+        public async Task<bool> IsInRole(IdentityUser<int> user, string role)
+        {
+            return await _userManager.IsInRoleAsync(user, role);
+        }
+
         public async Task<int> Login(string username, string password, CancellationToken cancellationToken)
         {
             return await _userService.Login(username, password, cancellationToken);
