@@ -38,6 +38,7 @@ namespace App.Domain.Core.Contract.UserAgg.AppService
         public Task<IdentityUser<int>?> GetUser(ClaimsPrincipal user);
 
         public Task<IdentityResult> Update(IdentityUser<int> identityUser);
+        public Task<IdentityResult> ChangePassword(IdentityUser<int> identityUser , string oldPass , string newPass);
 
     }
 }

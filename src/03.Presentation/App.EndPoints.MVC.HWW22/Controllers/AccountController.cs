@@ -285,16 +285,16 @@ namespace App.EndPoints.MVC.HWW22.Controllers
         {
             if (!ModelState.IsValid) return View(model);
 
-            var user = await _userManager.GetUserAsync(User);
+            var user = await userAppService.GetUser(User);
             if (user == null) return RedirectToAction("Login");
 
  
-            var result = await _userManager.ChangePasswordAsync(user, model.OldPassword, model.NewPassword);
+            var result = await userAppService.ChangePassword(user, model.OldPassword, model.NewPassword);
 
             if (result.Succeeded)
             {
                
-                await _signInManager.RefreshSignInAsync(user);
+                await userAppService.RefreshSignIn(user);
 
                 TempData["Success"] = "رمز عبور شما با موفقیت تغییر کرد.";
                 return RedirectToAction("Profile");

@@ -30,6 +30,11 @@ namespace App.Domain.AppServices.UserAgg
             return await _userService.ChangeDatabaseUsername(identityUserId, newUsername, cancellationToken);
         }
 
+        public async Task<IdentityResult> ChangePassword(IdentityUser<int> identityUser, string oldPass, string newPass)
+        {
+           return await _userManager.ChangePasswordAsync(identityUser, oldPass, newPass);
+        }
+
         public async Task<IdentityResult> Create(IdentityUser<int> identityUser, string pass)
         {
            return await _userManager.CreateAsync(identityUser, pass);
