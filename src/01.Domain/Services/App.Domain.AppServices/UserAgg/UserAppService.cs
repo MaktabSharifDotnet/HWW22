@@ -23,7 +23,7 @@ namespace App.Domain.AppServices.UserAgg
             return await _userService.ChangeDatabaseUsername(identityUserId, newUsername, cancellationToken);
         }
 
-        public async Task<IdentityUser<int>?> FindByName(string username)
+        public async Task<IdentityUser<int>?> FindByName(string username )
         {
            return await _userManager.FindByNameAsync(username);
         }
@@ -81,8 +81,9 @@ namespace App.Domain.AppServices.UserAgg
             return await _userService.RegisterUser(username, identityUserId, cancellationToken);
         }
 
-      
-
-        
+        public async Task SignOut()
+        {
+            await _signInManager.SignOutAsync();
+        }
     }
 }

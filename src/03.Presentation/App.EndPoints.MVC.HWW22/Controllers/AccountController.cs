@@ -96,7 +96,7 @@ namespace App.EndPoints.MVC.HWW22.Controllers
 
         public async Task<IActionResult> LogOut()
         {
-            await _signInManager.SignOutAsync();
+            await userAppService.SignOut();
             HttpContext.Session.Remove("UserCart");
             return RedirectToAction("Index", "Home");
         }
