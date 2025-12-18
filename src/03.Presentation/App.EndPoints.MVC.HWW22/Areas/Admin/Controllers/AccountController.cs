@@ -9,8 +9,7 @@ namespace App.EndPoints.MVC.HWW22.Areas.Admin.Controllers
 {
     [Area(AreaConstants.Admin)]
     public class AccountController( ILogger<AccountController> _logger
-        //, SignInManager<IdentityUser<int>> _signInManager
-        //, UserManager<IdentityUser<int>> _userManager
+      
         ,IUserAppService userAppService
 
         ) : Controller
