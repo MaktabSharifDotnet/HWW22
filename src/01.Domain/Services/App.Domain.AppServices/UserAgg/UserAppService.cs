@@ -4,6 +4,7 @@ using App.Domain.Core.Contract.CategoryAgg.Service;
 using App.Domain.Core.Contract.UserAgg.AppService;
 using App.Domain.Core.Contract.UserAgg.Service;
 using App.Domain.Core.Dtos.UserAgg;
+using App.Domain.Core.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Logging;
 using System;
@@ -58,6 +59,11 @@ namespace App.Domain.AppServices.UserAgg
             }
 
             return Result<UserDetailDto>.Success(userDetailDto);
+        }
+
+        public async Task<IdentityUser<int>?> GetUser(ClaimsPrincipal user)
+        {
+           return await _userManager.GetUserAsync(user);
         }
 
         public async Task<int> GetUserIdByIdentityId(int identityUserId, CancellationToken cancellationToken)

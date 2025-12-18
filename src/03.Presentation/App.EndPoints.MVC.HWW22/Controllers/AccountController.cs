@@ -162,17 +162,53 @@ namespace App.EndPoints.MVC.HWW22.Controllers
 
         public async Task<IActionResult> Profile()
         {
-         
-            var userDto = await userAppService.GetUserProfileAsync(User);
 
-       
-            if (userDto == null)
+
+            var user = await userAppService.GetUser(User);
+
+            if (user == null) return RedirectToAction("Login");
+
+
+            var model = new EditProfileViewModel
+
             {
-                return RedirectToAction("Login");
-            }
+
+                Username = user.UserName,
+
+                PhoneNumber = user.PhoneNumber,
+
+                Email = user.Email
+
+            };
 
 
-            return View(userDto);
+            return View(model);
+
+        }
+        public async Task<IActionResult> EditProfile()
+        {
+
+
+            var user = await _userManager.GetUserAsync(User);
+
+            if (user == null) return RedirectToAction("Login");
+
+
+            var model = new EditProfileViewModel
+
+            {
+
+                Username = user.UserName,
+
+                PhoneNumber = user.PhoneNumber,
+
+                Email = user.Email
+
+            };
+
+
+            return View(model);
+
         }
 
 

@@ -34,6 +34,7 @@ namespace App.Domain.Core.Contract.UserAgg.AppService
         public Task<IdentityResult> Delete(IdentityUser<int> identityUser);
         public Task<IdentityResult> Create(IdentityUser<int> identityUser , string pass);
         public Task<IdentityResult> AddToRole(IdentityUser<int> identityUser , string role);
+        public Task<IdentityUser<int>?> GetUser(ClaimsPrincipal user);
 
     }
 }
