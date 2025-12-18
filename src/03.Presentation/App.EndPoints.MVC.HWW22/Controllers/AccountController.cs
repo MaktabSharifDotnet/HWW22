@@ -189,7 +189,7 @@ namespace App.EndPoints.MVC.HWW22.Controllers
         {
 
 
-            var user = await _userManager.GetUserAsync(User);
+            var user = await userAppService.GetUser(User);
 
             if (user == null) return RedirectToAction("Login");
 
@@ -217,7 +217,7 @@ namespace App.EndPoints.MVC.HWW22.Controllers
         {
             if (!ModelState.IsValid) return View(model);
 
-            var user = await _userManager.GetUserAsync(User);
+            var user = await userAppService.GetUser(User);
             if (user == null) return RedirectToAction("Login");
 
 
@@ -236,7 +236,7 @@ namespace App.EndPoints.MVC.HWW22.Controllers
                 user.Email = model.Email;
             }
 
-            var result = await _userManager.UpdateAsync(user);
+            var result = await userAppService.Update(user);
 
             if (result.Succeeded)
             {
@@ -256,7 +256,7 @@ namespace App.EndPoints.MVC.HWW22.Controllers
                     }
                 }
 
-                await _signInManager.RefreshSignInAsync(user);
+                await userAppService.RefreshSignIn(user);
 
                 TempData["Success"] = "پروفایل با موفقیت بروزرسانی شد.";
                 return RedirectToAction("Profile");

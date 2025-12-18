@@ -30,11 +30,14 @@ namespace App.Domain.Core.Contract.UserAgg.AppService
         public Task<SignInResult> PasswordSignIn(string username , string password , bool isPersistent , bool lockoutOnFailure );
         public Task<IdentityUser<int>?> FindByName(string username );
         public Task SignOut();
+        public Task RefreshSignIn(IdentityUser<int> identityUser);
         public Task SignIn(IdentityUser<int> identityUser);
         public Task<IdentityResult> Delete(IdentityUser<int> identityUser);
         public Task<IdentityResult> Create(IdentityUser<int> identityUser , string pass);
         public Task<IdentityResult> AddToRole(IdentityUser<int> identityUser , string role);
         public Task<IdentityUser<int>?> GetUser(ClaimsPrincipal user);
+
+        public Task<IdentityResult> Update(IdentityUser<int> identityUser);
 
     }
 }

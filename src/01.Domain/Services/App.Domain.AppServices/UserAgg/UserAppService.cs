@@ -98,6 +98,11 @@ namespace App.Domain.AppServices.UserAgg
            return await _signInManager.PasswordSignInAsync(username , password, isPersistent, lockoutOnFailure);
         }
 
+        public async Task RefreshSignIn(IdentityUser<int> identityUser)
+        {
+            await _signInManager.RefreshSignInAsync(identityUser);
+        }
+
         public async Task<int> RegisterUser(string username, int identityUserId, CancellationToken cancellationToken)
         {
             return await _userService.RegisterUser(username, identityUserId, cancellationToken);
@@ -111,6 +116,11 @@ namespace App.Domain.AppServices.UserAgg
         public async Task SignOut()
         {
             await _signInManager.SignOutAsync();
+        }
+
+        public async Task<IdentityResult> Update(IdentityUser<int> identityUser)
+        {
+           return await _userManager.UpdateAsync(identityUser);
         }
     }
 }
